@@ -1,0 +1,244 @@
+[
+    {
+        "//": "炸鸡",
+        "type": "COMESTIBLE",
+        "id": "Pam_fried_chicken",
+        "name": {
+            "str": "炸鸡",
+            "str_pl": "炸鸡"
+        },
+        "weight": 300,
+        "color": "yellow",
+        "spoils_in": 2,
+        "container": null,
+        "comestible_type": "FOOD",
+        "symbol": "&",
+        "quench": 5,
+        "healthy": -10,
+        "calories": 350,
+        "description": "这是一道外酥里嫩的炸鸡，香脆可口，色香味俱全。",
+        "price": 10,
+        "material": [
+            "egg",
+            "salt",
+            "flesh",
+            "oil"
+        ],
+        "volume": 0.3,
+        "phase": "solid",
+        "charges": 1,
+        "flags": {
+            "EATEN_HOT": 1,
+            "USE_EAT_VERB": 1
+        },
+        "addiction_potential": 0,
+        "cib_to_hit": 0
+    },
+    {
+        "//": "鸡肉汉堡",
+        "type": "COMESTIBLE",
+        "id": "Pam_chicken_burger",
+        "name": {
+            "str": "鸡肉汉堡",
+            "str_pl": "鸡肉汉堡"
+        },
+        "weight": 400,
+        "color": "white",
+        "spoils_in": 1,
+        "container": null,
+        "comestible_type": "FOOD",
+        "symbol": "&",
+        "quench": 10,
+        "healthy": -5,
+        "calories": 300,
+        "description": "这是一种将鸡肉、面包和各种蔬菜制成的汉堡，口感丰富，营养均衡。",
+        "price": 12,
+        "material": [
+            "vegetables",
+            "wheat",
+            "flesh",
+            "egg"
+        ],
+        "volume": 0.4,
+        "phase": "solid",
+        "charges": 1,
+        "flags": {
+            "EATEN_HOT": 1,
+            "USE_EAT_VERB": 1
+        },
+        "addiction_potential": 0,
+        "cib_to_hit": 0
+    },
+    {
+        "//": "牛肉堡",
+        "type": "COMESTIBLE",
+        "id": "Pam_beef_burger",
+        "name": {
+            "str": "牛肉堡",
+            "str_pl": "牛肉堡"
+        },
+        "weight": 450,
+        "color": "brown",
+        "spoils_in": 2,
+        "container": null,
+        "comestible_type": "FOOD",
+        "symbol": "&",
+        "quench": 10,
+        "healthy": -10,
+        "calories": 350,
+        "description": "这是一种将牛肉饼、生菜、番茄与其他配料放在面包里制成的汉堡，口味浓郁劲道。",
+        "price": 10,
+        "material": [
+            "flesh",
+            "wheat",
+            "vegetables",
+            "tomato",
+            "salt"
+        ],
+        "volume": 0.4,
+        "phase": "solid",
+        "charges": 1,
+        "flags": {
+            "EATEN_HOT": 1,
+            "USE_EAT_VERB": 1
+        },
+        "addiction_potential": 0,
+        "cib_to_hit": 0
+    },
+    {
+        "//": "奶酪牛肉堡",
+        "type": "COMESTIBLE",
+        "id": "Pam_cheese_beef_burger",
+        "name": {
+            "str": "奶酪牛肉堡",
+            "str_pl": "奶酪牛肉堡"
+        },
+        "weight": 500,
+        "color": "brown",
+        "spoils_in": 2,
+        "container": null,
+        "comestible_type": "FOOD",
+        "symbol": "&",
+        "quench": 15,
+        "healthy": -15,
+        "calories": 400,
+        "description": "这是一种在牛肉堡里添加奶酪的变种，奶酪的浓郁与牛肉的劲道融为一体，味道更加丰富。",
+        "price": 12,
+        "material": [
+            "wheat",
+            "flesh",
+            "cheese",
+            "salt"
+        ],
+        "volume": 0.45,
+        "phase": "solid",
+        "charges": 1,
+        "flags": {
+            "EATEN_HOT": 1,
+            "USE_EAT_VERB": 1
+        },
+        "addiction_potential": 0,
+        "cib_to_hit": 0
+    },
+    {
+        "//": "培根芝士堡",
+        "type": "COMESTIBLE",
+        "id": "Pam_bacon_cheese_burger",
+        "name": {
+            "str": "培根芝士堡",
+            "str_pl": "培根芝士堡"
+        },
+        "weight": 600,
+        "color": "brown",
+        "spoils_in": 1,
+        "container": null,
+        "comestible_type": "FOOD",
+        "symbol": "&",
+        "quench": 15,
+        "healthy": -20,
+        "calories": 600,
+        "description": "这是一种在牛肉堡里添加培根与奶酪的变种,培根的咸香与奶酪的浓郁完美融合,口味更加丰富。",
+        "price": 15,
+        "material": [
+            "bacon",
+            "cheese",
+            "wheat",
+            "flesh",
+            "salt"
+        ],
+        "volume": 0.5,
+        "phase": "solid",
+        "charges": 1,
+        "flags": {
+            "EATEN_HOT": 1,
+            "USE_EAT_VERB": 1
+        },
+        "addiction_potential": 0
+    },
+    {
+        "//": "热狗",
+        "type": "COMESTIBLE",
+        "id": "Pam_hotdog",
+        "name": {
+            "str": "热狗",
+            "str_pl": "热狗"
+        },
+        "weight": 250,
+        "color": "brown",
+        "spoils_in": 2,
+        "container": null,
+        "comestible_type": "FOOD",
+        "symbol": "&",
+        "quench": 10,
+        "healthy": -5,
+        "calories": 300,
+        "description": "这是一种经典的美式快餐,香肠配以面包和各种配菜,美味方便。",
+        "price": 6,
+        "material": [
+            "wheat",
+            "flesh",
+            "salt"
+        ],
+        "volume": 0.2,
+        "phase": "solid",
+        "charges": 1,
+        "flags": {
+            "EATEN_HOT": 1,
+            "USE_EAT_VERB": 1
+        },
+        "addiction_potential": 0
+    },
+    {
+        "//": "鱼肉堡",
+        "type": "COMESTIBLE",
+        "id": "Pam_fish_burger",
+        "name": {
+            "str": "鱼肉堡",
+            "str_pl": "鱼肉堡"
+        },
+        "weight": 400,
+        "color": "white",
+        "spoils_in": 1,
+        "container": null,
+        "comestible_type": "FOOD",
+        "symbol": "&",
+        "quench": 10,
+        "healthy": 5,
+        "calories": 250,
+        "description": "这是一种将鱼肉饼与生菜、番茄等放在面包里制成的汉堡,营养丰富,口味清新。",
+        "price": 8,
+        "material": [
+            "wheat",
+            "flesh",
+            "salt"
+        ],
+        "volume": 350,
+        "phase": "solid",
+        "charges": 1,
+        "flags": {
+            "EATEN_HOT": 1,
+            "USE_EAT_VERB": 1
+        },
+        "addiction_potential": 0
+    }
+]

@@ -1,0 +1,298 @@
+[
+    {
+        "//": "鸡肉粒",
+        "type": "COMESTIBLE",
+        "id": "Pam_chicken_nuggets",
+        "name": {
+            "str": "鸡肉粒(chicken nuggets)",
+            "str_pl": "鸡肉粒(chicken nuggets)"
+        },
+        "weight": 200,
+        "color": "white",
+        "spoils_in": 3,
+        "container": "Pam_Bag",
+        "comestible_type": "FOOD",
+        "symbol": "&",
+        "quench": 1,
+        "healthy": 4,
+        "calories": 350,
+        "description": "这是一种以鸡肉为馅料,外包脆皮衣而成的快餐零食,营养丰富,口感酥脆。常作为小孩子的零食。",
+        "price": 5,
+        "price_postapoc": 8,
+        "material": [
+            "flesh",
+            "wheat",
+            "oil"
+        ],
+        "volume": 150,
+        "phase": "solid",
+        "charges": 12,
+        "flags": {
+            "EATEN_HOT": 1,
+            "USE_EAT_VERB": 1,
+            "NO_PARASITES": 1,
+            "NO_SPOIL": 1
+        },
+        "vitamins": [
+            [
+                "vitA",
+                6
+            ],
+            [
+                "vitC",
+                8
+            ]
+        ],
+        "fun": 7,
+        "addiction_potential": 2,
+        "cib_to_hit": 0,
+        "rand_eaten_msg": [
+            "鸡肉粒的香脆口感让你回味无穷。",
+            "吃完鸡肉粒,手指上还残留着油脂的香气。"
+        ]
+    },
+    {
+        "//": "鸡肉便餐",
+        "type": "COMESTIBLE",
+        "id": "Pam_chicken_takeout",
+        "name": {
+            "str": "鸡肉便餐(chicken takeout)",
+            "str_pl": "鸡肉便餐(chicken takeouts)"
+        },
+        "weight": 350,
+        "color": "white",
+        "spoils_in": 1,
+        "container": "Pam_Bowl",
+        "comestible_type": "FOOD",
+        "symbol": "*",
+        "quench": 2,
+        "healthy": 7,
+        "calories": 650,
+        "description": "这是一种以鸡肉为主料,搭配米饭和蔬菜的外带餐点,营养均衡,方便快捷。",
+        "price": 8,
+        "price_postapoc": 12,
+        "material": [
+            "flesh",
+            "vegetables",
+            "rice"
+        ],
+        "volume": 250,
+        "phase": "solid",
+        "charges": 5,
+        "flags": {
+            "EATEN_HOT": 1,
+            "USE_EAT_VERB": 1,
+            "NO_PARASITES": 1
+        },
+        "vitamins": [
+            [
+                "vitA",
+                8
+            ],
+            [
+                "vitC",
+                10
+            ]
+        ],
+        "fun": 6,
+        "addiction_potential": 2,
+        "cib_to_hit": 0,
+        "rand_eaten_msg": [
+            "鸡肉便餐的香气让你食欲大开。",
+            "吃完鸡肉便餐,你感到身体得到了很好的补充。"
+        ]
+    },
+    {
+        "//": "红烧牛肉",
+        "type": "COMESTIBLE",
+        "id": "Pam_braised_beef",
+        "name": {
+            "str": "红烧牛肉(braised beef)",
+            "str_pl": "红烧牛肉(braised beefs)"
+        },
+        "weight": 450,
+        "color": "red",
+        "spoils_in": 2,
+        "container": "Pam_Bowl",
+        "comestible_type": "FOOD",
+        "symbol": "@",
+        "quench": 2,
+        "healthy": 8,
+        "calories": 800,
+        "description": "这是一道以番茄酱和大量酱油慢烧牛肉而成的家常菜,口感酥烂又略带甜味。",
+        "price": 12,
+        "price_postapoc": 18,
+        "material": [
+            "flesh",
+            "vegetables",
+            "wheat"
+        ],
+        "volume": 0.3,
+        "phase": "solid",
+        "charges": 4,
+        "flags": {
+            "EATEN_HOT": 1,
+            "USE_EAT_VERB": 1,
+            "NO_PARASITES": 1
+        },
+        "vitamins": [
+            [
+                "vitA",
+                10
+            ],
+            [
+                "vitC",
+                15
+            ]
+        ],
+        "fun": 7,
+        "addiction_potential": 2,
+        "cib_to_hit": 0,
+        "rand_eaten_msg": [
+            "红烧牛肉的酥烂口感让你回味无穷。",
+            "吃完红烧牛肉,你感到精神为之一振。"
+        ]
+    },
+    {
+        "//": "熏肉蛋",
+        "type": "COMESTIBLE",
+        "id": "Pam_bacon_and_egg",
+        "name": {
+            "str": "熏肉蛋(bacon and egg)",
+            "str_pl": "熏肉蛋(bacon and eggs)"
+        },
+        "weight": 300,
+        "color": "yellow",
+        "spoils_in": 2,
+        "container": "Pam_Dish",
+        "comestible_type": "FOOD",
+        "symbol": "*",
+        "quench": 1,
+        "healthy": 5,
+        "calories": 550,
+        "description": "这是一份早餐主食,由煎熟的鸡蛋和脆熏肉组成,口味浓郁香嫩。",
+        "price": 7.5,
+        "price_postapoc": 12,
+        "material": [
+            "egg",
+            "flesh"
+        ],
+        "volume": 0.2,
+        "phase": "solid",
+        "charges": 8,
+        "flags": {
+            "EATEN_HOT": 1,
+            "USE_EAT_VERB": 1,
+            "NO_PARASITES": 1
+        },
+        "vitamins": [
+            [
+                "protein",
+                20
+            ]
+        ],
+        "fun": 8,
+        "addiction_potential": 1,
+        "cib_to_hit": 0,
+        "rand_eaten_msg": [
+            "熏肉蛋的香味让你心情愉悦。",
+            "吃完熏肉蛋,你感到精力充沛。"
+        ]
+    },
+    {
+        "//": "肉馅",
+        "type": "COMESTIBLE",
+        "id": "Pam_mincemeat",
+        "name": {
+            "str": "肉馅(mincemeat)",
+            "str_pl": "肉馅(mincemeats)"
+        },
+        "weight": 200,
+        "color": "red",
+        "spoils_in": 5,
+        "container": "Pam_Bowl",
+        "comestible_type": "FOOD",
+        "symbol": "@",
+        "quench": 1,
+        "healthy": 3,
+        "calories": 400,
+        "description": "这是一种以碎肉,砂糖,水果和香料调味而成的馅料,软甜可口,常用于馅饼或点心。",
+        "price": 6,
+        "price_postapoc": 10,
+        "material": [
+            "sugar",
+            "fruit",
+            "flesh"
+        ],
+        "volume": 0.15,
+        "phase": "solid",
+        "charges": 10,
+        "flags": {
+            "EATEN_COLD": 1,
+            "USE_EAT_VERB": 1,
+            "NO_PARASITES": 1
+        },
+        "vitamins": [
+            [
+                "vitA",
+                5
+            ],
+            [
+                "vitC",
+                10
+            ]
+        ],
+        "fun": 6,
+        "addiction_potential": 1,
+        "cib_to_hit": 0,
+        "rand_eaten_msg": [
+            "肉馅的软糯口感让你回味无穷。",
+            "吃完肉馅,你感到精神为之一振。"
+        ]
+    },
+    {
+        "//": "肉干",
+        "type": "COMESTIBLE",
+        "id": "Pam_jerky",
+        "name": {
+            "str": "肉干(jerky)",
+            "str_pl": "肉干(jerky)"
+        },
+        "weight": 100,
+        "color": "white",
+        "spoils_in": 365,
+        "container": "Pam_Bag",
+        "comestible_type": "FOOD",
+        "symbol": "&",
+        "quench": 1,
+        "healthy": 7,
+        "calories": 350,
+        "description": "这是一种以肉条经烟熏腌制后风干而成的零食,富含蛋白质,口感具有弹性和香味。",
+        "price": 10,
+        "price_postapoc": 15,
+        "material": [
+            "flesh"
+        ],
+        "volume": 0.05,
+        "phase": "solid",
+        "charges": 20,
+        "flags": {
+            "EATEN_COLD": 1,
+            "USE_EAT_VERB": 1,
+            "NO_PARASITES": 1
+        },
+        "vitamins": [
+            [
+                "vitB12",
+                10
+            ]
+        ],
+        "fun": 5,
+        "addiction_potential": 2,
+        "cib_to_hit": 0,
+        "rand_eaten_msg": [
+            "肉干的香味让你回味无穷。",
+            "吃完肉干,你感到精力充沛。"
+        ]
+    }
+]

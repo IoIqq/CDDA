@@ -1,0 +1,400 @@
+[
+    {
+        "//": "冰激凌",
+        "type": "COMESTIBLE",
+        "id": "Pam_ice_cream",
+        "name": {
+            "str": "冰激凌(Ice Cream)"
+        },
+        "weight": 500,
+        "color": "white",
+        "spoils_in": "7 days",
+        "container": "Pam_Cup",
+        "comestible_type": "FOOD",
+        "symbol": "@",
+        "quench": 5,
+        "healthy": 6,
+        "calories": 330,
+        "description": "这是一种流行的甜点,由牛奶,奶油和糖经过冷冻而成,色彩白色,口味香醇滑腻。",
+        "price": 5,
+        "material": [
+            "milk",
+            "sugar"
+        ],
+        "volume": "450 ml",
+        "phase": "solid",
+        "charges": 10,
+        "flags": {
+            "EATEN_COLD": 1,
+            "USE_EAT_VERB": 1
+        },
+        "vitamins": [
+            [
+                "calcium",
+                10
+            ],
+            [
+                "vitA",
+                5
+            ]
+        ],
+        "fun": 10,
+        "addiction_potential": 2
+    },
+    {
+        "//": "焦糖冰激凌",
+        "type": "COMESTIBLE",
+        "id": "Pam_caramel_ice_cream",
+        "name": {
+            "str": "焦糖冰激凌(Caramel Ice Cream)"
+        },
+        "weight": 500,
+        "color": "brown",
+        "spoils_in": "7 days",
+        "container": "Pam_Cup",
+        "comestible_type": "FOOD",
+        "symbol": "&",
+        "quench": 5,
+        "healthy": 6,
+        "calories": 360,
+        "description": "这是一种流行的焦糖口味冰激凌,由牛奶,奶油,糖和焦糖酱经过冷冻而成,色彩浅棕,口味浓郁香醇。",
+        "price": 6.5,
+        "material": [
+            "milk",
+            "sugar"
+        ],
+        "volume": "450 ml",
+        "phase": "solid",
+        "charges": 10,
+        "flags": {
+            "EATEN_COLD": 1,
+            "USE_EAT_VERB": 1
+        },
+        "vitamins": [
+            [
+                "calcium",
+                10
+            ],
+            [
+                "vitA",
+                5
+            ]
+        ],
+        "fun": 10,
+        "addiction_potential": 3
+    },
+    {
+        "//": "巧克力布丁",
+        "type": "COMESTIBLE",
+        "id": "Pam_chocolate_pudding",
+        "name": {
+            "str": "巧克力布丁",
+            "str_pl": "巧克力布丁"
+        },
+        "weight": 200,
+        "color": "brown",
+        "spoils_in": "3 days",
+        "container": "Pam_Bowl",
+        "comestible_type": "FOOD",
+        "symbol": "*",
+        "quench": 2,
+        "healthy": 6,
+        "calories": 220,
+        "description": "这是一种流行的巧克力口味布丁,由牛奶,蛋黄,糖,可可粉和生粉熟成而成,色彩棕褐,口味浓郁滑腻。",
+        "price": 3.5,
+        "material": [
+            "milk",
+            "sugar"
+        ],
+        "volume": "180 ml",
+        "phase": "solid",
+        "charges": 64,
+        "flags": {
+            "EATEN_COLD": 1,
+            "USE_EAT_VERB": 1
+        },
+        "vitamins": [
+            [
+                "calcium",
+                10
+            ],
+            [
+                "vitA",
+                5
+            ]
+        ],
+        "fun": 10,
+        "addiction_potential": 2
+    },
+    {
+        "//": "巧克力焦糖",
+        "type": "COMESTIBLE",
+        "id": "Pam_chocolate_caramel",
+        "name": {
+            "str": "巧克力焦糖",
+            "str_pl": "巧克力焦糖"
+        },
+        "weight": 150,
+        "color": "brown",
+        "spoils_in": "5 days",
+        "container": "wrapper",
+        "comestible_type": "FOOD",
+        "symbol": "%",
+        "quench": 3,
+        "healthy": 5,
+        "calories": 260,
+        "description": "这是一种流行的巧克力焦糖,由糖,巧克力和牛奶经焦化处理而成,色彩棕褐,口味浓郁香酥。",
+        "price": 4,
+        "material": [
+            "coco_beans",
+            "milk",
+            "sugar"
+        ],
+        "volume": "120 ml",
+        "phase": "solid",
+        "charges": 64,
+        "flags": {
+            "EATEN_HOT": 0,
+            "USE_EAT_VERB": 1
+        },
+        "vitamins": [
+            [
+                "calcium",
+                5
+            ],
+            [
+                "vitA",
+                2
+            ]
+        ],
+        "fun": 9,
+        "addiction_potential": 4
+    },
+    {
+        "//": "焦糖",
+        "type": "COMESTIBLE",
+        "id": "Pam_caramel",
+        "name": {
+            "str": "焦糖",
+            "str_pl": "焦糖"
+        },
+        "weight": 200,
+        "color": "brown",
+        "spoils_in": "7 days",
+        "container": "Pam_Jar",
+        "comestible_type": "FOOD",
+        "symbol": "@",
+        "quench": 2,
+        "healthy": 4,
+        "calories": 240,
+        "description": "这是一种流行的焦糖酱,由糖经高温浓缩处理而成,色彩棕色,口味香醇甜浓。",
+        "price": 3,
+        "material": [
+            "sugar"
+        ],
+        "volume": "160 ml",
+        "phase": "liquid",
+        "charges": 64,
+        "flags": {
+            "EATEN_HOT": 0,
+            "USE_EAT_VERB": 1
+        },
+        "vitamins": [],
+        "fun": 10,
+        "addiction_potential": 2
+    },
+    {
+        "//": "焦糖苹果",
+        "type": "COMESTIBLE",
+        "id": "Pam_caramel_apple",
+        "name": {
+            "str": "焦糖苹果",
+            "str_pl": "焦糖苹果"
+        },
+        "weight": 500,
+        "color": "brown",
+        "spoils_in": "7 days",
+        "container": "stick",
+        "comestible_type": "FOOD",
+        "symbol": "^",
+        "quench": 1,
+        "healthy": 10,
+        "calories": 500,
+        "description": "这是一种流行的零食,由新鲜苹果在糖浆中烤制而成,表面覆盖焦化的糖衣,甜蜜香甜,口感脆甜。",
+        "price": 5,
+        "material": [
+            "fruit",
+            "sugar"
+        ],
+        "volume": "500 ml",
+        "phase": "solid",
+        "charges": 1,
+        "flags": {
+            "EATEN_HOT": 1,
+            "USE_EAT_VERB": 1
+        },
+        "vitamins": [],
+        "fun": 10,
+        "addiction_potential": 3
+    },
+    {
+        "type": "COMESTIBLE",
+        "id": "Pam_cotton_candy",
+        "name": {
+            "str": "棉花软糖",
+            "str_pl": "棉花软糖"
+        },
+        "weight": 15,
+        "color": "pink",
+        "spoils_in": "3 days",
+        "container": "Pam_Bag",
+        "comestible_type": "FOOD",
+        "symbol": "*",
+        "quench": 0,
+        "healthy": -3,
+        "calories": 520,
+        "description": "这是一种流行的零食,由糖经高速旋转制成的细小丝状结晶体,外形轻盈绵软如棉花,甜味扑鼻。",
+        "price": 3,
+        "material": [
+            "sugar"
+        ],
+        "volume": "150 ml",
+        "phase": "solid",
+        "charges": 1,
+        "flags": {
+            "EATEN_HOT": 0,
+            "USE_EAT_VERB": 1
+        },
+        "vitamins": [],
+        "fun": 10,
+        "addiction_potential": 4
+    },
+    {
+        "type": "COMESTIBLE",
+        "id": "Pam_chick_cotton_candy",
+        "name": {
+            "str": "小鸡棉花软糖",
+            "str_pl": "小鸡棉花软糖"
+        },
+        "weight": 20,
+        "color": "pink",
+        "spoils_in": "3 days",
+        "container": "Pam_Bag",
+        "comestible_type": "FOOD",
+        "symbol": "*",
+        "quench": 0,
+        "healthy": -3,
+        "calories": 520,
+        "description": "这是一种流行的零食,由糖经高速旋转制成的细小丝状结晶体,外形呈小鸡形状,甜香扑鼻。",
+        "price": 3,
+        "material": [
+            "sugar"
+        ],
+        "volume": "200 ml",
+        "phase": "solid",
+        "charges": 1,
+        "flags": {
+            "EATEN_HOT": 0,
+            "USE_EAT_VERB": 1
+        },
+        "vitamins": [],
+        "fun": 15,
+        "addiction_potential": 5
+    },
+    {
+        "type": "COMESTIBLE",
+        "id": "Pam_marshmallow",
+        "name": {
+            "str": "棉花糖",
+            "str_pl": "棉花糖"
+        },
+        "weight": 25,
+        "color": "white",
+        "spoils_in": "7 days",
+        "container": "Pam_Bag",
+        "comestible_type": "FOOD",
+        "symbol": "&",
+        "quench": 0,
+        "healthy": -5,
+        "calories": 330,
+        "description": "这是一种流行的零食,由糖,玉米淀粉和凝胶atin制成,外形呈白色海绵状,甜香可口。",
+        "price": 5,
+        "material": [
+            "sugar"
+        ],
+        "volume": "80 ml",
+        "phase": "solid",
+        "charges": 1,
+        "flags": {
+            "EATEN_HOT": 0,
+            "USE_EAT_VERB": 1
+        },
+        "vitamins": [],
+        "fun": 8,
+        "addiction_potential": 5
+    },
+    {
+        "type": "COMESTIBLE",
+        "id": "Pam_gummy_bears",
+        "name": {
+            "str": "小熊软糖",
+            "str_pl": "小熊软糖"
+        },
+        "weight": 125,
+        "color": "white",
+        "spoils_in": "14 days",
+        "container": "Pam_Bag",
+        "comestible_type": "FOOD",
+        "symbol": "%",
+        "quench": 0,
+        "healthy": -10,
+        "calories": 520,
+        "description": "这是一种流行的果冻状零食,由糖,葡萄糖,淀粉和人工色素制成,外形呈小熊形状,色彩鲜艳,口味甜美。",
+        "price": 8,
+        "material": [
+            "sugar"
+        ],
+        "volume": "150 ml",
+        "phase": "solid",
+        "charges": 1,
+        "flags": {
+            "EATEN_HOT": 0,
+            "USE_EAT_VERB": 1
+        },
+        "vitamins": [],
+        "fun": 10,
+        "addiction_potential": 10
+    },
+    {
+        "type": "COMESTIBLE",
+        "id": "Pam_jelly_beans",
+        "name": {
+            "str": "糖豆",
+            "str_pl": "糖豆"
+        },
+        "weight": 150,
+        "color": "white",
+        "spoils_in": "21 days",
+        "container": "Pam_Bag",
+        "comestible_type": "FOOD",
+        "symbol": "^",
+        "quench": 0,
+        "healthy": -12,
+        "calories": 680,
+        "description": "这是一种流行的果冻状零食,由糖,葡萄糖,淀粉和人工色素制成,外形呈豆子形状,色彩鲜艳,口味甜美。",
+        "price": 10,
+        "material": [
+            "sugar"
+        ],
+        "volume": "200 ml",
+        "phase": "solid",
+        "charges": 1,
+        "flags": {
+            "EATEN_HOT": 0,
+            "USE_EAT_VERB": 1
+        },
+        "vitamins": [],
+        "fun": 12,
+        "addiction_potential": 15
+    }
+]

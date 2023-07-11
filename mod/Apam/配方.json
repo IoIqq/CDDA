@@ -1,0 +1,69 @@
+[
+  {
+    "result": "Pam_Cracker",
+    "type": "recipe",
+    "name": "物品包",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_OTHER",
+    "skills_required": [
+      "cooking",
+      2
+    ],
+    "skill_used": "cooking",
+    "time": "2 m",
+    "reversible": false,
+    "book_learn": [
+      [
+        "pam_farm",
+        1
+      ]
+    ],
+    "using": [],
+    "components": [
+      [
+        [
+          "water",
+          1
+        ]
+      ],
+      [
+        [
+          "wheat",
+          5
+        ]
+      ]
+    ]
+  },
+  {
+    "id": "Pam_Jar",
+    "type": "TOOL",
+    "name": {
+      "str": "罐子",
+      "str_pl": "罐子"
+    },
+    "description": "一个方便密封的容器,可以用来储存食物。",
+    "weight": 500,
+    "volume": 10,
+    "symbol": "$",
+    "material": [
+      "plastic",
+      "ceramic"
+    ],
+    "qualities": [
+      [
+        "CONTAIN",
+        4
+      ]
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "WATERTIGHT",
+      "INSULATED_CONTAINER"
+    ],
+    "material_damaged": "ceramic",
+    "color": "white",
+    "price": 50,
+    "longest_side": 20,
+    "phase": "solid"
+  }
+]

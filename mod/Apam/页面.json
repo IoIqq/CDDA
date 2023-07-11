@@ -1,0 +1,11 @@
+[
+  {
+    "type": "recipe_category",
+    "id": "CC_pam",
+    "recipe_subcategories": [
+      "CSC_ALL",
+      "CSC_pam_饮品",
+      "CSC_pam_食物"
+    ]
+  }
+]

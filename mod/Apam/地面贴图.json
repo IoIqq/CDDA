@@ -1,0 +1,63 @@
+[
+  {
+    "type": "mod_tileset",
+    "compatibility": [
+      "Chibi_ Ultica",
+      "Ult imateCataclysm",
+      "MshockXottoplus",
+      "UNDEAD_PEOPLE",
+      "UNDEAD_PEOPLE_BASE",
+      "UNDEAD_PEOPLE_LEGACY",
+      "UlticaShell",
+      "MshockXottoplus12",
+      "MSX++DEAD_PEOPLE",
+      "MXplus12_for_cosmetics",
+      "Ultica"
+    ],
+    "tiles-new": [
+      {
+        "file": "telies/Pam_核心1/work.png",
+        "sprite_width": 32,
+        "sprite_height": 32,
+        "tiles": [
+          {
+            "id": "Pam_Bakeware",
+            "fg": 0
+          },
+          {
+            "id": "Pam_Cutting_Board",
+            "fg": 1
+          },
+          {
+            "id": "Pam_Juicer",
+            "fg": 2
+          },
+          {
+            "id": "Pam_Grinder",
+            "fg": 3
+          },
+          {
+            "id": "Pam_Mixing_Bowl",
+            "fg": 4
+          },
+          {
+            "id": "Pam_Pot",
+            "fg": 5
+          },
+          {
+            "id": "Pam_Roller",
+            "fg": 6
+          },
+          {
+            "id": "Pam_Sauce_Pan",
+            "fg": 7
+          },
+          {
+            "id": "Pam_Skillet",
+            "fg": 8
+          }
+        ]
+      }
+    ]
+  }
+]

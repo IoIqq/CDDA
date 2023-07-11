@@ -1,0 +1,33 @@
+[
+  {
+    "id": "Pam_Cracker",
+    "type": "item_group",
+    "subtype": "collection",
+    "items": [
+      {
+        "item": "Pam_Bakeware"
+      },
+      {
+        "item": "Pam_Cutting_Board"
+      },
+      {
+        "item": "Pam_Juicer"
+      },
+      {
+        "item": "Pam_Grinder"
+      },
+      {
+        "item": "Pam_Mixing_Bowl"
+      },
+      {
+        "item": "Pam_Roller"
+      },
+      {
+        "item": "Pam_Sauce_Pan"
+      },
+      {
+        "item": "Pam_Skillet"
+      }
+    ]
+  }
+]

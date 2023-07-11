@@ -1,0 +1,141 @@
+[
+    {
+        "//": "煮鸡蛋",
+        "type": "COMESTIBLE",
+        "id": "Pam_boiled_egg",
+        "name": {
+            "str": "煮鸡蛋(boiled egg)",
+            "str_pl": "煮鸡蛋(boiled eggs)"
+        },
+        "weight": 50,
+        "color": "white",
+        "spoils_in": 7,
+        "container": "Pam_Bowl",
+        "comestible_type": "FOOD",
+        "symbol": "&",
+        "quench": 5,
+        "healthy": 10,
+        "calories": 80,
+        "description": "这是一种口感软滑,富含蛋白质和维生素B的食品。",
+        "price": 5,
+        "price_postapoc": 8,
+        "material": [
+            "egg",
+            "salt"
+        ],
+        "volume": 0.05,
+        "phase": "solid",
+        "charges": 10,
+        "flags": {
+            "EATEN_COLD": 1,
+            "USE_EAT_VERB": 1,
+            "NO_PARASITES": 1
+        },
+        "vitamins": [
+            [
+                "vitB2",
+                1
+            ]
+        ],
+        "fun": 6,
+        "addiction_potential": 1,
+        "cib_to_hit": 0,
+        "rand_eaten_msg": [
+            "煮鸡蛋的软滑口感让你回味无穷。",
+            "吃完煮鸡蛋,你感到精力充沛。"
+        ]
+    },
+    {
+        "//": "荷包蛋",
+        "type": "COMESTIBLE",
+        "id": "Pam_scrambled_egg",
+        "name": {
+            "str": "荷包蛋(scrambled egg)",
+            "str_pl": "荷包蛋(scrambled eggs)"
+        },
+        "weight": 70,
+        "color": "yellow",
+        "spoils_in": 2,
+        "container": "Pam_Bowl",
+        "comestible_type": "FOOD",
+        "symbol": "&",
+        "quench": 5,
+        "healthy": 10,
+        "calories": 100,
+        "description": "这是一种口感细腻,味道鲜美的蛋类食品,富含维生素A。",
+        "price": 10,
+        "price_postapoc": 15,
+        "material": [
+            "egg",
+            "milk"
+        ],
+        "volume": 0.07,
+        "phase": "solid",
+        "charges": 10,
+        "flags": {
+            "EATEN_HOT": 1,
+            "USE_EAT_VERB": 1,
+            "NO_PARASITES": 1
+        },
+        "vitamins": [
+            [
+                "vitA",
+                2
+            ]
+        ],
+        "fun": 7,
+        "addiction_potential": 1,
+        "cib_to_hit": 0,
+        "rand_eaten_msg": [
+            "荷包蛋的香味让你心情愉悦。",
+            "吃完荷包蛋,你感到精神为之一振。"
+        ]
+    },
+    {
+        "//": "西式炒蛋",
+        "type": "COMESTIBLE",
+        "id": "Pam_western_scrambled_egg",
+        "name": {
+            "str": "西式炒蛋(western scrambled egg)",
+            "str_pl": "西式炒蛋(western scrambled eggs)"
+        },
+        "weight": 150,
+        "color": "yellow",
+        "spoils_in": 1,
+        "container": "Pam_Dish",
+        "comestible_type": "FOOD",
+        "symbol": "&",
+        "quench": 5,
+        "healthy": 5,
+        "calories": 200,
+        "description": "这是一道美味可口的西式早餐菜肴,味道鲜美,口感柔滑,富含维生素B。",
+        "price": 25,
+        "price_postapoc": 35,
+        "material": [
+            "egg",
+            "milk",
+            "salt"
+        ],
+        "volume": 0.15,
+        "phase": "solid",
+        "charges": 15,
+        "flags": {
+            "EATEN_HOT": 1,
+            "USE_EAT_VERB": 1,
+            "NO_PARASITES": 1
+        },
+        "vitamins": [
+            [
+                "vitB2",
+                2
+            ]
+        ],
+        "fun": 8,
+        "addiction_potential": 1,
+        "cib_to_hit": 0,
+        "rand_eaten_msg": [
+            "西式炒蛋的香味让你心情愉悦。",
+            "吃完西式炒蛋,你感到精力充沛。"
+        ]
+    }
+]

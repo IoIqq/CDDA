@@ -1,0 +1,137 @@
+[
+    {
+        "name": "Pam_toast",
+        "type": "COMESTIBLE",
+        "id": "Pam_toast",
+        "conditional_names": [
+            {
+                "type": "COMPONENT_ID",
+                "condition": "apple",
+                "name": {
+                    "str_sp": "苹果酱吐司(%s)"
+                }
+            },
+            {
+                "type": "COMPONENT_ID",
+                "condition": "watermelon",
+                "name": {
+                    "str_sp": "西瓜酱吐司(%s)"
+                }
+            },
+            {
+                "type": "COMPONENT_ID",
+                "condition": "berry",
+                "name": {
+                    "str_sp": "浆果酱吐司(%s)"
+                }
+            },
+            {
+                "type": "COMPONENT_ID",
+                "condition": "wheat",
+                "name": {
+                    "str_sp": "吐司(%s)"
+                }
+            }
+        ],
+        "weight": "80g",
+        "color": "white",
+        "spoils_in": "2 day",
+        "container": "Pam_Bag",
+        "comestible_type": "FOOD",
+        "symbol": "&",
+        "calories": 150,
+        "material": [
+            "wheat",
+            "egg"
+        ],
+        "volume": "50 ml",
+        "description": "一块烤得恰到好处，上面涂满果酱的美味吐司。",
+        "price": 2,
+        "flags": {
+            "USE_EAT_VERB": true,
+            "EATEN_COLD": true,
+            "EATEN_HOT": true,
+            "NO_PARASITES": true
+        },
+        "fun": 5,
+        "healthy": 3,
+        "addiction_potential": 1,
+        "rand_eaten_msg": [],
+        "vitamins": []
+    },
+    {
+        "type": "COMESTIBLE",
+        "id": "Pam_carrot_bread",
+        "name": {
+            "str": "胡萝卜面包(Carrot bread)"
+        },
+        "weight": "300g",
+        "color": "white",
+        "spoils_in": "3 day",
+        "container": "Pam_Bag",
+        "comestible_type": "FOOD",
+        "symbol": "*",
+        "calories": 250,
+        "material": [
+            "vegetables",
+            "wheat",
+            "oil"
+        ],
+        "volume": "20 ml",
+        "description": "...",
+        "price": 6,
+        "flags": {
+            "EATEN_HOT": 0,
+            "USE_EAT_VERB": 1,
+            "NO_PARASITES": 1
+        },
+        "vitamins": [
+            [
+                "vitaminc",
+                12
+            ]
+        ],
+        "fun": 8,
+        "healthy": 10,
+        "addiction_potential": 1,
+        "rand_eaten_msg": [
+            "胡萝卜的香气与面包的口感完美结合。",
+            "软糯多汁的甜味令你眉开眼笑。"
+        ]
+    },
+    {
+        "//": "南瓜面包",
+        "type": "COMESTIBLE",
+        "id": "Pam_pumpkin_bread",
+        "name": {
+            "str": "南瓜面包",
+            "str_pl": "南瓜面包"
+        },
+        "weight": 350,
+        "color": "white",
+        "spoils_in": 3,
+        "container": null,
+        "comestible_type": "FOOD",
+        "symbol": "*",
+        "quench": 6,
+        "healthy": 12,
+        "calories": 300,
+        "description": "这是一种添加了南瓜的面包,南瓜的天然香甜与面包的松软完美结合,营养丰富,口感软糯甜美。",
+        "price": 8,
+        "material": [
+            "fruit",
+            "wheat"
+        ],
+        "volume": 0.25,
+        "phase": "solid",
+        "charges": 6,
+        "flags": {
+            "EATEN_HOT": 0,
+            "USE_EAT_VERB": 1
+        },
+        "vitamins": [],
+        "fun": 10,
+        "addiction_potential": 1,
+        "cib_to_hit": 0
+    }
+]

@@ -1,0 +1,172 @@
+{
+    "type": "object",
+    "properties": {
+        "type": {
+            "type": "string",
+            "const": "COMESTIBLE"
+        },
+        "id": {
+            "type": "string",
+            "pattern": "^Pam_.*$"
+        },
+        "name": {
+            "type": "object",
+            "properties": {
+                "str": {
+                    "type": "string",
+                    "pattern": "^[\\u4e00-\\u9fa5]+\\(.*\\)$"
+                }
+            },
+            "required": [
+                "str"
+            ]
+        },
+        "vitamins": {
+            "type": "array",
+            "items": {
+                "type": "array",
+                "items": [
+                    {
+                        "type": "string"
+                    },
+                    {
+                        "type": "number"
+                    }
+                ],
+                "minItems": 2,
+                "maxItems": 2
+            }
+        },
+        "material": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "alcohol",
+                    "aluminum",
+                    "acidchitin",
+                    "bone",
+                    "brass",
+                    "budget_steel",
+                    "ceramic",
+                    "chitin",
+                    "clay",
+                    "copper",
+                    "cotton",
+                    "diamond",
+                    "egg",
+                    "flesh",
+                    "flesnclay",
+                    "fruit",
+                    "fur",
+                    "faux_fur",
+                    "glass",
+                    "gold",
+                    "hardsteel",
+                    "hflesh",
+                    "honey",
+                    "hydrocarbons",
+                    "iflesh",
+                    "iron",
+                    "junk",
+                    "kevlar",
+                    "lead",
+                    "leather",
+                    "milk",
+                    "neoprene",
+                    "nomex",
+                    "null",
+                    "oil",
+                    "paper",
+                    "plastic",
+                    "powder",
+                    "powder_nonflam",
+                    "silver",
+                    "steel",
+                    "stone",
+                    "superalloy",
+                    "veggy",
+                    "tomato",
+                    "bean",
+                    "garlic",
+                    "nut",
+                    "mushroom",
+                    "water",
+                    "wheat",
+                    "wood",
+                    "wool",
+                    "feces",
+                    "seeds",
+                    "bacon",
+                    "rice",
+                    "coco_beans",
+                    "sugar",
+                    "salt"
+                ]
+            }
+        },
+        "weight": {
+            "type": "number"
+        },
+        "color": {
+            "type": "string"
+        },
+        "spoils_in": {
+            "type": "string"
+        },
+        "container": {
+            "type": "string"
+        },
+        "symbol": {
+            "type": "string",
+            "enum": [
+                "%",
+                "&"
+            ]
+        },
+        "flags": {
+            "type": "string",
+            "pattern": "^[A-Z]+(\\d+|true|false)*$"
+        },
+        "volume": {
+            "type": "string"
+        },
+        "charges": {
+            "type": "number"
+        },
+        "fun": {
+            "type": "number"
+        },
+        "quench": {
+            "type": "number"
+        },
+        "healthy": {
+            "type": "number"
+        },
+        "rand_eaten_msg": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        }
+    },
+    "required": [
+        "type",
+        "id",
+        "name",
+        "vitamins",
+        "material",
+        "weight",
+        "color",
+        "spoils_in",
+        "container",
+        "symbol",
+        "flags",
+        "volume",
+        "charges",
+        "fun",
+        "quench",
+        "healthy",
+        "rand_eaten_msg"
+    ]
+}

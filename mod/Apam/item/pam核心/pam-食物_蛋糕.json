@@ -1,0 +1,169 @@
+[
+    {
+        "type": "COMESTIBLE",
+        "id": "Pam_chocolate_swiss_roll",
+        "name": {
+            "str": "巧克力蛋卷(Chocolate swiss roll)"
+        },
+        "weight": 200,
+        "color": "brown",
+        "spoils_in": "3 day",
+        "container": "cardboard box",
+        "comestible_type": "FOOD",
+        "symbol": "*",
+        "quench": 5,
+        "calories": 350,
+        "material": [
+            "egg",
+            "coco_beans",
+            "sugar",
+            "milk"
+        ],
+        "volume": "150ml",
+        "description": "这是一种口感松软....",
+        "price": 60,
+        "price_postapoc": 100,
+        "flags": {
+            "EATEN_COLD": 1,
+            "USE_EAT_VERB": 1
+        },
+        "vitamins": [
+            [
+                "vitaminc",
+                20
+            ]
+        ],
+        "fun": 8,
+        "healthy": -10,
+        "addiction_potential": 3,
+        "rand_eaten_msg": [
+            "浓郁的巧克力味让你沉醉其中。",
+            "松软可口的口感令你忍不住多吃几口。"
+        ]
+    },
+    {
+        "type": "COMESTIBLE",
+        "id": "Pam_Pam_Cupcake",
+        "name": {
+            "str": "纸杯蛋糕(Pam_Cupcake)"
+        },
+        "weight": "100g",
+        "color": "pink",
+        "spoils_in": "3 day",
+        "container": null,
+        "comestible_type": "FOOD",
+        "symbol": "&",
+        "quench": 5,
+        "healthy": -10,
+        "nutrition": 240,
+        "material": [
+            "egg",
+            "milk",
+            "sugar",
+            "oil"
+        ],
+        "volume": "150ml",
+        "description": "这是一种小巧精致的蛋糕,香甜可口。",
+        "price": 40,
+        "price_postapoc": 80,
+        "flags": {
+            "EATEN_COLD": 1,
+            "USE_EAT_VERB": 1
+        },
+        "fun": 5,
+        "addiction_potential": 3,
+        "rand_eaten_msg": [
+            "甜腻的口感和香味让你赏心悦目。",
+            "香甜可口的口味让你惬意满足。"
+        ]
+    },
+    {
+        "type": "COMESTIBLE",
+        "id": "Pam_cake",
+        "name": {
+            "str": "蛋糕(Cake)"
+        },
+        "weight": "500g",
+        "color": "pink",
+        "spoils_in": "3 day",
+        "container": "Pam_Dish",
+        "comestible_type": "FOOD",
+        "symbol": "&",
+        "quench": 5,
+        "calories": 1600,
+        "material": [
+            "egg",
+            "milk",
+            "coco_beans",
+            "sugar"
+        ],
+        "volume": "500 ml",
+        "description": "这是一种由多个蛋糕层叠加而成的甜点,外层涂上奶油、巧克力等制成的糖衣。",
+        "price": 120,
+        "price_postapoc": 180,
+        "flags": {
+            "EATEN_COLD": 1,
+            "USE_EAT_VERB": 1,
+            "NO_PARASITES": 1
+        },
+        "vitamins": [
+            [
+                "vitamina",
+                25
+            ],
+            [
+                "vitaminc",
+                50
+            ]
+        ],
+        "fun": 9,
+        "healthy": -20,
+        "addiction_potential": 4,
+        "rand_eaten_msg": [
+            "甜腻的糖衣和多层蛋糕让口味丰富。",
+            "多层的蛋糕和甜美的糖衣让你满意回味。"
+        ]
+    },
+    {
+        "type": "COMESTIBLE",
+        "id": "Pam_pancake",
+        "name": {
+            "str": "松饼(Pancake)"
+        },
+        "weight": 200,
+        "color": "white",
+        "spoils_in": "2 day",
+        "container": "Pam_Bag",
+        "comestible_type": "FOOD",
+        "symbol": "&",
+        "quench": 5,
+        "calories": 300,
+        "material": [
+            "egg",
+            "milk",
+            "wheat"
+        ],
+        "volume": "300 ml",
+        "description": "这是一种口感松软,色香味俱全的煎制食品。",
+        "price": 50,
+        "price_postapoc": 100,
+        "flags": {
+            "EATEN_HOT": 1,
+            "USE_EAT_VERB": 1,
+            "NO_PARASITES": 1
+        },
+        "vitamins": [
+            [
+                "vitaminc",
+                12
+            ]
+        ],
+        "fun": 8,
+        "healthy": -10,
+        "addiction_potential": 2,
+        "rand_eaten_msg": [
+            "桌上的松饼让你满意迎向新的一天。",
+            "煎制出的软糯松饼带来灵魂的慰藉。"
+        ]
+    }
+]

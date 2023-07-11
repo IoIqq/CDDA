@@ -1,0 +1,178 @@
+[
+  {
+    "id": "Pam_farm",
+    "type": "BOOK",
+    "name": {
+      "str": "潘马斯百科全书",
+      "str_pl": "pam_books"
+    },
+    "description": "记载了所有配方的百科全书,它是制作潘马斯食物的一切基础",
+    "weight": 40,
+    "volume": 1,
+    "price": 1000,
+    "price_postapoc": 3500,
+    "material": [
+      "paper"
+    ],
+    "symbol": "#",
+    "color": "red",
+    "skill": "cooking",
+    "required_level": 0,
+    "max_level": 4,
+    "intelligence": 6,
+    "time": 600,
+    "fun": 3
+  },
+  {
+    "id": "Pam_pack",
+    "name": "pam物品包",
+    "type": "GENERIC",
+    "description": "pam的物品包",
+    "weight": 1,
+    "volume": 0.01,
+    "price": 1,
+    "symbol": "#",
+    "material": [
+      "wood"
+    ],
+    "color": "red",
+    "use_action": {
+      "type": "unpack",
+      "group": "Pam_Cracker"
+    }
+  },
+  {
+    "id": "Pam_Bag",
+    "type": "TOOL",
+    "name": {
+      "str": "袋子",
+      "str_pl": "袋子"
+    },
+    "description": "一个普通的布质口袋,可以用来装东西。",
+    "weight": 550,
+    "volume": 10,
+    "symbol": "$",
+    "material": [
+      "cotton",
+      "leather"
+    ],
+    "qualities": [
+      [
+        "CONTAIN",
+        4
+      ]
+    ],
+    "flags": [
+      "POCKET",
+      "EFFECTIVE_STORAGE"
+    ],
+    "color": "white",
+    "price": 50,
+    "phase": "solid"
+  },
+  {
+    "id": "Pam_Cup",
+    "type": "TOOL",
+    "name": {
+      "str": "杯子",
+      "str_pl": "杯子"
+    },
+    "description": "一个小巧的陶瓷杯子,用于饮酒和饮茶。",
+    "weight": 200,
+    "volume": 1,
+    "symbol": "$",
+    "material": [
+      "ceramic"
+    ],
+    "qualities": [
+      [
+        "CONTAIN",
+        3
+      ],
+      [
+        "BOIL",
+        1
+      ]
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "BOIL_OR_FREEZE"
+    ],
+    "color": "white",
+    "price": 80,
+    "price_postapoc": 30,
+    "longest_side": 10,
+    "phase": "solid"
+  },
+  {
+    "id": "Pam_Dish",
+    "type": "TOOL",
+    "name": {
+      "str": "瓷碗",
+      "str_pl": "瓷碗"
+    },
+    "description": "一个方便用餐的瓷质碗盘。",
+    "weight": 500,
+    "volume": 5,
+    "symbol": "•",
+    "material": [
+      "ceramic"
+    ],
+    "qualities": [
+      [
+        "CONTAIN",
+        2
+      ],
+      [
+        "CHOP",
+        1
+      ]
+    ],
+    "flags": [
+      "DURABLE_MELEE"
+    ],
+    "color": "white",
+    "phase": "solid",
+    "price": 80,
+    "price_postapoc": 30,
+    "longest_side": 15
+  },
+  {
+    "id": "Pam_Bowl",
+    "type": "TOOL",
+    "name": {
+      "str": "碗(Bowl)",
+      "str_pl": "碗(Bowls)"
+    },
+    "description": "方便用餐的陶瓷碗。",
+    "weight": "300g",
+    "volume": 1.2,
+    "symbol": "%",
+    "material": [
+      "ceramic"
+    ],
+    "qualities": [
+      [
+        "CONTAIN",
+        3
+      ]
+    ],
+    "flags": [
+      "DURABLE_MELEE"
+    ],
+    "color": "off white",
+    "phase": "solid",
+    "price": 60,
+    "price_postapocalypse": 20,
+    "longest_side": "15cm",
+    "bashing": 4,
+    "to_hit": 1,
+    "max_volume": 1200,
+    "usage_methods": [
+      [
+        "CONTAIN",
+        "容纳食物和液体"
+      ]
+    ]
+  }
+]

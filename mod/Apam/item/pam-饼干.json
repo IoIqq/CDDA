@@ -1,0 +1,545 @@
+[
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_protein_cookie",
+    "name": {
+      "str": "蛋白霜曲奇(Protein Cookie)"
+    },
+    "description": "富含高蛋白质的健康饼干,适合运动员和繁忙人士补充能量。",
+    "weight": 7,
+    "volume": "10 ml",
+    "price": 5,
+    "comestible_type": "FOOD",
+    "spoils_in": "5 days",
+    "calories": 300,
+    "charges": 1,
+    "flags": [
+      "EATEN_HOT",
+      "EATEN_COLD"
+    ],
+    "material": [
+      "wheat",
+      "egg"
+    ],
+    "vitamins": [],
+    "color": "brown",
+    "container": "Pam_Bag",
+    "symbol": "%",
+    "fun": 0,
+    "quench": 0,
+    "healthy": 10,
+    "addiction_potential": 0,
+    "phase": "solid",
+    "cib_to_hit": 0,
+    "rand_eaten_msg": [
+      "你感到充满力量，这就是蛋白质的力量。",
+      "你的肌肉在欢呼，他们得到了他们想要的蛋白质。"
+    ]
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_butter_cookie",
+    "name": {
+      "str": "黄油饼干(Butter Cookie)"
+    },
+    "description": "这片饼干有着浓郁的黄油味道,不仅松脆可口,而且方便携带。",
+    "weight": 10,
+    "color": "yellow",
+    "spoils_in": "7 days",
+    "container": "Pam_Bag",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "nutrition": 150,
+    "material": [
+      "wheat",
+      "milk"
+    ],
+    "volume": "8 ml",
+    "charges": 1,
+    "flags": {
+      "USE_EAT_VERB": 1,
+      "EATEN_HOT": 1,
+      "EATEN_COLD": 1
+    },
+    "fun": 3,
+    "quench": 0,
+    "healthy": 0,
+    "addiction_potential": 1,
+    "phase": "solid",
+    "price": 2,
+    "price_postapoc": 3,
+    "rand_eaten_msg": [
+      "这黄油饼干的香味令你满意。",
+      "松脆口感带来短暂而惬意的享受。"
+    ]
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_lucky_cookie",
+    "name": {
+      "str": "幸运曲奇(Lucky Cookie)"
+    },
+    "description": "这个可爱的小曲奇里面藏着一个小小的彩色陶瓷块,据说吃到某种颜色就会带来不同的好运。",
+    "weight": 10,
+    "volume": "8 ml",
+    "price": 5,
+    "comestible_type": "FOOD",
+    "spoils_in": "60 days",
+    "calories": 150,
+    "charges": 1,
+    "flags": [
+      "EATEN_HOT",
+      "EATEN_COLD"
+    ],
+    "material": [
+      "wheat",
+      "egg"
+    ],
+    "vitamins": [],
+    "color": "brown",
+    "container": "Pam_Bag",
+    "symbol": "&",
+    "fun": 3,
+    "quench": 0,
+    "healthy": 0,
+    "addiction_potential": 0,
+    "phase": "solid",
+    "cib_to_hit": 0
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_creeper_cookie",
+    "name": {
+      "str": "苦力怕饼干(Creeper Cookie)"
+    },
+    "description": "这个饼干看起来很不可靠,里面仿佛藏了什么不得了的东西。",
+    "weight": 10,
+    "volume": "8 ml",
+    "price": 20,
+    "comestible_type": "FOOD",
+    "spoils_in": "365 days",
+    "calories": 280,
+    "charges": 1,
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "material": [
+      "wheat",
+      "egg",
+      "coco_beans"
+    ],
+    "vitamins": [],
+    "color": "green",
+    "container": "Pam_Bag",
+    "symbol": "&",
+    "fun": 3,
+    "quench": 0,
+    "healthy": 0,
+    "addiction_potential": 0,
+    "sound": "你听到了一个爆炸声，但是你并没有受到伤害。",
+    "phase": "solid",
+    "cib_to_hit": 0
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_soft_cookie",
+    "name": {
+      "str": "烤软饼",
+      "str_pl": "烤软饼"
+    },
+    "description": "这个软饼看上去非常柔软,算起来也很营养。",
+    "weight": 10,
+    "volume": "8 ml",
+    "price": 2,
+    "comestible_type": "FOOD",
+    "spoils_in": "3 days",
+    "calories": 120,
+    "charges": 1,
+    "flags": [
+      "EATEN_HOT",
+      "EATEN_COLD"
+    ],
+    "material": [
+      "wheat",
+      "wheat"
+    ],
+    "vitamins": [],
+    "color": "brown",
+    "container": "Pam_Bag",
+    "symbol": "&",
+    "fun": 2,
+    "quench": 0,
+    "healthy": 1,
+    "addiction_potential": 0,
+    "phase": "solid",
+    "cib_to_hit": 0
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_cheese_cookie",
+    "name": {
+      "str": "奶酪饼干",
+      "str_pl": "奶酪饼干"
+    },
+    "description": "这个饼干里夹着美味的奶酪,是一种非常适合下午茶的小吃。",
+    "weight": 10,
+    "volume": "8 ml",
+    "price": 5,
+    "comestible_type": "FOOD",
+    "spoils_in": "10 days",
+    "calories": 90,
+    "charges": 1,
+    "flags": [
+      "EATEN_HOT",
+      "EATEN_COLD"
+    ],
+    "material": [
+      "milk",
+      "cheese",
+      "sugar"
+    ],
+    "vitamins": [],
+    "color": "yellow",
+    "container": "Pam_Bag",
+    "symbol": "&",
+    "fun": 4,
+    "quench": 0,
+    "healthy": 0,
+    "addiction_potential": 0,
+    "phase": "solid",
+    "cib_to_hit": 0
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_cream_cookie",
+    "name": {
+      "str": "奶油饼干",
+      "str_pl": "奶油饼干"
+    },
+    "description": "用新鲜的奶油和香草精制成的饼干,味道非常美妙。",
+    "weight": 10,
+    "volume": "8 ml",
+    "price": 5,
+    "comestible_type": "FOOD",
+    "spoils_in": "10 days",
+    "calories": 150,
+    "charges": 1,
+    "flags": [
+      "EATEN_HOT",
+      "EATEN_COLD"
+    ],
+    "material": [
+      "wheat",
+      "milk",
+      "sugar"
+    ],
+    "vitamins": [
+      [
+        "vitA",
+        1
+      ],
+      [
+        "vitD",
+        1
+      ]
+    ],
+    "color": "white",
+    "container": "Pam_Bag",
+    "symbol": "&",
+    "fun": 4,
+    "quench": 0,
+    "healthy": 1,
+    "addiction_potential": 0,
+    "phase": "solid",
+    "cib_to_hit": 0
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_jiafa_cake",
+    "name": {
+      "str": "佳发蛋糕",
+      "str_pl": "佳发蛋糕"
+    },
+    "description": "由糯米粉和红豆馅制成的传统中国点心,口感糯软甜香。",
+    "weight": 100,
+    "volume": "30 ml",
+    "price": 12,
+    "comestible_type": "FOOD",
+    "spoils_in": "15 days",
+    "calories": 350,
+    "charges": 4,
+    "flags": [
+      "EATEN_HOT"
+    ],
+    "material": [
+      "wheat",
+      "egg",
+      "sugar"
+    ],
+    "vitamins": [
+      [
+        "vitB",
+        2
+      ]
+    ],
+    "color": "red",
+    "container": null,
+    "symbol": "%",
+    "fun": 6,
+    "quench": 0,
+    "healthy": 0,
+    "addiction_potential": 0,
+    "phase": "solid",
+    "cib_to_hit": 0
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_gingerbread_cookie",
+    "name": {
+      "str": "姜饼",
+      "str_pl": "姜饼"
+    },
+    "description": "这种充满节日气息的饼干有着浓郁的姜味,通常在圣诞节期间享用。",
+    "weight": 10,
+    "volume": "8 ml",
+    "price": 3,
+    "comestible_type": "FOOD",
+    "spoils_in": "30 days",
+    "calories": 120,
+    "fun": 5,
+    "quench": 0,
+    "healthy": 1,
+    "addiction_potential": 0,
+    "max_goodness": 10,
+    "spoils_velocity": 0.0005,
+    "stack_size": 20,
+    "flags": [
+      "EATEN_HOT",
+      "EATEN_COLD"
+    ],
+    "material": [
+      "wheat",
+      "sugar"
+    ],
+    "vitamins": [
+      [
+        "vitC",
+        2
+      ]
+    ],
+    "color": "brown",
+    "symbol": "&",
+    "phase": "solid",
+    "cib_to_hit": 0
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_raisin_cookie",
+    "name": {
+      "str": "葡萄干饼干",
+      "str_pl": "葡萄干饼干"
+    },
+    "description": "这种饼干中混合了葡萄干，口感甜美。",
+    "weight": 10,
+    "volume": "8 ml",
+    "price": 6,
+    "comestible_type": "FOOD",
+    "spoils_in": "20 days",
+    "calories": 100,
+    "fun": 4,
+    "quench": 0,
+    "healthy": 1,
+    "addiction_potential": 0,
+    "max_goodness": 10,
+    "spoils_velocity": 0.001,
+    "stack_size": 20,
+    "flags": [
+      "EATEN_HOT",
+      "EATEN_COLD"
+    ],
+    "material": [
+      "wheat",
+      "milk",
+      "fruit",
+      "sugar"
+    ],
+    "vitamins": [
+      [
+        "vitA",
+        1
+      ],
+      [
+        "vitC",
+        2
+      ]
+    ],
+    "color": "brown",
+    "symbol": "&",
+    "phase": "solid",
+    "cib_to_hit": 0
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_peanut_butter_cookie",
+    "name": {
+      "str": "花生曲奇",
+      "str_pl": "花生曲奇"
+    },
+    "description": "用新鲜的花生酱和香草精制成的曲奇饼干,是一种口感松脆的小点心。",
+    "weight": 10,
+    "volume": "8 ml",
+    "price": 7,
+    "comestible_type": "FOOD",
+    "spoils_in": 18,
+    "calories": 150,
+    "fun": 4,
+    "quench": 0,
+    "healthy": 1,
+    "addiction_potential": 0,
+    "max_goodness": 10,
+    "spoils_velocity": 0.002,
+    "stack_size": 20,
+    "flags": [
+      "EATEN_HOT",
+      "EATEN_COLD"
+    ],
+    "material": [
+      "wheat",
+      "sugar"
+    ],
+    "vitamins": [
+      [
+        "vitA",
+        1
+      ]
+    ],
+    "color": "brown",
+    "symbol": "&",
+    "phase": "solid",
+    "cib_to_hit": 0
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_sugar_cookie",
+    "name": {
+      "str": "糖饼干",
+      "str_pl": "糖饼干"
+    },
+    "description": "这是一种简单的糖饼干，甜而不腻，适合任何时候享用。",
+    "weight": 10,
+    "volume": "8 ml",
+    "price": 4,
+    "comestible_type": "FOOD",
+    "spoils_in": 25,
+    "calories": 120,
+    "fun": 4,
+    "quench": 0,
+    "healthy": 0,
+    "addiction_potential": 0,
+    "max_goodness": 10,
+    "spoils_velocity": 0.001,
+    "stack_size": 20,
+    "flags": [
+      "EATEN_HOT",
+      "EATEN_COLD"
+    ],
+    "material": [
+      "wheat",
+      "sugar"
+    ],
+    "vitamins": [
+      [
+        "vitB",
+        1
+      ]
+    ],
+    "color": "white",
+    "symbol": "%",
+    "phase": "solid",
+    "cib_to_hit": 0
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_Potato_Chicken_Roast_Soft_TACO",
+    "name": {
+      "str": "土豆泥鸡肉烤软饼",
+      "str_pl": "土豆泥鸡肉烤软饼"
+    },
+    "description": "这个软饼烤得恰到好处,里面夹着香喷喷的鸡肉和绵软的土豆泥。",
+    "weight": 200,
+    "volume": 0.5,
+    "price": 15,
+    "comestible_type": "FOOD",
+    "spoils_in": 3,
+    "calories": 350,
+    "fun": 15,
+    "quench": 0,
+    "healthy": 5,
+    "addiction_potential": 0,
+    "max_goodness": 10,
+    "spoils_velocity": 0.03,
+    "stack_size": 10,
+    "flags": [
+      "EATEN_HOT",
+      "EATEN_COLD"
+    ],
+    "material": [
+      "wheat",
+      "flesh",
+      "veggy"
+    ],
+    "vitamins": [
+      [
+        "vitA",
+        1
+      ],
+      [
+        "vitC",
+        1
+      ]
+    ],
+    "color": "brown",
+    "symbol": "&",
+    "phase": "solid",
+    "cib_to_hit": 0
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_Salt_Biscuits",
+    "name": {
+      "str": "咸味饼干",
+      "str_pl": "咸味饼干"
+    },
+    "description": "口味咸香,适合作为下午茶配方。",
+    "weight": 10,
+    "volume": "8 ml",
+    "price": 5,
+    "comestible_type": "FOOD",
+    "spoils_in": 7,
+    "calories": 50,
+    "fun": 5,
+    "quench": 0,
+    "healthy": 0,
+    "addiction_potential": 0,
+    "max_goodness": 10,
+    "spoils_velocity": 0,
+    "stack_size": 50,
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "material": [
+      "wheat",
+      "salt"
+    ],
+    "vitamins": [
+      [
+        "vitB",
+        1
+      ]
+    ],
+    "color": "white",
+    "symbol": "%",
+    "phase": "solid",
+    "cib_to_hit": 0
+  }
+]
