@@ -1,102 +1,102 @@
-# JSON INFO
+# JSON INFO（JSON 信息）
 
-Use the `Home` key to return to the top.
+使用`Home`键返回顶部。
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**
 
-- [Introduction](#introduction)
-  - [Overall structure](#overall-structure)
-  - [Common properties](#common-properties)
-    - [`"copy-from"` and `"abstract"`](#copy-from-and-abstract)
-- [Navigating the JSON](#navigating-the-json)
-- [Common field types](#common-field-types)
-  - [Units](#units)
-    - [Time duration](#time-duration)
-  - [Translatable strings](#translatable-strings)
-  - [Comments](#comments)
-- [File descriptions](#file-descriptions)
+**Table of Contents（目录）**
+
+- [JSON INFO（JSON 信息）](#json-infojson-信息)
+- [Introduction（介绍）](#introduction介绍)
+  - [Overall structure（总体结构）](#overall-structure总体结构)
+  - [Common properties (通用属性)](#common-properties-通用属性)
+    - [`"copy-from"` and `"abstract"`（“copy-from”和“abstract”）](#copy-from-and-abstractcopy-from和abstract)
+- [Navigating the JSON (在 JSON 中导航)](#navigating-the-json-在-json-中导航)
+- [Common field types (常见字段类型)](#common-field-types-常见字段类型)
+  - [Units (单位)](#units-单位)
+    - [Time duration (时间持续)](#time-duration-时间持续)
+  - [Translatable strings (可翻译字符串)](#translatable-strings-可翻译字符串)
+  - [Comments (注释)](#comments-注释)
+- [File descriptions (文件描述)](#file-descriptions-文件描述)
   - [`data/json/`](#datajson)
   - [`data/json/items/`](#datajsonitems)
     - [`data/json/items/comestibles/`](#datajsonitemscomestibles)
   - [`data/json/requirements/`](#datajsonrequirements)
   - [`data/json/vehicles/`](#datajsonvehicles)
-- [Description and content of each JSON file](#description-and-content-of-each-json-file)
+- [Description and content of each JSON file (每个 JSON 文件的描述和内容)](#description-and-content-of-each-json-file-每个-json-文件的描述和内容)
   - [`data/json/` JSONs](#datajson-jsons)
-    - [Ascii_arts](#ascii_arts)
-    - [Addiction types](#addiction-types)
-    - [Body Graphs](#body-graphs)
-      - [Graph Parts](#graph-parts)
-    - [Body_parts](#body_parts)
-- [On-hit Effects](#on-hit-effects)
-    - [Limb scores](#limb-scores)
-    - [Character Modifiers](#character-modifiers)
-      - [Character Modifiers - Value](#character-modifiers---value)
-    - [Bionics](#bionics)
-    - [Damage Types](#damage-types)
-    - [Damage Info Ordering](#damage-info-ordering)
-    - [Dreams](#dreams)
-    - [Disease](#disease)
-    - [Emitters](#emitters)
-    - [Item Groups](#item-groups)
-    - [Item Category](#item-category)
-    - [Item Properties](#item-properties)
-    - [Item Variables](#item-variables)
-    - [Item faults](#item-faults)
-    - [Item fault fixes](#item-fault-fixes)
-    - [Materials](#materials)
-      - [Fuel data](#fuel-data)
-      - [Burn data](#burn-data)
-    - [Monster Groups](#monster-groups)
-      - [Group definition](#group-definition)
-      - [Monster/Subgroup definition](#monstersubgroup-definition)
-    - [Monster Factions](#monster-factions)
-    - [Monsters](#monsters)
-    - [Mutation Categories](#mutation-categories)
-    - [Names](#names)
-    - [Profession item substitution](#profession-item-substitution)
-    - [Professions](#professions)
-      - [`description`](#description)
-      - [`name`](#name)
-      - [`points`](#points)
-      - [`addictions`](#addictions)
-      - [`skills`](#skills)
-      - [`missions`](#missions)
-      - [`proficiencies`](#proficiencies)
-      - [`items`](#items)
-      - [`pets`](#pets)
-      - [`vehicle`](#vehicle)
-      - [`flags`](#flags)
-      - [`cbms`](#cbms)
-      - [`traits`](#traits)
-      - [`requirement`](#requirement)
-    - [Recipes](#recipes)
-      - [Practice recipes](#practice-recipes)
-      - [Nested recipes](#nested-recipes)
-      - [Recipe requirements](#recipe-requirements)
-      - [Defining common requirements](#defining-common-requirements)
-      - [Overlapping recipe component requirements](#overlapping-recipe-component-requirements)
-    - [Constructions](#constructions)
-    - [Scent_types](#scent_types)
-    - [Scores, Achievements, and Conducts](#scores-achievements-and-conducts)
-      - [`event_transformation`](#event_transformation)
-      - [`event_statistic`](#event_statistic)
-      - [`score`](#score)
-      - [`achievement`](#achievement)
-      - [`conduct`](#conduct)
-    - [Skills](#skills)
-    - [Speed Description](#speed-description)
-    - [Mood Face](#mood-face)
-    - [Tool Qualities](#tool-qualities)
-    - [Traits/Mutations](#traitsmutations)
-    - [Trait Migrations](#trait-migrations)
-    - [Traps](#traps)
-    - [Vehicle Groups](#vehicle-groups)
-    - [Vehicle Parts](#vehicle-parts)
-      - [Symbols and Variants](#symbols-and-variants)
-      - [The following optional fields are specific to CARGO parts.](#the-following-optional-fields-are-specific-to-cargo-parts)
-      - [The following optional fields are specific to ENGINEs.](#the-following-optional-fields-are-specific-to-engines)
+    - [Ascii\_arts](#ascii_arts)
+    - [### Addiction types(成瘾类型)](#-addiction-types成瘾类型)
+    - [Body Graphs (身体图谱)](#body-graphs-身体图谱)
+      - [Graph Parts(图表部分)](#graph-parts图表部分)
+    - [Body\_parts (身体部位)](#body_parts-身体部位)
+- [On-hit Effects (受击效果)](#on-hit-effects-受击效果)
+    - [Limb scores (肢体评分)](#limb-scores-肢体评分)
+    - [Character Modifiers (角色修饰符)](#character-modifiers-角色修饰符)
+      - [Character Modifiers - Value (角色修饰符 - 值)](#character-modifiers---value-角色修饰符---值)
+    - [Damage Types (伤害类型)](#damage-types-伤害类型)
+    - [Dreams (梦境)](#dreams-梦境)
+    - [Disease (疾病)](#disease-疾病)
+    - [Emitters （发射器）](#emitters-发射器)
+    - [Item Groups （物品组）](#item-groups-物品组)
+    - [Item Category (物品类别)](#item-category-物品类别)
+    - [Item Properties（物品属性）](#item-properties物品属性)
+    - [Item Variables（物品变量）](#item-variables物品变量)
+    - [Item faults（物品故障）](#item-faults物品故障)
+    - [Item fault fixes（物品故障修复）](#item-fault-fixes物品故障修复)
+    - [材料（Materials）](#材料materials)
+      - [Fuel data (燃料数据)](#fuel-data-燃料数据)
+      - [Burn data（燃烧数据）](#burn-data燃烧数据)
+    - [Monster Groups（怪物组）](#monster-groups怪物组)
+      - [Group definition（群组定义）](#group-definition群组定义)
+      - [Monster/Subgroup definition（怪物/子分组定义）](#monstersubgroup-definition怪物子分组定义)
+    - [Monster Factions（怪物派系）](#monster-factions怪物派系)
+    - [Monsters（怪物）](#monsters怪物)
+    - [Mutation Categories（变异类别）](#mutation-categories变异类别)
+    - [Names（名字）](#names名字)
+    - [Profession item substitution（职业物品替换）](#profession-item-substitution职业物品替换)
+    - [Professions（职业）](#professions职业)
+      - [`description`（描述）](#description描述)
+      - [`name`（名称）](#name名称)
+      - [`points`（点数）](#points点数)
+      - [`addictions`（成瘾）](#addictions成瘾)
+      - [`技能` (Skills)](#技能-skills)
+      - [`missions`（任务）](#missions任务)
+      - [`proficiencies`（熟练度）](#proficiencies熟练度)
+      - [`items`（物品）](#items物品)
+      - [`pets`（宠物）](#pets宠物)
+      - [`vehicle`（交通工具）](#vehicle交通工具)
+      - [`flags`（标志）](#flags标志)
+      - [`cbms`（生物芯片）](#cbms生物芯片)
+      - [`traits`（特征）](#traits特征)
+      - [`requirement`（需求）](#requirement需求)
+    - [配方](#配方)
+      - [练习食谱](#练习食谱)
+      - [嵌套食谱](#嵌套食谱)
+      - [配方要求](#配方要求)
+      - [Defining common requirements(定义通用要求)](#defining-common-requirements定义通用要求)
+      - [Overlapping recipe component requirements (重复的配方组件需求)](#overlapping-recipe-component-requirements-重复的配方组件需求)
+    - [Constructions(构造)](#constructions构造)
+    - [气味类型(Scent\_types)](#气味类型scent_types)
+    - [Scores, Achievements, and Conducts(得分，成就和行为准则)](#scores-achievements-and-conducts得分成就和行为准则)
+      - [`event_transformation`（事件转换）](#event_transformation事件转换)
+      - [`事件统计` (Event Statistic)](#事件统计-event-statistic)
+      - [`score` (得分)](#score-得分)
+      - [`achievement` (成就)](#achievement-成就)
+      - [`conduct` (行为准则)](#conduct-行为准则)
+    - [技能 (Skills)](#技能-skills-1)
+    - [速度描述 (Speed Description)](#速度描述-speed-description)
+    - [心情表情 (Mood Face)](#心情表情-mood-face)
+    - [工具品质 (Tool Qualities)](#工具品质-tool-qualities)
+    - [特质/突变 (Traits/Mutations)](#特质突变-traitsmutations)
+    - [特质迁移 (Trait Migrations)](#特质迁移-trait-migrations)
+    - [陷阱 (Traps)](#陷阱-traps)
+    - [车辆群组 (Vehicle Groups)](#车辆群组-vehicle-groups)
+    - [车辆部件 (Vehicle Parts)](#车辆部件-vehicle-parts)
+      - [符号和变种](#符号和变种)
+      - [以下可选字段仅适用于CARGO部件。](#以下可选字段仅适用于cargo部件)
+      - [The following optional fields are specific to ENGINEs.(以下可选字段专用于ENGINEs。)](#the-following-optional-fields-are-specific-to-engines以下可选字段专用于engines)
       - [The following optional fields are specific to WHEELs.](#the-following-optional-fields-are-specific-to-wheels)
       - [The following optional fields are specific to ROTORs.](#the-following-optional-fields-are-specific-to-rotors)
       - [The following optional fields are specific to WORKBENCHes.](#the-following-optional-fields-are-specific-to-workbenches)
@@ -116,7 +116,7 @@ Use the `Home` key to return to the top.
     - [Armor](#armor)
       - [Armor Portion Data](#armor-portion-data)
         - [Encumbrance](#encumbrance)
-        - [Encumbrance_modifiers](#encumbrance_modifiers)
+        - [Encumbrance\_modifiers](#encumbrance_modifiers)
         - [Coverage](#coverage)
         - [Covers](#covers)
         - [Specifically Covers](#specifically-covers)
@@ -188,8 +188,8 @@ Use the `Home` key to return to the top.
       - [`roof`](#roof)
     - [Common To Furniture And Terrain](#common-to-furniture-and-terrain)
       - [`id`](#id-1)
-      - [`name`](#name-1)
-      - [`flags`](#flags-1)
+      - [`name`](#name)
+      - [`flags`](#flags)
       - [`connect_groups`](#connect_groups)
         - [Connection groups](#connection-groups)
       - [`connects_to`](#connects_to)
@@ -215,40 +215,40 @@ Use the `Home` key to return to the top.
         - [`destroy_only`](#destroy_only)
         - [`bash_below`](#bash_below)
         - [`tent_centers`, `collapse_radius`](#tent_centers-collapse_radius)
-        - [`items`](#items-1)
+        - [`items`](#items)
       - [`map_deconstruct_info`](#map_deconstruct_info)
         - [`furn_set`, `ter_set`](#furn_set-ter_set-1)
-        - [`items`](#items-2)
+        - [`items`](#items-1)
       - [`plant_data`](#plant_data-1)
         - [`transform`](#transform)
         - [`emissions`](#emissions)
         - [`base`](#base)
         - [`growth_multiplier`](#growth_multiplier)
         - [`harvest_multiplier`](#harvest_multiplier)
-    - [clothing_mod](#clothing_mod)
+    - [clothing\_mod](#clothing_mod)
 - [Scenarios](#scenarios)
-  - [`description`](#description-1)
-  - [`name`](#name-2)
-  - [`points`](#points-1)
-  - [`items`](#items-3)
-  - [`flags`](#flags-2)
+  - [`description`](#description)
+  - [`name`](#name-1)
+  - [`points`](#points)
+  - [`items`](#items-2)
+  - [`flags`](#flags-1)
   - [`cbms`](#cbms-1)
   - [`traits`, `forced_traits`, `forbidden_traits`](#traits-forced_traits-forbidden_traits)
   - [`allowed_locs`](#allowed_locs)
   - [`start_name`](#start_name)
   - [`professions`](#professions)
   - [`map_special`](#map_special)
-  - [`requirement`](#requirement-1)
+  - [`requirement`](#requirement)
   - [`eocs`](#eocs)
-  - [`missions`](#missions-1)
+  - [`missions`](#missions)
   - [`custom_initial_date`](#custom_initial_date)
 - [Starting locations](#starting-locations)
-  - [`name`](#name-3)
-  - [`terrain`](#terrain)
+  - [`name`](#name-2)
+  - [`terrain`](#terrain-1)
   - [`city_sizes`](#city_sizes)
   - [`city_distance`](#city_distance)
   - [`allowed_z_levels`](#allowed_z_levels)
-  - [`flags`](#flags-3)
+  - [`flags`](#flags-2)
 - [Mutation overlay ordering](#mutation-overlay-ordering)
   - [`id`](#id-2)
   - [`order`](#order)
@@ -264,16 +264,16 @@ Use the `Home` key to return to the top.
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# Introduction
-This document describes the contents of the json files used in Cataclysm: Dark Days Ahead. You are probably reading this if you want to add or change content of Cataclysm: Dark Days Ahead and need to learn more about what to find where and what each file and property does.
+# Introduction（介绍）
 
-## Overall structure
-The game data is distributed amongst many JSON files in `data`.  Most of the
-core game data is in `data/json`, with mod data in `data/mods`.  There is also
-some in other subdirectories of `data`, but you are less likely to be interested
-in those.
+这份文档描述了 Cataclysm: Dark Days Ahead 中使用的 json 文件的内容。如果你想添加或修改 Cataclysm: Dark Days Ahead 的内容，并且需要了解更多关于在哪里找到什么，以及每个文件和属性的作用，那么你可能正在阅读这份文档。
 
-Each JSON file is a list of JSON objects
+## Overall structure（总体结构）
+
+游戏数据分布在`data`中的许多 JSON 文件中。大部分核心游戏数据在`data/json`中，模组数据在`data/mods`中。还有一些在`data`的其他子目录中，但你不太可能对那些感兴趣。
+
+每个 JSON 文件都是一个 JSON 对象列表
+
 ```json
 [
   {
@@ -285,57 +285,35 @@ Each JSON file is a list of JSON objects
 ]
 ```
 
-Each object must have a `"type"` member that tells the game how to interpret
-that object.  For example, crafting recipes have `"type": "recipe"`, vehicle
-parts have `"type": "vehicle_part"`, and so on.  Note that items are a little
-unusual; there are multiple types which can be used to define an item.  See
-[the item documentation](#datajsonitems-jsons) for more details.
+每个对象必须具有一个`"type"`成员，用于告诉游戏如何解释该对象。例如，制作配方具有`"type": "recipe"`，车辆部件具有`"type": "vehicle_part"`，依此类推。请注意，物品有点不寻常；可以使用多种类型来定义物品。有关更多详细信息，请参阅[物品文档](#datajsonitems-jsons)。
 
-Each of these types is documented separately, either below or in other
-documentation which should be linked from below (doubtless a few have been
-missed; feel free to file bugs for missing documentation).
+每种类型都有单独的文档，可以在下面或从下面链接的其他文档中找到（无疑有一些遗漏的；请随时报告缺失的文档）。
 
-The documentation is organized by file, because objects of the same type tend
-to be defined together in one file or a collection of co-located files.
-However, the game does not enforce this convention and in practice you could
-define a JSON object of any type in any file.  If you were writing a small mod
-it might be reasonable to simply put all your JSON in a single file and that
-would be fine.
+文档按文件组织，因为相同类型的对象往往在一个文件或一组相邻文件中共同定义。然而，游戏并不强制实行这种约定，实际上您可以在任何文件中定义任何类型的 JSON 对象。如果您编写一个小型 mod，将所有 JSON 放在一个文件中也是可以的。
 
-There are a few cases where certain objects must be loaded before other objects
-and the names of the files defining those objects will affect the [loading
-order](JSON_LOADING_ORDER.md); sticking to established convention should avoid
-that issue.
+有一些情况，其中某些对象必须在其他对象之前加载，定义这些对象的文件名会影响[加载顺序](JSON_LOADING_ORDER.md)；遵循既定的约定应该可以避免这个问题。
 
-There are a few features that most types of JSON object have in common.  Those
-common features are documented in the next section.
+大多数类型的 JSON 对象都有一些共同的特性。这些通用特性将在下一节中详细介绍。
 
-## Common properties
+## Common properties (通用属性)
 
-For most types, every object of that type must have a unique id.  That id is
-typically defined by the `"id"` field.  For example:
+对于大多数类型，每个该类型的对象都必须具有唯一的 id。这个 id 通常由`"id"`字段定义。例如：
 
 ```json
-  {
-    "type": "skill",
-    "id": "barter",
-    "name": { "str": "bartering" },
-    "description": "…",
-    "display_category": "display_social"
-  }
+{
+  "type": "skill",
+  "id": "barter",
+  "name": { "str": "bartering" },
+  "description": "…",
+  "display_category": "display_social"
+}
 ```
 
-This defines a skill with id `barter`.
+这定义了一个 id 为`barter`的技能。
 
-### `"copy-from"` and `"abstract"`
+### `"copy-from"` and `"abstract"`（“copy-from”和“abstract”）
 
-Sometimes you want to define an object which is similar to another object,  or
-a collection of similar objects.  In most cases you can achieve this with
-`"copy-from"`, specifying the id of the object you wish to copy.  For example,
-the definition of a harvested pine tree copies `t_tree_pine` (the unharvested
-pine tree) and then specifies only a few properties.  Other properties (such as
-the fact that it's impassable, flammable, etc.) are inherited from
-`t_tree_pine`.
+有时您想定义一个与另一个对象类似的对象，或一组类似的对象。在大多数情况下，您可以通过`"copy-from"`实现这一点，指定要复制的对象的 id。例如，收获松树的定义会复制`t_tree_pine`（未收获的松树），然后只指定几个属性。其他属性（例如它是不可通行的、易燃的等）都是从`t_tree_pine`继承的。
 
 ```json
   {
@@ -343,21 +321,18 @@ the fact that it's impassable, flammable, etc.) are inherited from
     "id": "t_tree_pine_harvested",
     "copy-from": "t_tree_pine",
     "name": "pine tree",
-    "description": "A towering coniferous tree that belongs to the 'Pinus' genus, with the New England species varying from 'P. strobus', 'P. resinosa' and 'P. rigida'.  Some of the branches have been stripped away and many of the pinecones aren't developed fully yet, but given a season, it could be harvestable again.",
+    "description": "一棵属于'Pinus'属的高大针叶树，新英格兰地区的品种从'P. strobus'，'P. resinosa'和'P. rigida'中变化。树枝上已经有些被剥离，许多松果还没有完全发育，但经过一个季节，它可能又可以收获了。",
     "symbol": "4",
     "color": "brown",
     "looks_like": "t_tree_deadpine",
     "transforms_into": "t_tree_pine",
     "examine_action": "harvested_plant"
-  },
+  },ss
 ```
 
-Sometimes you might want define a collection of objects which are similar, but
-there is no obvious single object that the others should copy.  In this case,
-you can create a special, *abstract* object and have all the others copy it.
+有时，您可能希望定义一组相似的对象，但没有明显的单个对象应该被其他对象复制。在这种情况下，您可以创建一个特殊的*抽象*对象，并让所有其他对象复制它。
 
-An abstract object specifies its id via the `"abstract"` field rather than
-`"id"`.  For example, here is the abstract vehicle alternator:
+抽象对象通过`"abstract"`字段而不是`"id"`字段指定其 id。例如，这是抽象的汽车发电机：
 
 ```json
   {
@@ -371,71 +346,69 @@ An abstract object specifies its id via the `"abstract"` field rather than
   },
 ```
 
-All vehicle alternator definitions use `"copy-from": "vehicle_alternator"` to
-inherit these common properties, but because `vehicle_alternator` is an
-abstract object, it does not appear in the game as a real vehicle part you can
-install.
+所有车辆发电机定义都使用`"copy-from": "vehicle_alternator"`来
+继承这些通用属性，但是因为`vehicle_alternator`是一个
+抽象对象，所以它不会以一个真实的车辆部件的形式出现在游戏中供你
+安装。
 
-When using `"copy-from"`, you can define fields that were also defined in the
-object you are copying, and the new value will override the old.  However,
-sometimes you want to change the value in the copied object without overriding
-it entirely; there is support for that.  See the [JSON
-inheritance](JSON_INHERITANCE.md) documentation for details.
+当使用`"copy-from"`时，您可以定义在复制的
+对象中也定义过的字段，新值将覆盖旧值。然而，
+有时您希望更改复制对象中的值，而不是完全覆盖
+它；这是有支持的。详见 [JSON
+继承](JSON_INHERITANCE.md) 文档。
 
-`"copy-from"` also implies `"looks_like"` connection, so you don't have
-to specify the id multiple times.
+`"copy-from"`还暗示了`"looks_like"`连接，所以您不必
+多次指定 id。
 
+# Navigating the JSON (在 JSON 中导航)
 
-# Navigating the JSON
-A lot of the JSON involves cross-references to other JSON entities.  To make it easier to navigate, we provide a script `tools/json_tools/cddatags.py` that can build a `tags` file for you.  This enables you to jump to the definition of an object given its id.
+很多 JSON 都涉及到与其他 JSON 实体的交叉引用。为了使导航更容易，我们提供了一个脚本 `tools/json_tools/cddatags.py`，可以为您生成一个 `tags` 文件。这使您可以跳转到给定 id 的对象定义。
 
-To run the script you'll need Python 3.  On Windows you'll probably need to install that, and associate `.py` files with Python.  Then open a command prompt, navigate to your CDDA folder, and run `tools\json_tools\cddatags.py`.
+要运行脚本，您需要 Python 3。在 Windows 上，您可能需要安装 Python，并将 `.py` 文件与 Python 关联。然后打开命令提示符，导航到您的 CDDA 文件夹，运行 `tools\json_tools\cddatags.py`。
 
-To use this feature your editor will need [ctags support](http://ctags.sourceforge.net/).  When that's working you should be able to easily jump to the definition of any entity.  For example, by positioning your cursor over an id and hitting the appropriate key combination.
+要使用此功能，您的编辑器需要[ctags 支持 ↗](http://ctags.sourceforge.net/)。当这个功能正常工作时，您应该能够轻松地跳转到任何实体的定义。例如，将光标放在 id 上并按下相应的组合键。
 
-* In Vim, this feature exists by default, and you can jump to a definition using [`^]`](http://vimdoc.sourceforge.net/htmldoc/tagsrch.html#tagsrch.txt).
-* In Notepad++ go to "Plugins" -> "Plugins Admin" and enable the "TagLEET" plugin.  Then select any id and press Alt+Space to open the references window.
+- 在 Vim 中，此功能默认存在，您可以使用 [`^]`]([http://vimdoc.sourceforge.net/htmldoc/tagsrch.html#tagsrch.txt) ↗](http://vimdoc.sourceforge.net/htmldoc/tagsrch.html#tagsrch.txt)) 跳转到定义。
+- 在 Notepad++ 中，转到 "Plugins" -> "Plugins Admin" 并启用 "TagLEET" 插件。然后选择任何 id 并按 Alt+Space 打开引用窗口。
 
-# Common field types
-This section describes some common features of formatting values in CDDA JSON files.
+# Common field types (常见字段类型)
 
-## Units
+本节描述了在 CDDA JSON 文件中格式化值的一些常见特性。
 
-Most values which represent physical quantities (length, volume, time, etc.)
-are given as a string with a numerical value and an abbreviation of the unit,
-separated with a space.  Generally we use SI units and try to stick to the
-conventional SI abbreviations.  For example, a volume of 3 liters would be
-defined as `"3 L"`.
+## Units (单位)
 
-### Time duration
+大多数表示物理量（长度、体积、时间等）的值都是用数值和单位的缩写组成的字符串表示，中间用空格隔开。通常我们使用国际单位制（SI）并尽量遵循传统的 SI 缩写。例如，一个体积为 3 升的值应定义为 `"3 L"`。
 
-A string containing one or more pairs of number and time duration unit. Number and unit, as well as each pair, can be separated by an arbitrary amount of spaces.
-Available units:
-- "hours", "hour", "h" - one hour
-- "days", "day", "d" - one day
-- "minutes", "minute", "m" - one minute
-- "turns", "turn", "t" - one turn,
+### Time duration (时间持续)
 
-Examples:
-- " +1 day -23 hours 50m " `(1*24*60 - 23*60 + 50 == 110 minutes)`
-- "1 turn 1 minutes 9 turns" (1 minute and 10 seconds because 1 turn is 1 second)
+一个包含一个或多个数字与时间持续单位配对的字符串。数字和单位以及每对之间可以用任意数量的空格分隔。
+可用单位：
 
-## Translatable strings
+- "hours", "hour", "h" - 一小时
+- "days", "day", "d" - 一天
+- "minutes", "minute", "m" - 一分钟
+- "turns", "turn", "t" - 一回合，
 
-Some json strings are extracted for translation, for example item names, descriptions, etc. The exact extraction is handled in `lang/extract_json_strings.py`. Apart from the obvious way of writing a string without translation context, the string can also have an optional translation context (and sometimes a plural form), by writing it like:
+示例：
+
+- " +1 day -23 hours 50m " `(1*24*60 - 23*60 + 50 == 110 分钟)`
+- "1 turn 1 minutes 9 turns" (1 分钟 10 秒，因为 1 回合是 1 秒)
+
+## Translatable strings (可翻译字符串)
+
+某些 json 字符串会被提取出来进行翻译，例如物品名称、描述等。具体的提取操作在 `lang/extract_json_strings.py` 中进行。除了明显的没有翻译上下文的字符串写法外，字符串还可以有可选的翻译上下文（有时还有复数形式），写法如下：
 
 ```JSON
 "name": { "ctxt": "foo", "str": "bar", "str_pl": "baz" }
 ```
 
-or, if the plural form is the same as the singular form:
+或者，如果复数形式与单数形式相同：
 
 ```JSON
 "name": { "ctxt": "foo", "str_sp": "foo" }
 ```
 
-You can also add comments for translators by adding a "//~" entry like below. The
-order of the entries does not matter.
+您还可以通过添加 "//~" 条目来为翻译者添加注释，如下所示。条目的顺序无关紧要。
 
 ```JSON
 "name": {
@@ -444,154 +417,153 @@ order of the entries does not matter.
 }
 ```
 
-Currently, only some JSON values support this syntax (see [here](/doc/TRANSLATING.md#translation) for a list of supported values and more detailed explanation).
+目前，只有部分 JSON 值支持此语法（参见[这里](/doc/TRANSLATING.md#translation)以获取支持值的列表和更详细的解释）。
 
-## Comments
+## Comments (注释)
 
-JSON has no intrinsic support for comments.  However, by convention in CDDA
-JSON, any field starting with `//` is a comment.
-
-```json
-{
-  "//" : "comment"
-}
-```
-
-If you want multiple comments in a single object then append a number to `//`.
-For example:
+JSON 本身不支持注释。然而，在 CDDA JSON 中，按照惯例，任何以`//`开头的字段都是注释。
 
 ```json
 {
-  "//" : "comment",
-  "//1" : "another comment",
-  "//2" : "yet another comment"
+  "//": "comment (注释)"
 }
 ```
 
-# File descriptions
-Here's a quick summary of what each of the JSON files contain, broken down by folder. This list is not comprehensive, but covers the broad strokes.
+如果你想在一个对象中放置多个注释，那么在`//`后面附加一个数字。例如：
+
+```json
+{
+  "//": "comment (注释)",
+  "//1": "another comment (另一个注释)",
+  "//2": "yet another comment (还有一个注释)"
+}
+```
+
+# File descriptions (文件描述)
+
+这里是对每个 JSON 文件包含的内容的快速概述，按文件夹划分。此列表并非详尽无遗，但涵盖了大部分内容。
 
 ## `data/json/`
 
-| Filename                      | Description
-|---                            |---
-| `achievements.json`           | achievements
-| `anatomy.json`                | a listing of player body parts - do not edit
-| `ascii_arts.json`             | ascii arts for item descriptions
-| `bionics.json`                | bionics, does NOT include bionic effects
-| `body_parts.json`             | an expansion of anatomy.json - do not edit
-| `clothing_mods.json`          | definition of clothing mods
-| `conducts.json`               | conducts
-| `connect_groups.json`         | definition of terrain and furniture connect groups
-| `construction.json`           | definition of construction menu tasks
-| `default_blacklist.json`      | a standard blacklist of joke monsters
-| `doll_speech.json`            | talking doll speech messages
-| `dreams.json`                 | dream text and linked mutation categories
-| `disease.json`                | disease definitions
-| `effects.json`                | common effects and their effects
-| `emit.json`                   | smoke and gas emissions
-| `flags.json`                  | common flags and their descriptions
-| `furniture.json`              | furniture, and features treated like furniture
-| `game_balance.json`           | various options to tweak game balance
-| `gates.json`                  | gate terrain definitions
-| `harvest.json`                | item drops for butchering corpses
-| `health_msgs.json`            | messages displayed when the player wakes
-| `item_actions.json`           | descriptions of standard item actions
-| `item_category.json`          | item categories and their default sort
-| `item_groups.json`            | item spawn groups
-| `lab_notes.json`              | lab computer messages
-| `martialarts.json`            | martial arts styles and buffs
-| `materials.json`              | material types
-| `monster_attacks.json`        | monster attacks
-| `monster_drops.json`          | monster item drops on death
-| `monster_factions.json`       | monster factions
-| `monstergroups.json`          | monster spawn groups
-| `monstergroups_egg.json`      | monster spawn groups from eggs
-| `monsters.json`               | monster descriptions, mostly zombies
-| `morale_types.json`           | morale modifier messages
-| `mutation_category.json`      | messages for mutation categories
-| `mutation_ordering.json`      | draw order for mutation and CBM overlays in tiles mode
-| `mutations.json`              | traits/mutations
-| `names.json`                  | names used for NPC/player name generation
-| `overmap_connections.json`    | connections for roads and tunnels in the overmap
-| `overmap_terrain.json`        | overmap terrain
-| `player_activities.json`      | player activities
-| `professions.json`            | profession definitions
-| `recipes.json`                | crafting/disassembly recipes
-| `regional_map_settings.json`  | settings for the entire map generation
-| `road_vehicles.json`          | vehicle spawn information for roads
-| `rotatable_symbols.json`      | rotatable symbols - do not edit
-| `scent_types.json`            | type of scent available
-| `scores.json`                 | scores
-| `skills.json`                 | skill descriptions and ID's
-| `snippets.json`               | flier/poster descriptions
-| `species.json`                | monster species
-| `speed_descripton.json`       | monster speed description
-| `speech.json`                 | monster vocalizations
-| `statistics.json`             | statistics and transformations used to define scores and achievements
-| `start_locations.json`        | starting locations for scenarios
-| `techniques.json`             | generic for items and martial arts
-| `terrain.json`                | terrain types and definitions
-| `test_regions.json`           | test regions
-| `tips.json`                   | tips of the day
-| `tool_qualities.json`         | standard tool qualities and their actions
-| `traps.json`                  | standard traps
-| `tutorial.json`               | messages for the tutorial (that is out of date)
-| `vehicle_groups.json`         | vehicle spawn groups
-| `vehicle_parts.json`          | vehicle parts, does NOT affect flag effects
-| `vitamin.json`                | vitamins and their deficiencies
+| Filename                     | Description                           |
+| ---------------------------- | ------------------------------------- |
+| `achievements.json`          | 成就                                  |
+| `anatomy.json`               | 玩家身体部位列表 - 请勿修改           |
+| `ascii_arts.json`            | 物品描述的 ASCII 艺术                 |
+| `bionics.json`               | 仿生学, 不包括仿生效果                |
+| `body_parts.json`            | anatomy.json 的扩展 - 请勿修改        |
+| `clothing_mods.json`         | 服装改造的定义                        |
+| `conducts.json`              | 行为准则                              |
+| `connect_groups.json`        | 地形和家具连接组的定义                |
+| `construction.json`          | 建筑菜单任务的定义                    |
+| `default_blacklist.json`     | 恶作剧怪物的标准黑名单                |
+| `doll_speech.json`           | 说话玩偶的语言信息                    |
+| `dreams.json`                | 梦境文本与关联突变类别                |
+| `disease.json`               | 疾病定义                              |
+| `effects.json`               | 常见效果及其影响                      |
+| `emit.json`                  | 烟雾和气体排放                        |
+| `flags.json`                 | 常见标志及其描述                      |
+| `furniture.json`             | 家具及被视为家具的特征                |
+| `game_balance.json`          | 调整游戏平衡的各种选项                |
+| `gates.json`                 | 门的地形定义                          |
+| `harvest.json`               | 屠宰尸体时的物品掉落                  |
+| `health_msgs.json`           | 玩家醒来时显示的消息                  |
+| `item_actions.json`          | 标准物品操作的描述                    |
+| `item_category.json`         | 物品类别及其默认排序                  |
+| `item_groups.json`           | 物品生成组                            |
+| `lab_notes.json`             | 实验室电脑信息                        |
+| `martialarts.json`           | 武术风格和增益                        |
+| `materials.json`             | 材料类型                              |
+| `monster_attacks.json`       | 怪物攻击                              |
+| `monster_drops.json`         | 怪物死亡时的物品掉落                  |
+| `monster_factions.json`      | 怪物派系                              |
+| `monstergroups.json`         | 怪物生成组                            |
+| `monstergroups_egg.json`     | 蛋孵化的怪物生成组                    |
+| `monsters.json`              | 怪物描述，主要是僵尸                  |
+| `morale_types.json`          | 情绪修正信息                          |
+| `mutation_category.json`     | 变异类别信息                          |
+| `mutation_ordering.json`     | 瓷砖模式下变异和 CBM 覆盖层的绘制顺序 |
+| `mutations.json`             | 特征/变异                             |
+| `names.json`                 | 用于 NPC/玩家名字生成的名称           |
+| `overmap_connections.json`   | 大地图中的道路和隧道连接              |
+| `overmap_terrain.json`       | 大地图地形                            |
+| `player_activities.json`     | 玩家活动                              |
+| `professions.json`           | 职业定义                              |
+| `recipes.json`               | 制作/拆解配方                         |
+| `regional_map_settings.json` | 整个地图生成的设置                    |
+| `road_vehicles.json`         | 道路上的车辆生成信息                  |
+| `rotatable_symbols.json`     | 可旋转符号 - 请勿编辑                 |
+| `scent_types.json`           | 可用气味类型                          |
+| `scores.json`                | 分数                                  |
+| `skills.json`                | 技能描述和 ID                         |
+| `snippets.json`              | 传单/海报描述                         |
+| `species.json`               | 怪物种类                              |
+| `speed_descripton.json`      | 怪物速度描述                          |
+| `speech.json`                | 怪物发声                              |
+| `statistics.json`            | 用于定义分数和成就的统计数据和转换    |
+| `start_locations.json`       | 情景的起始位置                        |
+| `techniques.json`            | 物品和武术通用技巧                    |
+| `terrain.json`               | 地形类型和定义                        |
+| `test_regions.json`          | 测试区域                              |
+| `tips.json`                  | 每日提示                              |
+| `tool_qualities.json`        | 标准工具质量及其操作                  |
+| `traps.json`                 | 标准陷阱                              |
+| `tutorial.json`              | 教程信息（已过时）                    |
+| `vehicle_groups.json`        | 车辆生成组                            |
+| `vehicle_parts.json`         | 车辆零件，不影响旗帜效果              |
+| `vitamin.json`               | 维生素及其缺乏症                      |
 
-selected subfolders
+选定的子文件夹
 
 ## `data/json/items/`
 
-See below for specifics on the various items
+有关各种物品的详细信息，请参阅下文：
 
-| Filename                       | Description
-|---                             |---
-| `ammo.json`                    | common base components like batteries and marbles
-| `ammo_types.json`              | standard ammo types by gun
-| `archery.json`                 | bows and arrows
-| `armor.json`                   | armor and clothing
-| `bionics.json`                 | Compact Bionic Modules (CBMs)
-| `biosignatures.json`           | animal waste
-| `books.json`                   | books
-| `chemicals_and_resources.json` | chemical precursors
-| `comestibles.json`             | food/drinks
-| `containers.json`              | containers
-| `crossbows.json`               | crossbows and bolts
-| `fake.json`                    | fake items for bionics or mutations
-| `fuel.json`                    | liquid fuels
-| `grenades.json`                | grenades and throwable explosives
-| `handloaded_bullets.json`      | random ammo
-| `melee.json`                   | melee weapons
-| `newspaper.json`               | flyers, newspapers, and survivor notes. `snippets.json` for messages
-| `ranged.json`                  | guns
-| `software.json`                | software for SD-cards and USB sticks
-| `tool_armor.json`              | clothes and armor that can be (a)ctivated
-| `toolmod.json`                 | modifications of tools
-| `tools.json`                   | tools and items that can be (a)ctivated
-| `vehicle_parts.json`           | components of vehicles when they aren't on the vehicle
+| Filename                       | Description                                     |
+| ------------------------------ | ----------------------------------------------- |
+| `ammo.json`                    | 常见的基础组件，如电池和弹珠                    |
+| `ammo_types.json`              | 标准枪支类型对应的弹药类型                      |
+| `archery.json`                 | 弓和箭                                          |
+| `armor.json`                   | 护甲和服装                                      |
+| `bionics.json`                 | 紧凑型仿生模块（CBMs）                          |
+| `biosignatures.json`           | 动物废物                                        |
+| `books.json`                   | 书籍                                            |
+| `chemicals_and_resources.json` | 化学前体                                        |
+| `comestibles.json`             | 食物/饮料                                       |
+| `containers.json`              | 容器                                            |
+| `crossbows.json`               | 十字弩和弩箭                                    |
+| `fake.json`                    | 用于仿生器或突变的虚拟物品                      |
+| `fuel.json`                    | 液体燃料                                        |
+| `grenades.json`                | 手榴弹和可投掷的爆炸物                          |
+| `handloaded_bullets.json`      | 随机弹药                                        |
+| `melee.json`                   | 近战武器                                        |
+| `newspaper.json`               | 传单、报纸和幸存者便条。`snippets.json`用于消息 |
+| `ranged.json`                  | 枪械                                            |
+| `software.json`                | 用于 SD 卡和 USB 闪存盘的软件                   |
+| `tool_armor.json`              | 可以(激活)a 的衣物和护甲                        |
+| `toolmod.json`                 | 工具的修改部件                                  |
+| `tools.json`                   | 可以(激活)a 的工具和物品                        |
+| `vehicle_parts.json`           | 脱离车辆后的车辆组件                            |
 
 ### `data/json/items/comestibles/`
 
 ## `data/json/requirements/`
 
-Standard components and tools for crafting (See [Recipe requirements](#recipe-requirements))
+标准组件和工具用于制作（请参阅[配方要求](#recipe-requirements-配方要求)）
 
-| Filename                     | Description
-|---                           |---
-| `ammo.json`                  | ammo components
-| `cooking_components.json`    | common ingredient sets
-| `cooking_requirements.json`  | cooking tools and heat sources
-| `materials.json`             | thread, fabric, and other basic materials
-| `toolsets.json`              | sets of tools commonly used together
-| `uncraft.json`               | common results of taking stuff apart
-| `vehicle.json`               | tools to work on vehicles
+| 文件名                      | 描述                   |
+| --------------------------- | ---------------------- |
+| `ammo.json`                 | 弹药组件               |
+| `cooking_components.json`   | 常见原料集合           |
+| `cooking_requirements.json` | 烹饪工具和热源         |
+| `materials.json`            | 线、布料和其他基本材料 |
+| `toolsets.json`             | 常用工具组合           |
+| `uncraft.json`              | 拆解物品的常见结果     |
+| `vehicle.json`              | 用于维修车辆的工具     |
 
 ## `data/json/vehicles/`
 
-Groups of vehicle definitions with self-explanatory names of files:
+具有自解释文件名的车辆定义组：
 
 | Filename
 |---
@@ -610,18 +582,18 @@ Groups of vehicle definitions with self-explanatory names of files:
 | `vans_busses.json`
 | `vehicles.json`
 
-# Description and content of each JSON file
-This section describes each json file and their contents. Each json has their own unique properties that are not shared with other Json files (for example 'chapters' property used in books does not apply to armor). This will make sure properties are only described and used within the context of the appropriate JSON file.
+# Description and content of each JSON file (每个 JSON 文件的描述和内容)
 
+本节描述了每个 json 文件及其内容。每个 json 都有自己独特的属性，这些属性与其他 Json 文件不共享（例如，用于书籍的'chapters'属性不适用于护甲）。这将确保属性仅在适当的 JSON 文件上下文中被描述和使用。
 
 ## `data/json/` JSONs
 
 ### Ascii_arts
 
-| Identifier | Description
-|---         |---
-| `id`       | Unique ID. Must be one continuous word, use underscores if necessary.
-| `picture`  | Array of string, each entry is a line of an ascii picture and must be at most 41 columns long. \ have to be replaced by \\\ in order to be visible.
+| 标识符    | 描述                                                                                       |
+| --------- | ------------------------------------------------------------------------------------------ |
+| `id`      | 唯一 ID。必须是一个连续的单词，如有必要，请使用下划线。                                    |
+| `picture` | 字符串数组，每个条目都是一个 ascii 图片的行，每行最多 41 列长。\ 必须替换为 \\\ 才能显示。 |
 
 ```C++
   {
@@ -645,11 +617,12 @@ This section describes each json file and their contents. Each json has their ow
     ]
   }
 ```
-For information about tools with option to export ASCII art in format ready to be pasted into `ascii_arts.json`, see [ASCII_ARTS.md](ASCII_ARTS.md).
 
-### Addiction types
+关于可以导出 ASCII 艺术格式并粘贴到 `ascii_arts.json` 的工具的信息，请参阅[ASCII_ARTS.md](ASCII_ARTS.md)。
 
-Addictions are defined in JSON using `"addiction_type"`:
+### ### Addiction types(成瘾类型)
+
+成瘾是用 JSON 定义的，使用 `"addiction_type"`：
 
 ```JSON
 {
@@ -663,16 +636,16 @@ Addictions are defined in JSON using `"addiction_type"`:
 }
 ```
 
-| Field                   | Description
-|---                      |---
-| `"name"`                | The name of the addiction's effect as it appears in the player's status
-| `"type_name"`           | The name of the addiction's source
-| `"description"`         | Description of the addiction's effects as it appears in the player's status
-| `"craving_morale"`      | ID of the `morale_type` penalty
-| `"effect_on_condition"` | ID of the `effect_on_condition` (can also be an inline EOC) which activates on each `update_body` (aka every turn)
-| `"builtin"`             | *(for legacy addiction code)* Name of a hardcoded function to process the addiction's effect. For new addictions, use `"effect_on_condition"` instead.
+| 字段                    | 描述                                                                                            |
+| ----------------------- | ----------------------------------------------------------------------------------------------- |
+| `"name"`                | 玩家状态中上瘾效果的名称                                                                        |
+| `"type_name"`           | 上瘾来源的名称                                                                                  |
+| `"description"`         | 玩家状态中上瘾效果的描述                                                                        |
+| `"craving_morale"`      | `morale_type` 惩罚的 ID                                                                         |
+| `"effect_on_condition"` | 每个 `update_body` (即每回合)激活的 `effect_on_condition` 的 ID（也可以是内联 EOC）             |
+| `"builtin"`             | (用于传统上瘾代码) 用于处理上瘾效果的硬编码函数名称。对于新上瘾，改用 `"effect_on_condition"`。 |
 
-Each turn, the player's addictions are processed using either the given `effect_on_condition` or `builtin`. These effects usually have a rng condition so that the effect isn't applied constantly every turn. Ex:
+每回合，玩家的上瘾会使用给定的 `effect_on_condition` 或 `builtin` 进行处理。这些效果通常具有 rng 条件，以便效果不会在每个回合都持续应用。例如：
 
 ```JSON
 {
@@ -695,20 +668,20 @@ Each turn, the player's addictions are processed using either the given `effect_
 }
 ```
 
-Current hardcoded builtins:
-- `nicotine_effect`
-- `alcohol_effect`
-- `diazepam_effect`
-- `opiate_effect`
-- `amphetamine_effect`
-- `cocaine_effect`
-- `crack_effect`
+当前硬编码的 builtins:
 
+- `nicotine_effect` 尼古丁效果：尼古丁通常是从烟草产品（如香烟和雪茄）中摄取的。它可能导致提神、放松和降低食欲等作用。
+- `alcohol_effect` 酒精效果：酒精通常是从酒精饮料（如啤酒、葡萄酒和烈酒）中摄取的。它可能导致感觉迟钝、眩晕、失去平衡和说话含糊不清等作用。
+- `diazepam_effect` 地西泮效果：地西泮是一种抗焦虑药物，通常用于治疗焦虑、紧张和抑郁等症状。它可能导致镇静、放松和嗜睡等作用。
+- `opiate_effect` 鸦片类效果：鸦片类药物包括吗啡、海洛因和处方止痛药。它们通常用于治疗剧烈疼痛。这种效果可能导致欣快感、缓解疼痛和嗜睡等作用。
+- `amphetamine_effect` 安非他命效果：安非他命是一种刺激剂，通常用于治疗注意力缺陷多动障碍（ADHD）和类似症状。它可能导致提神、警觉和心跳加速等作用。
+- `cocaine_effect` 可卡因效果：可卡因是一种强烈的刺激剂，通常会导致精神亢奋、自信和警觉等作用。
+- `crack_effect` 烟碱效果：烟碱是一种可卡因的研磨和加工形式，通常吸入后产生强烈的兴奋作用。它可能导致剧烈的欣快感和精神亢奋等作用。
 
-### Body Graphs
+### Body Graphs (身体图谱)
 
-Body graphs are displayed in the body status menu, accessible by pressing `s` on the player's @-screen.
-These are interactive graphs that highlight different body parts or sub body parts.
+身体图谱会显示在身体状态菜单中，通过在玩家的 @-屏幕上按 `s` 键即可访问。
+这些是可交互的图表，可以突显不同的身体部位或子身体部位。
 
 ```JSON
 {
@@ -754,107 +727,101 @@ These are interactive graphs that highlight different body parts or sub body par
 }
 ```
 
-| Field             | description
-|---                |---
-| `type`            | Always `body_graph`.
-| `id`              | String uniquely identifying this graph.
-| `parent_bodypart` | (_optional_) ID of the parent body part of this graph, if any. Only used to display the current body part as the window's subtitle.
-| `fill_sym`        | (_optional_) Specifies a character to fill all sections of the graph when viewing in-game.
-| `fill_color`      | (_optional_) Specifies a color to use for unselected sections of the graph when viewing in-game.
-| `rows`            | Array of strings that form the graph. The symbols used for each fragment may correspond to an entry in `parts`, which form the sections of the graph. Empty spaces (` `) are ignored for the purposes of filling.
-| `mirror`          | (_optional_) Can be specified instead of `rows`. This takes a string ID referring to a different body_graph, which will be flipped horizontally and used as the rows in this graph (ex: `hand_l` mirrors `hand_r`).
-| `parts`           | A list of symbols present in the graph that correspond to specific body parts or sub body parts.
+| 字段              | 描述                                                                                                                                                           |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `type`            | 始终为 `body_graph`。                                                                                                                                          |
+| `id`              | 唯一标识此图表的字符串。                                                                                                                                       |
+| `parent_bodypart` | （_可选_）此图表的父身体部位的 ID（如果有）。仅用于将当前身体部位显示为窗口的子标题。                                                                          |
+| `fill_sym`        | （_可选_）指定在游戏中查看时填充图表所有部分的字符。                                                                                                           |
+| `fill_color`      | （_可选_）指定在游戏中查看时用于未选定图表部分的颜色。                                                                                                         |
+| `rows`            | 组成图表的字符串数组。用于每个片段的符号可能对应于 `parts` 中的条目，它们构成图表的各个部分。为空格 (` `) 的空位在填充时将被忽略。                             |
+| `mirror`          | （_可选_）可以指定为 `rows` 的替代。这将采用一个字符串 ID，引用不同的 body_graph，该 body_graph 将水平翻转并用作此图表中的行（例如：`hand_l` 镜像 `hand_r`）。 |
+| `parts`           | 图表中存在的与特定身体部位或子身体部位相对应的符号列表。                                                                                                       |
 
-The resolution limit for the `rows` field is 40x20, in order to maintain compatibility with 80x24 terminals.
+`rows` 字段的分辨率限制为 40x20，以保持与 80x24 终端的兼容性。
 
-#### Graph Parts
+#### Graph Parts(图表部分)
 
-The `parts` field can be used to define the interaction with different sections of the graph. Each part should
-reference at least one body part or sub body part.
+`parts` 字段可用于定义与图表不同部分的交互。每个部分至少应引用一个身体部位或子身体部位。
 
-| Field            | description
-|---               |---
-| `body_parts`     | An array of `body_part` IDs that are represented by this graph section.
-| `sub_body_parts` | An array of `sub_body_part` IDs that are represented by this graph section.
-| `sym`            | (_optional_) A symbol to override fragments belonging to this section.
-| `select_color`   | (_optional_) Color to use when selecting this section.
-| `nested_graph`   | (_optional_) ID of another body_graph. When the player selects and confirms this section, the UI switches to the given nested graph.
+| 字段             | 描述                                                              |
+| ---------------- | ----------------------------------------------------------------- |
+| `body_parts`     | 表示此图表部分的一组 `body_part` ID。                             |
+| `sub_body_parts` | 表示此图表部分的一组 `sub_body_part` ID。                         |
+| `sym`            | （_可选_）用于覆盖属于此部分的片段的符号。                        |
+| `select_color`   | （_可选_）选择此部分时使用的颜色。                                |
+| `nested_graph`   | （_可选_）另一个 body_graph 的 ID。当玩家选择并确认此部分时，界面 |
 
+### Body_parts (身体部位)
 
-### Body_parts
-
-| `Identifier`           | Description
-|---                     |---
-| `id`                   | (_mandatory_) Unique ID. Must be one continuous word, use underscores if necessary.
-| `name`                 | (_mandatory_) In-game name displayed.
-| `limb_type`            | (_mandatory_) Type of limb, as defined by `bodypart.h`. Certain functions will check only a given bodypart type for their purposes. Currently implemented types are: `head, torso, sensor, mouth, arm, hand, leg, foot, wing, tail, other`.
-| `limb_types`           | (_optional_) (Can be used instead of `limb_type`) Weighted list of limb types this body part can emulate. The weights are modifiers that determine how good this body part is at acting like the given limb type. (Ex: `[ [ "foot", 1.0 ], [ "hand", 0.15 ] ]`)
-| `secondary_types`      | (_optional_) List of secondary limb types for the bodypart, to include it in relevant calculations.
-| `accusative`           | (_mandatory_) Accusative form for this bodypart.
-| `heading`              | (_mandatory_) How it's displayed in headings.
-| `heading_multiple`     | (_mandatory_) Plural form of heading.  Gets used if opposite bodyparts have the same encumbrance data, health and temperature.
-| `encumbrance_text`     | (_mandatory_) Message printed when the limb reaches 40 encumbrance.
-| `encumbrance_threshold`| (_optional_) Encumbrance value where the limb's scores start scaling based on encumbrance. Default 0, meaning scaling from the first point of encumbrance.
-| `encumbrance_limit`    | (_optional_) When encumbrance reaches or surpasses this value the limb stops contributing its scores. Default 100.
-| `grabbing_effect`      | (_optional_) Effect id of the `GRAB_FILTER` effect to apply to a monster grabbing this limb, necessary for adequate grab removal (see `MONSTER_SPECIAL_ATTACKS.md` for the grab logic). 
-| `hp_bar_ui_text`       | (_mandatory_) How it's displayed next to the hp bar in the panel.
-| `main_part`            | (_mandatory_) What is the main part this one is attached to. (If this is a main part it's attached to itself)
-| `connected_to`         | (_mandatory_ if main_part is itself) What is the next part this one is attached to towards the "root" bodypart (the root bodypart should be connected to itself).  Each anatomy should have a unique root bodypart, usually the head.
-| `base_hp`              | (_mandatory_) The amount of hp this part has before any modification.
-| `opposite_part`        | (_mandatory_) What is the opposite part of this one in case of a pair.
-| `hit_size`             | (_mandatory_) Size of the body part for (melee) attack targeting.  Monster special attacks are capable of targeting set bodypart hitsizes (see `hitsize_min/max` in `MONSTERS.md`).  The character's whole `hitsize sum / base hitsize sum` acts as a denominator of dodge rolls, meaning extra limbs passively make it harder to dodge.
-| `hit_difficulty`       | (_mandatory_) How hard is it to hit a given body part, assuming "owner" is hit. Higher number means good hits will veer towards this part, lower means this part is unlikely to be hit by inaccurate attacks. Formula is `chance *= pow(hit_roll, hit_difficulty)`
-| `drench_capacity`      | (_mandatory_) How wet this part can get before being 100% drenched. 0 makes the limb waterproof, morale checks for absolute wetness while other effects for wetness percentage - making a high `drench_capacity` prevent the penalties longer.
-| `drench_increment`     | (_optional_) Units of "wetness" applied each time the limb gets drenched. Default 2, ignored by diving underwater.
-| `drying_chance`        | (_optional_) Base chance the bodypart will succeed in the drying roll ( `x/80` chance, modified by ambient temperature etc)
-| `drying_increment`     | (_optonal_) Units of wetness the limb will dry each turn, if it succeeds in the drying roll (base chance `drench_capacity / 80`, modified by ambient temperature).
-| `wet_morale`           | (_optional_) Mood bonus/malus when the limb gets wet, representing the morale effect at 100% limb saturation. Modified by worn clothing and ambient temperature.
-| `stylish_bonus`        | (_optional_) Mood bonus associated with wearing fancy clothing on this part. (default: `0`)
-| `hot_morale_mod`       | (_optional_) Mood effect of being too hot on this part. (default: `0`)
-| `cold_morale_mod`      | (_optional_) Mood effect of being too cold on this part. (default: `0`)
-| `squeamish_penalty`    | (_optional_) Mood effect of wearing filthy clothing on this part. (default: `0`)
-| `fire_warmth_bonus`    | (_optional_) How effectively you can warm yourself at a fire with this part. (default: `0`)
-| `temp_mod`             | (_optional array_) Intrinsic temperature modifier of the bodypart.  The first value (in the same "temperature unit" as mutations' `bodytemp_modifier`) is always applied, the second value is applied on top when the bodypart isn't overheated.
-| `env_protection`       | (_optional_) Innate environmental protection of this part. (default: `0`)
-| `stat_hp_mods`         | (_optional_) Values modifying hp_max of this part following this formula: `hp_max += int_mod*int_max + dex_mod*dex_max + str_mod*str_max + per_mod*per_max + health_mod*get_healthy()` with X_max being the unmodified value of the X stat and get_healthy() being the hidden health stat of the character.
-| `heal_bonus`           | (_optional_) Innate amount of HP the bodypart heals every successful healing roll. See the `ALWAYS_HEAL` and `HEAL_OVERRIDE` flags.
-| `mend_rate`            | (_optional_) Innate mending rate of the limb, should it get broken. Default `1.0`, used as a multiplier on the healing factor after other factors are calculated.
-| `health_limit`         | (_optional_) Amount of limb HP necessary for the limb to provide its melee `techniques` and `conditional_flags`.  Defaults to 1, meaning broken limbs don't contribute.
-| `ugliness`             | (_optional_) Ugliness of the part that can be covered up, negatives confer beauty bonuses.
-| `ugliness_mandatory`   | (_optional_) Inherent ugliness that can't be covered up by armor.
-| `bionic_slots`         | (_optional_) How many bionic slots does this part have.
-| `is_limb`              | (_optional_) Is this bodypart a limb and capable of breaking. (default: `false`)
-| `smash_message`        | (_optional_) The message displayed when using that part to smash something.
-| `smash_efficiency`     | (_optional_) Modifier applied to your smashing strength when using this part to smash terrain or furniture unarmed. (default: `0.5`)
-| `flags`                | (_optional_) List of bodypart flags.  These are considered character flags, similar to bionic/trait/effect flags.
-| `conditional_flags`    | (_optional_) List of character flags this limb provides as long as it's above `health_limit` HP.
-| `techniques`           | (_optional_) List of melee techniques granted by this limb as long as it's above its `health_limit` HP.  The chance for the technique to be included in each attack's tech list is dependent on limb encumbrance. ( `!x_in_y(current encumbrance / technique_encumbrance_limit`)
-| `technique_encumbrance_limit` | (_optional_) Level of encumbrance that disables the given techniques for this limb completely, lower encumbrance still reduces the chances of the technique being chosen (see above).
-| `limb_scores`          | (_optional_) List of arrays defining limb scores. Each array contains 2 mandatory values and 1 optional value. Value 1 is a reference to a `limb_score` id. Value 2 is a float defining the limb score's value. (optional) Value 3 is a float defining the limb score's maximum value (mostly just used for manipulator score).
-| `effects_on_hit`       | (_optional_) Array of effects that can apply whenever the limb is damaged.  For details see below.
-| `unarmed_damage`       | (_optional_) An array of objects, each detailing the amount of unarmed damage the bodypart contributes to unarmed attacks and their armor penetration. The unarmed damages of each limb are summed and added to the base unarmed damage. Should be used for limbs the character is expected to *always* attack with, for special attacks use a dedicated technique.
-| `armor`                | (_optional_) An object containing damage resistance values. Ex: `"armor": { "bash": 2, "cut": 1 }`. See [Part Resistance](#part-resistance) for details.
+| `Identifier` (标识符)   | Description (描述)                                                                                                                                                                                                                                |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`                    | （_必填_）唯一 ID。必须是一个连续的单词，如果需要使用下划线。                                                                                                                                                                                     |
+| `name`                  | （_必填_）游戏中显示的名称。                                                                                                                                                                                                                      |
+| `limb_type`             | （_必填_）由 `bodypart.h` 定义的肢体类型。某些功能仅检查特定的 bodypart 类型以达到它们的目的。目前实现的类型有：`head, torso, sensor, mouth, arm, hand, leg, foot, wing, tail, other`。                                                           |
+| `limb_types`            | （_可选_）（可用于替代 `limb_type`）此身体部位可模拟的肢体类型的加权列表。权重是决定此身体部位在扮演给定肢体类型时有多好的修饰符。（例如：`[ [ "foot", 1.0 ], [ "hand", 0.15 ] ]`）                                                               |
+| `secondary_types`       | （_可选_）身体部位的次要肢体类型列表，用于在相关计算中包含它。                                                                                                                                                                                    |
+| `accusative`            | （_必填_）这个 bodypart 的宾格形式。                                                                                                                                                                                                              |
+| `heading`               | （_必填_）在标题中的显示方式。                                                                                                                                                                                                                    |
+| `heading_multiple`      | （_必填_）标题的复数形式。如果相对的身体部位具有相同的负重数据、健康状况和温度，那么会使用它。                                                                                                                                                    |
+| `encumbrance_text`      | （_必填_）当肢体负重达到 40 时打印的信息。                                                                                                                                                                                                        |
+| `encumbrance_threshold` | （_可选_）肢体的分数开始基于负重进行缩放的负重值。默认为 0，表示从第一点负重开始缩放。                                                                                                                                                            |
+| `encumbrance_limit`     | （_可选_）当负重达到或超过此值时，肢体停止贡献其分数。默认为 100。                                                                                                                                                                                |
+| `grabbing_effect`       | （_可选_）要应用于抓取此肢体的怪物的 `GRAB_FILTER` 效果的效果 ID，对于适当的抓取移除是必要的（请参见 `MONSTER_SPECIAL_ATTACKS.md` 中的抓取逻辑）。                                                                                                |
+| `hp_bar_ui_text`        | （_必填_）在面板中与 hp 条相邻的显示方式。                                                                                                                                                                                                        |
+| `main_part`             | （_必填_） 这个部位连接到哪个主要部位（如果这个部位是主要部位，那么它连接到自己）。                                                                                                                                                               |
+| `connected_to`          | (必填 若 main_part 是自身) 这个部位连接到朝向“根”身体部位的下一个部位（根身体部位应该连接到自己）。每个解剖学都应该有一个独特的根身体部位，通常是头部。                                                                                           |
+| `base_hp`               | （_必填_） 此部位在任何修改之前拥有的生命值。                                                                                                                                                                                                     |
+| `opposite_part`         | （_必填_） 在一对中，这个部位的相对部位是什么。                                                                                                                                                                                                   |
+| `hit_size`              | （_必填_） 身体部位在(近战)攻击定向时的大小。怪物特殊攻击能够针对设定的身体部位命中大小（详见 `MONSTERS.md` 的 `hitsize_min/max`）。角色的整个 `命中大小总和 / 基本命中大小总和` 作为躲避滚动的分母，意味着额外的肢体会被动地使躲避变得更加困难。 |
+| `hit_difficulty`        | （_必填_） 假设“所有者”被击中，击中特定身体部位有多困难。较高的数字意味着好的命中会偏向这个部位，较低的数字意味着不准确的攻击不太可能击中这个部位。公式是 `chance *= pow(hit_roll, hit_difficulty)` 。                                            |
+| `drench_capacity`       | （_必填_） 此部位在完全被浸湿前能变得多湿。 0 会使肢体变成防水，士气检查绝对湿度，而其他效果则检查湿度百分比 - 使得高 `drench_capacity` 能更长时间地防止惩罚。                                                                                    |
+| `drench_increment`      | （_可选_） 每次肢体被浸湿时应用的“湿度”单位。默认为 2，潜水时忽略。                                                                                                                                                                               |
+| `drying_chance`         | （_可选_） 身体部位在干燥滚动中成功的基本概率（`x/80` 的概率，受环境温度等因素影响）。                                                                                                                                                            |
+| `drying_increment`      | （_可选_） 如果身体部位在干燥滚动中成功（基本概率为 `drench_capacity / 80`，受环境温度影响），每轮干燥的湿度单位。                                                                                                                                |
+| `wet_morale`            | （_可选_） 肢体变湿时的士气加成/减成，表示在肢体饱和度 100% 时的士气影响。受穿着的衣物和环境温度的影响。                                                                                                                                          |
+| `stylish_bonus`         | （_可选_） 在该部位穿戴时髦衣物所获得的士气加成。 (默认：`0`)                                                                                                                                                                                     |
+| `hot_morale_mod`        | （_可选_） 该部位过热时的士气影响。 (默认：`0`)                                                                                                                                                                                                   |
+| `cold_morale_mod`       | （_可选_） 该部位过冷时的士气影响。 (默认：`0`)                                                                                                                                                                                                   |
+| `squeamish_penalty`     | （_可选_） 在该部位穿着肮脏衣物时的士气影响。 (默认：`0`)                                                                                                                                                                                         |
+| `fire_warmth_bonus`     | （_可选_） 用这个部位在火堆旁取暖的效果如何。 (默认：`0`)                                                                                                                                                                                         |
+| `temp_mod`              | (可选 数组) 身体部位的固有温度调节器。第一个值（与突变的`bodytemp_modifier`相同的“温度单位”）总是被应用，第二个值在身体部位没有过热时被附加在上面。                                                                                               |
+| `env_protection`        | （_可选_） 该部位固有的环境防护。 (默认：`0`)                                                                                                                                                                                                     |
+| `stat_hp_mods`          | (_必填_) 修改此部位的 hp_max 的值，遵循以下公式：`hp_max += int_mod*int_max + dex_mod*dex_max + str_mod*str_max + per_mod*per_max + health_mod*get_healthy()`，其中 X_max 是 X 统计数据的未修改值，get_healthy() 是角色的隐藏健康统计数据。       |
+| `heal_bonus`            | (_必填_) 每次成功治疗滚动时，该部位固有的 HP 恢复量。请参见 `ALWAYS_HEAL` 和 `HEAL_OVERRIDE` 标志。                                                                                                                                               |
+| `mend_rate`             | (_必填_) 如果该肢体断裂，其固有的愈合速率。默认值为 `1.0`，在计算其他因素后作为愈合因子的乘数使用。                                                                                                                                               |
+| `health_limit`          | (_必填_) 肢体必须具备多少 HP，才能提供其近战 `techniques` 和 `conditional_flags`。默认值为 1，意味着断裂的肢体无法提供贡献。                                                                                                                      |
+| `ugliness`              | (_必填_) 可以通过掩盖来改变的部位的丑陋程度，负数值表示美观加成。                                                                                                                                                                                 |
+| `ugliness_mandatory`    | (_必填_) 无法通过护甲掩盖的固有丑陋程度。                                                                                                                                                                                                         |
+| `bionic_slots`          | (_必填_) 该部位具有多少个仿生插槽。                                                                                                                                                                                                               |
+| `is_limb`               | (_必填_) 此部位是否为肢体，是否可能断裂。（默认：`false`）                                                                                                                                                                                        |
+| `smash_message`         | (_必填_) 使用该部位砸东西时显示的消息。                                                                                                                                                                                                           |
 
 ```json
 {
   "id": "arm_l",
   "type": "body_part",
-  "//": "See comments in `body_part_struct::load` of bodypart.cpp about why xxx and xxx_multiple are not inside a single translation object.",
-  "name": "left arm",
-  "name_multiple": "arms",
-  "accusative": { "ctxt": "bodypart_accusative", "str": "left arm" },
-  "accusative_multiple": { "ctxt": "bodypart_accusative", "str": "arms" },
-  "heading": "L. Arm",
-  "heading_multiple": "Arms",
-  "encumbrance_text": "Melee and ranged combat is hampered.",
-  "hp_bar_ui_text": "L ARM",
+  "//": "查看bodypart.cpp中的`body_part_struct::load`中的注释，了解为什么xxx和xxx_multiple不在一个翻译对象内。",
+  "name": "left arm (左臂)",
+  "name_multiple": "arms (胳膊)",
+  "accusative": { "ctxt": "bodypart_accusative", "str": "left arm (左臂)" },
+  "accusative_multiple": { "ctxt": "bodypart_accusative", "str": "arms (胳膊)" },
+  "heading": "L. Arm (左臂)",
+  "heading_multiple": "Arms (胳膊)",
+  "encumbrance_text": "Melee and ranged combat is hampered (近战和远程战斗受阻)。",
+  "hp_bar_ui_text": "L ARM (左臂)",
   "main_part": "arm_l",
   "connected_to": "torso",
   "opposite_part": "arm_r",
   "hit_size": 9,
   "hit_difficulty": 0.95,
   "limb_type": "arm",
-  "limb_scores": [ [ "manip", 0.1, 0.2 ], [ "lift", 0.5 ], [ "block", 1.0 ], [ "swim", 0.1 ] ],
+  "limb_scores": [
+    ["manip", 0.1, 0.2],
+    ["lift", 0.5],
+    ["block", 1.0],
+    ["swim", 0.1]
+  ],
   "armor": { "electric": 2, "stab": 1 },
   "side": "left",
   "legacy_id": "ARM_L",
@@ -865,36 +832,39 @@ reference at least one body part or sub body part.
   "is_limb": true,
   "base_hp": 60,
   "drench_capacity": 10,
-  "smash_message": "You elbow-smash the %s.",
+  "smash_message": "You elbow-smash the %s (你用胳膊肘猛击%s)。",
   "bionic_slots": 20,
-  "sub_parts": [ "arm_shoulder_l", "arm_upper_l", "arm_elbow_l", "arm_lower_l" ]
+  "sub_parts": ["arm_shoulder_l", "arm_upper_l", "arm_elbow_l", "arm_lower_l"]
 }
+
+该对象包含了关于身体部位名称、与其他身体部位的连接、命中大小和难度、肢体得分、护甲值等信息。
+
 ```
 
-# On-hit Effects
+# On-hit Effects (受击效果)
 
 An array of effects to add whenever the limb in question takes damage. Variables for each entry:
+每当相关部位受到伤害时添加的效果数组。每个条目的变量：
 
-| `Identifier`           | Description
-|---                     |---
-| `id`                   | (_mandatory_) ID of the effect to apply.
-| `global`               | (_optional_) Bool, if true the effect won't apply to the bodypart but to the whole character. Default false.
-| `dmg_type`             | (_optional_) String id of the damage type eligible to apply the effect. Defaults to all damage.
-| `dmg_threshold`        | (_optional_) Integer, amount of damage to trigger the effect. For main parts used as percent of limb max health, for minor parts as absolute damage amount. Default 1.
-| `dmg_scale_increment`  | (_optional_) Float, steps of scaling based on damage above `damage_threshold`. Default 1.
-| `chance`               | (_optional_) Integer, percent chance to trigger the effect. Default 100.
-| `chance_dmg_scaling`   | (_optional_) Float, chance is increased by this value for every `dmg_scale_increment` above `dmg_threshold`. Default 0.
-| `intensity`            | (_optional_) Integer, intensity of effect to apply. Default 1.
-| `intensity_dmg_scaling`| (_optional_) Float, intensity is increased by this value for every `dmg_scale_increment` above `dmg_threshold`. Default 0.
-| `max_intensity`        | (_optional_) Integer, max intensity the limb can gain as part of the onhit effect - other sources of effects like spells or explicit special attack effects can still apply higher intensities. Default INT_MAX.
-| `duration`             | (_optional_) Integer, duration of effect to apply in seconds. Default 1.
-| `duration_dmg_scaling` | (_optional_) Float, duration is increased by this value for every `dmg_scale_increment` above `dmg_threshold`. Default 0.
-| `max_duration`         | (_optional_) Integer, max seconds duration the limb can gain as part of the onhit effect - see `max_intensity`. Default INT_MAX.
-
+| `标识符`                | 描述                                                                                                                                     |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`                    | （必需）要应用的效果的 ID。                                                                                                              |
+| `global`                | （可选）布尔值，如果为 true，则效果不会应用于身体部位，而是应用于整个角色。默认为 false。                                                |
+| `dmg_type`              | （可选）符合条件应用效果的伤害类型的字符串 ID。默认为所有伤害。                                                                          |
+| `dmg_threshold`         | （可选）整数，触发效果的伤害量。对于主要部位，用作肢体最大健康值的百分比；对于次要部位，用作绝对伤害量。默认为 1。                       |
+| `dmg_scale_increment`   | （可选）浮点数，基于高于 `dmg_threshold` 的伤害的缩放步骤。默认为 1。                                                                    |
+| `chance`                | （可选）整数，触发效果的百分比几率。默认为 100。                                                                                         |
+| `chance_dmg_scaling`    | （可选）浮点数，每高于 `dmg_threshold` 的 `dmg_scale_increment` 增加这个值的几率。默认为 0。                                             |
+| `intensity`             | （可选）整数，要应用的效果强度。默认为 1。                                                                                               |
+| `intensity_dmg_scaling` | （可选）浮点数，每高于 `dmg_threshold` 的 `dmg_scale_increment` 增加这个值的强度。默认为 0。                                             |
+| `max_intensity`         | （可选）整数，作为 onhit 效果一部分时肢体能获得的最大强度 - 像法术或显式特殊攻击效果等其他效果来源仍然可以应用更高强度。默认为 INT_MAX。 |
+| `duration`              | （可选）整数，以秒为单位应用效果的持续时间。默认为 1。                                                                                   |
+| `duration_dmg_scaling`  | （可选）浮点数，每高于 `dmg_threshold` 的 `dmg_scale_increment` 增加这个值的持续时间。默认为 0。                                         |
+| `max_duration`          | （可选）整数，作为 onhit 效果一部分时肢体能获得的最大持续时间（以秒为单位） - 见 `max_intensity`。默认为 INT_MAX。                       |
 
 ```json
 {
-"effects_on_hit": [
+  "effects_on_hit": [
     {
       "id": "staggered",
       "dmg_type": "bash",
@@ -920,8 +890,10 @@ An array of effects to add whenever the limb in question takes damage. Variables
 }
 ```
 
-### Limb scores
-Limb scores act as the basis of calculating the effect of limb encumbrance and damage on the abilities of characters. They are defined using the `"limb_score"` type:
+### Limb scores (肢体评分)
+
+TODO：肢体评分，后续继续修改
+肢体评分作为计算肢体负担和损伤对角色能力影响的基础。它们使用`"limb_score"`类型来定义：
 
 ```json
 {
@@ -932,47 +904,48 @@ Limb scores act as the basis of calculating the effect of limb encumbrance and d
   "affected_by_encumb": false
 }
 ```
-- `"type"`: Always "limb_score".
-- `"id"`: Identifies this limb score
-- `"name"`: Mandatory. Defines a translatable name for this limb score that will be displayed in the UI.
-- `"affected_by_wounds"`: Optional, defaults to true. Determines whether this limb score is affected by the character's limb health. Lower limb health => lower score.
-- `"affected_by_encumb"`: Optional, defaults to true. Determines whether this limb score is affected by the character's limb encumbrance. Higher encumbrance => lower score.
 
-Here are the currently defined limb scores:
+- `"type"`: 类型始终为 "limb_score (肢体评分)"。
+- `"id"`: 用于识别该肢体评分的标识符
+- `"name"`: 必填项。为此肢体评分定义一个可翻译的名称，该名称将显示在用户界面中。
+- `"affected_by_wounds"`: 可选项，默认为 true。确定该肢体评分是否受角色肢体健康状况影响。肢体健康状况较低 => 评分较低。
+- `"affected_by_encumb"`: 可选项，默认为 true。确定该肢体评分是否受角色肢体负担影响。负担较重 => 评分较低。
 
-| Limb score id          | Description
-|------                  |------
-| `manipulator_score`    | Modifies aim speed, reload speed, thrown attack speed, ranged dispersion and crafting speed.  The manipulator scores of each limb type are aggregated and the best limb group is chosen for checks.
-| `manipulator_max`      | The upper limit of manipulator score the limb can contribute to.
-| `lifting_score`        | Modifies melee attack stamina and move cost, as well as a number of STR checks.  A sum above 0.5 qualifies for wielding two-handed weapons and similar checks.  Arms below 0.1 lift score don't count as working for the purposes of melee combat.
-| `blocking_score`       | The blocking limb is chosen by a roll weighted by eligible limbs' block score, and blocking efficiency is multiplied by the target limb's score.
-| `breathing_score`      | Modifies stamina recovery speed and shout volume.
-| `vision_score`         | Modifies ranged dispersion, ranged and melee weakpoint hit chances.
-| `nightvision_score`    | Modifies night vision range (multiplier on the calculated range).
-| `reaction_score`       | Modifies dodge chance, block chance, melee weakpoint hit chances.
-| `balance_score`        | Modifies thrown attack speed, movement cost and melee attack rolls.
-| `footing_score`        | Modifies movement cost.
-| `movement_speed_score` | Modifies movement cost.
-| `swim_score`           | Modifies swim speed.
+以下是当前定义的肢体评分：
 
-These limb scores are referenced in `"body_part"` within the `"limb_scores"` array. (See [body parts](#body_parts)).
+| 肢体评分 id            | 描述                                                                                                                                                 |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `manipulator_score`    | 修改瞄准速度、装弹速度、投掷攻击速度、远程散布和制作速度。每种肢体类型的操纵器评分都会汇总，然后为检查选择最佳肢体组。                               |
+| `manipulator_max`      | 肢体可以为操纵器评分贡献的上限。                                                                                                                     |
+| `lifting_score`        | 修改近战攻击耐力和移动成本，以及一些力量检查。总和大于 0.5 的肢体可以进行双手武器和类似检查。对于近战战斗的目的，提升评分低于 0.1 的手臂不算作有效。 |
+| `blocking_score`       | 通过有资格肢体的阻挡评分加权滚动选择阻挡肢体，阻挡效率乘以目标肢体的评分。                                                                           |
+| `breathing_score`      | 修改耐力恢复速度和喊叫音量。                                                                                                                         |
+| `vision_score`         | 修改远程散布、远程和近战弱点命中几率。                                                                                                               |
+| `nightvision_score`    | 修改夜视范围（计算范围的乘数）。                                                                                                                     |
+| `reaction_score`       | 修改闪避几率、格挡几率、近战弱点命中几率。                                                                                                           |
+| `balance_score`        | 修改投掷攻击速度、移动成本和近战攻击滚动。                                                                                                           |
+| `footing_score`        | 修改移动成本。                                                                                                                                       |
+| `movement_speed_score` | 修改移动成本。                                                                                                                                       |
+| `swim_score`           | 修改游泳速度。                                                                                                                                       |
 
-### Character Modifiers
+这些肢体分数在 `"body_part"` 中的 `"limb_scores"` 数组中有所引用。（参见 [body parts](<#body_parts(肢体部位)>)）
 
-Character modifiers define how effective different behaviours are for actions the character takes. These are usually derived from a limb score.
+### Character Modifiers (角色修饰符)
+
+角色修饰符定义了角色采取的不同行为对操作的有效性。这些通常来自肢体得分。
 
 ```json
 {
   "type": "character_mod",
   "id": "ranged_dispersion_manip_mod",
-  "description": "Hand dispersion when using ranged attacks",
+  "description": "Hand dispersion when using ranged attacks (使用远程攻击时的手部散布)",
   "mod_type": "+",
   "value": { "limb_score": "manip", "max": 1000.0, "nominator": 22.8, "subtract": 22.8 }
 },
 {
   "type": "character_mod",
   "id": "slip_prevent_mod",
-  "description": "Slip prevention modifier",
+  "description": "Slip prevention modifier (防滑修饰符)",
   "mod_type": "x",
   "value": {
     "limb_score": [ [ "grip", 3.0 ], [ "lift", 2.0 ], "footing" ],
@@ -984,108 +957,108 @@ Character modifiers define how effective different behaviours are for actions th
 {
   "type": "character_mod",
   "id": "stamina_move_cost_mod",
-  "description": "Stamina move cost modifier",
+  "description": "Stamina move cost modifier (耐力移动成本修饰符)",
   "mod_type": "x",
   "value": { "builtin": "stamina_move_cost_modifier" }
 }
 ```
 
-| Field         | Description
-|------         |------------
-| `type`        | Always "character_mod".
-| `id`          | Unique identifier for this character modifier.
-| `description` | Translatable text that describes the function of this modifier, which will be displayed in the UI.
-| `mod_type`    | Describes how this modifier is applied. Can be `"+"` (added), `"x"` (multiplied), or `""` (unspecified).
-| `value`       | Object that describes how this modifier is calculated.
+| 字段          | 描述                                                                         |
+| ------------- | ---------------------------------------------------------------------------- |
+| `type`        | 总是 "character_mod"。                                                       |
+| `id`          | 此角色修饰符的唯一标识符。                                                   |
+| `description` | 可翻译的文本，描述此修饰符的功能，将显示在 UI 中。                           |
+| `mod_type`    | 描述如何应用此修饰符。可以是 `"+"`（相加），`"x"`（相乘）或 `""`（未指定）。 |
+| `value`       | 描述如何计算此修饰符的对象。                                                 |
 
-#### Character Modifiers - Value
+#### Character Modifiers - Value (角色修饰符 - 值)
 
-| Field             | Description
-|------             |------------
-| `limb_score`      | Refers to a `limb_score` id, or an array of `limb_score` id's (can be a weighted list). These are the limb scores from which this modifier is derived.  For additive calculations ( `limb_score_op: "+"`) the score is multiplied by the weight, for multiplicative calculation (`limb_score_op: "x"`) it is raised to the weight's power.
-| `limb_score_op`   | (_optional_) Operation (add `+` or multiply `x`) to apply when multiple limb scores are defined. Ex: `x` => `score1 x score2 x score3 ...`. (Defaults to `x`)
-| `limb_type`       | (_optional_) Refers to a `limb_type` as defined in [`body_part`](#body_parts). If present, only limb scores from body parts with that `limb_type` are used.
-| `override_encumb` | (_optional_) Boolean (true/false). If specified, this forces the limb score to be affected/unaffected by limb encumbrance if true/false. (Overrides `affected_by_encumb` in `limb_score`)
-| `override_wounds` | (_optional_) Boolean (true/false). If specified, this forces the limb score to be affected/unaffected by limb health if true/false.(Overrides `affected_by_wounds` in `limb_score`)
-| `min`             | (_optional_) Defines a minimum value for this modifier. Generally only used for "bonus" multipliers that provide a benefit. Should not be used together with `max`.
-| `max`             | (_optional_) Defines a maximum value for this modifier. Generally used for "cost" multipliers that provide a malus. Should not be used together with `min`. This value can be defined as a decimal or as the special value `"max_move_cost"`.
-| `nominator`       | (_optional_) Causes the limb score to divide the specified value, such that `nominator / ( limb_score * denominator )`.
-| `denominator`     | (_optional_) Divides the limb score (or the nominator, if specified) by the specified value, such that `limb_score / denominator`.
-| `subtract`        | (_optional_) Defines a value to subtract from the resulting modifier, such that `mod - subtract`.
-| `builtin`         | Instead of a limb score, the `value` object can define a built-in function to handle the calculation of the modifier.
+| 字段              | 描述                                                                                                                                                                                                                      |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `limb_score`      | 指代一个 `limb_score` id，或者一个 `limb_score` id 的数组（可以是加权列表）。这些是导出此修饰符的肢体得分。对于加法计算（`limb_score_op: "+"`），得分乘以权重，对于乘法计算（`limb_score_op: "x"`），将其提高到权重的幂。 |
+| `limb_score_op`   | （_可选_） 当定义多个肢体得分时，应用的操作（加 `+` 或乘 `x`）。例如：`x` => `score1 x score2 x score3 ...`。（默认为 `x`）                                                                                               |
+| `limb_type`       | （_可选_） 指代在 [`body_part`](<#body_parts(肢体部位)>) 中定义的 `limb_type`。 如果存在，则仅使用具有该 `limb_type` 的身体部位的肢体得分。                                                                               |
+| `override_encumb` | （_可选_） 布尔值（true/false）。如果指定，则强制肢体得分受到/不受肢体负重影响（为 true/false）。（覆盖 `limb_score` 中的 `affected_by_encumb`）                                                                          |
+| `override_wounds` | （_可选_） 布尔值（true/false）。如果指定，则强制肢体得分受到/不受肢体健康影响（为 true/false）。（覆盖 `limb_score` 中的 `affected_by_wounds`）                                                                          |
+| `min`             | （_可选_） 为此修饰符定义最小值。通常仅用于提供好处的“奖励”乘数。不应与 `max` 一起使用。                                                                                                                                  |
+| `max`             | （_可选_） 为此修饰符定义最大值。通常用于提供弊端的“成本”乘数。不应与 `min` 一起使用。此值可以定义为小数或特殊值 `"max_move_cost"`。                                                                                      |
+| `nominator`       | （_可选_） 使肢体得分除以指定值，从而使 `nominator / ( limb_score * denominator )`。                                                                                                                                      |
+| `denominator`     | （_可选_） 将肢体得分（或指定的 nominator，如果指定的话）除以指定值，这样就可以得到 `limb_score / denominator`。                                                                                                          |
+| `subtract`        | （_可选_） 定义从结果修饰符中减去的值，从而得到 `mod - subtract`。                                                                                                                                                        |
+| `builtin`         | 与肢体得分不同，`value` 对象可以定义一个内置函数来处理修饰符的计算。                                                                                                                                                      |
 
-The modifier is normally derived from a limb score, which is modified in a sequence of operations. Here are some possible outcomes for different combinations of specified fields in `value`:
+修饰符通常来自肢体得分，该得分在一系列操作中进行修改。这里有一些`value`中指定字段不同组合的可能结果：
+
 ```C++
-// Only one "limb_score" specified:
-mod = limb_score;
-// 3 score id's in "limb_score" array (with "x" operation):
-mod = limb_score1 * limb_score2 * limb_score3;
-// "max" specified:
-mod = min( max, limb_score );
-// "min" specified:
-mod = max( min, limb_score );
-// Both "max" and "nominator" specified:
-mod = min( max, nominator / limb_score );
-// "max", "nominator", and "subtract" specified:
-mod = min( max, ( nominator / limb_score ) - subtract );
-// "max", "denominator", and "subtract" specified:
-mod = min( max, ( limb_score / denominator ) - subtract );
+// 只指定一个"limb_score"（肢体得分）：
+mod = limb_score（肢体得分）;
+// "limb_score" 数组中有3个得分id（带有"x"操作）：
+mod = limb_score1（肢体得分1） * limb_score2（肢体得分2） * limb_score3（肢体得分3）;
+// 指定了"max"（最大值）：
+mod = min( max（最大值）, limb_score（肢体得分） );
+// 指定了"min"（最小值）：
+mod = max( min（最小值）, limb_score（肢体得分） );
+// 同时指定"max"（最大值）和"nominator"（分子）：
+mod = min( max（最大值）, nominator（分子） / limb_score（肢体得分） );
+// 指定了"max"（最大值）、"nominator"（分子）和"subtract"（减去）：
+mod = min( max（最大值）, ( nominator（分子） / limb_score（肢体得分） ) - subtract（减去） );
+// 指定了"max"（最大值）、"denominator"（分母）和"subtract"（减去）：
+mod = min( max（最大值）, ( limb_score（肢体得分） / denominator（分母） ) - subtract（减去） );
 ```
 
+````
 
-### Bionics
+### 仿生学（Bionics）
 
-| Identifier                   | Description
-|---                           |---
-| `id`                         | Unique ID. Must be one continuous word, use underscores if necessary.
-| `name`                       | In-game name displayed.
-| `description`                | In-game description.
-| `act_cost`                   | (_optional_) How many kJ it costs to activate the bionic.  Strings can be used "1 kJ"/"1000 J"/"1000000 mJ" (default: `0`)
-| `deact_cost`                 | (_optional_) How many kJ it costs to deactivate the bionic.  Strings can be used "1 kJ"/"1000 J"/"1000000 mJ" (default: `0`)
-| `react_cost`                 | (_optional_) How many kJ it costs over time to keep this bionic active, does nothing without a non-zero "time".  Strings can be used "1 kJ"/"1000 J"/"1000000 mJ" (default: `0`)
-| `trigger_cost`               | (_optional_) How many kJ it costs to trigger special effects for this bionic. This can be a reaction to specific conditions or an action taken while the bionic is active.  Strings can be used "1 kJ"/"1000 J"/"1000000 mJ" (default: `0`)
-| `time`                       | (_optional_) How long, when activated, between drawing cost. If 0, it draws power once. (default: `0`)
-| `upgraded_bionic`            | (_optional_) Bionic that can be upgraded by installing this one.
-| `available_upgrades`         | (_optional_) Upgrades available for this bionic, i.e. the list of bionics having this one referenced by `upgraded_bionic`.
-| `encumbrance`                | (_optional_) A list of body parts and how much this bionic encumber them.
-| `known_ma_styles`            | (_optional_) A list of martial art styles that are known to the wearer when the bionic is activated
-| `weight_capacity_bonus`      | (_optional_) Bonus to weight carrying capacity in grams, can be negative.  Strings can be used - "5000 g" or "5 kg" (default: `0`)
-| `weight_capacity_modifier`   | (_optional_) Factor modifying base weight carrying capacity. (default: `1`)
-| `canceled_mutations`         | (_optional_) A list of mutations/traits that are removed when this bionic is installed (e.g. because it replaces the fault biological part).
-| `mutation_conflicts`         | (_optional_) A list of mutations that prevent this bionic from being installed.
-| `included_bionics`           | (_optional_) Additional bionics that are installed automatically when this bionic is installed. This can be used to install several bionics from one CBM item, which is useful as each of those can be activated independently.
-| `included`                   | (_optional_) Whether this bionic is included with another. If true this bionic does not require a CBM item to be defined. (default: `false`)
-| `env_protec`                 | (_optional_) How much environmental protection does this bionic provide on the specified body parts.
-| `protec`                     | (_optional_) An array of resistance values that determines the types of protection this bionic provides on the specified body parts.
-| `occupied_bodyparts`         | (_optional_) A list of body parts occupied by this bionic, and the number of bionic slots it take on those parts.
-| `capacity`                   | (_optional_) Amount of power storage added by this bionic.  Strings can be used "1 kJ"/"1000 J"/"1000000 mJ" (default: `0`)
-| `fuel_options`               | (_optional_) A list of materials that this bionic can use to produce bionic power.
-| `is_remote_fueled`           | (_optional_) If true this bionic allows you to plug your power banks to an external power source (solar backpack, UPS, vehicle etc) via a cable. (default: `false`)
-| `fuel_capacity`              | (_optional_) Volume of fuel this bionic can store.
-| `fuel_efficiency`            | (_optional_) Fraction of fuel energy converted into power. (default: `0`)
-| `passive_fuel_efficiency`    | (_optional_) Fraction of fuel energy passively converted into power. Useful for CBM using PERPETUAL fuel like `muscle`, `wind` or `sun_light`. (default: `0`)
-| `exothermic_power_gen`       | (_optional_) If true this bionic emits heat when producing power. (default: `false`)
-| `coverage_power_gen_penalty` | (_optional_) Fraction of coverage diminishing fuel_efficiency. Float between 0.0 and 1.0. (default: `nullopt`)
-| `power_gen_emission`         | (_optional_) `emit_id` of the field emitted by this bionic when it produces energy. Emit_ids are defined in `emit.json`.
-| `stat_bonus`                 | (_optional_) List of passive stat bonus. Stat are designated as follow: "DEX", "INT", "STR", "PER".
-| `activated_eocs`             | (_optional_) List of effect_on_conditions that attempt to activate when this CBM is successfully activated.
-| `processed_eocs`             | (_optional_) List of effect_on_conditions that attempt to activate each turn this CBM is active.
-| `deactivated_eocs`           | (_optional_) List of effect_on_conditions that attempt to activate when this CBM is successfully deactivated.
-| `enchantments`               | (_optional_) List of enchantments applied by this CBM (see MAGIC.md for instructions on enchantment. NB: enchantments are not necessarily magic.) Values can either be the enchantment's id or an inline definition of the enchantment.
-| `learned_spells`             | (_optional_) Map of {spell:level} you gain when installing this CBM, and lose when you uninstall this CBM. Spell classes are automatically gained.
-| `learned_proficiencies`      | (_optional_) Array of proficiency ids you gain when installing this CBM, and lose when uninstalling
-| `installation_requirement`   | (_optional_) Requirement id pointing to a requirement defining the tools and components necessary to install this CBM.
-| `vitamin_absorb_mod`         | (_optional_) Modifier to vitamin absorption, affects all vitamins. (default: `1.0`)
-| `dupes_allowed`              | (_optional_) Boolean to determine if multiple copies of this bionic can be installed.  Defaults to false.
-| `cant_remove_reason`         | (_optional_) String message to be displayed as the reason it can't be uninstalled.  Having any value other than `""` as this will prevent unistalling the bionic. Formatting includes two `%s` for example: `The Telescopic Lenses are part of %1$s eyes now. Removing them would leave %2$s blind.`  (default: `""`)
-| `social_modifiers`			     | (_optional_) Json object with optional members: persuade, lie, and intimidate which add or subtract that amount from those types of social checks
-| `dispersion_mod`             | (_optional_) Modifier to change firearm dispersion.
-| `activated_on_install`       | (_optional_) Auto-activates this bionic when installed.
+| 标识符（Identifier）         | 说明                                                                                                                                                                                                                                                                                |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`                         | 唯一ID。必须是一个连续的单词，如果需要，可以使用下划线。                                                                                                                                                                                                                            |
+| `name`                       | 游戏中显示的名称。                                                                                                                                                                                                                                                                  |
+| `description`                | 游戏中的描述。                                                                                                                                                                                                                                                                      |
+| `act_cost`                   | (_可选_) 激活仿生器所需的能量（kJ）。可以使用字符串："1 kJ"/"1000 J"/"1000000 mJ"（默认值：`0`）                                                                                                                                                                                    |
+| `deact_cost`                 | (_可选_) 关闭仿生器所需的能量（kJ）。可以使用字符串："1 kJ"/"1000 J"/"1000000 mJ"（默认值：`0`）                                                                                                                                                                                    |
+| `react_cost`                 | (_可选_) 保持此仿生器激活状态所需的能量（kJ），在非零"时间"下无效。可以使用字符串："1 kJ"/"1000 J"/"1000000 mJ"（默认值：`0`）                                                                                                                                                      |
+| `trigger_cost`               | (_可选_) 触发此仿生器的特殊效果所需的能量（kJ）。这可以是对特定条件的反应或在仿生器激活时采取的操作。可以使用字符串："1 kJ"/"1000 J"/"1000000 mJ"（默认值：`0`）                                                                                                                    |
+| `time`                       | (_可选_) 激活后，需要多长时间来消耗能量。如果为0，则只消耗一次能量。（默认值：`0`）                                                                                                                                                                                                 |
+| `upgraded_bionic`            | (_可选_) 通过安装此仿生器可以升级的仿生器。                                                                                                                                                                                                                                         |
+| `available_upgrades`         | (_可选_) 此仿生器的可用升级，即：具有由`upgraded_bionic`引用的此仿生器的仿生器列表。                                                                                                                                                                                                |
+| `encumbrance`                | (_可选_) 仿生器给身体各部位带来的负担的列表。                                                                                                                                                                                                                                       |
+| `known_ma_styles`            | (_可选_) 激活仿生器时佩戴者已知的武术风格列表                                                                                                                                                                                                                                       |
+| `weight_capacity_bonus`      | (_可选_) 重量携带能力的奖励，以克为单位，可以为负数。可以使用字符串 - "5000 g" 或 "5 kg"（默认值：`0`）                                                                                                                                                                             |
+| `weight_capacity_modifier`   | (_可选_) 修改基本重量携带能力的因素。（默认值：`1`）                                                                                                                                                                                                                                |
+| `canceled_mutations`         | (_可选_) 安装此仿生器时删除的突变/特征列表（例如，因为它替换了有缺陷的生物部件）。                                                                                                                                                                                                  |
+| `mutation_conflicts`         | (_可选_) 阻止安装此仿生器的突变列表。                                                                                                                                                                                                                                               |
+| `included_bionics`           | (_可选_) 在安装此仿生器时自动安装的其他仿生器。这可以用于从一个CBM项目安装多个仿生器，因为它们可以独立激活。                                                                                                                                                                        |
+| `included`                   | (_可选_) 该仿生器是否包含在另一个仿生器中。如果为真，则该仿生器不需要定义CBM项目。（默认值：`false`）                                                                                                                                                                               |
+| `env_protec`                 | (_可选_) 此仿生器在指定身体部位提供的环境保护程度。                                                                                                                                                                                                                                 |
+| `protec`                     | (_可选_) 一个阻力值数组，用于确定此仿生器在指定身体部位提供的保护类型。                                                                                                                                                                                                             |
+| `occupied_bodyparts`         | (_可选_) 一个描述仿生器占用身体部位的列表。这将阻止其他仿生器使用这些部位。例如，如果一个仿生器占用了左手，那么另一个需要左手的仿生器将无法安装。                                                                                                                                   |
+| `flags`                      | (_可选_) 与此仿生器相关联的标志列表，用于控制行为或提供特殊属性。                                                                                                                                                                                                                   |
+| `installation_requirement`   | (_可选_) 一个描述安装此仿生器所需工具和/或物品的对象。                                                                                                                                                                                                                              |
+| `fuel_efficiency`            | (_可选_) 转换为动力的燃料能量的比例。 (默认值: `0`)                                                                                                                                                                                                                                 |
+| `passive_fuel_efficiency`    | (_可选_) 被动转换为动力的燃料能量的比例。适用于使用永久燃料的CBM，如 `muscle`（肌肉）, `wind`（风）或 `sun_light`（阳光）。 (默认值: `0`)                                                                                                                                           |
+| `exothermic_power_gen`       | (_可选_) 如果为真，该生物体内植入器在产生能量时会释放热量。 (默认值: `false`)                                                                                                                                                                                                       |
+| `coverage_power_gen_penalty` | (_可选_) 覆盖范围减少燃料效率的比例。浮点数在0.0和1.0之间。 (默认值: `nullopt`)                                                                                                                                                                                                     |
+| `power_gen_emission`         | (_可选_) 当该生物体内植入器产生能量时，释放的 `emit_id` 字段。Emit_ids 在 `emit.json` 中定义。                                                                                                                                                                                      |
+| `stat_bonus`                 | (_可选_) 被动属性加成列表。属性如下: "DEX"（敏捷）, "INT"（智力）, "STR"（力量）, "PER"（感知）。                                                                                                                                                                                   |
+| `activated_eocs`             | (_可选_) 当成功激活此CBM时，试图激活的 effect_on_conditions 列表。                                                                                                                                                                                                                  |
+| `processed_eocs`             | (_可选_) 当此CBM处于活动状态时，每回合尝试激活的 effect_on_conditions 列表。                                                                                                                                                                                                        |
+| `deactivated_eocs`           | (_可选_) 当成功停用此CBM时，试图激活的 effect_on_conditions 列表。                                                                                                                                                                                                                  |
+| `enchantments`               | (_可选_) 由该CBM应用的附魔列表（有关附魔的说明，请参阅MAGIC.md。注意：附魔不一定是魔法。）值可以是附魔的id或附魔的内联定义。                                                                                                                                                        |
+| `learned_spells`             | (_可选_) 安装此CBM时获得的 {spell:level} 映射，卸载时失去。安装时自动获得法术类。                                                                                                                                                                                                   |
+| `learned_proficiencies`      | (_可选_) 安装此CBM时获得的熟练度id数组，卸载时失去。                                                                                                                                                                                                                                |
+| `installation_requirement`   | (_可选_) 指向要求的id，该要求定义安装此CBM所需的工具和组件。                                                                                                                                                                                                                        |
+| `vitamin_absorb_mod`         | (_可选_) 维生素吸收修正，影响所有维生素。 (默认值: `1.0`)                                                                                                                                                                                                                           |
+| `dupes_allowed`              | (_可选_) 布尔值，确定是否允许安装多个此类生物体内植入器。默认为false。                                                                                                                                                                                                              |
+| `cant_remove_reason`         | (_可选_) 显示为无法卸载的原因的字符串消息。除了`""`之外的任何值都将阻止卸载生物体内植入器。格式包括两个`%s`，例如：`The Telescopic Lenses are part of %1$s eyes now. Removing them would leave %2$s blind.` (现在望远镜镜片是%1$s眼睛的一部分。取下它们会让%2$s失明) (默认值: `""`) |
+| `social_modifiers`           | (_可选_) Json对象，带有可选成员：persuade（说服），lie（撒谎）和intimidate（恐吓），向这些类型的社交检查添加或减去该数额。                                                                                                                                                          |
+| `dispersion_mod`             | (_可选_) 修改火器散布的修正。                                                                                                                                                                                                                                                       |
+| `activated_on_install`       | (_可选_) 安装时自动激活此生物体内植入器。                                                                                                                                                                                                                                           |
 
 ```JSON
 {
     "id"           : "bio_batteries",
-    "name"         : "Battery System",
+    "name"         : "Battery System (电池系统)",
     "active"       : false,
     "act_cost"     : 0,
     "time"         : 1,
@@ -1094,7 +1067,7 @@ mod = min( max, ( limb_score / denominator ) - subtract );
     "fuel_options": [ "battery" ],
     "fuel_capacity": 500,
     "encumbrance"  : [ [ "torso", 10 ], [ "arm_l", 10 ], [ "arm_r", 10 ], [ "leg_l", 10 ], [ "leg_r", 10 ], [ "foot_l", 10 ], [ "foot_r", 10 ] ],
-    "description"  : "You have a battery draining attachment, and thus can make use of the energy contained in normal, everyday batteries. Use 'E' to consume batteries.",
+    "description"  : "You have a battery draining attachment, and thus can make use of the energy contained in normal, everyday batteries. Use 'E' to consume batteries. (你有一个电池排放附件，因此可以利用普通日常电池中的能量。使用'E'消耗电池。)",
     "canceled_mutations": ["HYPEROPIC"],
     "mutation_conflicts": [ "HUGE" ],
     "installation_requirement": "sewing_standard",
@@ -1103,8 +1076,8 @@ mod = min( max, ( limb_score / denominator ) - subtract );
 {
     "id": "bio_purifier",
     "type": "bionic",
-    "name": "Air Filtration System",
-    "description": "Surgically implanted in your trachea is an advanced filtration system.  If toxins, or airborne diseases find their way into your windpipe, the filter will attempt to remove them.",
+    "name": "Air Filtration System (空气过滤系统)",
+    "description": "Surgically implanted in your trachea is an advanced filtration system.  If toxins, or airborne diseases find their way into your windpipe, the filter will attempt to remove them. (在你的气管中植入了一个先进的过滤系统。如果毒素或空气传播的疾病进入你的气管，过滤器会试图将它们去除。)",
     "occupied_bodyparts": [ [ "torso", 4 ], [ "mouth", 2 ] ],
     "env_protec": [ [ "mouth", 7 ] ],
     "protec": [
@@ -1115,535 +1088,531 @@ mod = min( max, ( limb_score / denominator ) - subtract );
     ],
     "flags": [ "BIONIC_NPC_USABLE" ]
 }
-```
+````
 
-Bionics effects are defined in the code and new effects cannot be created through JSON alone.
-When adding a new bionic, if it's not included with another one, you must also add the corresponding CBM item in `data/json/items/bionics.json`. Even for a faulty bionic.
+仿生效果是在代码中定义的，仅通过 JSON 无法创建新效果。
+当添加一个新的仿生器时，如果它没有包含在另一个仿生器里，你还必须在`data/json/items/bionics.json`中添加相应的 CBM 物品。即使是对于一个有缺陷的仿生器。
 
+### Damage Types (伤害类型)
 
-### Damage Types
-
-| Field               | Description
-| ---                 | ---
-| `name`              | The name of the damage type as it appears in the protection values in the item info screen.
-| `skill`             | _(optional)_ Determines the skill used when dealing this damage type. (defaults to none)
-| `physical`          | _(optional)_ Identifies this damage type as originating from physical sources. (defaults to false)
-| `melee_only`        | _(optional)_ Identifies this damage type as originating from melee weapons and attacks. (defaults to false)
-| `edged`             | _(optional)_ Identifies this damage type as originating from a sharp or pointy weapon or implement. (defaults to false)
-| `environmental`     | _(optional)_ This damage type corresponds to environmental sources. Currently influences whether an item or piece of armor includes environmental resistance against this damage type. (defaults to false)
-| `material_required` | _(optional)_ Determines whether materials must defined a resistance for this damage type. (defaults to false)
-| `mon_difficulty`    | _(optional)_ Determines whether this damage type should contribute to a monster's difficulty rating. (defaults to false)
-| `no_resist`         | _(optional)_ Identifies this damage type as being impossible to resist against (ie. "pure" damage). (defaults to false)
-| `immune_flags`      | _(optional)_ An object with two optional fields: `"character"` and `"monster"`. Both inner fields list an array of character flags and monster flags, respectively, that would make the character or monster immune to this damage type.
-| `magic_color`       | _(optional)_ Determines which color identifies this damage type when used in spells. (defaults to "black")
-| `derived_from`      | _(optional)_ An array that determines how this damage type should be calculated in terms of armor protection and monster resistance values. The first value is the source damage type and the second value is the modifier applied to source damage type calculations.
-| `onhit_eocs`        | _(optional)_ An array of effect-on-conditions that activate when a monster or character hits another monster or character with this damage type. In this case, `u` refers to the damage source and `npc` refers to the damage target.
-
-```JSON
-  {
-    "//": "stabbing/piercing damage",
-    "id": "stab",
-    "type": "damage_type",
-    "melee_only": true,
-    "physical": true,
-    "edged": true,
-    "magic_color": "light_red",
-    "name": "pierce",
-    "skill": "stabbing",
-    "//2": "derived from cut only for monster defs",
-    "derived_from": [ "cut", 0.8 ],
-    "immune_flags": { "character": [ "STAB_IMMUNE" ] }
-  },
-  {
-    "//": "e.g. electrical discharge",
-    "id": "electric",
-    "type": "damage_type",
-    "physical": false,
-    "magic_color": "light_blue",
-    "name": "electric",
-    "immune_flags": { "character": [ "ELECTRIC_IMMUNE" ], "monster": [ "ELECTRIC", "ELECTRIC_FIELD" ] },
-    "onhit_eocs": [ "EOC_ELECTRIC_ONHIT" ]
-  }
-```
-
-
-### Damage Info Ordering
-
-Damage types are displayed in various parts of the item info UI, representing armor resistances, melee damage, etc.
-Using `damage_info_order` we can reorder how these are shown, and even determine whether they can be displayed at all.
-
-| Field          | Description
-| ---            | ---
-| `id`           | Unique identifier, must correspond to an existing `damage_type`
-| `info_display` | _(optional)_ Determines the detail in which this damage type is displayed in protection values. Valid values are "detailed", "basic", and "none". (defaults to "none")
-| `verb`         | _(optional)_ A verb describing how this damage type is applied (ex: "bashing"). Used in the melee section of an item's info.
-| `*_info`       | _(optional)_ An object that determines the order and visibility of this damage type for the specified section of an item's info. `"order"` determines where in the list of damage types it will be displayed in this section, and `"show_type"` determines whether to show this damage type in this section. Possible sections include: `bionic_info`, `protection_info`, `pet_prot_info`, `melee_combat_info`, and `ablative_info`.
+| 字段                | 描述                                                                                                                                          |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`              | 伤害类型在物品信息屏幕中的保护值中显示的名称。                                                                                                |
+| `skill`             | _(可选)_ 确定处理此伤害类型时使用的技能。(默认为无)                                                                                           |
+| `physical`          | _(可选)_ 将此伤害类型标识为来自物理来源。(默认为 false)                                                                                       |
+| `melee_only`        | _(可选)_ 将此伤害类型标识为来自近战武器和攻击。(默认为 false)                                                                                 |
+| `edged`             | _(可选)_ 将此伤害类型标识为来自尖锐或尖的武器或工具。(默认为 false)                                                                           |
+| `environmental`     | _(可选)_ 此伤害类型对应于环境来源。目前影响物品或护甲是否包括针对此伤害类型的环境防护。(默认为 false)                                         |
+| `material_required` | _(可选)_ 确定材料是否必须为此伤害类型定义阻力。(默认为 false)                                                                                 |
+| `mon_difficulty`    | _(可选)_ 确定此伤害类型是否应影响怪物的难度等级。(默认为 false)                                                                               |
+| `no_resist`         | _(可选)_ 将此伤害类型标识为无法抵抗(即"纯"伤害)。(默认为 false)                                                                               |
+| `immune_flags`      | _(可选)_ 一个带有两个可选字段的对象：`"character"` 和 `"monster"`。两个内部字段分别列出一组使角色或怪物对此伤害类型免疫的角色标志和怪物标志。 |
+| `magic_color`       | _(可选)_ 确定在法术中使用时哪种颜色标识此伤害类型。(默认为"black")                                                                            |
+| `derived_from`      | _(可选)_ 一个数组，确定应如何计算此伤害类型在护甲防护和怪物抗性值方面的计算。第一个值是源伤害类型，第二个值是应用于源伤害类型计算的修饰符。   |
+| `onhit_eocs`        | _(可选)_ 当怪物或角色用此伤害类型击中另一个怪物或角色时激活的一组效果条件。在这种情况下，`u` 指的是伤害来源，`npc` 指的是伤害目标。           |
 
 ```JSON
 {
-  "id": "acid",
-  "type": "damage_info_order",
-  "info_display": "basic",
-  "verb": "corroding",
-  "bionic_info": { "order": 500, "show_type": true },
-  "protection_info": { "order": 800, "show_type": true },
-  "pet_prot_info": { "order": 500, "show_type": true },
-  "melee_combat_info": { "order": 500, "show_type": false },
-  "ablative_info": { "order": 500, "show_type": false }
+    "//": "stabbing/piercing damage（刺穿/穿刺伤害）", // 描述：这是一种伤害类型的描述
+    "id": "stab", // 唯一标识符：这是伤害类型的唯一标识符
+    "type": "damage_type", // 条目类型：这是条目的类型
+    "melee_only": true, // 是否只适用于近战：这种伤害类型是否只适用于近战
+    "physical": true, // 是否是物理伤害：这种伤害是否是物理伤害
+    "edged": true, // 是否是边缘伤害：这种伤害是否是边缘伤害
+    "magic_color": "light_red", // 魔法颜色：这种伤害在魔法颜色系统中的颜色
+    "name": "pierce", // 显示名字：这种伤害的显示名字
+    "skill": "stabbing", // 相关技能：这种伤害相关的技能
+    "//2": "derived from cut only for monster defs（仅从怪物定义中派生的剪切）", // 派生信息：这是另一种注释，主要是关于派生的信息
+    "derived_from": [ "cut", 0.8 ], // 派生来源和比例：这种伤害是从哪种伤害派生的，以及派生的比例
+    "immune_flags": { "character": [ "STAB_IMMUNE" ] } // 免疫标志：这是角色对这种伤害的免疫标志
+},
+{
+    "//": "例如：电击", // 这是一种伤害类型的描述
+    "id": "electric", // 这是伤害类型的唯一标识符
+    "type": "damage_type", // 这是条目的类型
+    "physical": false, // 这种伤害是否是物理伤害
+    "magic_color": "light_blue", // 这种伤害的颜色
+    "name": "electric", // 这种伤害的显示名字
+    "immune_flags": { 
+        "character": [ "ELECTRIC_IMMUNE" ], 
+        "monster": [ "ELECTRIC", "ELECTRIC_FIELD" ] 
+    }, // 这是角色和怪物对这种伤害的免疫标志
+    "onhit_eocs": [ "EOC_ELECTRIC_ONHIT" ] // 这是此伤害类型的特殊效果，当命中时触发
+}
+
+### Damage Info Ordering (伤害信息排序)
+
+伤害类型在物品信息界面的各个部分显示，表示护甲阻力、近战伤害等。
+使用 `damage_info_order`，我们可以重新排列这些显示的顺序，甚至确定它们是否可以显示。
+
+| 字段           | 描述                                                                                                                                                                                                                                                                                                                                                |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`           | 唯一标识符，必须对应于现有的 `damage_type`                                                                                                                                                                                                                                                                                                          |
+| `info_display` | _(可选)_ 确定在保护值中显示此伤害类型的详细程度。有效值为 "detailed"（详细）, "basic"（基本）和 "none"（无）。(默认为 "none")                                                                                                                                                                                                                       |
+| `verb`         | _(可选)_ 描述如何应用此伤害类型的动词（例如："bashing"）。用于物品信息的近战部分。                                                                                                                                                                                                                                                                  |
+| `*_info`       | _(可选)_ 一个对象，确定此伤害类型在物品信息指定部分的顺序和可见性。`"order"` 确定在此部分的伤害类型列表中将在哪里显示，`"show_type"` 确定是否在此部分显示此伤害类型。可能的部分包括：`bionic_info`（仿生信息）, `protection_info`（保护信息）, `pet_prot_info`（宠物保护信息）, `melee_combat_info`（近战战斗信息）和 `ablative_info`（消耗信息）。 |
+
+```JSON
+{
+  "id": "acid(酸)",
+  "type": "damage_info_order(伤害信息顺序)",
+  "info_display": "basic(基本)",
+  "verb": "corroding(腐蚀)",
+  "bionic_info": { "order": 500, "show_type": true(显示类型) },
+  "protection_info": { "order": 800, "show_type": true(显示类型) },
+  "pet_prot_info": { "order": 500, "show_type": true(显示类型) },
+  "melee_combat_info": { "order": 500, "show_type": false(不显示类型) },
+  "ablative_info": { "order": 500, "show_type": false(不显示类型) }
 }
 ```
 
+### Dreams (梦境)
 
-### Dreams
-
-| Identifier | Description
-|---         |---
-| `messages` | List of potential dreams.
-| `category` | Mutation category needed to dream.
-| `strength` | Mutation category strength required (1 = 20-34, 2 = 35-49, 3 = 50+).
+| Identifier (标识符) | Description (描述)                                                                     |
+| ------------------- | -------------------------------------------------------------------------------------- |
+| `messages`          | List of potential dreams(潜在梦境列表).                                                |
+| `category`          | Mutation category needed to dream(需要的突变类别).                                     |
+| `strength`          | Mutation category strength required (1 = 20-34, 2 = 35-49, 3 = 50+)(突变类别强度要求). |
 
 ```C++
 {
     "messages" : [
-        "You have a strange dream about birds.",
-        "Your dreams give you a strange feathered feeling."
+        "You have a strange dream about birds(你做了一个关于鸟的奇怪梦).",
+        "Your dreams give you a strange feathered feeling(你的梦境给你一种奇怪的羽毛感觉)."
     ],
-    "category" : "MUTCAT_BIRD",
-    "strength" : 1
+    "category" : "MUTCAT_BIRD(鸟类突变类别)",
+    "strength" : 1(强度1)
 }
 ```
 
-### Disease
+### Disease (疾病)
 
-| Identifier           | Description
-|---                   |---
-| `id`                 | Unique ID. Must be one continuous word, use underscores if necessary.
-| `min_duration`       | The minimum duration the disease can last. Uses strings "x m", "x s","x d".
-| `max_duration`       | The maximum duration the disease can last.
-| `min_intensity`      | The minimum intensity of the effect applied by the disease
-| `max_intensity`      | The maximum intensity of the effect.
-| `health_threshold`   | The amount of health above which one is immune to the disease. Must be between -200 and 200. (optional )
-| `symptoms`           | The effect applied by the disease.
-| `affected_bodyparts` | The list of bodyparts on which the effect is applied. (optional, default to bp_null)
-
+| Identifier (标识符)  | Description (描述)                                                                                                   |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `id`                 | Unique ID(唯一标识符). 必须是一个连续的单词，如有必要请使用下划线.                                                   |
+| `min_duration`       | The minimum duration the disease can last(疾病持续的最短时间). 使用字符串 "x m", "x s","x d".                        |
+| `max_duration`       | The maximum duration the disease can last(疾病持续的最长时间).                                                       |
+| `min_intensity`      | The minimum intensity of the effect applied by the disease(疾病产生的效果的最小强度).                                |
+| `max_intensity`      | The maximum intensity of the effect(效果的最大强度).                                                                 |
+| `health_threshold`   | The amount of health above which one is immune to the disease(免疫疾病所需的健康值). 必须在 -200 和 200 之间. (可选) |
+| `symptoms`           | The effect applied by the disease(疾病产生的效果).                                                                   |
+| `affected_bodyparts` | The list of bodyparts on which the effect is applied(效果作用的身体部位列表). (可选，默认为 bp_null)                 |
 
 ```json
-  {
-    "type": "disease_type",
-    "id": "bad_food",
-    "min_duration": "6 m",
-    "max_duration": "1 h",
-    "min_intensity": 1,
-    "max_intensity": 1,
-    "affected_bodyparts": [ "TORSO" ],
-    "health_threshold": 100,
-    "symptoms": "foodpoison"
-  }
+{
+  "type": "disease_type(疾病类型)",
+  "id": "bad_food(不良食物)",
+  "min_duration": "6 m(6 分钟)",
+  "max_duration": "1 h(1 小时)",
+  "min_intensity": 1(最小强度1),
+  "max_intensity": 1(最大强度1),
+  "affected_bodyparts": ["TORSO(躯干)"],
+  "health_threshold": 100(健康阈值100),
+  "symptoms": "foodpoison(食物中毒)"
+}
 ```
 
-### Emitters
+### Emitters （发射器）
 
-Emitters randomly place [fields](#field-types) around their positions - every turn for monster emissions, every ten seconds for furniture/terrain.
+发射器会在其位置周围随机放置 [fields](#field-types-场) - 对于怪物的发射，每回合发射一次；对于家具/地形，每十秒发射一次。
 
-| Identifier  | Description
-|---          |---
-| `id`        | Unique ID
-| `field`     | Field type emitted
-| `intensity` | Initial intensity of the spawned fields (spawning multiple fields will still cause their intensity to increase). Default 1.
-| `chance`    | **Percent** chance of the emitter emitting, values above 100 will increase the quantity of fields placed via `roll_remainder` (ex: `chance: 150` will place one field 50% of the time and two fields the other 50% ). Failing the roll will disable the whole emission for the tick, not rolled for every `qty`! Default 100.
-| `qty`       | Number of fields placed. Fields are placed using the field propagation rules, allowing fields to spread. Default 1.
+| 标识符      | 描述                                                                                                                                                                                                                                           |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`        | 唯一 ID                                                                                                                                                                                                                                        |
+| `field`     | 发射的场类型                                                                                                                                                                                                                                   |
+| `intensity` | 生成的场的初始强度（生成多个场仍会导致其强度增加）。默认值 1。                                                                                                                                                                                 |
+| `chance`    | 发射器发射的**百分比**概率，值大于 100 时，将通过 `roll_remainder` 增加放置场的数量（例如：`chance: 150` 有 50% 的时间放置一个场，另外 50% 的时间放置两个场）。未通过概率滚动将在滚动时禁用整个发射，而不是对每个 `qty` 进行滚动！默认值 100。 |
+| `qty`       | 放置的场的数量。场使用场传播规则放置，允许场扩散。默认值 1。                                                                                                                                                                                   |
 
 ```JSON
-  {
-    "id": "emit_shock_burst",
-    "type": "emit",
-    "field": "fd_electricity",
-    "intensity": 3,
-    "chance": 1,
-    "qty": 10
-  },
+{
+  "id": "emit_shock_burst", //  "id"表示这个特定对象的唯一标识符。在这个例子中，它被命名为"emit_shock_burst"。
+  "type": "emit", //  "type"描述了对象的类型。在这个例子中，它是"emit"。这表示这个对象是一个发射器。
+  "field": "fd_electricity", //  "field"指的是发射器生成的场。在这个例子中，它是"fd_electricity"，这表示这个发射器生成的是电场。
+  "intensity": 3, //  "intensity"表示场的强度。在这个例子中，它的值为3，这表示电场的强度为3。
+  "chance": 1, //  "chance"表示生成场的概率。在这个例子中，它的值为1，这表示每次都会生成电场。
+  "qty": 10 //  "qty"表示生成场的数量。在这个例子中，它的值为10，这表示每次都会生成10个电场。
+}
 ```
-### Item Groups
 
-Item groups have been expanded, look at [the detailed docs](ITEM_SPAWN.md) to their new description.
-The syntax listed here is still valid.
+### Item Groups （物品组）
 
-| Identifier | Description
-|---         |---
-| `id`       | Unique ID. Must be one continuous word, use underscores if necessary
-| `items`    | List of potential item ID's. Chance of an item spawning is x/T, where X is the value linked to the specific item and T is the total of all item values in a group.
-| `groups`   | ??
+物品组已经扩展，请查看 [详细文档](ITEM_SPAWN.md) 以了解它们的新描述。
+这里列出的语法仍然有效。
+
+| 标识符   | 描述                                                                                              |
+| -------- | ------------------------------------------------------------------------------------------------- |
+| `id`     | 唯一 ID。必须是一个连续的单词，如果需要，请使用下划线                                             |
+| `items`  | 潜在物品 ID 的列表。物品的生成几率为 x/T，其中 X 是与特定物品相关的值，T 是组中所有物品值的总和。 |
+| `groups` | ??                                                                                                |
 
 ```C++
 {
-    "id":"forest",
-    "items":[
-        ["rock", 40],
-        ["stick", 95],
-        ["mushroom", 4],
-        ["mushroom_poison", 3],
-        ["mushroom_magic", 1],
-        ["blueberries", 3]
+    "id":"forest", // 唯一标识符：这是物品分布的唯一标识符
+    "items":[ // 物品列表：这是在此物品分布中可找到的物品及其概率
+        ["rock", 40], // 物品和概率：这是"rock"（石头）的出现概率
+        ["stick", 95], // 物品和概率：这是"stick"（棍子）的出现概率
+        ["mushroom", 4], // 物品和概率：这是"mushroom"（蘑菇）的出现概率
+        ["mushroom_poison", 3], // 物品和概率：这是"mushroom_poison"（毒蘑菇）的出现概率
+        ["mushroom_magic", 1], // 物品和概率：这是"mushroom_magic"（魔法蘑菇）的出现概率
+        ["blueberries", 3] // 物品和概率：这是"blueberries"（蓝莓）的出现概率
     ],
-    "groups":[]
+    "groups":[] // 物品组：这是包含在此物品分布中的物品组，此处为空，表示没有包含任何物品组
 }
 ```
 
-### Item Category
+### Item Category (物品类别)
 
-When you sort your inventory by category, these are the categories that are displayed.
+当您按类别整理库存时，这些类别将显示出来。
 
-| Identifier       | Description
-|---               |---
-| `id`             | Unique ID. Must be one continuous word, use underscores if necessary
-| `name`           | The name of the category. This is what shows up in-game when you open the inventory.
-| `zone`           | The corresponding loot_zone (see loot_zones.json)
-| `sort_rank`      | Used to sort categories when displaying.  Lower values are shown first
-| `priority_zones` | When set, items in this category will be sorted to the priority zone if the conditions are met. If the user does not have the priority zone in the zone manager, the items get sorted into zone set in the 'zone' property. It is a list of objects. Each object has 3 properties: ID: The id of a LOOT_ZONE (see LOOT_ZONES.json), filthy: boolean. setting this means filthy items of this category will be sorted to the priority zone, flags: array of flags
-| `spawn_rate`      | Sets amount of items from item category that might spawn.  Checks for `spawn_rate` value for item category.  If `spawn_chance` is 0.0, the item will not spawn. If `spawn_chance` is greater than 0.0 and less than 1.0, it will make a random roll (0.0-1.0) to check if the item will have a chance to spawn.  If `spawn_chance` is more than or equal to 1.0, it will add a chance to spawn additional items from the same category.  Items will be taken from item group which original item was located in.  Therefore this parameter won't affect chance to spawn additional items for items set to spawn solitary in mapgen (e.g. through use of `item` or `place_item`).
+| 标识符           | 描述                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`             | 唯一 ID。必须是一个连续的单词，如有必要，请使用下划线进行连接                                                                                                                                                                                                                                                                                                                                                              |
+| `name`           | 类别名称。这是在游戏中打开库存时显示的内容。                                                                                                                                                                                                                                                                                                                                                                               |
+| `zone`           | 相应的 loot_zone（见 loot_zones.json）                                                                                                                                                                                                                                                                                                                                                                                     |
+| `sort_rank`      | 用于在显示时对类别排序。较低的值优先显示                                                                                                                                                                                                                                                                                                                                                                                   |
+| `priority_zones` | 当设置时，此类别中的物品将根据满足的条件进行优先排序。如果用户在区域管理器中没有优先区域，则物品将按照在“zone”属性中设置的区域进行排序。这是一个对象列表。每个对象有 3 个属性：ID：LOOT_ZONE 的 ID（见 LOOT_ZONES.json），filthy：布尔值。设置此项意味着此类别的肮脏物品将被排序到优先区域，flags：标记数组                                                                                                                |
+| `spawn_rate`     | 设置可能生成的该类别物品数量。检查 item 类别的`spawn_rate`值。如果`spawn_chance`为 0.0，物品将不会生成。如果`spawn_chance`大于 0.0 且小于 1.0，系统将进行随机滚动（0.0-1.0），以检查物品是否有生成机会。如果`spawn_chance`大于或等于 1.0，将增加从相同类别生成额外物品的机会。物品将从原始物品所在的物品组中获取。因此，此参数不会影响在地图生成中设置为独立生成的物品的额外生成机会（例如通过使用`item`或`place_item`）。 |
 
 ```C++
 {
-    "id": "armor",
-    "name": "ARMOR",
-    "zone": "LOOT_ARMOR",
-    "sort_rank": -21,
-    "priority_zones": [ { "id": "LOOT_FARMOR", "filthy": true, "flags": [ "RAINPROOF" ] } ],
-    "spawn_rate": 0.5
+  "id": "armor", //  "id"表示这个特定对象的唯一标识符。在这个例子中，它被命名为"armor"。
+  "name": "ARMOR", //  "name"是这个对象的名称。在这个例子中，它是"ARMOR"。
+  "zone": "LOOT_ARMOR", //  "zone"是这个对象所在的区域。在这个例子中，它是"LOOT_ARMOR"，表示这个对象位于名为"LOOT_ARMOR"的区域中。
+  "sort_rank": -21, //  "sort_rank"是这个对象在其所在区域中的排序等级。在这个例子中，它的值为-21。
+  "priority_zones": [ { "id": "LOOT_FARMOR", "filthy": true, "flags": [ "RAINPROOF" ] } ],  //  "priority_zones"是一个包含优先区域信息的数组。在这个例子中，有一个优先区域，其"id"为"LOOT_FARMOR"，"filthy"属性为true，表示这个区域是脏的，"flags"属性包含一个"RAINPROOF"标志，表示这个区域是防雨的。
+  "spawn_rate": 0.5 //  "spawn_rate"表示这个对象的生成率。在这个例子中，它的值为0.5，表示这个对象的生成率为50%。
 }
 ```
 
-### Item Properties
+### Item Properties（物品属性）
 
-Properties are bound to item's type definition and code checks for them for special behaviour,
-for example the property below makes a container burst open when filled over 75% and it's thrown.
+属性绑定到物品的类型定义，代码会检查它们以进行特殊行为，例如下面的属性使得容器在被填充超过 75%并被扔出时破裂。
 
 ```json
-  {
-    "properties": [ [ "burst_when_filled", "75" ] ]
-  }
+{
+  "properties": [["burst_when_filled", "75"]]
+}
 ```
 
-### Item Variables
+### Item Variables（物品变量）
 
-Item variables are bound to the item itself and used to serialize special behaviour,
-for example folding a vehicle serializes the folded vehicle's name and list of parts
-(part type ids, part damage, degradation etc) into json string for use when unfolding.
+物品变量绑定到物品本身，并用于序列化特殊行为。例如，折叠车辆会将折叠后的车辆名称和零件清单（零件类型 ID、零件损坏、降级等）序列化为 JSON 字符串，以便在展开时使用。
 
-They can originate from code - like in the example above when folding a vehicle.
+它们可以源自代码 - 就像上面折叠车辆的示例一样。
 
-Alternatively item variables may also originate from the item's prototype. Specifying them
-can be done in the item's definition, add the `variables` key and inside write a key-value
-map.
+或者，物品变量也可以源自物品的原型。可以在物品定义中指定它们，添加`variables`键，然后编写键值映射。
 
-Example:
+示例：
+
 ```json
     "variables": {
       "special_key": "spiffy value"
     }
 ```
 
-This will make any item instantiated from that prototype get assigned this variable, once
-the item is spawned the variables set on the prototype no longer affect the item's variables,
-a migration can clear out the item's variables and reassign the prototype ones if reset_item_vars
-flag is set.
+这将使从该原型实例化的任何物品都被分配此变量。一旦物品生成，原型上设置的变量将不再影响物品的变量。如果设置了`reset_item_vars`标志，迁移可以清除物品的变量并重新分配原型变量。
 
-### Item faults
+### Item faults（物品故障）
 
-Faults can be defined for more specialized damage of an item.
+故障可以用于定义物品的更专门化的损坏。
 
 ```C++
 {
   "type": "fault",
-  "id": "fault_gun_chamber_spent", // unique id for the fault
-  "name": { "str": "Spent casing in chamber" }, // fault name for display
-  "description": "This gun currently...", // fault description
-  "item_prefix": "jammed", // optional string, items with this fault will be prefixed with this
-  "flags": [ "JAMMED_GUN" ] // optional flags, see below
+  "id": "fault_gun_chamber_spent", // 故障的唯一ID
+  "name": { "str": "Spent casing in chamber（膛内弹壳未排出）" }, // 用于显示的故障名称
+  "description": "This gun currently...（这把枪目前...）", // 故障描述
+  "item_prefix": "jammed（卡壳）", // 可选字符串，具有此故障的物品将以此为前缀
+  "flags": [ "JAMMED_GUN" ] // 可选标志，详见下方
 }
 ```
 
-`flags` trigger hardcoded C++ chunks that provide effects, see [JSON_FLAGS.md](JSON_FLAGS.md#faults) for a list of possible flags.
+`flags` 触发硬编码的 C++ 代码块以提供效果，请参阅 [JSON_FLAGS.md](JSON_FLAGS.md#faults) 以查看可能的标志列表。
 
-### Item fault fixes
+### Item fault fixes（物品故障修复）
 
-Fault fixes are methods to fix faults, the fixes can optionally add other faults, modify damage, degradation and item variables.
+故障修复是修复故障的方法，修复可以选择添加其他故障、修改损坏、降级和物品变量。
 
 ```C++
 {
   "type": "fault_fix",
-  "id": "mend_gun_fouling_clean", // unique id for the fix
-  "name": "Clean fouling", // name for display
-  "success_msg": "You clean your %s.", // message printed when fix is applied
-  "time": "50 m", // time to apply fix
-  "faults_removed": [ "fault_gun_dirt", "fault_gun_blackpowder" ], // faults removed when fix is applied
-  "faults_added": [ "fault_gun_unlubricated" ], // faults added when fix is applied
-  "skills": { "mechanics": 1 }, // skills required to apply fix
-  "set_variables": { "dirt": "0" }, // sets the variables on the item when fix is applied
-  "requirements": [ [ "gun_cleaning", 1 ] ], // requirements array, see below
-  "mod_damage": 1000, // damage to modify on item when fix is applied, can be negative to repair
-  "mod_degradation": 50 // degradation to modify on item when fix is applied, can be negative to reduce degradation
+  "id": "mend_gun_fouling_clean", // 修复的唯一ID
+  "name": "Clean fouling（清除火药残留）", // 用于显示的名称
+  "success_msg": "You clean your %s.（你清洁了你的 %s。）", // 修复应用时打印的消息
+  "time": "50 m", // 应用修复所需时间
+  "faults_removed": [ "fault_gun_dirt", "fault_gun_blackpowder" ], // 修复应用时移除的故障
+  "faults_added": [ "fault_gun_unlubricated" ], // 修复应用时添加的故障
+  "skills": { "mechanics": 1 }, // 应用修复所需的技能
+  "set_variables": { "dirt": "0" }, // 修复应用时在物品上设置的变量
+  "requirements": [ [ "gun_cleaning", 1 ] ], // 要求数组，详见下方
+  "mod_damage": 1000, // 修复应用时修改物品上的损坏程度，可以为负数以修复
+  "mod_degradation": 50 // 修复应用时修改物品上的降级程度，可以为负数以减少降级
 }
 ```
 
-`requirements` is an array of requirements, they can be specified in 2 ways:
-* An array specifying an already defined requirement by it's id and a multiplier, `[ "gun_lubrication", 2 ]` will add `gun_lubrication` requirement and multiply the components and tools ammo required by 2.
-* Inline object specifying the requirement in the same way [recipes define it](#recipe-requirements)
+`requirements` 是一个要求数组，可以用两种方式指定：
 
-### Materials
+- 一个数组，通过它的 id 和一个乘数指定已定义的要求：`[ "gun_lubrication", 2 ]` 将添加 `gun_lubrication` 要求，并将所需组件和工具弹药乘以 2。
+- 内联对象，以与[配方定义它](#recipe-requirements)相同的方式指定要求。
 
-| Identifier             | Description
-|---                     |---
-| `id`                   | Unique ID. Lowercase snake_case. Must be one continuous word, use underscores if necessary.
-| `name`                 | In-game name displayed.
-| `resist`               | An object that determines resistance values for this material.
-| `chip_resist`          | Returns resistance to being damaged by attacks against the item itself.
-| `bash_dmg_verb`        | Verb used when material takes bashing damage.
-| `cut_dmg_verb`         | Verb used when material takes cutting damage.
-| `dmg_adj`              | Description added to damaged item in ascending severity.
-| `dmg_adj`              | Adjectives used to describe damage states of a material.
-| `density`              | Affects vehicle collision damage, with denser parts having the advantage over less-dense parts.
-| `wind_resist`          | Percentage 0-100. How effective this material is at stopping wind from getting through. Higher values are better. If none of the materials an item is made of specify a value, a default of 99 is assumed.
-| `vitamins`             | Vitamins in a material. Usually overridden by item specific values.  An integer percentage of ideal daily value.
-| `specific_heat_liquid` | Specific heat of a material when not frozen (J/(g K)). Default 4.186 - water.
-| `specific_heat_solid`  | Specific heat of a material when frozen (J/(g K)). Default 2.108 - water.
-| `latent_heat`          | Latent heat of fusion for a material (J/g). Default 334.
-| `freezing_point`       | Freezing point of this material (C). Default 0 C ( 32 F ).
-| `edible`               | Optional boolean. Default is false.
-| `rotting`              | Optional boolean. Default is false.
-| `soft`                 | True for pliable materials, whose length doesn't prevent fitting into a container, or through the opening of a container. Default is false.
-| `conductive`           | True if the material conducts electricity, defaults to false
-| `reinforces`           | Optional boolean. Default is false.
+### 材料（Materials）
 
-There are seven -resist parameters: acid, bash, chip, cut, elec, fire, and bullet. These are integer values; the default is 0 and they can be negative to take more damage.
+| 标识符（Identifier）   | 说明                                                                                                          |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `id`                   | 唯一 ID。小写的蛇形命名法（snake_case）。必须是一个连续的单词，如有必要可使用下划线。                         |
+| `name`                 | 游戏内显示的名称。                                                                                            |
+| `resist`               | 决定该材料抵抗值的对象。                                                                                      |
+| `chip_resist`          | 返回物品本身受到攻击时的抵抗损坏值。                                                                          |
+| `bash_dmg_verb`        | 材料受到钝击伤害时使用的动词。                                                                                |
+| `cut_dmg_verb`         | 材料受到切割伤害时使用的动词。                                                                                |
+| `dmg_adj`              | 按照损坏程度递增的描述添加到损坏物品中。                                                                      |
+| `dmg_adj`              | 用于描述材料损坏状态的形容词。                                                                                |
+| `density`              | 影响车辆碰撞伤害，密度较大的部件相对于密度较小的部件具有优势。                                                |
+| `wind_resist`          | 百分比 0-100。此材料阻挡风的效果如何。数值越高越好。如果一个物品所使用的所有材料都没有指定数值，则默认为 99。 |
+| `vitamins`             | 材料中的维生素。通常会被物品特定数值覆盖。一个表示理想每日需求百分比的整数。                                  |
+| `specific_heat_liquid` | 材料未冻结时的比热（J/(g K)）。默认为 4.186 - 水。                                                            |
+| `specific_heat_solid`  | 材料冻结时的比热（J/(g K)）。默认为 2.108 - 水。                                                              |
+| `latent_heat`          | 材料的熔化潜热（J/g）。默认为 334。                                                                           |
+| `freezing_point`       | 该材料的冰点（摄氏度）。默认为 0 摄氏度（32 华氏度）。                                                        |
+| `edible`               | 可选布尔值。默认为 false。                                                                                    |
+| `rotting`              | 可选布尔值。默认为 false。                                                                                    |
+| `soft`                 | 对于柔软的材料，其长度不会影响装入容器或通过容器开口。默认为 false。                                          |
+| `conductive`           | 如果材料导电，则为 true，默认为 false                                                                         |
+| `reinforces`           | 可选布尔值。默认为 false。                                                                                    |
+
+共有七个 -resist 参数：acid（酸性），bash（钝击），chip（削片），cut（切割），elec（电击），fire（火焰）和 bullet（子弹）。这些都是整数值；默认值为 0，它们可以为负数以承受更多伤害。
 
 ```JSON
 {
-    "type": "material",
-    "id": "hflesh",
-    "name": "Human Flesh",
-    "density": 5,
-    "specific_heat_liquid": 3.7,
-    "specific_heat_solid": 2.15,
-    "latent_heat": 260,
-    "edible": true,
-    "rotting": true,
-    "resist": { "bash": 1, "cut": 1, "acid": 1, "heat": 1, "bullet": 1 },
-    "chip_resist": 2,
-    "dmg_adj": [ "bruised", "mutilated", "badly mutilated", "thoroughly mutilated" ],
-    "bash_dmg_verb": "bruised",
-    "cut_dmg_verb": "sliced",
-    "vitamins": [ [ "calcium", 0.1 ], [ "vitB", 1 ], [ "iron", 1.3 ] ],
-    "burn_data": [
-      { "fuel": 1, "smoke": 1, "burn": 1, "volume_per_turn": "2500_ml" },
-      { "fuel": 2, "smoke": 3, "burn": 2, "volume_per_turn": "10000_ml" },
-      { "fuel": 3, "smoke": 10, "burn": 3 }
-    ]
+  "type": "material", //  "type"字段：这是一个“材料”类型的对象。
+  "id": "hflesh", //  "id"字段：这个特定材料的唯一标识符。在这个例子中，它被命名为"hflesh"。
+  "name": "Human Flesh", //  "name"字段：这个材料的名称。在这个例子中，它是"Human Flesh"。
+  "density": 5, //  "density"字段：这个材料的密度。在这个例子中，它的值为5。
+  "specific_heat_liquid": 3.7, //  "specific_heat_liquid"字段：这个材料在液态时的比热。在这个例子中，它的值为3.7。
+  "specific_heat_solid": 2.15, //  "specific_heat_solid"字段：这个材料在固态时的比热。在这个例子中，它的值为2.15。
+  "latent_heat": 260, //  "latent_heat"字段：这个材料的潜热。在这个例子中，它的值为260。
+  "edible": true, //  "edible"字段：这个材料是否可以食用。在这个例子中，它的值为true，表示这个材料是可食用的。
+  "rotting": true, //  "rotting"字段：这个材料是否会腐烂。在这个例子中，它的值为true，表示这个材料会腐烂。
+  "resist": { "bash": 1, "cut": 1, "acid": 1, "heat": 1, "bullet": 1 }, //  "resist"字段：这个材料对各种类型的伤害的抗性。在这个例子中，它对所有类型的伤害的抗性都是1。
+  "chip_resist": 2, //  "chip_resist"字段：这个材料对碎片的抗性。在这个例子中，它的值为2。
+  "dmg_adj": [ "bruised", "mutilated", "badly mutilated", "thoroughly mutilated" ], //  "dmg_adj"字段：描述了这个材料受到伤害后的各种状态。在这个例子中，它的状态可以是"bruised"、"mutilated"、"badly mutilated"或"thoroughly mutilated"。
+  "bash_dmg_verb": "bruised", //  "bash_dmg_verb"字段：表示这个材料受到撞击伤害后的状态。在这个例子中，它的状态是"bruised"。
+  "cut_dmg_verb": "sliced", //  "cut_dmg_verb"字段：表示这个材料受到切割伤害后的状态。在这个例子中，它的状态是"sliced"。
+  "vitamins": [ [ "calcium", 0.1 ], [ "vitB", 1 ], [ "iron", 1.3 ] ], //  "vitamins"字段：表示这个材料所含的维他命。在这个例子中，它包含钙（0.1）、维他命B（1）和铁（1.3）。
+  "burn_data": [ //  "burn_data"字段：表示这个材料燃烧时的各种属性。
+    { "fuel": 1, "smoke": 1, "burn": 1, "volume_per_turn": "2500_ml" }, //  在这个例子中，第一阶段的燃料值为1，烟雾值为1，燃烧值为1，每轮燃烧体积为2500毫升。
+    { "fuel": 2, "smoke": 3, "burn": 2, "volume_per_turn": "10000_ml" }, //  在第二阶段，燃料值为2，烟雾值为3，燃烧值为2，每轮燃烧体积为10000毫升。
+    { "fuel": 3, "smoke": 10, "burn": 3 } //  在第三阶段，燃料值为3，烟雾值为10，燃烧值为3。注意，这一阶段没有定义每轮燃烧体积。
+  ]
 }
 ```
 
-Note that the above example gives floats, not integers, for the vitamins values.  This is likely incorrect; they should be replaced with integers.
+请注意，上述示例中的维生素值是浮点数，而非整数。这可能是不正确的；它们应该被替换为整数。
 
+#### Fuel data (燃料数据)
 
-#### Fuel data
+每种材料都可以具有燃料数据，用于确定每单位消耗产生的马力。目前，气体和等离子体实际上不能作为燃料。
 
-Every material can have fuel data that determines how much horse power it produces per unit consumed. Currently, gases and plasmas cannot really be fuels.
-
-If a fuel has the PERPETUAL flag, engines powered by it never use any fuel.  This is primarily intended for the muscle pseudo-fuel, but mods may take advantage of it to make perpetual motion machines.
+如果燃料具有 PERPETUAL 标志，那么由它驱动的发动机永远不会使用任何燃料。这主要是为肌肉伪燃料设计的，但模组也可以利用它制作永动机。
 
 ```C++
 "fuel_data" : {
-    "energy": "34200_kJ",        // Energy per litre of fuel.
+    "energy": "34200_kJ",        // 每升燃料的能量。
                                  // https://en.wikipedia.org/wiki/Energy_density
-   "perpetual": true,            // this material is a perpetual fuel like `wind`, `sunlight`, `muscle`, `animal` and `metabolism`.
-   "pump_terrain": "t_gas_pump", // optional. terrain id for the fuel's pump, if any.
-   "explosion_data": {           // optional for fuels that can cause explosions
-        "chance_hot": 2,         // 1 in chance_hot of explosion when attacked by HEAT weapons
-        "chance_cold": 5,        // 1 in chance_cold of explosion when attacked by other weapons
-        "factor": 1.0,           // explosion factor - larger numbers create more powerful explosions
-        "fiery": true,           // true for fiery explosions
-        "size_factor": 0.1       // size factor - larger numbers make the remaining fuel increase explosion power more
+   "perpetual": true,            // 这种材料是像`wind`、`sunlight`、`muscle`、`animal`和`metabolism`这样的永久燃料。
+   "pump_terrain": "t_gas_pump", // 可选。燃料泵的地形ID（如果有的话）。
+   "explosion_data": {           // 可选，对于可能导致爆炸的燃料
+        "chance_hot": 2,         // 当受到热能武器攻击时，1/2的几率发生爆炸
+        "chance_cold": 5,        // 当受到其他武器攻击时，1/5的几率发生爆炸
+        "factor": 1.0,           // 爆炸系数 - 数值越大，爆炸越猛烈
+        "fiery": true,           // 对于火焰爆炸为true
+        "size_factor": 0.1       // 规模系数 - 数值越大，剩余燃料增加爆炸威力越多
     }
 }
 ```
 
-#### Burn data
+#### Burn data（燃烧数据）
 
-Every material can have burn data that determines how it interacts with fire. Fundamentally, the intensity, smoke production, and longevity of fires depends on the volume of consumed items. However, these values allow for certain items to burn more for a given volume, or even put out or inhibit the growth of fires.
+每种材料都可以有燃烧数据，用于确定其与火焰的相互作用。从根本上讲，火焰的强度、烟雾产生和持续时间取决于消耗物品的体积。然而，这些值允许某些物品在给定的体积下燃烧更多，甚至扑灭或抑制火焰的生长。
 
-Note that burn_data is defined per material, but items may be made of multiple materials. For such cases, each material of the item will be calculated separately, as if it was multiple items each corresponding to a single material.
+请注意，`burn_data`是按材料定义的，但物品可能由多种材料制成。对于这种情况，将分别计算物品的每种材料，就像它是多个对应单一材料的物品一样。
 
 ```C++
 "burn_data": [
-    { "immune": true,                    // Defaults to false, optional boolean. If true, makes the resulting material immune to fire. As such it can neither provide fuel nor be burned or damaged.
-	"fuel": 300,                     // Float value that determines how much time and intensity this material adds to a fire. Negative values will subtract fuel from the fire, smothering it. 
-	                                 // Items with a phase ID of liquid should be made of materials with a value of >= 200 if they are intended to be flammable.
-	"smoke": 0,                      // Float value, determines how much smoke this material produces when burning.
-	"volume_per_turn": "750 ml",     // If non-zero and lower than item's volume, scale burning by volume_per_turn / volume
-	"burn": 1 }                      // Float value, determines how quickly a fire will convert items made of this material to fuel. Does not affect the total fuel provided by a given
-                                         // volume of a given material.
+    { "immune": true,                    // 默认为 false，可选布尔值。如果为 true，则使得结果的材料对火焰免疫。因此，它既不能提供燃料，也不能被燃烧或损坏。
+	"fuel": 300,                     // 浮点值，确定该材料向火焰添加的时间和强度。负值将从火焰中减去燃料，使其熄灭。
+	                                 // 与液体相对应的 phase ID 的物品应该由具有 >= 200 值的材料制成，如果它们是可燃的。
+	"smoke": 0,                      // 浮点值，确定该材料在燃烧时产生的烟雾量。
+	"volume_per_turn": "750 ml",     // 如果非零且低于物品的体积，则按 volume_per_turn / volume 缩放燃烧
+	"burn": 1 }                      // 浮点值，确定火焰将此材料制成的物品转化为燃料的速度。不影响给定材料的给定体积所提供的总燃料。
     ],
 ```
 
-### Monster Groups
+### Monster Groups（怪物组）
 
-#### Group definition
+#### Group definition（群组定义）
 
-| Identifier              | Description
-|---                      |---
-| `name`                  | Unique ID. Must be one continuous word, use underscores if necessary.
-| `default`               | (_optional_) Default monster, used to represent the monster group. (default: The monster with the highest `weight` in the group)
-| `monsters`              | To choose a monster for spawning, the game creates entries equal to the sum of all `weight` and picks one. Each monster will have a number of entries equal to its `weight`. See the table below for how to build the single monster definitions.
-| `is_safe`               | (_optional_) (bool) Check to not trigger safe-mode warning, currently inconsequential.
-| `is_animal`             | (_optional_) (bool) Check if that group has only normal animals, currently inconsequential.
-| `replace_monster_group` | (_optional_) (bool) Check if the group should be replaced completely by another monster group as game time progresses - doesn't affect already spawned monsters, as such mostly superseded by monster evolution.
-| `new_monster_group_id`  | (_optional_) (string) The id of the monster group that should replace this one.
-| `replacement_time`      | (_optional_) (int) The amount of time before the group should be replaced by the new one, in days. Final replacement date is calculated by `replacement_time * evolution factor`.
+| 标识符                  | 描述                                                                                                                                                   |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `name`                  | 唯一 ID。必须是一个连续的单词，如有必要，请使用下划线。                                                                                                |
+| `default`               | (_可选_) 默认怪物，用于表示怪物群。 (默认：群组中 `weight` 最高的怪物)                                                                                 |
+| `monsters`              | 为了选择用于生成的怪物，游戏创建等于所有 `weight` 总和的条目并选择一个。每个怪物将拥有等于其 `weight` 的条目数量。请参阅下表了解如何构建单个怪物定义。 |
+| `is_safe`               | (_可选_) (布尔值)检查以防止触发安全模式警告，目前无关紧要。                                                                                            |
+| `is_animal`             | (_可选_) (布尔值)检查该组是否只有普通动物，目前无关紧要。                                                                                              |
+| `replace_monster_group` | (_可选_) (布尔值)检查随着游戏时间的推移，该组是否应完全被另一个怪物组替换 - 不影响已经生成的怪物，因此主要被怪物进化取代。                             |
+| `new_monster_group_id`  | (_可选_) (字符串)应替换此组的怪物组的 ID。                                                                                                             |
+| `replacement_time`      | (_可选_) (整数)在以天为单位的时间之前，该组应被新组替换。最后的替换日期由 `replacement_time * evolution factor` 计算。                                 |
 
-#### Monster/Subgroup definition
+#### Monster/Subgroup definition（怪物/子分组定义）
 
-In monster groups, within the `"monsters"` array, you can define `"group"` objects as well as `"monster"` objects. Groups use the same fields as monsters, but they are processed differently. When the game looks for possible spawns from a monster group, it will recursively check subgroups if they exist. The weight of the subgroup is defined just like monster objects, so spawn chances only matter for top-level objects.
+在怪物分组中，在`"monsters"`数组中，您可以定义`"group"`对象以及`"monster"`对象。分组使用与怪物相同的字段，但处理方式不同。当游戏查找可能从怪物组中生成的怪物时，如果存在子分组，它将递归地检查子分组。子分组的权重与怪物对象一样定义，因此生成几率仅对顶级对象有关。
 
-| Identifier        | Description
-|---                |---
-| `monster`         | The monster's unique ID, eg. `"mon_zombie"`. Indicates that this entry is a "monster".
-| `group`           | The sub-group's unique ID eg. `"GROUP_ZOMBIE"`. Indicates that this entry is a "monstergroup".
-| `weight`          | (_optional_) Chance of occurrence (`weight` / total `weight` in group) (default: 1)
-| `cost_multiplier` | (_optional_) How many monsters each monster in this definition should count as, if spawning a limited number of monsters.  (default: 1)
-| `pack_size`       | (_optional_) The minimum and maximum number of monsters in this group that should spawn together.  (default: `[1,1]`)
-| `conditions`      | (_optional_) Conditions limit when monsters spawn. Valid options: `SUMMER`, `WINTER`, `AUTUMN`, `SPRING`, `DAY`, `NIGHT`, `DUSK`, `DAWN`. Multiple Time-of-day conditions (`DAY`, `NIGHT`, `DUSK`, `DAWN`) will be combined together so that any of those conditions makes the spawn valid. Multiple Season conditions (`SUMMER`, `WINTER`, `AUTUMN`, `SPRING`) will be combined together so that any of those conditions makes the spawn valid.
-| `starts`          | (_optional_) This entry becomes active after this time.  Specified using time units.  (**multiplied by the evolution scaling factor**)
-| `ends`            | (_optional_) This entry becomes inactive after this time.  Specified using time units.  (**multiplied by the evolution scaling factor**)
-| `spawn_data`      | (_optional_) Any properties that the monster only has when spawned in this group. `ammo` defines how much of which ammo types the monster spawns with. Only applies to "monster" type entries.
-| `event`           | (_optional_) If present, this entry can only spawn during the specified event. See the `holiday` enum for possible values. Defaults to `none`. (Ex: `"event": "halloween"`)
+| 标识符            | 描述                                                                                                                                                                                                                                                                                                                                                   |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `monster`         | 怪物的唯一 ID，例如`"mon_zombie"`。表示此条目是一个"monster"。                                                                                                                                                                                                                                                                                         |
+| `group`           | 子分组的唯一 ID，例如`"GROUP_ZOMBIE"`。表示此条目是一个"monstergroup"。                                                                                                                                                                                                                                                                                |
+| `weight`          | （_可选_）发生几率（`weight` / 分组中的总`weight`）（默认值：1）                                                                                                                                                                                                                                                                                       |
+| `cost_multiplier` | （_可选_）在生成有限数量的怪物时，此定义中每个怪物应计数为多少个。（默认值：1）                                                                                                                                                                                                                                                                        |
+| `pack_size`       | （_可选_）此组中应一起生成的怪物的最小和最大数量。（默认值：`[1,1]`）                                                                                                                                                                                                                                                                                  |
+| `conditions`      | （_可选_）条件限制怪物何时生成。有效选项：`SUMMER`（夏季）, `WINTER`（冬季）, `AUTUMN`（秋季）, `SPRING`（春季）, `DAY`（白天）, `NIGHT`（夜晚）, `DUSK`（黄昏）, `DAWN`（黎明）。多个昼夜条件（`DAY`，`NIGHT`，`DUSK`，`DAWN`）将组合在一起，以便任何这些条件使生成有效。多个季节条件（`SUMMER`，`WINTER`，`AUTUMN`，`SPRING`）将组合在一起，这样任何 |
 
 ```C++
-// Example of a monstergroup containing only "monster" entries:
+// 示例：只包含"monster"条目的monstergroup（怪物组）：
 {
-  "name" : "GROUP_ANT",
-  "default" : "mon_ant",
-  "monsters" : [
-    { "monster" : "mon_ant", "weight" : 870, "cost_multiplier" : 0 },
+  "name" : "GROUP_ANT", // 名称：怪物组的唯一标识符
+  "default" : "mon_ant", // 默认：如果没有选择任何怪物，将会默认生成这个怪物
+  "monsters" : [ // 怪物：这是一个包含所有可能生成怪物的列表
+    { "monster" : "mon_ant", "weight" : 870, "cost_multiplier" : 0 }, // 怪物：这是要生成的怪物的类型；权重：怪物出现的权重；成本倍增器：影响怪物的生成成本
     { "monster" : "mon_ant_larva", "weight" : 40, "cost_multiplier" : 0 },
     { "monster" : "mon_ant_soldier", "weight" : 90, "cost_multiplier" : 5 },
     { "monster" : "mon_ant_queen", "weight" : 0, "cost_multiplier" : 0 },
-    { "monster" : "mon_thing", "weight" : 100, "cost_multiplier" : 0, "pack_size" : [3,5], "conditions" : ["DUSK","DAWN","SUMMER"] },
-    { "monster" : "mon_santa", "weight" : 500, "event" : "christmas" }
+    { "monster" : "mon_thing", "weight" : 100, "cost_multiplier" : 0, "pack_size" : [3,5], "conditions" : ["DUSK","DAWN","SUMMER"] }, // 包大小：定义生成怪物的数量范围；条件：定义怪物出现的条件
+    { "monster" : "mon_santa", "weight" : 500, "event" : "christmas" } // 事件：定义怪物在特定事件（如圣诞节）时出现
   ]
-},
-// Example of a monstergroup containing subgroups:
+}
+// 示例：包含子分组的monstergroup：
 {
   "type": "monstergroup",
   "name": "GROUP_MIGO_RAID",
-  "//": "Meta-group for mi-gos on-the-go.",
+  "//": "mi-go的元组，用于在行动中的生成。",
   "monsters": [
-    { "group": "GROUP_MI-GO_BASE_CAPTORS", "weight": 150, "cost_multiplier": 6, "pack_size": [ 1, 2 ] },
-    { "group": "GROUP_MI-GO_SCOUT_TOWER", "weight": 100, "cost_multiplier": 4, "pack_size": [ 0, 2 ] },
-    { "monster": "mon_mi_go_guard", "weight": 200, "cost_multiplier": 4 },
-    { "monster": "mon_mi_go", "weight": 500, "cost_multiplier": 2, "pack_size": [ 3, 4 ] }
+    // 使用"GROUP_MI-GO_BASE_CAPTORS"组作为生成源，权重为150，生成成本乘数为6，每次生成1到2个怪物
+    { "group": "GROUP_MI-GO_BASE_CAPTORS", "weight": 150, "cost_multiplier": 6, "pack_size": [ 1, 2 ] }, 
+    // 使用"GROUP_MI-GO_SCOUT_TOWER"组作为生成源，权重为100，生成成本乘数为4，每次生成0到2个怪物
+    { "group": "GROUP_MI-GO_SCOUT_TOWER", "weight": 100, "cost_multiplier": 4, "pack_size": [ 0, 2 ] }, 
+    // 生成一个mi-go守卫怪物，权重为200，生成成本乘数为4
+    { "monster": "mon_mi_go_guard", "weight": 200, "cost_multiplier": 4 }, 
+    // 生成一个mi-go怪物，权重为500，生成成本乘数为2，每次生成3到4个怪物
+    { "monster": "mon_mi_go", "weight": 500, "cost_multiplier": 2, "pack_size": [ 3, 4 ] } 
   ]
 }
 ```
 
-### Monster Factions
+### Monster Factions（怪物派系）
 
-| Identifier      | Description
-|---              |---
-| `name`          | Unique ID. Must be one continuous word, use underscores when necessary.
-| `base_faction`  | Optional base faction. Relations to other factions are inherited from it and relations of other factions to this one check this.
-| `by_mood`       | Be hostile towards this faction when angry, neutral otherwise. Default attitude to all other factions.
-| `neutral`       | Always be neutral towards this faction.
-| `friendly`      | Always be friendly towards this faction. By default a faction is friendly towards itself.
-| `hate`          | Always be hostile towards this faction. Will change target to monsters of this faction if available.
+| 标识符（Identifier） | 描述（Description）                                                        |
+| -------------------- | -------------------------------------------------------------------------- |
+| `name`               | 唯一 ID。必须是一个连续的单词，如果需要，请使用下划线。                    |
+| `base_faction`       | 可选的基本派系。从中继承与其他派系的关系，以及其他派系与此派系的关系检查。 |
+| `by_mood`            | 当生气时对这个派系表示敌意，其他情况保持中立。默认对所有其他派系的态度。   |
+| `neutral`            | 始终对这个派系保持中立。                                                   |
+| `friendly`           | 始终对这个派系保持友好。默认情况下，一个派系对自己是友好的。               |
+| `hate`               | 始终对这个派系表示敌意。如果有这个派系的怪物可供选择，将改变目标。         |
 
 ```C++
 {
-    "name"         : "cult",
-    "base_faction" : "zombie",
-    "by_mood"      : ["slime"],
-    "neutral"      : ["nether"],
-    "friendly"     : ["slime"],
-    "hate"         : ["fungus"]
+    "name"         : "cult（邪教）",
+    "base_faction" : "zombie（僵尸）",
+    "by_mood"      : ["slime（史莱姆）"],
+    "neutral"      : ["nether（下界）"],
+    "friendly"     : ["slime（史莱姆）"],
+    "hate"         : ["fungus（真菌）"]
 }
 ```
 
-### Monsters
+### Monsters（怪物）
 
-See [MONSTERS.md](MONSTERS.md)
+参见 [MONSTERS.md（怪物.md）](MONSTERS.md)
 
-### Mutation Categories
+### Mutation Categories（变异类别）
 
-See [MUTATIONS.md](MUTATIONS.md)
+参见 [MUTATIONS.md（变异.md）](MUTATIONS.md)
 
-### Names
+### Names（名字）
 
 ```C++
-{ "name" : "Aaliyah", "gender" : "female", "usage" : "given" }, // Name, gender, "given"/"family"/"city" (first/last/city name).
+{ "name" : "Aaliyah", "gender" : "female", "usage" : "given" }, // 名字，性别，"given"/"family"/"city"（名/姓/城市名称）。
 ```
 
-### Profession item substitution
+### Profession item substitution（职业物品替换）
 
-Defines item replacements that are applied to the starting items based upon the starting traits. This allows for example to replace wool items with non-wool items when the characters starts with the wool allergy trait.
+定义基于起始特征的起始物品替换。例如，这允许在角色开始时具有羊毛过敏特征时，用非羊毛物品替换羊毛物品。
 
-If the JSON objects contains a "item" member, it defines a replacement for the given item, like this:
+如果 JSON 对象包含一个"item"成员，它定义了给定物品的替换，如下所示：
 
 ```C++
 {
-  "type": "profession_item_substitutions",
-  "item": "sunglasses",
+  "type": "profession_item_substitutions（职业物品替换）",
+  "item": "sunglasses（太阳镜）",
   "sub": [
-    { "present": [ "HYPEROPIC" ], "new": [ "fitover_sunglasses" ] },
-    { "present": [ "MYOPIC" ], "new": [ { "fitover_sunglasses", "ratio": 2 } ] }
+    { "present": [ "HYPEROPIC（远视）" ], "new": [ "fitover_sunglasses（适合佩戴的太阳镜）" ] },
+    { "present": [ "MYOPIC（近视）" ], "new": [ { "fitover_sunglasses（适合佩戴的太阳镜）", "ratio": 2 } ] }
   ]
 }
 ```
-This defines each item of type "sunglasses" shall be replaced with:
-- an item "fitover_sunglasses" if the character has the "HYPEROPIC" trait,
-- two items "fitover_sunglasses" if the character has the "MYOPIC" trait.
 
-If the JSON objects contains a "trait" member, it defines a replacement for multiple items that applies when the character has the given trait:
+这定义了每个类型为 "sunglasses（太阳镜）" 的物品将被替换为：
+
+- 如果角色具有 "HYPEROPIC（远视）" 特质，则替换为一个 "fitover_sunglasses（适合佩戴的太阳镜）" 物品，
+- 如果角色具有 "MYOPIC（近视）" 特质，则替换为两个 "fitover_sunglasses（适合佩戴的太阳镜）" 物品。
+
+如果JSON对象包含一个 "trait" 成员，它定义了当角色具有给定特质时适用于多个物品的替换：
 ```C++
 {
-  "type": "profession_item_substitutions",
-  "trait": "WOOLALLERGY",
+  "type": "profession_item_substitutions（职业物品替换）",
+  "trait": "WOOLALLERGY（羊毛过敏）",
   "sub": [
-    { "item": "blazer", "new": [ "jacket_leather_red" ] },
-    { "item": "hat_hunting", "new": [ { "item": "hat_cotton", "ratio": 2 } ] }
+    { "item": "blazer（西装外套）", "new": [ "jacket_leather_red（红色皮夹克）" ] },
+    { "item": "hat_hunting（猎人帽）", "new": [ { "item": "hat_cotton（棉帽）", "ratio": 2 } ] }
   ]
 }
 ```
-This defines characters with the WOOLALLERGY trait get some items replaced:
-- "blazer" is converted into "jacket_leather_red",
-- each "hat_hunting" is converted into *two* "hat_cotton" items.
 
-If the JSON objects contains a "bonus" member, it defines which items will be received, like this:
+这个定义了具有WOOLALLERGY特征的角色会有一些物品替换：
+
+- "blazer"（外套）会被转换成 "jacket_leather_red"（红色皮夹克），
+- 每个 "hat*hunting"（狩猎帽）会被转换成 \_two* "hat_cotton"（棉帽）物品。
+
+如果JSON对象包含一个 "bonus"（奖励）成员，它将定义将获得哪些物品，如下所示：
+
 ```C++
 {
   "type": "profession_item_substitutions",
   "group": {
-    "items": [ "winter_pants_army", "undershirt", "socks", "sweatshirt", "boots_hiking", "knife_folding", "wristwatch" ],
+    "items": [ "winter_pants_army"（冬季军裤）, "undershirt"（内衣）, "socks"（袜子）, "sweatshirt"（运动衫）, "boots_hiking"（登山鞋）, "knife_folding"（折叠刀）, "wristwatch"（手表） ],
     "entries": [
-      { "group": "charged_two_way_radio" },
-      { "group": "charged_matches" },
-      { "item": "ear_plugs" },
-      { "item": "water_clean", "container-item": "canteen" },
-      { "item": "m1911", "ammo-item": "45_acp", "charges": 7, "container-item": "holster" },
-      { "item": "45_acp", "charges": 23 },
-      { "item": "garand", "ammo-item": "3006", "charges": 8, "contents-item": "shoulder_strap" },
-      { "item": "3006", "charges": 8, "container-item": "garandclip" },
-      { "item": "3006", "charges": 4 }
+      { "group": "charged_two_way_radio"（充电对讲机） },
+      { "group": "charged_matches"（充电火柴） },
+      { "item": "ear_plugs"（耳塞） },
+      { "item": "water_clean"（清水）, "container-item": "canteen"（水壶） },
+      { "item": "m1911"（M1911手枪）, "ammo-item": "45_acp"（.45 ACP子弹）, "charges": 7, "container-item": "holster"（枪套） },
+      { "item": "45_acp"（.45 ACP子弹）, "charges": 23 },
+      { "item": "garand"（加兰德步枪）, "ammo-item": "3006"（.30-06子弹）, "charges": 8, "contents-item": "shoulder_strap"（肩带） },
+      { "item": "3006"（.30-06子弹）, "charges": 8, "container-item": "garandclip"（加兰德弹夹） },
+      { "item": "3006"（.30-06子弹）, "charges": 4 }
     ]
   },
   "bonus": {
-    "present": [ "ALBINO" ],
-    "absent": [ "HYPEROPIC" ]
+    "present": [ "ALBINO"（白化病） ],
+    "absent": [ "HYPEROPIC"（远视） ]
   }
 }
 ```
 
-### Professions
+### Professions（职业）
 
-Professions are specified as JSON object with "type" member set to "profession":
+职业是指定为JSON对象，其"type"成员设置为"profession"：
 
 ```C++
 {
@@ -1653,325 +1622,331 @@ Professions are specified as JSON object with "type" member set to "profession":
 }
 ```
 
-The id member should be the unique id of the profession.
+id成员应该是职业的唯一id。
 
-The following properties (mandatory, except if noted otherwise) are supported:
+支持以下属性（除非另有说明，否则为必填）：
 
-#### `description`
-(string)
+#### `description`（描述）
 
-The in-game description.
+（字符串）
 
-#### `name`
-(string or object with members "male" and "female")
+游戏内描述。
 
-The in-game name, either one gender-neutral string, or an object with gender specific names. Example:
+#### `name`（名称）
+
+（字符串或带有 "male"（男性）和 "female"（女性）成员的对象）
+
+游戏内名称，可以是一个中性的字符串，或具有特定性别名称的对象。示例：
+
 ```C++
 "name": {
-    "male": "Groom",
-    "female": "Bride"
+    "male": "Groom"（新郎）,
+    "female": "Bride"（新娘）
 }
 ```
 
-#### `points`
+#### `points`（点数）
+
 (integer)
 
-Point cost of profession. Positive values cost points and negative values grant points.
+职业的点数消耗。正值表示消耗点数，负值表示获得点数。
 
-#### `addictions`
-(optional, array of addictions)
+#### `addictions`（成瘾）
 
-List of starting addictions. Each entry in the list should be an object with the following members:
-- "type": the string id of the addiction (see [JSON_FLAGS.md](JSON_FLAGS.md)),
-- "intensity": intensity (integer) of the addiction.
+（可选，成瘾数组）
 
-Example:
+初始成瘾列表。列表中的每个条目都应是一个具有以下成员的对象：
+
+- "type": 成瘾的字符串ID（参见 [JSON_FLAGS.md](JSON_FLAGS.md)），
+- "intensity": 成瘾的强度（整数）。
+
+示例：
+
 ```C++
 "addictions": [
     { "type": "nicotine", "intensity": 10 }
 ]
 ```
 
-#### `skills`
+ #### `技能` (Skills)
 
-(optional, array of skill levels)
+(可选,技能等级数组)
 
-List of starting skills. Each entry in the list should be an object with the following members:
-- "name": the string id of the skill (see skills.json),
-- "level": level (integer) of the skill. This is added to the skill level that can be chosen in the character creation.
+起始技能列表。列表中的每个条目应该是一个对象,包含以下成员:
 
-Example:
+- "name":技能的字符串ID(见skills.json),  
+
+- "level":技能的等级(整数)。这会加到角色创建时可以选择的技能等级上。
+
+例如:
+
 ```C++
 "skills": [
     { "name": "archery", "level": 2 }
 ]
 ```
 
-#### `missions`
+#### `missions`（任务）
 
-(optional, array of mission ids)
+（可选，任务ID数组）
 
-List of starting missions for this profession/hobby.
+此职业/爱好的起始任务列表。
 
-Example:
+示例：
+
 ```JSON
 "missions": [ "MISSION_LAST_DELIVERY" ]
 ```
 
-#### `proficiencies`
+#### `proficiencies`（熟练度）
 
-(optional, array of proficiency ids)
+（可选，熟练度ID数组）
 
-List of starting proficiency ids.
+起始熟练度ID列表。
 
 Example:
+
 ```json
 "proficiencies": [ "prof_knapping" ]
 ```
 
-#### `items`
+#### `items`（物品）
 
-(optional, object with optional members "both", "male" and "female")
+（可选，包含可选成员 "both"、"male" 和 "female" 的对象）
 
-Items the player starts with when selecting this profession. One can specify different items based on the gender of the character. Each lists of items should be an array of items ids, or pairs of item ids and snippet ids. Item ids may appear multiple times, in which case the item is created multiple times. The syntax for each of the three lists is identical.
+选择此职业时，玩家开始拥有的物品。可以根据角色的性别指定不同的物品。每个物品列表应为物品ID数组，或物品ID和片段ID对。物品ID可以出现多次，这样物品会被创建多次。这三个列表的语法是相同的。
 
-Example:
+示例：
+
 ```C++
 "items": {
     "both": [
-        "pants",
-        "rock",
-        "rock",
-        ["tshirt_text", "allyourbase"],
-        "socks"
+        "pants"（裤子）,
+        "rock"（石头）,
+        "rock"（石头）,
+        ["tshirt_text"（T恤）, "allyourbase"（片段ID）],
+        "socks"（袜子）
     ],
     "male": [
-        "briefs"
+        "briefs"（男式内裤）
     ],
     "female": [
-        "panties"
+        "panties"（女式内裤）
     ]
 }
 ```
 
-This gives the player pants, two rocks, a t-shirt with the snippet id "allyourbase" (giving it a special description), socks and (depending on the gender) briefs or panties.
+这给玩家提供了裤子，两块石头，一件带有片段id "allyourbase" 的T恤（给它一个特殊描述），袜子以及（根据性别）内裤或女式内裤。
 
-#### `pets`
+#### `pets`（宠物）
 
-(optional, array of string mtype_ids )
+（可选，字符串mtype_ids数组）
 
-A list of strings, each is the same as a monster id
-player will start with these as tamed pets.
+一个由字符串组成的列表，每个字符串都与一个怪物ID相同。
+玩家将从这些中开始作为驯服的宠物。
 
-#### `vehicle`
+#### `vehicle`（交通工具）
 
-(optional, string vproto_id )
+（可选，字符串vproto_id）
 
-A  string, which is the same as a vehicle ( vproto_id )
-player will start with this as a nearby vehicle.
-( it will find the nearest road and place it there, then mark it as "remembered" on the overmap )
+一个字符串，与交通工具（vproto_id）相同。
+玩家将以这个作为附近的交通工具开始。
+（它会找到最近的道路并将其放置在那里，然后在地图上标记为“记住的”）
 
-#### `flags`
+#### `flags`（标志）
 
-(optional, array of strings)
+（可选，字符串数组）
 
-A list of flags. TODO: document those flags here.
+标志列表。待办事项：在此处记录这些标志。
 
-- `NO_BONUS_ITEMS` Prevent bonus items (such as inhalers with the ASTHMA trait) from being given to this profession
+- `NO_BONUS_ITEMS` 阻止为这个职业提供奖励物品（例如带有哮喘特征的吸入器）
 
-#### `cbms`
+#### `cbms`（生物芯片）
 
-(optional, array of strings)
+（可选，字符串数组）
 
-A list of CBM ids that are implanted in the character.
+植入角色的CBM ID列表。
 
-#### `traits`
+#### `traits`（特征）
 
-(optional, array of strings)
+（可选，字符串数组）
 
-A list of trait/mutation ids that are applied to the character.
+应用于角色的特征/突变ID列表。
 
-#### `requirement`
+#### `requirement`（需求）
 
-(optional, an achievement ID)
+（可选，成就ID）
 
-The achievement you need to do to access this profession
+要解锁此职业需要达成的成就
 
-### Recipes
+### 配方
 
-Crafting recipes are defined as a JSON object with the following fields:
+制作配方定义为具有以下字段的JSON对象：
 
 ```C++
-"result": "javelin",         // ID of resulting item
-"byproducts": [ [ "" ] ],    // Optional (default: empty). Additional items generated by crafting this recipe.
-"byproduct_group": [         // Optional (default: empty). Same as above, but using item group definitions.
+"result": "javelin",         // 生成物品的ID
+"byproducts": [ [ "" ] ],    // 可选项（默认：空）。制作此配方时产生的额外物品。
+"byproduct_group": [         // 可选项（默认：空）。与上面相同，但使用物品组定义。
   { "item": "item_id_1", "count": [ 1, 4 ] },
   { "item": "item_id_2", "charges": [ 8, 15 ] },
 ],
-"category": "CC_WEAPON",     // Category of crafting recipe. CC_NONCRAFT used for disassembly recipes
+"category": "CC_WEAPON",     // 制作配方的类别。解构配方使用CC_NONCRAFT。
 "subcategory": "CSC_WEAPON_PIERCING",
-"id_suffix": "",             // Optional (default: empty string). Some suffix to make the ident of the recipe unique. The ident of the recipe is "<id-of-result><id_suffix>".
-"override": false,           // Optional (default: false). If false and the ident of the recipe is already used by another recipe, loading of recipes fails. If true and a recipe with the ident is already defined, the existing recipe is replaced by the new recipe.
-"delete_flags": [ "CANNIBALISM" ], // Optional (default: empty list). Flags specified here will be removed from the resultant item upon crafting. This will override flag inheritance, but *will not* delete flags that are part of the item type itself.
-"skill_used": "fabrication", // Skill trained and used for success checks
-"skills_required": [["survival", 1], ["throw", 2]], // Skills required to unlock recipe
-"book_learn": {	             // (optional) Books that this recipe can be learned from.
-    "textbook_anarch" : {    // ID of the book the recipe can be learned from
-        "skill_level" : 7,   // Skill level at which it can be learned
-        "recipe_name" : "something", // (optional) Name of the recipe as it should appear in the book's description (default is the name of resulting item of the recipe)
-        "hidden" : true },   // (optional) If set to true, recipe will not be shown in the description of the book
-    "textbook_gaswarfare" : { // Additional book this recipe can be learnt from.
+"id_suffix": "",             // 可选项（默认：空字符串）。一些后缀，使配方的标识唯一。配方的标识是 "<result-id><id_suffix>"。
+"override": false,           // 可选项（默认：false）。如果为false且配方的标识已被另一个配方使用，加载配方将失败。如果为true且已定义具有标识的配方，则新配方将替换现有配方。
+"delete_flags": [ "CANNIBALISM" ], // 可选项（默认：空列表）。在此处指定的标志将在制作过程中从生成物品中移除。这将覆盖标志继承，但 *不会* 删除物品类型本身的标志。
+"skill_used": "fabrication", // 用于训练和成功检查的技能
+"skills_required": [["survival", 1], ["throw", 2]], // 解锁配方所需的技能
+"book_learn": {	             // （可选）可以从中学习此配方的书籍。
+    "textbook_anarch" : {    // 可以从中学习配方的书籍ID
+        "skill_level" : 7,   // 可学习的技能等级
+        "recipe_name" : "something", // （可选）书籍描述中配方的名称（默认为配方生成物品的名称）
+        "hidden" : true },   // （可选）如果设置为true，配方将不会显示在书籍描述中
+    "textbook_gaswarfare" : { // 可以从中学习此配方的其他书籍。
         "skill_level" : 8
     }
 },
-"difficulty": 3,             // Difficulty of success check
-"time": "5 m",               // Preferred time to perform recipe, can specify in minutes, hours etc.
-"time": 5000,                // Legacy time to perform recipe (where 1000 ~= 10 turns ~= 10 seconds game time).
-"reversible": true,          // Can be disassembled. Time taken is as long as to craft the item.
-"reversible": { "time": "30 s" }, // Can be disassembled. Time to disassemble as specified.
-"autolearn": true,           // Automatically learned upon gaining required skills
-"autolearn" : [              // Automatically learned upon gaining listed skills
+"difficulty": 3,             // 成功检查的难度
+"time": "5 m",               // 执行配方的首选时间，可以指定为分钟、小时等。
+"time": 5000,                // 旧版执行配方的时间（其中1000≈10回合≈10秒游戏时间）。
+"reversible": true,          // 可以拆卸。所需时间与制作该物品的时间相同。
+"reversible": { "time": "30 s" }, // 可以拆卸。拆解所需时间如指定。
+"autolearn": true,           // 获得所需技能后自动学习
+"autolearn" : [              // 获得以下技能后自动学习
     [ "survival", 2 ],
     [ "fabrication", 3 ]
 ],
-"decomp_learn" : 4,          // Can be learned by disassembling an item of same type as result at this level of the skill_used
-"decomp_learn" : [           // Can be learned by disassembling an item of same type as result at specified levels of skills
+"decomp_learn" : 4,          // 可通过拆解同类型物品来学习该技能等级的配方
+"decomp_learn" : [           // 可通过拆解同类型物品来学习指定技能等级的配方
     [ "survival", 1 ],
     [ "fabrication", 2 ]
 ],
-"activity_level": "LIGHT_EXERCISE", // Options are NO_EXERCISE, LIGHT_EXERCISE, MODERATE_EXERCISE, BRISK_EXERCISE, ACTIVE_EXERCISE, EXTRA_EXERCISE. How energy intensive of an activity this craft is. E.g. making an anvil is much more exercise than cooking a fish.
-"proficiencies" : [ // The proficiencies related to this recipe
+"activity_level": "LIGHT_EXERCISE", // 选项为NO_EXERCISE（无锻炼）、LIGHT_EXERCISE（轻度锻炼）、MODERATE_EXERCISE（中度锻炼）、BRISK_EXERCISE（快速锻炼）、ACTIVE_EXERCISE（高强度锻炼）和EXTRA_EXERCISE（额外锻炼）。此制作活动的能量强度。例如，制作铁砧比烹饪鱼需要更多运动量。
+"proficiencies" : [ // 与此配方相关的熟练度
     {
-      "proficiency": "prof_knapping", // The id of a proficiency
-      "required": false, // Whether or not you must have the proficiency to craft it. Incompatible with `time_multiplier`
-      "time_multiplier": 2.0 // The multiplier on time taken to craft this recipe if you do not have this proficiency
-      "skill_penalty": 1.5 // The effective skill penalty when crafting without this proficiency. Defaults to 1.0. Multiple proficiencies will add to this value.
-      "learning_time_multiplier": 1.2 // The multiplier on learning speed for this proficiency. By default, it's the time of the recipe, divided by the time multiplier, and by the number of proficiencies that can also be learned from it.
-      "max_experience": "15 m" // This recipe cannot raise your experience for that proficiency above 15 minutes worth.
+      "proficiency": "prof_knapping", // 熟练度的ID
+      "required": false, // 是否必须具备该熟练度才能制作。与`time_multiplier`不兼容
+      "time_multiplier": 2.0 // 如果您没有此熟练度，制作此配方所需时间的倍数
+      "skill_penalty": 1.5 // 在没有此熟练度的情况下制作时的有效技能惩罚。默认为1.0。多个熟练度将增加此值。
+      "learning_time_multiplier": 1.2 // 此熟练度的学习速度乘数。默认情况下，它是配方的时间除以时间乘数，再除以可以从中学习的熟练度数量。
+      "max_experience": "15 m" // 该配方不能使您的该熟练度经验超过15分钟。
     }
 ]
-"contained": true, // Boolean value which defines if the resulting item comes in its designated container. Automatically set to true if any container is defined in the recipe. 
-"container": "jar_glass_sealed", //The resulting item will be contained by the item set here, overrides default container.
-"batch_time_factors": [25, 15], // Optional factors for batch crafting time reduction. First number specifies maximum crafting time reduction as percentage, and the second number the minimal batch size to reach that number. In this example given batch size of 20 the last 6 crafts will take only 3750 time units.
-"result_mult": 2,            // Multiplier for resulting items. Also multiplies container items.
-"flags": [                   // A set of strings describing boolean features of the recipe
+"contained": true, // 布尔值，定义所得到的物品是否在其指定容器中。如果配方中定义了任何容器，则自动设置为true。
+"container": "jar_glass_sealed", // 所得到的物品将由此处设置的物品包含，覆盖默认容器。
+"batch_time_factors": [25, 15], // 批量制作时间缩短的可选因素。第一个数字指定最大的制作时间缩短百分比，第二个数字指定达到该百分比所需的最小批量大小。在本例中，给定批量大小为20，最后6个制作将只需要3750个时间单位。
+"result_mult": 2,            // 所得到的物品数量乘数。也会乘以容器中的物品。
+"flags": [                   // 描述配方布尔特征的一组字符串
   "BLIND_EASY",
   "ANOTHERFLAG"
 ],
-"result_eocs": [ {"id": "TEST", "effect": { "u_message": "You feel Test" } } // List of inline effect_on_conditions or effect_on_condition ids that attempt to activate when this recipe is successfully finished.  If a value is provided a result becomes optional, though a name and id will be needed it it is missing.  If no result is provided and a description is present, that will be displayed as the result on the crafting gui.
-], 
-"construction_blueprint": "camp", // an optional string containing an update_mapgen_id.  Used by faction camps to upgrade their buildings
-"on_display": false,         // this is a hidden construction item, used by faction camps to calculate construction times but not available to the player
-"qualities": [               // Generic qualities of tools needed to craft
+"result_eocs": [ {"id": "TEST", "effect": { "u_message": "You feel Test" } } // 试图在成功完成此配方时激活的内联effect_on_conditions或effect_on_condition id列表。如果提供了一个值，结果将变成可选的，尽管如果缺少名称和id，则需要它。如果没有提供结果且存在描述，则将在制作界面显示该描述。
+],
+"construction_blueprint": "camp", // 一个可选的字符串，包含一个update_mapgen_id。用于帮派营地升级其建筑物
+"on_display": false,         // 这是一个隐藏的建筑物，用于帮派营地计算建造时间，但玩家无法使用它
+"qualities": [               // 制作所需的通用工具质量
   { "id": "CUT", "level": 1, "amount": 1 }
 ],
-"tools": [                   // Specific tools needed to craft
+"tools": [                   // 制作所需的特定工具
 [
-  [ "fire", -1 ]             // Charges consumed when tool is used, -1 means no charges are consumed
+  [ "fire", -1 ]             // 使用该工具时消耗的电量，-1表示不消耗电量。
 ]],
-"using": [                   // Requirement IDs and multipliers of tools and materials used
-  [ "req_a", 3 ],            // Second number multiplies requirement materials by that amount
-  [ "req_b", 5 ],            // Need 3x everything in req_a, 5x everything in req_b
+"using": [                   // 使用的工具和材料的要求ID和乘数
+  [ "req_a", 3 ],            // 第二个数字将要求材料乘以该数量。
+  [ "req_b", 5 ],            // 需要3倍的req_a中的所有物品，5倍的req_b中的所有物品。
 ],
-"components": [              // Items (or item alternatives) required to craft this recipe
+"components": [              // 制作此配方所需的物品（或物品替代品）
   [
-    [ "item_a", 5 ]          // First ingredient: need 5 of item_a
+    [ "item_a", 5 ]          // 第一个原料：需要5个item_a
   ],
   [
-    [ "item_b", 2 ],         // Also need 2 of item_b...
-    [ "item_c", 4 ]          // OR 4 of item_c (but do not need both)
+    [ "item_b", 2 ],         // 还需要2个item_b...
+    [ "item_c", 4 ]          // 或者4个item_c（但不需要同时拥有两者）
   ],
   [
-    // ... any number of other component ingredients (see below)
+    // ... 其他任意数量的组件原料（见下文）
   ]
 ]
 ```
 
-#### Practice recipes
+#### 练习食谱
 
-Recipes may instead be defined with type "practice", to make them appear in the "PRACTICE" tab of
-the crafting menu.  These recipes do not have a "result", but they may define "byproducts"/"byproduct_group".
-See [PRACTICE_RECIPES.md](PRACTICE_RECIPES.md) for how to define them.
+食谱也可以定义为“练习”类型，让它们出现在制作菜单的“练习”选项卡中。这些食谱没有“结果”，但它们可以定义“副产品”/“副产品组”。
+请参阅 [PRACTICE_RECIPES.md](PRACTICE_RECIPES.md) 了解如何定义它们。
 
-#### Nested recipes
+#### 嵌套食谱
 
-Similar recipes may instead be nested allowing you to save space in the UI.  This is done as such:
+类似的食谱也可以嵌套，让您节省界面空间。这样做如下：
 ```json
 {
-  "id": "nested_steel_legs",
-  "type": "nested_category",
-  "activity_level": "BRISK_EXERCISE",
-  "category": "CC_ARMOR",
-  "subcategory": "CSC_ARMOR_LEGS",
-  "name": "steel leg guards",
-  "description": "Recipes related to constructing steel leg guards in various thickness and steel variants.",
-  "skill_used": "fabrication",
+  "id": "nested_steel_legs",      // 物品ID
+  "type": "nested_category",     // 物品类型
+  "activity_level": "BRISK_EXERCISE",   // 制作活动强度
+  "category": "CC_ARMOR",        // 物品所属类别
+  "subcategory": "CSC_ARMOR_LEGS",     // 物品所属子类别
+  "name": "steel leg guards",     // 物品名称
+  "description": "与各种厚度和钢种相关的制作钢制护腿的配方。",   // 物品描述
+  "skill_used": "fabrication",   // 制作所需技能
   "nested_category_data": [
-    "xl_armor_qt_heavy_leg_guard",
-    "armor_qt_heavy_leg_guard",
-    "xl_armor_ch_heavy_leg_guard",
-    "armor_ch_heavy_leg_guard",
-    "xl_armor_hc_heavy_leg_guard",
-    "armor_hc_heavy_leg_guard",
-    "xl_armor_mc_heavy_leg_guard",
-    "armor_mc_heavy_leg_guard",
-    "xl_armor_lc_heavy_leg_guard",
-    "armor_lc_heavy_leg_guard",
-    "xl_armor_qt_leg_guard",
-    "armor_qt_leg_guard",
-    "xl_armor_ch_leg_guard",
-    "armor_ch_leg_guard",
-    "xl_armor_hc_leg_guard",
-    "armor_hc_leg_guard",
-    "xl_armor_mc_leg_guard",
-    "armor_mc_leg_guard",
-    "xl_armor_lc_leg_guard",
-    "armor_lc_leg_guard",
-    "xl_armor_qt_light_leg_guard",
-    "armor_qt_light_leg_guard",
-    "xl_armor_ch_light_leg_guard",
-    "armor_ch_light_leg_guard",
-    "xl_armor_hc_light_leg_guard",
-    "armor_hc_light_leg_guard",
-    "xl_armor_mc_light_leg_guard",
-    "armor_mc_light_leg_guard",
-    "xl_armor_lc_light_leg_guard",
-    "armor_lc_light_leg_guard"
+    "xl_armor_qt_heavy_leg_guard", // 极大型钢制重型护腿
+    "armor_qt_heavy_leg_guard", // 大型钢制重型护腿
+    "xl_armor_ch_heavy_leg_guard", // 极大型链甲重型护腿
+    "armor_ch_heavy_leg_guard", // 大型链甲重型护腿
+    "xl_armor_hc_heavy_leg_guard", // 极大型硬皮重型护腿
+    "armor_hc_heavy_leg_guard", // 大型硬皮重型护腿
+    "xl_armor_mc_heavy_leg_guard", // 极大型金属装甲重型护腿
+    "armor_mc_heavy_leg_guard", // 大型金属装甲重型护腿
+    "xl_armor_lc_heavy_leg_guard", // 极大型皮革重型护腿
+    "armor_lc_heavy_leg_guard", // 大型皮革重型护腿
+    "xl_armor_qt_leg_guard", // 极大型钢制护腿
+    "armor_qt_leg_guard", // 大型钢制护腿
+    "xl_armor_ch_leg_guard", // 极大型链甲护腿
+    "armor_ch_leg_guard", // 大型链甲护腿
+    "xl_armor_hc_leg_guard", // 极大型硬皮护腿
+    "armor_hc_leg_guard", // 大型硬皮护腿
+    "xl_armor_mc_leg_guard", // 极大型金属装甲护腿
+    "armor_mc_leg_guard", // 大型金属装甲护腿
+    "xl_armor_lc_leg_guard", // 极大型皮革护腿
+    "armor_lc_leg_guard", // 大型皮革护腿
+    "xl_armor_qt_light_leg_guard", // 极大型轻型钢制护腿
+    "armor_qt_light_leg_guard", // 大型轻型钢制护腿
+    "xl_armor_ch_light_leg_guard", // 极大型轻型链甲护腿
+    "armor_ch_light_leg_guard", // 大型轻型链甲护腿
+    "xl_armor_hc_light_leg_guard", // 极大型轻型硬皮护腿
+    "armor_hc_light_leg_guard", // 大型轻型硬皮护腿
+    "xl_armor_mc_light_leg_guard", // 极大型轻型金属装甲护腿
+    "armor_mc_light_leg_guard", // 大型轻型金属装甲护腿
+    "xl_armor_lc_light_leg_guard", // 极大型轻型皮革护腿
+    "armor_lc_light_leg_guard" // 大型轻型皮革护腿
   ],
-  "difficulty": 5,
-  "autolearn": [ [ "fabrication", 5 ] ]
+  "difficulty": 5, // 制造难度为5
+  "autolearn": [["fabrication", 5]] // 自动学习等级为5的制造技能
 }
 ```
 
-So it is identical to a normal recipe with the addition of the "nested_category_data" which lists all of the recipe ID's that are in the category.
+这个配方和普通的配方一样，只是增加了“nested_category_data”字段，其中列出了该类别中所有配方的ID。
 
-If you want to hide recipes that are nested you can set their category and subcategory as:
+如果您希望隐藏嵌套的配方，可以将它们的类别和子类别设置为：
 
 ```json
 "category": "CC_*",
 "subcategory": "CSC_*_NESTED",
 ```
 
-#### Recipe requirements
+#### 配方要求
 
-The tool quality and component requirements for a recipe may be expressed in a combination of
-several ways, with these JSON fields:
+一个配方的工具品质和组件要求可以通过以下 JSON 字段的组合来表达：
 
-- "qualities" defines item qualities like CUT or HAMMER, and quality levels needed to craft
-- "tools" lists *item* ids of tools (or several alternative tools) needed for crafting the recipe
-- "components" lists *item* or *requirement* ids, intended mainly for material ingredients
-- "using" gives *requirement* ids; the requirement may have nested tools, qualities, or components
+- “qualities” 定义物品品质，如 CUT 或 HAMMER，以及制作所需的品质等级
+- “tools” 列出制作配方所需的工具（或几种可替代的工具）的物品 ID
+- “components” 列出物品或需求 ID，主要用于材料成分
+- “using” 给出需求 ID；需求可能有嵌套的工具、品质或组件
 
-These fields may be used similarly in uncrafting, constructions, vehicle parts, and vehicle faults.
-The first three fields are applicable to "requirement" definitions as well, and may be nested; see
-the [requirements section](#datajsonrequirements).
+这些字段在解体、建筑、车辆部件和车辆故障中的使用方式类似。前三个字段同样适用于“需求”定义，并且可以嵌套；请参见[requirements section(需求部分)](#datajsonrequirements)。
 
-A recipe's "components" lists all the required items or ingredients needed to craft the finished
-item from the recipe.  Each component is given as an integer quantity of a specific item id or
-requirement id, or as a list of several alternative item/requirement quantities.
+一个配方的“components”列出了制作完成物品所需的所有必要物品或成分。每个组件都以特定物品 ID 或需求 ID 的整数数量或几个可替代的物品/需求数量列表给出。
 
-The syntax of a component in its simplest form is an item id and quantity.  Continuing the "javelin"
-recipe, let's require a single "spear_wood" item:
+组件的语法在其最简单的形式中是一个物品 ID 和数量。接下来以“javelin”配方为例，让我们要求一个“spear_wood”物品的单个数量：
 
 ```json
 "components": [
@@ -1979,8 +1954,7 @@ recipe, let's require a single "spear_wood" item:
 ]
 ```
 
-A single component may also have substitutions; for instance, to allow crafting from one
-"spear_wood" *or* one "pointy_stick":
+一个组件也可以有替代品；例如，允许从一个“spear_wood”或一个“pointy_stick”制作：
 
 ```json
 "components": [
@@ -1988,11 +1962,9 @@ A single component may also have substitutions; for instance, to allow crafting 
 ]
 ```
 
-Notice that the first example with *only* "spear_wood" was simply the degenerate case - a list of
-alternatives with only 1 alternative - which is why it was doubly nested in `[ [ ... ] ]`.
+请注意，第一个例子中仅有“spear_wood”的情况只是退化的情况——只有一个替代品的替代品列表——这就是为什么它在`[[...]]`中嵌套两次的原因。
 
-The javelin would be better with some kind of leather or cloth grip.  To require 2 rags, 1 leather,
-or 1 fur *in addition to* the wood spear or pointy stick:
+长矛加上一些皮革或布料的握柄会更好。如果除了木制长矛或尖木棍之外，还需要 2 块布条、1 块皮革或 1 块毛皮：
 
 ```json
 "components": [
@@ -2001,8 +1973,7 @@ or 1 fur *in addition to* the wood spear or pointy stick:
 ]
 ```
 
-And to bind the grip onto the javelin, some sinew or thread should be required, which can have the
-"NO_RECOVER" keyword to indicate they cannot be recovered if the item is deconstructed:
+为了将握柄固定在长矛上，需要一些筋膜或线，它们可以具有“NO_RECOVER”关键字，表示如果物品被拆解，它们将无法恢复：
 
 ```json
 "components": [
@@ -2012,46 +1983,52 @@ And to bind the grip onto the javelin, some sinew or thread should be required, 
 ]
 ```
 
-*Note*: Related to "NO_RECOVER", some items such as "superglue" and "duct_tape" have an
-"UNRECOVERABLE" flag on the item itself, indicating they can never be reclaimed when disassembling.
-See [JSON_FLAGS.md](JSON_FLAGS.md) for how to use this and other item flags.
+注意：与“NO_RECOVER”相关的一些物品，如“superglue”和“duct_tape”，在物品本身上具有“UNRECOVERABLE”标志，表示它们在拆卸时永远无法被回收。请参见 [JSON_FLAGS.md](JSON_FLAGS.md) 以了解如何使用此项和其他物品标志。
 
-#### Defining common requirements
+#### Defining common requirements(定义通用要求)
 
-To avoid repeating commonly used sets of components, instead of an individual item id, provide
-the id of a `requirement` type, along with a quantity, and the `"LIST"`
-keyword.  Typically these are defined within
-[`data/json/requirements`](#datajsonrequirements).
+为了避免重复使用常用的组件集合，可以提供“requirement”类型的ID，以及数量和“LIST”关键字，而不是单个物品ID。通常这些是在 [`data/json/requirements`](#datajsonrequirements) 中定义的。
 
-For example if these `grip_patch` and `grip_wrap` requirements were defined:
+例如，如果定义了这些“grip_patch”和“grip_wrap”要求：
 
 ```json
 [
   {
-    "id": "grip_patch",
-    "type": "requirement",
-    "components": [ [ [ "rag", 2 ], [ "leather", 1 ], [ "fur", 1 ] ] ]
+    "id": "grip_patch", // 握柄要求的ID
+    "type": "requirement", // 类型为“requirement”
+    "components": [
+      [
+        ["rag", 2], // 需要 2 块布条
+        ["leather", 1], // 或者 1 块皮革
+        ["fur", 1] // 或者 1 块毛皮
+      ]
+    ]
   },
   {
-    "id": "grip_wrap",
-    "type": "requirement",
-    "components": [ [ [ "sinew", 20, "NO_RECOVER" ], [ "thread", 20, "NO_RECOVER" ] ] ]
+    "id": "grip_wrap", // 绕包要求的ID
+    "type": "requirement", // 类型为“requirement”
+    "components": [
+      [
+        ["sinew", 20, "NO_RECOVER"], // 需要 20 个筋膜，“NO_RECOVER”表示无法回收
+        ["thread", 20, "NO_RECOVER"] // 或者 20 根线，“NO_RECOVER”表示无法回收
+      ]
+    ]
   }
 ]
 ```
 
-Then javelin recipe components could use 1 grip and 1 wrap, for example:
+然后，长矛配方组件可以使用 1 个握柄和 1 个绕包，例如：
 
 ```json
-"result": "javelin",
+"result": "javelin", // 制作结果为“javelin”
 "components": [
-  [ [ "spear_wood", 1 ], [ "pointy_stick", 1 ] ],
-  [ [ "grip_patch", 1, "LIST" ] ],
-  [ [ "grip_wrap", 1, "LIST" ] ]
+  [ [ "spear_wood", 1 ], [ "pointy_stick", 1 ] ], // 使用 1 个“spear_wood”或 1 个“pointy_stick”
+  [ [ "grip_patch", 1, "LIST" ] ], // 使用 1 个“grip_patch”，“LIST”表示使用组件清单
+  [ [ "grip_wrap", 1, "LIST" ] ] // 使用 1 个“grip_wrap”，“LIST”表示使用组件清单
 ]
 ```
 
-And other recipes needing two such grips could simply require 2 of each:
+需要两个这样的握把的其他配方可以简单地要求每个配备两个：
 
 ```json
 "result": "big_staff",
@@ -2062,62 +2039,60 @@ And other recipes needing two such grips could simply require 2 of each:
 ]
 ```
 
-The `"using"` field in a recipe works similarly, but `"using"` may only refer
-to requirement ids, not specific items or tools.  A requirement included with
-`"using"` must also give a multiplier, telling how many units of that
-requirement are needed.  As with `"components"`, the "using" list is formatted
-as a collection of alternatives, even if there is only one alternative.
+在配方中，`"using"`字段的使用方法类似，但是`"using"`只能引用要求ID，而不能引用特定的物品或工具。在`"using"`中包含的要求还必须给出一个乘数，以告诉需要多少个该要求的单位。与`"components"`一样，即使只有一个替代方案，`"using"`列表也被格式化为一组替代方案。
 
-For instance, this `"uncraft"` recipe for a motorbike alternator uses either 20 units of the
-`"soldering_standard"` requirement, or 5 units of the `"welding_standard"` requirement:
+例如，这个电动摩托车交流发电机的`"uncraft"`配方使用了20个`"soldering_standard"`的要求或5个`"welding_standard"`的要求：
 
 ```json
 {
   "type": "uncraft",
   "result": "alternator_motorbike",
-  "qualities": [ { "id": "SCREW", "level": 1 } ],
-  "using": [ [ "soldering_standard", 20 ], [ "welding_standard", 5 ] ],
-  "components": [ [ [ "power_supply", 1 ] ], [ [ "cable", 20 ] ], [ [ "bearing", 5 ] ], [ [ "scrap", 2 ] ] ]
+  "qualities": [{ "id": "SCREW", "level": 1 }],
+  "using": [
+    ["soldering_standard", 20],
+    ["welding_standard", 5]
+  ],
+  "components": [
+    [["power_supply", 1]],
+    [["cable", 20]],
+    [["bearing", 5]],
+    [["scrap", 2]]
+  ]
 }
 ```
 
-Requirements may include `"tools"` or `"qualities"` in addition to
-`"components"`.  Here we have a standard soldering requirement needing either a
-`"soldering_iron"` or `"toolset"`, plus 1 unit of the `"solder_wire"` component:
-
+要求除了`"components"`之外还可以包括`"tools"`或`"qualities"`。在这里，我们有一个标准的焊接要求，需要一个`"soldering_iron"`或`"toolset"`，再加上1个`"solder_wire"`的组件单位：
 
 ```json
 {
-  "id": "soldering_standard",
-  "type": "requirement",
-  "//": "Tools and materials needed for soldering metal items or electronics",
-  "tools": [ [ [ "soldering_iron", 1 ], [ "toolset", 1 ] ] ],
-  "components": [ [ [ "solder_wire", 1 ] ] ]
+  "id": "soldering_standard", //要求ID
+  "type": "requirement", //"requirement"类型
+  "//": "Tools and materials needed for soldering metal items or electronics", //注释：用于焊接金属物品或电子设备的工具和材料
+  "tools": [ //需要的工具
+    [
+      ["soldering_iron", 1], //需要1个"soldering_iron"
+      ["toolset", 1] //需要1个"toolset"
+    ]
+  ],
+  "components": [[["solder_wire", 1]]] //需要的组件，这里是1个"solder_wire"的组件单位
 }
 ```
 
-This simplifies recipes needing soldering, via the `"using"` field.  For
-instance, a simple `"tazer"` recipe could require 10 units of the soldering
-requirement, along with some other components:
+通过`"using"`字段，简化需要焊接的配方。例如，一个简单的`"tazer"`配方可能需要10个焊接要求单位，以及其他一些组件：
 
 ```json
 {
   "type": "recipe",
   "result": "tazer",
-  "using": [ [ "soldering_standard", 10 ] ],
-  "components": [ [ [ "amplifier", 1 ] ], [ [ "power_supply", 1 ] ], [ [ "scrap", 2 ] ] ],
+  "using": [["soldering_standard", 10]],
+  "components": [[["amplifier", 1]], [["power_supply", 1]], [["scrap", 2]]],
   "//": "..."
 }
-
 ```
 
-Requirements can be used not just for regular crafting and uncrafting recipes,
-but also for constructions and vehicle part installation and mending.
+要求不仅可以用于常规的制作和反制作配方，还可以用于建筑和车辆零件的安装和修理。
 
-***NOTE:*** Requirement lists included in mods overwrite the previously loaded
-requirement list with a matching id. This means that two mods modifying the same
-requirement id will overwrite each other. This can be avoided by using `"extend"`
-to extend from the previously loaded list. Ex.:
+**注意：** 在模组中包含的需求列表将使用匹配的ID覆盖先前加载的需求列表。这意味着修改相同要求ID的两个模组将相互覆盖。可以通过使用`"extend"`来扩展先前加载的列表来避免这种情况。例如：
 
 ```json
 {
@@ -2126,561 +2101,494 @@ to extend from the previously loaded list. Ex.:
   "extend": {
     "components": [
       [
-        [ "frost_bone_human", 1 ],
-        [ "alien_bone", 1 ]
+        ["frost_bone_human", 1],
+        ["alien_bone", 1]
       ]
     ]
   }
 }
 ```
 
+ #### Overlapping recipe component requirements (重复的配方组件需求)
 
-#### Overlapping recipe component requirements
+如果配方有重叠的需求,这将使游戏更难计算出是否可以制作该配方。
 
-If recipes have requirements which overlap, this makes it more
-difficult for the game to calculate whether it is possible to craft a recipe at
-all.
-
-For example, the survivor telescope recipe has the following requirements
-(amongst others):
+例如,幸存者望远镜配方有以下需求(以及其他需求):
 
 ```
-1 high-quality lens
-AND
-1 high-quality lens OR 1 small high-quality lens
+1个高品质透镜
+和
+1个高品质透镜或者1个小型高品质透镜
 ```
 
-These overlap because both list the high-quality lens.
+这两者有重复,因为都列出了高品质透镜。
 
-A small amount of overlap (such as the above) can be handled, but if you have
-too many component lists which overlap in too many ways, then you may see an
-error during recipe finalization that your recipe is too complex.  In this
-case, the game may not be able to correctly predict whether it can be crafted.
+少量重复(如上例)可以处理,但是如果你有太多互相重叠的组件列表,则在配方最终确定时可能会看到错误,说你的配方太复杂了。在这种情况下,游戏可能无法正确预测是否可以制作该配方。
 
-To work around this issue, if you do not wish to simplify the recipe
-requirements, then you can split your recipe into multiple steps.  For
-example, if we wanted to simplify the above survivor telescope recipe we could
-introduce an intermediate item "survivor eyepiece", which requires one of
-either lens, and then the telescope would require a high-quality lens and an
-eyepiece.  Overall, the requirements are the same, but neither recipe has any
-overlap.
+为了解决这个问题,如果你不想简化配方需求,可以将配方分成多个步骤。例如,如果我们想简化上述的望远镜配方,可以引入一个中间物品“望远镜眼镜”,它需要任意一种透镜,然后望远镜再需要一个高品质透镜和一副眼镜。总体来说,需求是相同的,但两个配方都没有任何重叠。
 
-For more details, see [this pull
-request](https://github.com/CleverRaven/Cataclysm-DDA/pull/36657) and the
-[related issue](https://github.com/CleverRaven/Cataclysm-DDA/issues/32311).
+欲了解更多细节,请参见[此拉取请求 ↗](https://github.com/CleverRaven/Cataclysm-DDA/pull/36657)和[相关问题 ↗](https://github.com/CleverRaven/Cataclysm-DDA/issues/32311)。
 
-### Constructions
+### Constructions(构造)
+
 ```C++
-"group": "spike_pit",                                               // Construction group, used to group related constructions in UI
-"category": "DIG",                                                  // Construction category
-"required_skills": [ [ "survival", 1 ] ],                           // Skill levels required to undertake construction
-"time": "30 m",                                                     // Time required to complete construction. Integers will be read as minutes or a time string can be used.
-"components": [ [ [ "spear_wood", 4 ], [ "pointy_stick", 4 ] ] ],   // Items used in construction
-"pre_special": "check_empty",                                       // Required something that isn't terrain
-"pre_terrain": "t_pit",                                             // Alternative to pre_special; Required terrain to build on
-"pre_flags": [ "WALL", { "flag": "DIGGABLE", "force_terrain": true } ], // Flags beginning furniture/terrain must have. force_ter forces the flag to apply to the underlying terrain
-"post_terrain": "t_pit_spiked"                                      // Terrain type after construction is complete
-"strict": false                                                     // if true, the build activity for this construction will only look for prerequisites in the same group
+ group: "spike_pit",                                    // 构造组,用于在UI中对相关构造进行分组
+category: "DIG",                                               // 构造类别 
+required_skills: [ [ "survival", 1 ] ],                        // 进行构造所需的技能等级
+time: "30 m",                                                  // 完成构造所需的时间。整数将被视为分钟,或可以使用时间字符串。  
+components: [ [ [ "spear_wood", 4 ], [ "pointy_stick", 4 ] ] ], // 构造中使用的物品
+pre_special: "check_empty",                                    // 所需的非地形先决条件
+pre_terrain: "t_pit",                                          // pre_special的替代项;所需的地形以进行建造
+pre_flags: [ "WALL", { "flag": "DIGGABLE", "force_terrain": true } ], // 开始的家具/地形必须具有的标志。force_ter强制标志应用于底层地形
+post_terrain: "t_pit_spiked"                                   // 构造完成后地形的类型
+strict: false                                                  // 如果为true,则此构造的建造活动将仅在同一组中查找先决条件
 ```
 
-| pre_special            | Description
-|---                     |---
-| `check_channel`        | Must be empty and have a current in at least one orthogonal tile
-| `check_empty`          | Tile is empty (no furniture, trap, item, or vehicle) and flat terrain
-| `check_empty_lite`     | Tile is empty (no furniture, trap, item, or vehicle)
-| `check_support`        | Must have at least two solid walls/obstructions nearby on orthogonals (non-diagonal directions only) to support the tile
-| `check_support_below`  | Must have at least two solid walls/obstructions at the Z level below on orthogonals (non-diagonal directions only) to support the tile and be empty lite but with a ledge trap acceptable, as well as open air
-| `check_stable`         | Tile on level below has a flag `SUPPORTS_ROOF`
-| `check_empty_stable`   | Tile is empty and stable
-| `check_nofloor_above`  | Tile on level above has a flag `NO_FLOOR`
-| `check_deconstruction` | The furniture (or tile, if no furniture) in the target tile must have a "deconstruct" entry
-| `check_empty_up_OK`    | Tile is empty and is below the maximum possible elevation (can build up here)
-| `check_up_OK`          | Tile is below the maximum possible elevation (can build up here)
-| `check_down_OK`        | Tile is above the lowest possible elevation (can dig down here)
-| `check_no_trap`        | There is no trap object in this tile
-| `check_ramp_low`       | Both this and the next level above can be built up one additional Z level
-| `check_ramp_high`      | There is a complete downramp on the next higher level, and both this and next level above can be built up one additional Z level
-| `check_no_wiring`      | The tile must either be free of a vehicle, or at least a vehicle that doesn't have the WIRING flag
+ | pre_special | 描述 |
+ | ----------- | ---- ||
+ | `check_channel`        | 必须为空且至少在一个正交的tile中有水流                                                                                     |
+ | `check_empty`          | 该tile为空(无家具、陷阱、物品或车辆)且为平坦地形                                                                           |
+ | `check_empty_lite`     | 该tile为空(无家具、陷阱、物品或车辆)                                                                                       |
+ | `check_support`        | 必须在正交方向(仅非对角线方向)附近至少有两个坚固的墙壁/障碍以支撑该tile                                                    |
+ | `check_support_below`  | 在正下方的Z层必须至少有两个坚固的墙壁/障碍在正交方向(仅非对角线方向)以支撑该tile,且须为空且可以接受檐口陷阱,以及开放的空气 |
+ | `check_stable`         | 下一层的tile具有`SUPPORTS_ROOF`标志                                                                                        |
+ | `check_empty_stable`   | 该tile为空且稳定                                                                                                           |
+ | `check_nofloor_above`  | 上层的tile具有`NO_FLOOR`标志                                                                                               |
+ | `check_deconstruction` | 目标tile中的家具(或无家具的tile)必须有一个“拆除”条目                                                                       |
+ | `check_empty_up_OK`    | 该tile为空且在最大可能高度以下(可以在此向上建造)                                                                           |
+ | `check_up_OK`          | 该tile在最大可能高度以下(可以在此向上建造)                                                                                 |
+ | `check_down_OK`        | 该tile在最低可能高度以上(可以在此向下挖掘)                                                                                 |
+ | `check_no_trap`        | 该tile中没有陷阱对象                                                                                                       |
+ | `check_ramp_low`       | 本层和上一层都可以再提高一个Z层                                                                                            |
+ | `check_ramp_high`      | 在下一更高层有一个完成的下坡道,本层和上一层都可以再提高一个Z层                                                             |
+ | `check_no_wiring`      | 该tile必须为空或至少是一个没有WIRING标志的车辆                                                                             |
 
-### Scent_types
+ 这是关于CDDA模组中气味类型(scent_types)的翻译:
 
-| Identifier               | Description
-|---                       |---
-| `id`                     | Unique ID. Must be one continuous word, use underscores if necessary.
-| `receptive_species`      | Species able to track this scent. Must use valid ids defined in `species.json`
+### 气味类型(Scent_types)
+
+| 标识符 | 描述 |
+| ------ | ---- ||
+| `id`                | 唯一ID。必须是一个连续的单词,必要时使用下划线。              |
+| `receptive_species` | 能够跟踪此气味的物种。必须使用`species.json`中定义的有效ID。 |
 
 ```json
-  {
-    "type": "scent_type",
-    "id": "sc_flower",
-    "receptive_species": [ "MAMMAL", "INSECT", "MOLLUSK", "BIRD" ]
-  }
+{
+  "type": "scent_type", // 气味类型
+  "id": "sc_flower", // 唯一ID
+  "receptive_species": ["MAMMAL", "INSECT", "MOLLUSK", "BIRD"] // 可以感知的物种  
+}
 ```
 
-### Scores, Achievements, and Conducts
+### Scores, Achievements, and Conducts(得分，成就和行为准则)
 
-Scores are defined in two or three steps based on *events*.  To see what events
-exist and what data they contain, read [`event.h`](../src/event.h).
+得分是基于“事件”定义的两到三个步骤。要查看存在哪些事件以及它们包含哪些数据，请阅读[`event.h`](../src/event.h)。
 
-Each event contains a certain set of fields.  Each field has a string key and a
-`cata_variant` value.  The fields should provide all the relevant information
-about the event.
+每个事件都包含一定的字段。每个字段都有一个字符串键和一个`cata_variant`值。这些字段应该提供有关事件的所有相关信息。
 
-For example, consider the `gains_skill_level` event.  You can see this
-specification for it in `event.h`:
+例如，考虑`gains_skill_level`事件。您可以在`event.h`中看到它的规定：
 
 <!-- {% raw %} -->
+
 ```C++
 template<>
 struct event_spec<event_type::gains_skill_level> {
+    // 定义事件的字段，包括名称和类型
     static constexpr std::array<std::pair<const char *, cata_variant_type>, 3> fields = {{
-            { "character", cata_variant_type::character_id },
-            { "skill", cata_variant_type::skill_id },
-            { "new_level", cata_variant_type::int_ },
+            { "character", cata_variant_type::character_id }, // 角色 ID
+            { "skill", cata_variant_type::skill_id }, // 技能 ID
+            { "new_level", cata_variant_type::int_ }, // 新等级
         }
     };
 };
 ```
+
 <!-- {% endraw %} -->
-From this, you can see that this event type has three fields:
-* `character`, with the id of the character gaining the level.
-* `skill`, with the id of the skill gained.
-* `new_level`, with the integer level newly acquired in that skill.
 
-Events are generated by the game when in-game circumstances dictate.  These
-events can be transformed and summarized in various ways.  There are three
-concepts involved: event streams, event statistics, and scores.
+由此可见，该事件类型有三个字段：
 
-* Each `event_type` defined by the game generates an event stream.
-* Further event streams can be defined in json by applying an
-  `event_transformation` to an existing event stream.
-* An `event_statistic` summarizes an event stream into a single value (usually
-  a number, but other types of value are possible).
-* A `score` uses such a statistic to define an in-game score which players can
-  see.
+- `character`，表示获得等级的角色 ID。
+- `skill`，表示获得的技能 ID。
+- `new_level`，表示在该技能中新获得的整数等级。
 
-#### `event_transformation`
+游戏根据游戏情况生成事件。这些事件可以以各种方式进行转换和总结。涉及三个概念：事件流、事件统计和得分。
 
-An `event_transformation` can modify an event stream, producing another event
-stream.
+- 游戏定义的每个`event_type`都会生成一个事件流。
+- 可以通过将“事件转换”应用于现有事件流来定义进一步的事件流。
+- `event_statistic`将事件流总结为单个值（通常是数字，但也可能是其他类型的值）。
+- `score`使用这样的统计数据来定义玩家可以看到的游戏得分。
 
-The input stream to be transformed is specified either as an `"event_type"`, to
-use one of the built-in event type streams, or an `"event_transformation"`,
-to use another json-defined transformed event stream.
+#### `event_transformation`（事件转换）
 
-Any or all of the following alterations can be made to the event stream:
+`event_transformation`可以修改事件流，生成另一个事件流。
 
-* Add new fields to each event based on event field transformations.  The event
-  field transformations can be found in
-  [`event_field_transformations.cpp`](/src/event_field_transformations.cpp).
-* Filter events based on the values they contain to produce a stream containing
-  some subset of the input stream.
-* Drop some fields which are not of interest in the output stream.
+要转换的输入流可以指定为`"event_type"`，以使用内置的事件类型流，或者`"event_transformation"`，以使用另一个json定义的转换事件流。
 
-Here are examples of each modification:
+可以对事件流进行以下任何或所有的修改：
 
-```C++
+- 根据事件字段转换向每个事件添加新字段。事件字段转换可以在[`event_field_transformations.cpp`](/src/event_field_transformations.cpp)中找到。
+- 根据它们包含的值过滤事件，以产生输入流的某个子集。
+- 删除在输出流中不感兴趣的一些字段。
+
+以下是每种修改的示例：
+
+```json
 "id": "avatar_kills_with_species",
 "type": "event_transformation",
-"event_type": "character_kills_monster", // Transformation acts upon events of this type
-"new_fields": { // A dictionary of new fields to add to the event
-    // The key is the new field name; the value should be a dictionary of one element
+"event_type": "character_kills_monster", // 这个转换工具会对此类型的事件产生影响
+"new_fields": { // 这是一个字典，我们会添加新的字段到事件中
+    // 字典中的键是新字段的名称；值是一个单独的字典
     "species": {
-        // The key specifies the event_field_transformation to apply; the value specifies
-        // the input field whose value should be provided to that transformation.
-        // So, in this case, we are adding a new field 'species' which will
-        // contain the species of the victim of this kill event.
+        // 这个键告诉我们要进行什么样的字段转换；值指定了
+        // 需要被转换的字段应该用在哪个地方。
+        // 所以，在这里，我们正在添加一个新字段名为'species'，
+        // 它会包含这个杀戮事件的受害者的种类。
         "species_of_monster": "victim_type"
     }
 }
 ```
+在这个例子中，我们使用了 "event_transformation"（事件转换）工具，它可以修改或添加新的信息到事件中。对于这个特定的转换工具，它会对 "character_kills_monster" （角色击杀怪物）类型的事件生效，并向事件中添加一个新的字段，名为 "species"（种类）。新字段 "species" 的值将会根据 "victim_type"（受害者类型）字段通过 "species_of_monster"（怪物种类）的转换方法得出。
 
-```C++
+**简单说，这个转换工具会在角色击杀怪物的事件中添加一个字段，显示被杀怪物的种类。**
+
+```json
 "id": "moves_on_horse",
 "type": "event_transformation",
-"event_type" : "avatar_moves", // An event type.  The transformation will act on events of this type
-"value_constraints" : { // A dictionary of constraints
-    // Each key is the field to which the constraint applies
-    // The value specifies the constraint.
-    // "equals" can be used to specify a constant cata_variant value the field must take.
-    // "lt", "lteq", "gteq" and "gt" can be used with int type to compare against a constant cata_variant value.
-    // "equals_any" can be used to check for a value in a set of values
-    // "equals_statistic" specifies that the value must match the value of some statistic (see below)
+"event_type" : "avatar_moves", // 这是我们要处理的事件类型
+"value_constraints" : { // 这是我们要求的条件
+    // "mount" 必须是 "mon_horse"，也就是说，角色必须在骑马
     "mount" : { "equals": [ "mtype_id", "mon_horse" ] }
 }
-// Since we are filtering to only those events where 'mount' is 'mon_horse', we
-// might as well drop the 'mount' field, since it provides no useful information.
+// 既然我们只关心角色在骑马的情况，那么 "mount" 字段就没有用了，我们可以把它去掉
 "drop_fields" : [ "mount" ]
 ```
+在这个例子中，我们用 "event_transformation"（事件转换）工具来处理 "avatar_moves"（角色移动）事件。我们设置了一些条件，只有满足这些条件的事件才会被处理。在这个例子中，我们的条件是角色必须在骑马。如果一个事件满足这个条件，那么我们就会处理这个事件，并且把 "mount"（骑乘）字段去掉，因为在我们关心的事件中，这个字段总是 "mon_horse"（马），所以它没有什么信息量。
 
-The parameter to `"equals"` (and other single-value comparators) is normally a
-length-two array specifying a `cata_variant_type` and a value.  As a short cut,
-you can simply specify an `int` or `bool` (e.g. `"equals": 7` or `"equals": true`)
-for fields which have those types.
 
-The parameter to `"equals_any"` will be a pair where the first element is a
-string `cata_variant_type` and the second is an array of values.  For example:
+`"equals"`（以及其他单值比较符）的参数通常是一个长度为两个元素的数组，指定一个`cata_variant_type`和一个值。作为快捷方式，对于具有那些类型的字段，你可以简单地指定一个`int`或`bool`（例如：`"equals": 7`或`"equals": true`）。
+
+`"equals_any"`的参数将会是一对元素，其中第一个元素是一个字符串`cata_variant_type`，第二个是一组值的数组。例如：
+
 ```
 "value_constraints": {
   "oter_type_id": { "equals_any": [ "oter_type_str_id", [ "central_lab_finale", "lab_finale" ] ] }
 }
 ```
 
-Value constraints are type-checked, so you should see an error message at game
-data verification time if the variant type you have specified doesn't match the
-type of the field you're matching.
+值约束会进行类型检查，所以如果你指定的变体类型与你要匹配的字段类型不符，你应该会在游戏数据验证时看到一个错误消息。
 
-#### `event_statistic`
+#### `事件统计` (Event Statistic)
 
-As with `event_transformation`, an `event_statistic` requires an input event
-stream.  That input stream can be specified in the same was as for
-`event_transformation`, via one of the following two entries:
+与`事件转换`一样，`事件统计`需要一个输入事件流。可以通过以下两种方式之一来指定输入流：
 
 ```C++
-"event_type" : "avatar_moves" // Events of this built-in type
-"event_transformation" : "moves_on_horse" // Events resulting from this json-defined transformation
+"event_type" : "avatar_moves" // 这个内置类型的事件
+"event_transformation" : "moves_on_horse" // 由此JSON定义的转换生成的事件
 ```
 
-Then it specifies a particular `stat_type` and potentially additional details
-as follows:
+然后，它指定了特定的`统计类型`，并可能包含其他详细信息，如下所示：
 
-The number of events:
+事件数量：
+
 ```C++
 "stat_type" : "count"
 ```
+ 
+将指定字段中所有事件的数值求和：
 
-The sum of the numeric value in the specified field across all events:
 ```C++
 "stat_type" : "total"
 "field" : "damage"
 ```
 
-The maximum of the numeric value in the specified field across all events:
+将指定字段中所有事件的数值取最大值：
+
 ```C++
 "stat_type" : "maximum"
 "field" : "damage"
 ```
 
-The minimum of the numeric value in the specified field across all events:
+将指定字段中所有事件的数值取最小值：
+
 ```C++
 "stat_type" : "minimum"
 "field" : "damage"
 ```
 
-Assume there is only a single event to consider, and take the value of the
-given field for that unique event:
+假设只有一个事件需要考虑，并采用该唯一事件中给定字段的值：
+
 ```C++
 "stat_type": "unique_value",
 "field": "avatar_id"
 ```
 
-The value of the given field for the first event in the input stream:
+取输入流中第一个事件中给定字段的值：
+
 ```C++
 "stat_type": "first_value",
 "field": "avatar_id"
 ```
 
 The value of the given field for the last event in the input stream:
+
 ```C++
 "stat_type": "last_value",
 "field": "avatar_id"
 ```
 
-Regardless of `stat_type`, each `event_statistic` can also have:
+无论`统计类型`如何，每个`事件统计`还可以具有以下内容：
+
 ```C++
-// Intended for use in describing scores and achievement requirements.
-"description": "Number of things"
+// 用于描述得分和成就要求的内容。
+"description": "某物的数量"
 ```
 
-#### `score`
+#### `score` (得分)
 
-Scores simply associate a description to an event for formatting in tabulations
-of scores.  The `description` specifies a string which is expected to contain a
-`%s` format specifier where the value of the statistic will be inserted.
+得分仅将描述与事件关联，用于在得分表格中进行格式化显示。`description`指定一个字符串，其中应包含一个`%s`格式说明符，用于插入统计量的值。
 
-Note that even though most statistics yield an integer, you should still use
-`%s`.
+请注意，即使大多数统计量产生整数值，也应该使用`%s`。
 
-If the underlying statistic has a description, then the score description is
-optional.  It defaults to "<statistic description>: <value>".
+如果基础统计量有描述，则得分描述是可选的。默认值为 "<统计量描述>: <值>"。
 
 ```C++
 "id": "score_headshots",
 "type": "score",
-"description": "Headshots: %s",
+"description": "爆头击杀数： %s",
 "statistic": "avatar_num_headshots"
 ```
 
-#### `achievement`
+#### `achievement` (成就)
 
-Achievements are goals for the player to aspire to, in the usual sense of the
-term as popularized in other games.
+成就是玩家可以追求的目标，与其他游戏中普遍使用的意义相同。
 
-An achievement is specified via requirements, each of which is a constraint on
-an `event_statistic`.  For example:
+通过要求条件来指定成就，其中每个条件都是对`事件统计`的约束。例如：
 
 ```C++
 {
   "id": "achievement_kill_zombie",
   "type": "achievement",
-  // The achievement name and description are used for the UI.
-  // Description is optional and can provide extra details if you wish.
-  "name": "One down, billions to go\u2026",
-  "description": "Kill a zombie",
-  // if you don't specify requirements because the achievement is given by an EOC
-  // you should set manually_given to true, this will avoid errors.
-  // this value defaults to false
+  // 成就的名称和描述用于UI显示。
+  // 描述是可选的，并且可以提供额外的细节。
+  "name": "一只已被消灭，还有数十亿只\u2026",
+  "description": "杀死一只僵尸",
+  // 如果成就是由EOC（事件外来条件）给予的，而无需指定要求条件，
+  // 则应将manually_given设置为true。这将避免错误。
+  // 此值默认为false。
   "manually_given": false,
   "requirements": [
-    // Each requirement must specify the statistic being constrained, and the
-    // constraint in terms of a comparison against some target value.
+    // 每个要求条件必须指定要受约束的统计量，并将其与某个目标值进行比较。
     { "event_statistic": "num_avatar_zombie_kills", "is": ">=", "target": 1 }
   ]
 },
 ```
 
-The `"is"` field must be `">="`, `"<="` or `"anything"`.  When it is not
-`"anything"` the `"target"` must be present, and must be an integer.
+`"is"`字段必须是`">="`，`"<="`或`"anything"`之一。当它不是`"anything"`时，`"target"`字段必须存在，并且必须是一个整数。
 
-Additional optional fields for each entry in `requirements` are:
+`requirements`中每个条目的其他可选字段如下：
 
-* `"visible"`, which can take the values `"always"`,
-  `"when_requirement_completed"`, `"when_achievement_completed"`, or `"never"`
-  to dictate when a requirement is visible.  Non-visible requirements will be
-  hidden in the UI.
-* `"description"` will override the default description of the requirement, for
-  cases where the default is not suitable.  The default takes the form `x/y
-  foo` where `x` is the current statistic value, `y` is the target value, and
-  `foo` is the statistic description (if any).
+- `"visible"`可以取值`"always"`，`"when_requirement_completed"`，`"when_achievement_completed"`或`"never"`，以指定要求条件何时可见。非可见的要求条件将在UI中隐藏。
+- `"description"`将覆盖要求条件的默认描述，适用于默认不适合的情况。默认描述的形式为`x/y foo`，其中`x`是当前统计量值，`y`是目标值，而`foo`是统计量描述（如果有）。
 
-There are further optional fields for the `achievement`:
+`achievement`还有更多可选字段：
 
 ```C++
 "hidden_by": [ "other_achievement_id" ]
 ```
 
-Give a list of other achievement ids.  This achievement will be hidden (i.e.
-not appear in the achievements UI) until all of the achievements listed have
-been completed.
+给出其他成就的id列表。在列出的所有成就完成之前，此成就将被隐藏（即不会出现在成就界面中）。
 
-Use this to prevent spoilers or to reduce clutter in the list of achievements.
+使用此功能可以防止剧透或减少成就列表中的杂乱。
 
-If you want an achievement to be hidden until completed, then mark it as
-`hidden_by` its own id.
+如果要隐藏某个成就直到完成，可以将其标记为`hidden_by`自己的id。
 
 ```C++
 "time_constraint": { "since": "game_start", "is": "<=", "target": "1 minute" }
 ```
 
-This allows putting a time limit (either a lower or upper bound) on when the
-achievement can be claimed.  The `"since"` field can be either `"game_start"`
-or `"cataclysm"`.  The `"target"` describes an amount of time since that
-reference point.
+这允许对可以获得成就的时间设置时间限制（下界或上界）。`"since"`字段可以是`"game_start"`或`"cataclysm"`。`"target"`描述了自那一参考点开始的时间量。
 
-Note that achievements can only be captured when a statistic listed in their
-requirements changes.  So, if you want an achievement which would normally be
-triggered by reaching some time threshold (such as "survived a certain amount
-of time") then you must place some requirement alongside it to trigger it after
-that time has passed.  Pick some statistic which is likely to change often, and
-add an `"anything"` constraint on it.  For example:
+请注意，只有在在其要求条件中列出的统计量变化时，才会捕获成就。因此，如果你想要一个通常会在到达某个时间阈值时触发的成就（例如"存活一段时间"），那么你必须在此之后添加一些要求条件来触发它。选择一些可能经常改变的统计量，并对其添加一个`"anything"`约束。例如：
 
 ```C++
 {
   "id": "achievement_survive_one_day",
   "type": "achievement",
-  "description": "The first day of the rest of their unlives",
+  "description": "其余未来的第一天",
   "time_constraint": { "since": "game_start", "is": ">=", "target": "1 day" },
   "requirements": [ { "event_statistic": "num_avatar_wake_ups", "is": "anything" } ]
 },
 ```
+这是一个简单的“存活一天”的成就，但是它是通过醒来触发的，因此在游戏进行24小时后的第一次醒来时，成就将被完成。
 
-This is a simple "survive a day" but is triggered by waking up, so it will be
-completed when you wake up for the first time after 24 hours into the game.
+#### `conduct` (行为准则)
 
-#### `conduct`
+行为准则是玩家自愿遵守的约束条件。在某种程度上，行为准则与成就相反：它指定了一组在游戏开始时可以为真的条件，但可能在某个时刻变为假。
 
-A conduct is a self-imposed constraint that players can choose to aspire to
-maintain.  In some ways a conduct is the opposite of an achievement: it
-specifies a set of conditions which can be true at the start of a game, but
-might cease to be true at some point.
+行为准则的实现与成就共享许多特性，并且在JSON中的规范使用了相同的字段。只需将`"type"`从`"achievement"`更改为`"conduct"`。
 
-The implementation of conducts shares a lot with achievements, and their
-specification in JSON uses all the same fields.  Simply change the `"type"`
-from `"achievement"` to `"conduct"`.
+游戏强制要求您为行为准则指定的任何要求条件必须在某种意义上“变为假”，即一旦它们变为假，它们永远不能再变为真。因此，例如，对某些单调递增统计量的上限是可以接受的，但您不能使用对可能随意上下波动的统计量的约束。
 
-The game enforces that any requirements you specify for a conduct must "become
-false" in the sense that once they are false, they can never become true again.
-So, for example, an upper bound on some monotonically increasing statistic is
-acceptable, but you cannot use a constraint on a statistic which might go down
-and up arbitrarily.
+通过一个好的例子来激励，这个约束条件可能会弱化，但目前它存在是为了帮助捕捉错误。
 
-With a good motivating example, this constraint might be weakened, but for now
-it is present to help catch errors.
-
-### Skills
+### 技能 (Skills)
 
 ```C++
-"id" : "smg",  // Unique ID. Must be one continuous word, use underscores if necessary
-"name" : "submachine guns",  // In-game name displayed
-"description" : "Your skill with submachine guns and machine pistols. Halfway between a pistol and an assault rifle, these weapons fire and reload quickly, and may fire in bursts, but they are not very accurate.", // In-game description
-"tags" : ["gun_type"]  // Special flags (default: none)
+"id" : "smg",  // 唯一ID。必须是一个连续的单词，如果需要可以使用下划线
+"name" : "冲锋枪",  // 游戏内显示的名称
+"description" : "你对冲锋枪和机枪手枪的熟练程度。介于手枪和突击步枪之间，这些武器射击和装填速度快，可以连发射击，但精度不高。", // 游戏内描述
+"tags" : ["gun_type"]  // 特殊标签 (默认: 无)
 ```
 
-### Speed Description
+### 速度描述 (Speed Description)
 
 ```C++
 {
     "type": "speed_description",
     "id": "mon_speed_centipede",
-    "values": [ // (optional)
+    "values": [ // (可选)
         {
-            // value is mandatory
+            // value为必填项
             "value": 1.40,
-            // description is optional
-            "descriptions": "Absurdly faster than you", // single description
+            // description可选
+            "descriptions": "比你快得离谱", // 单个描述
         },
         {
             "value": 1.00,
-            "descriptions": [ // array of descriptions, chosen randomly when called
-                "Roughly around the same speed",
-                "At a similar pace as you"
+            "descriptions": [ // 描述的数组，调用时随机选择一个
+                "大致与你的速度相当",
+                "与你的速度相似"
             ]
         },
         {
             "value": 0.01,
-            "descriptions": [ // array of descriptions, chosen randomly when called
-                "Barely moving",
-                "Is it even alive?"
+            "descriptions": [ // 描述的数组，调用时随机选择一个
+                "几乎不动",
+                "它还活着吗？"
             ]
         },
         {
-            "value": 0.00, // immobile monsters have it set to zero
-            "descriptions": [ "It's immobile" ] // array of descriptions with a single description
+            "value": 0.00, // 无法移动的怪物将其设置为零
+            "descriptions": [ "它无法移动" ] // 描述的数组，但只有一个描述
         }
     ]
 }
 ```
 
-There won't be any errors on two `values` with the same `value` but avoid it as one of them won't get called.
+如果两个`values`具有相同的`value`，将不会产生错误，但尽量避免这种情况，因为其中一个将不会被调用。
 
-Currently the ratio for values is `player_tiles_per_turn / monster_speed_rating`. The monster speed rating is their `effective_speed / 100`, their effective speed is equal to the monster speed, but the leap ability increases it by `50`.
+当前的比值为`player_tiles_per_turn / monster_speed_rating`。怪物的速度评级是其`effective_speed / 100`，其有效速度等于怪物的速度，但跳跃能力将其增加了`50`。
 
-Values are checked from highest first, the order they're defined in doesn't matter since they get sorted, but keep them organized anyway.
+值从最高值开始检查，它们的定义顺序无关紧要，因为它们会被排序，但还是保持组织有序。
 
-**Having a value of `0.00`** is important but not necessary, as it's used in case the ratio turns zero for whatever reason ( like monster has the flag `MF_IMMOBILE` ). If the ratio is zero and this value doesn't exist, the returned string will be empty.
+具有`0.00`值是重要的，但不是必需的，因为它用于在比率由于任何原因变为零时使用（比如怪物具有`MF_IMMOBILE`标志）。如果比率为零且不存在该值，则返回的字符串将为空。
 
-### Mood Face
+### 心情表情 (Mood Face)
+
 ```C++
 {
     "type": "mood_face",
     "id": "DEFAULT_HORIZONTAL",
-    "values": [ // mandatory
+    "values": [ // 必填项
         {
-            "value": 200, // mandatory
-            "face": "<color_green>@w@</color>" // mandatory
+            "value": 200, // 必填项
+            "face": "<color_green>@w@</color>" // 必填项
         },
         {
             "value": -200,
-            "face": "<color_red>XvX</color>" // adding a color is also mandatory
+            "face": "<color_red>XvX</color>" // 必须添加颜色
         },
         {
-            "value": -201, // morale is clamped [200, -200] on regular gameplay, not necessary unless debugging
+            "value": -201, // 在常规游戏中，士气被夹持在[200, -200]范围内，除非进行调试，否则不必要
             "face": "<color_yellow>@^@</color>"
         }
     ]
 }
 ```
 
-Color is mandatory, or else it won't appear on the sidebar.
+颜色是必需的，否则它不会在侧边栏上显示。
 
-`DEFAULT` and `DEFAULT_HORIZONTAL` for the default value, must not be deleted ( modifying is fine ).
+`DEFAULT`和`DEFAULT_HORIZONTAL`用于默认值，不得删除（可以进行修改）。
 
-`THRESH_TRAIT` and `THRESH_TRAIT_HORIZONTAL` for traits.
-Examples:
-For `THRESH_BIRD`: `THRESH_BIRD` and `THRESH_BIRD_HORIZONTAL`
-For `THRESH_SPIDER`: `THRESH_SPIDER` and `THRESH_SPIDER_HORIZONTAL`
+`THRESH_TRAIT`和`THRESH_TRAIT_HORIZONTAL`用于特征。例如:
+对于`THRESH_BIRD`：`THRESH_BIRD`和`THRESH_BIRD_HORIZONTAL`
+对于`THRESH_SPIDER`：`THRESH_SPIDER`和`THRESH_SPIDER_HORIZONTAL`
 
-The `id` must be exact as it is hardcoded to look for that.
+`id`必须精确匹配，因为它是硬编码以查找该值。
 
-`HORIZONTAL` means 3 characters width.
+`HORIZONTAL`表示3个字符的宽度。
 
-### Tool Qualities
+### 工具品质 (Tool Qualities)
 
-Defined in tool_qualities.json.
+在tool_qualities.json中定义。
 
-Format and syntax:
+格式和语法：
+
 ```C++
 {
   "type": "tool_quality",
-  "id": "SAW_W",                      // Unique ID
-  "name": { "str": "wood sawing" },   // Description used in tabs in-game when looking at entries with the id
-  "usages": [ [ 2, [ "LUMBER" ] ] ]   // Not mandatory.  The special actions that may be performed with the item.
+  "id": "SAW_W",                      // 唯一ID
+  "name": { "str": "wood sawing" },   // 在游戏中查看具有该ID的条目时，在选项卡中使用的描述
+  "usages": [ [ 2, [ "LUMBER" ] ] ]   // 不是必需的。可以使用该物品执行的特殊操作。
 },
 ```
 
-Examples of various usages syntax:
+各种用法示例的语法：
+
 ```C++
-"usages": [ [ 1, [ "PICK_LOCK" ] ] ]
-"usages": [ [ 2, [ "LUMBER" ] ] ]
-"usages": [ [ 1, [ "salvage", "inscribe"] ] ]
-"usages": [ [ 2, [ "HACKSAW", "saw_barrel" ] ] ]
-"usages": [ [ 1, [ "CHOP_TREE", "CHOP_LOGS" ] ], [ 2, [ "LUMBER" ] ] ]
+{
+ "usages": [ [ 1, [ "PICK_LOCK" ] ] ]  // 使用品质级别为1的工具进行 "解锁" 操作。
+ "usages": [ [ 2, [ "LUMBER" ] ] ]  // 使用品质级别为2的工具进行 "伐木" 操作。
+ "usages": [ [ 1, [ "salvage", "inscribe"] ] ]  // 使用品质级别为1的工具进行 "拆解" 和 "铭刻" 操作。
+ "usages": [ [ 2, [ "HACKSAW", "saw_barrel" ] ] ]  // 使用品质级别为2的工具进行 "使用锯子" 和 "锯开桶体" 操作。
+ "usages": [ [ 1, [ "CHOP_TREE", "CHOP_LOGS" ] ], [ 2, [ "LUMBER" ] ] ]  // 使用品质级别为1的工具进行 "砍树" 和 "砍伐木材" 操作；使用品质级别为2的工具进行 "伐木" 操作。
+}
 ```
 
-The usages line is only required for items that have qualities that allow
-special actions on activation. See [Use Actions](#use-actions) for specific
-actions and documentation.
+使用行仅对具有允许在激活时进行特殊操作的品质的物品是必需的。有关特定操作和文档，请参见[使用操作](#use-actions)。
 
-IDs of actions and the plaintext action description for the player are defined
-in item_actions.json.
+操作的ID和玩家的纯文本操作描述在item_actions.json中定义。
 
-Each usage must be defined first by the minimum level of the tool quality that
-is required for that action to be possible, then the ID of the action or array
-of actions that is possible with that tool quality level or greater.
+每个用法必须首先由工具品质的最低级别来定义，该级别是进行该操作所需的，并且必须定义具有该工具品质级别或更高级别可能的动作的ID或动作数组。
 
-As shown in the examples, one or more actions for multiple tool levels may be
-defined and if multiple levels are defined, those must be defined in a
-higher order array.
+如示例所示，可以为多个工具级别定义一个或多个动作，并且如果定义了多个级别，则必须在更高级别数组中定义。
 
-Comment lines using the normal `"//"` (or `"//1"`, or higher numbers) format are
-allowed (see [Comments](#comments)).
+允许使用常规的`"//"`（或`"//1"`，或更高数字）格式进行注释（请参见[注释](#comments)）。
 
-Qualities are (non-exclusively) associated with items in the various item
-definitions in the json files by adding a `"qualities":` line.
-For example: `"qualities": [ [ "ANVIL", 2 ] ],` associates the `ANVIL` quality
-at level `2` to the item.
+品质（非独占地）与各种item定义中的物品相关联，可以通过添加`"qualities":`行来定义。
+例如: `"qualities": [ [ "ANVIL", 2 ] ],`将`ANVIL`品质与等级`2`关联到该物品。
 
-### Traits/Mutations
+### 特质/突变 (Traits/Mutations)
 
-See [MUTATIONS.md](MUTATIONS.md)
+请参阅 [MUTATIONS.md](MUTATIONS.md)
 
-### Trait Migrations
+### 特质迁移 (Trait Migrations)
 
-See [MUTATIONS.md](MUTATIONS.md)
+请参阅 [MUTATIONS.md](MUTATIONS.md)
 
-### Traps
+### 陷阱 (Traps)
 
 ```C++
     "type": "trap",
-    "id": "tr_beartrap", // Unique ID
-    "name": "bear trap", // In-game name displayed
-    "color": "blue",
-    "symbol": "^",
-    "visibility": 2, // 0 to infinity, 0 means a blatantly obvious trap, the higher, the harder to spot.
-    "avoidance": 7, // 0 to infinity, affects how easy it is to dodge a triggered trap. 0 means dead easy, the higher the harder.
-    "difficulty": 3, // 0 to 99, 0 means disarming is always successful (e.g funnels or other benign traps), 99 means disarming is impossible.
-    "trap_radius": 1, // 0 to infinity, radius of space the trap needs when being deployed.
-    "action": "blade", // C++ function that gets run when trap is triggered, usually in trapfunc.cpp
-    "map_regen": "microlab_shifting_hall",  // a valid overmap id, for map_regen action traps
-    "benign": true, // For things such as rollmats, funnels etc. They can not be triggered.
-    "always_invisible": true, // Super well hidden traps the player can never detect
-    "funnel_radius": 200, // millimeters. The higher the more rain it will capture.
-    "comfort": 0, // Same property affecting furniture and terrain
-    "floor_bedding_warmth": -500, // Same property affecting furniture and terrain
-    "spell_data": { "id": "bear_trap" }, // data required for trapfunc::spell()
-    "trigger_weight": "200 g", // If an item with this weight or more is thrown onto the trap, it triggers. Defaults to 500 grams.
-    "drops": [ "beartrap" ], // ID of item spawned when disassembled
-    "flags": [ "UNDODGEABLE", "AVATAR_ONLY" ], // UNDODGEABLE means that it can not be dodged, no roll required. AVATAR_ONLY means only the player can trigger this trap.
+    "id": "tr_beartrap", // 唯一ID
+    "name": "捕熊夹", // 游戏内显示的名称
+    "color": "blue", // 颜色
+    "symbol": "^", // 符号
+    "visibility": 2, // 0到无穷大，0表示明显可见的陷阱，数值越高越难以发现
+    "avoidance": 7, // 0到无穷大，影响触发陷阱时的闪避难度，0表示非常容易躲避，数值越高越困难
+    "difficulty": 3, // 0到99，0表示拆除始终成功（例如漏斗或其他无害陷阱），99表示拆除不可能
+    "trap_radius": 1, // 0到无穷大，部署陷阱时所需的空间半径
+    "action": "blade", // 当陷阱被触发时运行的C++函数，通常在trapfunc.cpp中
+    "map_regen": "microlab_shifting_hall",  // 用于map_regen动作陷阱的有效地图重新生成（overmap id）
+    "benign": true, // 用于类似床垫、漏斗等的物品，它们不会被触发
+    "always_invisible": true, // 非常隐秘的陷阱，玩家永远无法检测到
+    "funnel_radius": 200, // 毫米。值越高，积水越多
+    "comfort": 0, // 影响家具和地形的舒适度。请参阅地形示例文件以了解更多施加该属性的地块
+    "floor_bedding_warmth": -500, // 影响家具和地形的地板垫的保暖程度
+    "spell_data": { "id": "bear_trap" }, // 用于trapfunc::spell()的所需数据
+    "trigger_weight": "200 g", // 如果扔在陷阱上的物品重量达到或超过该数值，则触发陷阱。默认值为500克
+    "drops": [ "beartrap" ], // 解除拆除时生成的物品的ID
+    "flags": [ "UNDODGEABLE", "AVATAR_ONLY" ], // UNDODGEABLE表示无法闪避，无需进行判定。AVATAR_ONLY表示只有玩家可以触发该陷阱。
     "vehicle_data": {
       "damage": 300,
       "sound_volume": 8,
@@ -2690,170 +2598,148 @@ See [MUTATIONS.md](MUTATIONS.md)
       "remove_trap": true,
       "spawn_items": [ "beartrap" ]
     },
-    "trigger_message_u": "A bear trap closes on your foot!", // This message will be printed when player steps on a trap
-    "trigger_message_npc": "A bear trap closes on <npcname>'s foot!" // This message will be printed when NPC or monster steps on a trap
+    "trigger_message_u": "你的脚被捕熊夹夹住了！", // 当玩家触碰到陷阱时显示的消息
+    "trigger_message_npc": "<npcname>的脚被捕熊夹夹住了！" // 当NPC或怪物触碰到陷阱时显示的消息
 ```
 
-### Vehicle Groups
-
+### 车辆群组 (Vehicle Groups)
 
 ```C++
-"id":"city_parked",            // Unique ID. Must be one continuous word, use underscores if necessary
-"vehicles":[                 // List of potential vehicle ID's. Chance of a vehicle spawning is X/T, where
-  ["suv", 600],           //    X is the value linked to the specific vehicle and T is the total of all
-  ["pickup", 400],          //    vehicle values in a group
+"id":"city_parked",            // 唯一ID。必须是一个连续的单词，如果需要可以使用下划线
+"vehicles":[                 // 可能车辆的ID列表。车辆生成的机会是X/T，其中
+  ["suv", 600],           //    X是与特定车辆相关联的值，T是群组中所有车辆值的总和
+  ["pickup", 400],          //    
   ["car", 4700],
   ["road_roller", 300]
 ]
 ```
 
-### Vehicle Parts
+### 车辆部件 (Vehicle Parts)
 
-Vehicle components when installed on a vehicle.
+车辆上安装的组件。
 
 ```C++
-"id": "wheel",                // Unique identifier, must not contain a # symbol
-"name": "wheel",              // Displayed name
-"looks_like": "small_wheel",  // (Optional) hint to tilesets if this part has no tile,
-                              // use the looks_like tile.
-"bonus": 100,                 // Function depends on part type:
-                              // seatbelt part is in "str" (non-functional #30239)
-                              // muffler part is % noise reduction
-                              // horn part volume
-                              // light part intensity
-                              // recharger part charging speed in watts
-                              // funnel part water collection area in mm^2
-"color": "dark_gray",         // Color used when part is working
-"broken_color": "light_gray", // Color used when part is broken
-"location": "fuel_source",    // Optional. One of the checks used when determining if a part 
-                              // can be installed on a given tile. A part cannot be installed
-                              // if any existing part occupies the same location.
-"damage_modifier": 50,        // (Optional, default = 100) Dealt damage multiplier when this
-                              // part hits something, as a percentage. Higher = more damage to
-                              // creature struck
-"durability": 200,            // How much damage the part can take before breaking
-"description": "A wheel.",    // A description of this vehicle part when installing it
-"fuel_type": "diesel",        // (Optional, default = "NULL") Type of fuel/ammo the part consumes,
-                              // as an item id
-"epower": -10                 // The electrical power use of the part, in watts.
-                              // Negative values mean power is consumed, positive values mean power
-                              // is generated.  Power consumption usually also requires the
-                              // ENABLED_DRAINS_EPOWER flag and for the item to be turned on.
-                              // Solar panel power gneration is modified by sun angle.
-                              // When sun is at 90 degrees the panel produces the full epower.
-"item": "wheel",              // The item used to install this part, and the item obtained when
-                              // removing this part.
-"difficulty": 4,              // Your mechanics skill must be at least this level to install this part
-"breaks_into" : [             // When the vehicle part is destroyed, items from this item group
-                              // (see ITEM_SPAWN.md) will be spawned around the part on the ground.
-  {"item": "scrap", "count": [0,5]} // instead of an array, this can be an inline item group,
+"id": "wheel",                // 唯一标识符，不得包含 # 符号
+"name": "轮子",              // 显示名称
+"looks_like": "small_wheel",  // （可选）如果该部件没有图块，使用与其外观相似的图块
+"bonus": 100,                 // 功能取决于部件类型：
+                              // 安全带部件中的 "str"（非功能性 #30239）
+                              // 消音器部件为噪音减少百分比
+                              // 喇叭部件音量
+                              // 车灯部件亮度
+                              // 充电器部件充电速度（瓦特）
+                              // 漏斗部件积水面积（平方毫米）
+"color": "dark_gray",         // 部件工作时的颜色
+"broken_color": "light_gray", // 部件损坏时的颜色
+"location": "fuel_source",    // （可选）确定是否可以将部件安装在特定块上的检查之一。如果任何现有部件占据相同位置，则无法安装该部件。
+"damage_modifier": 50,        // （可选，默认值 = 100）此部件对其他物体造成的伤害倍增器，以百分比表示。较高的值表示对被撞击的生物造成更多伤害。
+"durability": 200,            // 部件在损坏前可以承受的伤害量
+"description": "A wheel.",    // 安装该车辆部件时的描述
+"fuel_type": "diesel",        // （可选，默认值 = "NULL"）部件消耗的燃料/弹药类型，作为物品ID
+"epower": -10                 // 部件的电力使用量，以瓦特为单位。
+                              // 负值表示消耗电力，正值表示生成电力。电力消耗通常还需要启用 ENABLED_DRAINS_EPOWER 标志并将物品打开。
+                              // 太阳能电池板的电力生成量受到阳光角度的影响。
+                              // 当阳光直射时，太阳能电池板产生满功率的电力。
+"item": "wheel",              // 安装该部件所使用的物品，以及移除该部件时获得的物品。
+"difficulty": 4,              // 安装该部件所需的机械技能等级必须至少达到此级别
+"breaks_into" : [             // 当车辆部件被破坏时，从此物品组中生成的物品将分散在部件周围的地面上。
+  {"item": "scrap", "count": [0,5]} // 这里可以使用内联物品组，而不需要使用数组。
 ],
-"breaks_into" : "some_item_group", // or just the id of an item group.
-"flags": [                    // Flags associated with the part
+"breaks_into" : "some_item_group", // 或者只使用物品组的ID。
+"flags": [                    // 与该部件相关的标识
      "EXTERNAL", "MOUNT_OVER", "WHEEL", "MOUNT_POINT", "VARIABLE_SIZE"
 ],
-"requirements": {             // (Optional) Special installation, removal, or repair requirements
-                              // for the part.  Each field consists of an object, with fields
-                              // "skills", "time", and "using".
+"requirements": {             // （可选）安装、拆除或修复该部件的特殊要求。每个字段都由一个对象组成，具有“skills”、“time”和“using”字段。
   "install": {
-    "skills": [ [ "mechanics", 1 ] ], // "skills" is a list of lists, with each list being a skill
-                              // name and skill level.
-    "time": "200 s",          // "time" is a string specifying the time to perform the action.
-    "using": [ [ "vehicle_screw", 1 ] ] // "using" is a list of list, with each list being a
-                              // crafting requirement.
+    "skills": [["mechanics", 1]], // "skills"是一个嵌套列表，每个列表包含一个技能名称和技能等级。
+    "time": "200 s",          // "time"是指执行动作所需时间的字符串。
+    "using": [["vehicle_screw", 1]] // "using"是一个嵌套列表，每个列表包含一个工艺要求。
   },
-  "removal": { "skills": [ [ "mechanics", 1 ] ], "time": "200 s", "using": [ [ "vehicle_screw", 1 ] ] },
-  "repair": { "skills": [ [ "mechanics", 1 ] ], "time": "20 s", "using": [ [ "adhesive", 1 ] ] }
+  "removal": {
+    "skills": [["mechanics", 1]], "time": "200 s", "using": [["vehicle_screw", 1]]
+  },
+  "repair": {
+    "skills": [["mechanics", 1]], "time": "20 s", "using": [["adhesive", 1]]
+  }
 },
-"pseudo_tools" : [            // Crafting tools provided by this part
+"pseudo_tools" : [            // 该部件提供的工艺工具
   { "id": "hotplate", "hotkey": "h" },
   { "id": "pot" }
 ],
-"folded_volume": "750 ml", // volume this vpart takes in folded form, undefined or null disables folding
-"folding_tools": [ "needle_curved" ], // tool itype_ids required for folding
-"folding_time": "100 seconds", // time to fold this part
-"unfolding_tools": [ "hand_pump" ], // tool itype_ids required for unfolding
-"unfolding_time": "150 seconds", // time to unfold this part
-"damage_reduction" : {        // Flat reduction of damage; see "Part Resistance". If not specified, set to zero
+"folded_volume": "750 ml", // 该部件折叠时的体积，undefined或null禁用折叠
+"folding_tools": [ "needle_curved" ], // 折叠所需的工艺工具
+"folding_time": "100 seconds", // 折叠时间
+"unfolding_tools": [ "hand_pump" ], // 展开所需的工艺工具
+"unfolding_time": "150 seconds", // 展开时间
+"damage_reduction" : {        // 对损坏的减少量；参见“Part Resistance”。如果未指定，设为零
     "all" : 10,
     "physical" : 5
 },
-"qualities": [ [ "SELF_JACK", 17 ] ], // (Optional) A list of lists, with each list being a tool
-                              // quality and the quality level, that the vehicle part provides.
-                              // Only the "LIFT", "JACK", and "SELF_JACK" qualities are valid.
-"transform_terrain": {        // (Optional) This part can transform terrain, like a plow.
-                              // One of "post_terain", "post_furniture", or "post_field" is required.
-  "pre_flags": [ "PLOWABLE" ], // List of flags for the terrain that can be transformed.
-  "post_terrain": "t_dirtmound", // (Optional, default to "t_null") The resulting terrain, if any.
-  "post_furniture": "f_boulder", // (Optional, default to "f_null") The resulting furniture, if any.
-  "post_field": "fd_fire",    // (Optional, default to "fd_null") The resulting field, if any.
-  "post_field_intensity": 10, // (Optional, default to 0) The field's intensity, if any.
-  "post_field_age": "20 s"    // (Optional, default to 0 turns) The field's time to live, if any.
+"qualities": [ [ "SELF_JACK", 17 ] ], // （可选）一个嵌套列表，每个列表包含一个工具品质和其等级。只能使用 "LIFT"、"JACK" 和 "SELF_JACK" 品质。
+"transform_terrain": {        // （可选）该部件可转换地形，如犁。
+                              // 必须提供 "post_terrain"、"post_furniture" 或 "post_field" 之一。
+  "pre_flags": [ "PLOWABLE" ], // 可以转换的地形的标志列表。
+  "post_terrain": "t_dirtmound", // （可选，默认为 "t_null"）转换后的地形（如果有）。
+  "post_furniture": "f_boulder", // （可选，默认为 "f_null"）转换后的家具（如果有）。
+  "post_field": "fd_fire",    // （可选，默认为 "fd_null"）转换后的野外（如果有）。
+  "post_field_intensity": 10, // （可选，默认为0）野外的强度（如果有）。
+  "post_field_age": "20 s"    // （可选，默认为0转，即永久存在）野外的存活时间（如果有）。
 },
-"variants_bases": [ // variant bases to generate (see below)
-  { "id": "scooter", "label": "Scooter" },
-  { "id": "bike", "label": "bike" }
+"variants_bases": [ // 要生成的变种基础部件（详见下文）
+  { "id": "scooter", "label": "电动踏板车" },
+  { "id": "bike", "label": "自行车" }
 ],
 "variants": [
     {
-        "id": "front",         // variant id (must be unique in this part)
-        "label": "Front",      // label to display for ui
-        "symbols": "oooooooo", // symbols when part isn't broken
-        "symbols_broken": "x"  // symbols when part is broken
+        "id": "front",         // 变种的唯一标识符
+        "label": "前轮",      // 在用户界面中显示的标签
+        "symbols": "oooooooo", // 当部件未损坏时的符号
+        "symbols_broken": "x"  // 当部件损坏时的符号
     },
-    { "id": "rear", "label": "Rear", "symbols": "o", "symbols_broken": "x" }
+    { "id": "rear", "label": "后轮", "symbols": "o", "symbols_broken": "x" }
 ]
 ```
 
-#### Symbols and Variants
-Vehicle parts can have cosmetic variants that use different symbols and tileset sprites.  They are declared by the "variants" object.  Variants are used in the vehicle prototype as a suffix following the part id (ie `id#variant`), for example `"frame#nw"` or `"halfboard#cover"`.
+#### 符号和变种
 
-`symbols` and `symbols_broken` can be either a string of 1 character (A 1 character string is effectively 8 of that characters) or 8 characters long. The length is measured in console characters. An 8 character string represents the 8 symbols used for parts which can rotate; `abcdefgh` will put `a` when part is rotated north, `b` for NW, `c` for west, `d` for SW etc.
+车辆部件可以拥有外观变种，这些变种使用不同的符号和图块。它们通过"variants"对象声明。变种在车辆原型中作为后缀跟在部件id后面（例如`id#variant`），例如"frame#nw"或"halfboard#cover"。
 
-A subset of unicode box drawing characters is supported as symbols: `│ ─ ┼ ┌ ┐ ┘ └`, thick vertical and thick horizontal lines `┃ ━` are partially supported, they're rendered as `H` and `=` because there are no equivalents in curses ACS encoding.
+`symbols`和`symbols_broken`可以是一个长度为1的字符字符串（一个长度为1的字符串实际上是该字符的8个复制），或者是长度为8的字符。长度是以控制台字符计量的。一个长度为8的字符串表示部件旋转时使用的8个符号；例如，`abcdefgh`将在部件旋转到北方时显示`a`，在旋转到西北方时显示`b`，在旋转到西方时显示`c`，在旋转到西南方时显示`d`，依此类推。
 
-Variant bases are for generating extra variants from the specified ones, in the example above will make part loader perform cartesian product between each base and each of the variants, making finalized variants list the following: `[ "front", "rear", "scooter_front", "scooter_rear", "bike_front", "bike_rear" ]`, the base's `label` field is appended to the variant's label.
+一些Unicode框线字符被支持作为符号：`│ ─ ┼ ┌ ┐ ┘ └`，粗垂直和粗水平线 `┃ ━` 部分受支持，它们会被显示为 `H` 和 `=`，因为在 curses ACS 编码中没有对应的字符。
 
-For more details on how tilesets interact with variants and ids look into [VEHICLES_JSON.md](VEHICLES_JSON.md#part-variants) "Part Variants" section.
+变种基础部件用于从指定的基础部件和变种生成额外的变种。在上面的例子中，装载机将在每个基础部件和每个变种之间执行笛卡尔积，生成的最终变种列表如下：`[ "front", "rear", "scooter_front", "scooter_rear", "bike_front", "bike_rear" ]`，基础部件的`label`字段附加到变种的标签中。
 
-Unless specified as optional, the following fields are mandatory for parts with appropriate flag and are ignored otherwise.
-#### The following optional fields are specific to CARGO parts.
-```c++
-"size": "400 L",              // for parts with "CARGO" flag the capacity in liters
-"cargo_weight_modifier": 33,  // (Optional, default = 100) Multiplies cargo weight by this percentage.
+有关图块集与变种和id之间的交互的详细信息，请参阅 [VEHICLES_JSON.md](VEHICLES_JSON.md#part-variants) 中的 "Part Variants" 部分。
+
+除非另有指定，否则以下字段对于具有相应标识的部件是强制性的，否则将被忽略。
+
+#### 以下可选字段仅适用于CARGO部件。
+
+```C++
+"size": "400 L",              // 对于具有"CARGO"标识的部件，表示容量的升数
+"cargo_weight_modifier": 33,  // (可选，默认值为100) 该百分比将货物重量乘以此百分比。
 ```
 
-#### The following optional fields are specific to ENGINEs.
-```c++
-"power": "15000 W"            // Engine motive power in watts.
-"energy_consumption": "55 W"  // Engine power consumption at maximum power in watts.  Defaults to
-                              // electrical power and the E_COMBUSTION flag turns it to thermal
-                              // power produced from fuel_type.  Should always be larger than "power".
-"m2c": 50,                    // The ratio of safe power to maximum power.
-"backfire_threshold": 0.5,    // (Optional, default = 0) The engine will backfire (producing noise
-                              // and smoke if the ratio of damaged HP to max HP is below this value.
-"backfire_freq": 20,          // (Optional, default = 0) One in X chance of a backfire if the
-                              // ratio of damaged HP to max HP is below the backfire_threshold.
-"noise_factor": 15,           // (Optional, default = 0). Multiple engine power by this number to
-                              // determine noise.
-"damaged_power_factor": 0.5,  // (Optional, default = 0) If more than 0, power when damaged is
-                              // scaled to power * ( damaged_power_factor +
-                              // ( 1 - damaged_power_factor ) * ( damaged HP / max HP )
-"muscle_power_factor": 0,     // (Optional, default = 0) Increases engine power by
-                              // avatar (ST - 8) * muscle_power_factor.
-"exclusions": [ "souls" ]     // (Optional, defaults to empty). A list of words. A new engine can't
-                              // be installed on the vehicle if any engine on the vehicle shares a
-                              // word from exclusions.
-"fuel_options": [ "soul", "black_soul" ] // (Optional field, defaults to fuel_type).  A list of
-                              // item_ids. An engine can be fueled by any fuel type in its
-                              // fuel_options.  If provided, it overrides fuel_type and should
-                              // include the fuel in fuel_type.
-                              // To be a fuel an item needs to be made of only one material,
-                              // this material has to produce energy, *ie* have a `data_fuel` entry,
-                              // and it needs to have consumable charges.
+#### The following optional fields are specific to ENGINEs.(以下可选字段专用于ENGINEs。)
+
+```C++
+"power": "15000 W"            // 引擎的动力功率（单位：瓦特）。
+"energy_consumption": "55 W"  // 引擎在最大功率下的耗能（单位：瓦特）。默认为电力，并且E_COMBUSTION标志将其转换为燃料类型的热能。应始终大于"power"字段的值。
+"m2c": 50,                    // 安全功率和最大功率之比。
+"backfire_threshold": 0.5,    // (可选，默认值为0) 如果损坏的HP与最大HP的比值低于此值，则引擎会出现反火（产生噪音和烟雾）。
+"backfire_freq": 20,          // (可选，默认值为0) 如果损坏的HP与最大HP的比值低于反火阈值，则每次该比值低于阈值时，有1/X的机会出现反火。
+"noise_factor": 15,           // (可选，默认值为0) 将引擎动力乘以此数以确定噪音。
+"damaged_power_factor": 0.5,  // (可选，默认值为0) 如果大于0，则损坏时的动力将按比例缩放为
+                              // power * ( damaged_power_factor + ( 1 - damaged_power_factor ) * ( damaged HP / max HP )。
+"muscle_power_factor": 0,     // (可选，默认值为0) 通过增加（角色的体格 - 8）* muscle_power_factor来增加引擎动力。
+"exclusions": [ "souls" ]     // (可选， 默认为空)。一个词的列表。如果车辆上的任何引擎与exclusions中的任何词相同，新的引擎就无法安装在该车辆上。
+"fuel_options": [ "soul", "black_soul" ] // (可选字段，默认为fuel_type)。一个字符串列表。引擎可以使用fuel_options中的任何燃料类型作为燃料。如果提供了该字段，它将覆盖fuel_type字段，并且应该包含fuel_type中的燃料。
+                              // 要成为燃料，一个物品必须只由一个材料制成，该材料必须产生能量，即具有“data_fuel”条目，并且它需要具有可消耗的耗电量。
 ```
 
 #### The following optional fields are specific to WHEELs.
+
 ```c++
 "wheel_offroad_rating": 0.5,  // multiplier of wheel performance offroad
 "wheel_terrain_modifiers": { "FLAT": [ 0, 5 ], "ROAD": [ 0, 2 ] }, // see below
@@ -2872,17 +2758,21 @@ The key is one of the terrain flags, the list of flags can be found in [JSON_FLA
 The value expects an array of length 2. The first element is a modifier override applied when wheel is on the flagged terrain, the second element is an additive modifier penalty applied when wheel is NOT on flagged terrain, values of 0 are ignored. The modifier is applied over a base value provided by `map::move_cost_ter_furn`.
 
 Examples:
-* Standard `wheel` has the field set to `{ "FLAT": [ 0, 4 ], "ROAD": [ 0, 2 ] }`. If wheel is not on terrain flagged `FLAT` then the traction is 1/4 of base value. If not on terrain flagged `ROAD` then it's 1/2 of base value. If neither flag is present then traction will be 1/6 of base value. If terrain is flagged with both `ROAD` and `FLAT` then the base value from `map::move_cost_ter_furn` is used.
-* `rail_wheel` has the field set to `{ "RAIL": [ 2, 8 ] }`. If wheel is on terrain flagged `RAIL` the traction is overriden to be 1/2 of value calculated by `map::move_cost_ter_furn`, this value is the first element and considered an override, so if there had been modifiers applied prior to this they are ignored. If on terrain not flagged with `RAIL` then traction will be 1/8 of base value.
 
+- Standard `wheel` has the field set to `{ "FLAT": [ 0, 4 ], "ROAD": [ 0, 2 ] }`. If wheel is not on terrain flagged `FLAT` then the traction is 1/4 of base value. If not on terrain flagged `ROAD` then it's 1/2 of base value. If neither flag is present then traction will be 1/6 of base value. If terrain is flagged with both `ROAD` and `FLAT` then the base value from `map::move_cost_ter_furn` is used.
+- `rail_wheel` has the field set to `{ "RAIL": [ 2, 8 ] }`. If wheel is on terrain flagged `RAIL` the traction is overriden to be 1/2 of value calculated by `map::move_cost_ter_furn`, this value is the first element and considered an override, so if there had been modifiers applied prior to this they are ignored. If on terrain not flagged with `RAIL` then traction will be 1/8 of base value.
+-
 
 #### The following optional fields are specific to ROTORs.
+
 ```c++
 "rotor_diameter": 15,         // Rotor diameter in meters.  Larger rotors provide more lift.
 ```
 
 #### The following optional fields are specific to WORKBENCHes.
+
 These values apply to crafting tasks performed at the WORKBENCH.
+
 ```c++
 "multiplier": 1.1,            // Crafting speed multiplier.
 "mass": 1000000,              // Maximum mass in grams of a completed craft that can be crafted.
@@ -2890,6 +2780,7 @@ These values apply to crafting tasks performed at the WORKBENCH.
 ```
 
 #### The following optional fields are specific to SEATs.
+
 ```c++
 "comfort": 3,                 // (Optional, default=0). Sleeping comfort as for terrain/furniture.
 "floor_bedding_warmth": 300,  // (Optional, default=0). Bonus warmth as for terrain/furniture.
@@ -2897,11 +2788,13 @@ These values apply to crafting tasks performed at the WORKBENCH.
 ```
 
 #### The following optional field describes pseudo tools for any part.
+
 Crafting stations (e.g. kitchen, welding rigs etc) have tools that they provide as part
 of forming the inventory for crafting as well as providing menu items when `e`xamining
 the vehicle tile.
 Following example array gives the vpart a pot as passive tool for crafting because it has no hotkey defined.
 It also has a hotplate that can be activated by examining it with `e` then `h` on the part's vehicle tile.
+
 ```c++
 "pseudo_tools" : [
   { "id": "hotplate", "hotkey": "h" },
@@ -2910,7 +2803,9 @@ It also has a hotplate that can be activated by examining it with `e` then `h` o
 ```
 
 ### Part Resistance
+
 Damage resistance values, used by:
+
 - `armor` of [`"type": "body_part"`](#body_parts)
 - `damage_reduction` of [`"type": "vehicle_part"`](#vehicle-parts)
 
@@ -2929,6 +2824,7 @@ Damage resistance values, used by:
 ```
 
 ### Vehicle Placement
+
 ```C++
 "id":"road_straight_wrecks",  // Unique ID. Must be one continuous word, use underscores if necessary
 "locations":[ {               // List of potential vehicle locations. When this placement is used, one of those locations will be chosen at random.
@@ -2978,6 +2874,7 @@ See also [VEHICLES_JSON.md](VEHICLES_JSON.md)
 ```
 
 ### Weakpoint Sets
+
 A thin container for weakpoint definitions. The only unique fields for this object are `"id"` and `"type"`. The `"weakpoints"` array contains weakpoints that are defined the same way as in monster definitions. See [Weakpoints](MONSTERS.md#weakpoints) for details.
 
 ```json
@@ -2995,17 +2892,17 @@ A thin container for weakpoint definitions. The only unique fields for this obje
       "effects": [
         {
           "effect": "stunned",
-          "duration": [ 1, 2 ],
+          "duration": [1, 2],
           "chance": 5,
           "message": "The %s is stunned!",
-          "damage_required": [ 1, 10 ]
+          "damage_required": [1, 10]
         },
         {
           "effect": "stunned",
-          "duration": [ 1, 2 ],
+          "duration": [1, 2],
           "chance": 25,
           "message": "The %s is stunned!",
-          "damage_required": [ 11, 100 ]
+          "damage_required": [11, 100]
         }
       ]
     }
@@ -3014,10 +2911,12 @@ A thin container for weakpoint definitions. The only unique fields for this obje
 ```
 
 Weakpoint sets are applied to a monster using the monster's `"weakpoint_sets"` field. Each subsequent weakpoint set overwrites weakpoints with the same id from the previous set. This allows hierarchical sets that can be applied from general -> specific, so that general weakpoint sets can be reused for many different monsters, and more specific sets can override some general weakpoints for specific monsters. For example:
+
 ```json
 "//": "(in MONSTER type)",
 "weakpoint_sets": [ "humanoid", "zombie_headshot", "riot_gear" ]
 ```
+
 In the example above, the `"humanoid"` weakpoint set is applied as a base, then the `"zombie_headshot"` set overwrites any previously defined weakpoints with the same id (ex: "wp_head_stun"). Then the `"riot_gear"` set overwrites any matching weakpoints from the previous sets with armour-specific weakpoints. Finally, if the monster type has an inline `"weakpoints"` definition, those weakpoints overwrite any matching weakpoints from all sets.
 
 Weakpoints only match if they share the same id, so it's important to define the weakpoint's id field if you plan to overwrite previous weakpoints.
@@ -3115,7 +3014,8 @@ Weakpoints only match if they share the same id, so it's important to define the
 ```
 
 #### To hit object
-For additional clarity, an item's `to_hit` bonus can be encoded as string of 4 fields.  All the fields are mandatory:
+
+For additional clarity, an item's `to_hit` bonus can be encoded as string of 4 fields. All the fields are mandatory:
 
 ```C++
 "to_hit": {
@@ -3125,6 +3025,7 @@ For additional clarity, an item's `to_hit` bonus can be encoded as string of 4 f
     "balance": "neutral"   // one of "clumsy", "uneven", "neutral", or "good"
 }
 ```
+
 See [GAME_BALANCE.md](GAME_BALANCE.md)'s `MELEE_WEAPONS` section for the criteria for selecting each value.
 
 ### Ammo
@@ -3156,7 +3057,7 @@ See [GAME_BALANCE.md](GAME_BALANCE.md)'s `MELEE_WEAPONS` section for the criteri
 
 ```C++
     "id": "TACTICAL_LASER_EXPLOSION",   // Defines this as some generic item
-    "type": "ammo_effect",              // Defines this as an ammo_effect 
+    "type": "ammo_effect",              // Defines this as an ammo_effect
     "trigger_chance": 5,                // Option one in X chances for the rest of json defined ammo_effect properties to trigger at the hit location. Defaults to 1
     "explosion": {  }                   // (Optional) Creates an explosion at the hit location. See "explosion" for details.
     "aoe": {  },                        // (Optional) Spawn a square of specified fields on the hit location.
@@ -3179,7 +3080,6 @@ See [GAME_BALANCE.md](GAME_BALANCE.md)'s `MELEE_WEAPONS` section for the criteri
 "reload_time" : 100,             // How long it takes to load each unit of ammo into the magazine
 "linkage" : "ammolink"           // If set one linkage (of given type) is dropped for each unit of ammo consumed (set for disintegrating ammo belts)
 ```
-
 
 ### Armor
 
@@ -3209,6 +3109,7 @@ Armor can be defined like this:
 ```
 
 #### Armor Portion Data
+
 Encumbrance and coverage can be defined on a piece of armor as such:
 
 ```json
@@ -3242,14 +3143,17 @@ Encumbrance and coverage can be defined on a piece of armor as such:
 ```
 
 ##### Encumbrance
+
 (integer, or array of 2 integers)
 The value of this field (or, if it is an array, the first value in the array) is the base encumbrance (unfitted) of this item.
-When specified as an array, the second value is the max encumbrance - when the pockets of this armor are completely full of items, the encumbrance of a non-rigid item will be set to this. Otherwise it'll be between the first value and the second value following this the equation: first value + (second value - first value) * non-rigid volume / non-rigid capacity.  By default, the max encumbrance is the encumbrance + (non-rigid volume / 250ml).
+When specified as an array, the second value is the max encumbrance - when the pockets of this armor are completely full of items, the encumbrance of a non-rigid item will be set to this. Otherwise it'll be between the first value and the second value following this the equation: first value + (second value - first value) \* non-rigid volume / non-rigid capacity. By default, the max encumbrance is the encumbrance + (non-rigid volume / 250ml).
 
 ##### Encumbrance_modifiers
+
 Experimental feature for having an items encumbrance be generated by weight instead of a fixed number. Takes an array of "DESCRIPTORS" described in the code. If you don't need any descriptors put "NONE". This overrides encumbrance putting it as well will make it be ignored. Currently only works for head armor.
 
 ##### Coverage
+
 (integer)
 What percentage of time this piece of armor will be hit (and thus used as armor) when an attack hits the body parts in `covers`.
 
@@ -3258,10 +3162,12 @@ What percentage of time this piece of armor will be hit (and thus used as armor)
 `cover_vitals` represents the percentage of critical hit damage is absorbed. Only the excess damage on top of normal damage is mitigated, so a vital coverage value of 100 means that critical hits would do the same amount as normal hits.
 
 ##### Covers
+
 (array of strings)
 What body parts this section of the armor covers. See the bodypart_ids defined in body_parts.json for valid values.
 
 ##### Specifically Covers
+
 (array of strings)
 What sub body parts this section of the armor covers. See the sub_bodypart_ids defined in body_parts.json for valid values.
 These are used for wearing multiple armor pieces on a single layer without gaining encumbrance penalties. They are not mandatory
@@ -3269,13 +3175,15 @@ if you don't specify them it is assumed that the section covers all the body par
 strapped layer items, and outer layer armor should always have these specified otherwise it will conflict with other pieces.
 
 ##### Part Materials
+
 (array of objects)
 The type, coverage and thickness of the materials that make up this portion of the armor.
+
 - `type` indicates the material ID.
 - `covered_by_mat` (_optional_) indicates how much (%) of this armor portion is covered by said material. Defaults to 100.
 - `thickness` (_optional_) indicates the thickness of said material for this armor portion. Defaults to 0.0.
-The portion coverage and thickness determine how much the material contributes towards the armor's resistances.
-**NOTE:** These material definitions do not replace the standard `"material"` tag. Instead they provide more granularity for controlling different armor resistances.
+  The portion coverage and thickness determine how much the material contributes towards the armor's resistances.
+  **NOTE:** These material definitions do not replace the standard `"material"` tag. Instead they provide more granularity for controlling different armor resistances.
 
 `covered_by_mat` should not be confused with `coverage`. When specifying `covered_by_mat`, treat it like the `portion` field using percentage instead of a ratio value. For example:
 
@@ -3299,10 +3207,13 @@ The portion coverage and thickness determine how much the material contributes t
   }
 ]
 ```
+
 The case above describes a portion of armor that covers the arms. This portion is 100% covered by cotton, so a hit to the arm part of the armor will definitely impact the cotton. That portion is also 15% covered by plastic. This means that during damage absorption, the cotton material contributes 100% of its damage absorption, while the plastic material only contributes 15% of its damage absorption. Damage absorption is also affected by `thickness`, so thickness and material cover both provide positive effects for protection.
 
 ##### Armor Data
+
 Alternately, every item (book, tool, gun, even food) can be used as armor if it has armor_data:
+
 ```C++
 "type" : "TOOL",      // Or any other item type
 ...                   // same entries as for the type (e.g. same entries as for any tool),
@@ -3326,37 +3237,40 @@ Alternately, every item (book, tool, gun, even food) can be used as armor if it 
     "power_armor" : false
 }
 ```
-#### Guidelines for thickness: ####
+
+#### Guidelines for thickness:
+
 According to <https://propercloth.com/reference/fabric-thickness-weight/>, dress shirts and similar fine clothing range from 0.15mm to 0.35mm.
 According to <https://leathersupreme.com/leather-hide-thickness-in-leather-jackets/>:
-* Fashion leather clothes such as thin leather jackets, skirts, and thin vests are 1.0mm or less.
-* Heavy leather clothes such as motorcycle suits average 1.5mm.
+
+- Fashion leather clothes such as thin leather jackets, skirts, and thin vests are 1.0mm or less.
+- Heavy leather clothes such as motorcycle suits average 1.5mm.
 
 From [this site](https://cci.one/site/marine/design-tips-fabrication-overview/tables-of-weights-and-measures/), an equivalency guideline for fabric weight to mm:
 
-| Cloth                         | oz/yd2 | g/m2  | Inches | mm   |
-| -----                         | ------ | ----- | ------ | ---- |
-| Fiberglass (plain weave)      |    2.3 |    78 |  0.004 | 0.10 |
-| Fiberglass (plain weave)      |    6.0 |   203 |  0.007 | 0.17 |
-| Kevlar (TM) (plain weave)     |    5.0 |   170 |  0.010 | 0.25 |
-| Carbon Fiber (plain weave)    |    5.8 |   197 |  0.009 | 0.23 |
-| Carbon Fiber (unidirectional) |    9.0 |   305 |  0.011 | 0.28 |
+| Cloth                         | oz/yd2 | g/m2 | Inches | mm   |
+| ----------------------------- | ------ | ---- | ------ | ---- |
+| Fiberglass (plain weave)      | 2.3    | 78   | 0.004  | 0.10 |
+| Fiberglass (plain weave)      | 6.0    | 203  | 0.007  | 0.17 |
+| Kevlar (TM) (plain weave)     | 5.0    | 170  | 0.010  | 0.25 |
+| Carbon Fiber (plain weave)    | 5.8    | 197  | 0.009  | 0.23 |
+| Carbon Fiber (unidirectional) | 9.0    | 305  | 0.011  | 0.28 |
 
 Chart cobbled together from several sources for more general materials:
 
-| Fabric     | oz/yd2  | Max g/m2   | Inches      | mm to use  |
-| ---------- | ------- | ---------- | ----------- | ---------- |
-| Very light |     0-4 |        136 | 0.006-0.007 |       0.15 |
-| Light      |     4-7 |        237 |       0.008 |        0.2 |
-| Medium     |    7-11 |        373 | 0.009-0.011 |       0.25 |
-| Heavy      |   11-14 |        475 | 0.012-0.014 |        0.3 |
+| Fabric     | oz/yd2 | Max g/m2 | Inches      | mm to use |
+| ---------- | ------ | -------- | ----------- | --------- |
+| Very light | 0-4    | 136      | 0.006-0.007 | 0.15      |
+| Light      | 4-7    | 237      | 0.008       | 0.2       |
+| Medium     | 7-11   | 373      | 0.009-0.011 | 0.25      |
+| Heavy      | 11-14  | 475      | 0.012-0.014 | 0.3       |
 
 Shoe thicknesses are outlined at <https://secretcobbler.com/choosing-leather/>; TL;DR: upper 1.2 - 2.0mm, lining 0.8 - 1.2mm, for a total of 2.0 - 3.2mm.
 
 For turnout gear, see <https://web.archive.org/web/20220331215535/http://bolivar.mo.us/media/uploads/2014/09/2014-06-bid-fire-gear-packet.pdf>.
 
-
 ### Pet Armor
+
 Pet armor can be defined like this:
 
 ```C++
@@ -3370,7 +3284,9 @@ Pet armor can be defined like this:
 "min_pet_vol":          // the minimum volume of the pet that will fit into this armor. Volume in ml or L can be used - "50 ml" or "2 L".
 "power_armor" : false, // If this is a power armor item (those are special).
 ```
+
 Alternately, every item (book, tool, gun, even food) can be used as armor if it has armor_data:
+
 ```C++
 "type" : "TOOL",      // Or any other item type
 ...                   // same entries as for the type (e.g. same entries as for any tool),
@@ -3400,9 +3316,11 @@ Books can be defined like this:
 "chapters" : 4,       // Number of chapters (for fun only books), each reading "consumes" a chapter. Books with no chapters left are less fun (because the content is already known to the character).
 "required_level" : 2  // Minimum skill level required to learn
 ```
+
 It is possible to omit the `max_level` field if the book you're creating contains only recipes and it's not supposed to level up any skill. In this case the `skill` field will just refer to the skill required to learn the recipes.
 
 Alternately, every item (tool, gun, even food) can be used as book if it has book_data:
+
 ```C++
 "type" : "TOOL",      // Or any other item type
 ...                   // same entries as for the type (e.g. same entries as for any tool),
@@ -3422,14 +3340,14 @@ Since many book names are proper names, it's often necessary to explicitly speci
 the plural forms. The following is the game's convention on plural names of books:
 
 1. For non-periodical books (textbooks, manuals, spellbooks, etc.),
-    1. If the book's singular name is a proper name, then the plural name is `copies of (singular name)`. For example, the plural name of `Lessons for the Novice Bowhunter` is `copies of Lessons for the Novice Bowhunter`.
-    2. Otherwise, the plural name is the usual plural of the singular name. For example, the plural name of `tactical baton defense manual` is `tactical baton defense manuals`
+   1. If the book's singular name is a proper name, then the plural name is `copies of (singular name)`. For example, the plural name of `Lessons for the Novice Bowhunter` is `copies of Lessons for the Novice Bowhunter`.
+   2. Otherwise, the plural name is the usual plural of the singular name. For example, the plural name of `tactical baton defense manual` is `tactical baton defense manuals`
 2. For periodicals (magazines and journals),
-    1. If the periodical's singular name is a proper name, and doesn't end with "Magazine", "Weekly", "Monthly", etc., the plural name is `issues of (singular name)`. For example, the plural name of `Archery for Kids` is `issues of Archery for Kids`.
-    2. Otherwise, the periodical's plural name is the usual plural of the singular name. For example, the plural name of `Crafty Crafter's Quarterly` is `Crafty Crafter's Quarterlies`.
+   1. If the periodical's singular name is a proper name, and doesn't end with "Magazine", "Weekly", "Monthly", etc., the plural name is `issues of (singular name)`. For example, the plural name of `Archery for Kids` is `issues of Archery for Kids`.
+   2. Otherwise, the periodical's plural name is the usual plural of the singular name. For example, the plural name of `Crafty Crafter's Quarterly` is `Crafty Crafter's Quarterlies`.
 3. For board games (represented internally as book items),
-    1. If the board game's singular name is a proper name, the plural is `sets of (singular name)`. For example, the plural name of `Picturesque` is `sets of Picturesque`.
-    2. Otherwise the plural name is the usual plural. For example, the plural of `deck of cards` is `decks of cards`.
+   1. If the board game's singular name is a proper name, the plural is `sets of (singular name)`. For example, the plural name of `Picturesque` is `sets of Picturesque`.
+   2. Otherwise the plural name is the usual plural. For example, the plural of `deck of cards` is `decks of cards`.
 
 #### Conditional Naming
 
@@ -3453,45 +3371,47 @@ The `conditional_names` field allows defining alternate names for items that wil
       "type": "VAR",
       "condition": "npctalk_var_DISPLAY_NAME_MORALE",
       "name": { "str_sp": "%s (morale)" },
-      "value" : "true"
+      "value": "true"
     },
     {
       "type": "SNIPPET_ID",
       "condition": "test",
-      "value":"one",
-      "name": { "str_sp": "Report 1" } }
+      "value": "one",
+      "name": { "str_sp": "Report 1" }
+    }
   ]
 }
 ```
 
 You can list as many conditional names for a given item as you want. Each conditional name must consist of 3 elements:
+
 1. The condition type:
-    - `COMPONENT_ID` searches all the components of the item (and all of *their* components, and so on) for an item with the condition string in their ID. The ID only needs to *contain* the condition, not match it perfectly (though it is case sensitive). For example, supplying a condition `mutant` would match `mutant_meat`.
-    - `FLAG` which checks if an item has the specified flag (exact match).
-    - `VAR` which checks if an item has a variable with the given name (exact match) and value = `value`. Variables set with effect_on_conditions will have `npctalk_var_` in front of their name.  So a variable created with: `"npc_add_var": "MORALE", "type": "DISPLAY","context":"NAME", "value": "Felt Great" }` would be named: `npctalk_var_DISPLAY_NAME_MORALE`.
-    - `SNIPPET_ID`which checks if an item has a snippet id variable set by an effect_on_condition with the given name (exact match) and snippets id = `value`.
+   - `COMPONENT_ID` searches all the components of the item (and all of _their_ components, and so on) for an item with the condition string in their ID. The ID only needs to _contain_ the condition, not match it perfectly (though it is case sensitive). For example, supplying a condition `mutant` would match `mutant_meat`.
+   - `FLAG` which checks if an item has the specified flag (exact match).
+   - `VAR` which checks if an item has a variable with the given name (exact match) and value = `value`. Variables set with effect*on_conditions will have `npctalk_var*`in front of their name.  So a variable created with:`"npc_add_var": "MORALE", "type": "DISPLAY","context":"NAME", "value": "Felt Great" }`would be named:`npctalk_var_DISPLAY_NAME_MORALE`.
+   - `SNIPPET_ID`which checks if an item has a snippet id variable set by an effect_on_condition with the given name (exact match) and snippets id = `value`.
 2. The condition you want to look for.
 3. The name to use if a match is found. Follows all the rules of a standard `name` field, with valid keys being `str`, `str_pl`, and `ctxt`. You may use %s here, which will be replaced by the name of the item. Conditional names defined prior to this one are taken into account.
 
-So, in the above example, if the sausage is made from mutant humanoid meat, and therefore both has the `CANNIBALISM` flag, *and* has a component with `mutant` in its ID:
+So, in the above example, if the sausage is made from mutant humanoid meat, and therefore both has the `CANNIBALISM` flag, _and_ has a component with `mutant` in its ID:
+
 1. First, the item name is entirely replaced with "Mannwurst" if singular, or "Mannwursts" if plural.
 2. Next, it is replaced by "sinister %s", but %s is replaced with the name as it was before this step, resulting in "sinister Mannwurst" or "sinister Mannwursts".
 
 NB: If `"str": "sinister %s"` was specified instead of `"str_sp": "sinister %s"`, the plural form would be automatically created as "sinister %ss", which would become "sinister Mannwurstss" which is of course one S too far. Rule of thumb: If you are using %s in the name, always specify an identical plural form unless you know exactly what you're doing!
 
-
 #### Color Key
 
 When adding a new book, please use this color key:
 
-* Magazines: `pink`
-* “Paperbacks” Short enjoyment books (including novels): `light_cyan`
-* “Hardbacks” Long enjoyment books (including novels): `light_blue`
-* “Small textbook” Beginner level textbooks, guides and martial arts books: `green`
-* “Large textbook” Advanced level textbooks and advanced guides: `blue`
-* Religious books: `dark_gray`
-* “Printouts” (including spiral-bound, binders, and similar) Technical documents, (technical?) protocols, (lab) journals, personal diaries: `light_green`
-* Other reading material/non-books (use only if every other category does not apply): `light_gray`
+- Magazines: `pink`
+- “Paperbacks” Short enjoyment books (including novels): `light_cyan`
+- “Hardbacks” Long enjoyment books (including novels): `light_blue`
+- “Small textbook” Beginner level textbooks, guides and martial arts books: `green`
+- “Large textbook” Advanced level textbooks and advanced guides: `blue`
+- Religious books: `dark_gray`
+- “Printouts” (including spiral-bound, binders, and similar) Technical documents, (technical?) protocols, (lab) journals, personal diaries: `light_green`
+- Other reading material/non-books (use only if every other category does not apply): `light_gray`
 
 A few exceptions to this color key may apply, for example for books that don’t are what they seem to be.
 Never use `yellow` and `red`, those colors are reserved for sounds and infrared vision.
@@ -3550,7 +3470,6 @@ CBMs can be defined like this:
 "petfood": [ "FUNGALFRUIT", "MIGOFOOD" ] // (Optional) Pet food categories this item is in.
 ```
 
-
 ### Containers
 
 Any Item can be a container. To add the ability to contain things to an item, you need to add pocket_data. The below example is a typical container (shown with optional default values, or mandatory if the value is mandatory)
@@ -3568,7 +3487,7 @@ Any Item can be a container. To add the ability to contain things to an item, yo
     "weight_multiplier": 1.0,         // The items in this pocket magically weigh less inside than outside.  Nothing in vanilla should have a weight_multiplier.
     "moves": 100,                     // Indicates the number of moves it takes to remove an item from this pocket, assuming best conditions.
     "rigid": false,                   // Default false. If true, this pocket's size is fixed, and does not expand when filled.  A glass jar would be rigid, while a plastic bag is not.
-    "forbidden": true,                // Default false. If true, this pocket cannot be used by players. 
+    "forbidden": true,                // Default false. If true, this pocket cannot be used by players.
     "magazine_well": "0 ml",          // Amount of space you can put items in the pocket before it starts expanding.  Only works if rigid = false.
     "watertight": false,              // Default false. If true, can contain liquid.
     "airtight": false,                // Default false. If true, can contain gas.
@@ -3611,6 +3530,7 @@ Any Item can be a container. To add the ability to contain things to an item, yo
 "flags" : ["CHOP"],    // Indicates special effects
 "to_hit": 1            // To-hit bonus if using it as a melee weapon
 ```
+
 ### Memory Cards
 
 Memory card information can be defined on any GENERIC item by adding an object named `memory_card`, this field does not support `extend`/`remove`, only override.
@@ -3666,7 +3586,9 @@ Guns can be defined like this:
 "valid_mod_locations": [ [ "brass catcher", 1 ], [ "grip", 1 ] ],  // The valid locations for gunmods and the mount of slots for that location.
 "loudness": 10             // Amount of noise produced by this gun when firing. If no value is defined, then it's calculated based on loudness value from loaded ammo. Final loudness is calculated as gun loudness + gunmod loudness + ammo loudness. If final loudness is 0, then the gun is completely silent.
 ```
+
 Alternately, every item (book, tool, armor, even food) can be used as gun if it has gun_data:
+
 ```json
 "type": "TOOL",      // Or any other item type
 ...                   // same entries as for the type (e.g. same entries as for any tool),
@@ -3711,6 +3633,7 @@ Gun mods can be defined like this:
 ```
 
 Alternately, every item (book, tool, armor, even food) can be used as a gunmod if it has gunmod_data:
+
 ```json
 "type": "TOOL",       // Or any other item type
 ...                   // same entries as for the type (e.g. same entries as for any tool),
@@ -3721,8 +3644,8 @@ Alternately, every item (book, tool, armor, even food) can be used as a gunmod i
 }
 ```
 
-
 ### Batteries
+
 ```C++
 "type": "BATTERY",    // Defines this as a BATTERY
 ...                   // Same entries as above for the generic item
@@ -3766,7 +3689,6 @@ Alternately, every item (book, tool, armor, even food) can be used as a gunmod i
 "revert_to": "torch_done", // Transforms into item when charges are expended
 "sub": "hotplate",         // optional; this tool has the same functions as another tool
 ```
-
 
 ### Seed Data
 
@@ -3844,6 +3766,7 @@ Possible values (see src/enums.h for an up-to-date list):
 - `AEP_SICK` Decreases health over time
 
 #### `effects_worn`
+
 (optional, default: empty list)
 
 Effects of the artifact when it's worn (it must be an armor item to be worn).
@@ -4010,7 +3933,7 @@ The contents of use_action fields can either be a string indicating a built-in f
     "cable_type": "generic_device_cable" // The item type of the cable created with this action ( Optional, defaults to "generic_device_cable" ).
     "cable_length": 5 // Maximum length of the cable ( Optional, defaults to 2 ).
     "charge_rate": "60 W" // Charge rate in watts. A positive value will charge the device's chargeable batteries at the expense of the connected power grid.
-                          // A negative value will charge the connected electrical grid's batteries at the expense of the device's. 
+                          // A negative value will charge the connected electrical grid's batteries at the expense of the device's.
                           // A value of 0 won't charge the device's batteries, but will still let the device operate off of the connected power grid ( Optional, defaults to "0 W" ).
     "efficiency": 7 // one_in(this) chance to fail adding 1 charge every charge interval ( Optional, defaults to 7, which is around 85% efficiency ).
     "menu_text": // Text displayed in the activation screen ( Optional, defaults to "Connect / Disconnect" ).
@@ -4188,6 +4111,7 @@ The contents of use_action fields can either be a string indicating a built-in f
 Item use actions can be used with a timer delay.
 
 Item `"transform"` action can set and start the timer. This timer starts when the player activates the item.
+
 ```
 "use_action": {
     "type": "transform"
@@ -4218,10 +4142,13 @@ Additionally `"revert_to"` can be defined in item definitions (not in use action
 ### Random Descriptions
 
 Any item with a "snippet_category" entry will have random descriptions, based on that snippet category:
+
 ```
 "snippet_category": "newspaper",
 ```
+
 The item descriptions are taken from snippets, which can be specified like this (the value of category must match the snippet_category in the item definition):
+
 ```C++
 {
     "type" : "snippet",
@@ -4230,7 +4157,9 @@ The item descriptions are taken from snippets, which can be specified like this 
     "text": "your flavor text"
 }
 ```
+
 or several snippets at once:
+
 ```C++
 {
     "type" : "snippet",
@@ -4244,12 +4173,15 @@ or several snippets at once:
     "text": [ "your flavor text", "another flavor text", "more flavor" ]
 }
 ```
+
 Multiple snippets for the same category are possible and actually recommended. The game will select a random one for each item of that type.
 
 One can also put the snippets directly in the item definition:
+
 ```
 "snippet_category": [ "text 1", "text 2", "text 3" ],
 ```
+
 This will automatically create a snippet category specific to that item and populate that category with the given snippets.
 The format also support snippet ids like above.
 
@@ -4323,41 +4255,42 @@ Array of dictionaries defining possible items produced on butchering and their l
 `drop` value should be the `id` string of the item to be produced.
 
 `type` value should refer to an existing `harvest_drop_type` associated with body part the item comes from.
-    Acceptable values are as follows:
-    `flesh`: the "meat" of the creature.
-    `offal`: the "organs" of the creature. these are removed when field dressing.
-    `skin`: the "skin" of the creature. this is what is ruined while quartering.
-    `bone`: the "bones" of the creature. you will get some amount of these from field dressing, and the rest of them from butchering the carcass.
-    `mutagen`: an item from harvested mutagenic samples obtained from dissection.
-    `mutagen_group`: an item group that can produce an item from harvested mutagenic samples obtained from dissection.
-    `bionic`: an item gained by dissecting the creature. not restricted to CBMs.
-    `bionic_group`: an item group that will give an item by dissecting a creature. not restricted to groups containing CBMs.
+Acceptable values are as follows:
+`flesh`: the "meat" of the creature.
+`offal`: the "organs" of the creature. these are removed when field dressing.
+`skin`: the "skin" of the creature. this is what is ruined while quartering.
+`bone`: the "bones" of the creature. you will get some amount of these from field dressing, and the rest of them from butchering the carcass.
+`mutagen`: an item from harvested mutagenic samples obtained from dissection.
+`mutagen_group`: an item group that can produce an item from harvested mutagenic samples obtained from dissection.
+`bionic`: an item gained by dissecting the creature. not restricted to CBMs.
+`bionic_group`: an item group that will give an item by dissecting a creature. not restricted to groups containing CBMs.
 
-`flags` value should be an array of strings.  These flags will be added to the items of that entry upon harvesting.
+`flags` value should be an array of strings. These flags will be added to the items of that entry upon harvesting.
 
-`faults` value should be an array of `fault_id` strings.  These faults will be added to the items of that entry upon harvesting.
+`faults` value should be an array of `fault_id` strings. These faults will be added to the items of that entry upon harvesting.
 
 For every `type` other then those with "dissect_only" (see below) the following entries scale the results:
-    `base_num` value should be an array with two elements in which the first defines the minimum number of the corresponding item produced and the second defines the maximum number.
-    `scale_num` value should be an array with two elements, increasing the minimum and maximum drop numbers respectively by element value * survival skill.
-    `max` upper limit after `bas_num` and `scale_num` are calculated using
-    `mass_ratio` value is a multiplier of how much of the monster's weight comprises the associated item. to conserve mass, keep between 0 and 1 combined with all drops. This overrides `base_num`, `scale_num` and `max`
+`base_num` value should be an array with two elements in which the first defines the minimum number of the corresponding item produced and the second defines the maximum number.
+`scale_num` value should be an array with two elements, increasing the minimum and maximum drop numbers respectively by element value \* survival skill.
+`max` upper limit after `bas_num` and `scale_num` are calculated using
+`mass_ratio` value is a multiplier of how much of the monster's weight comprises the associated item. to conserve mass, keep between 0 and 1 combined with all drops. This overrides `base_num`, `scale_num` and `max`
 
 For `type`s with "dissect_only" (see below), the following entries can scale the results:
-    `max` this value (in contrary to `max` for other `type`s) corresponds to maximum butchery roll that will be passed to check_butcher_cbm() in activity_handlers.cpp; view check_butcher_cbm() to see corresponding distribution chances for roll values passed to that function
+`max` this value (in contrary to `max` for other `type`s) corresponds to maximum butchery roll that will be passed to check_butcher_cbm() in activity_handlers.cpp; view check_butcher_cbm() to see corresponding distribution chances for roll values passed to that function
 
 #### `leftovers`
 
-itype_id of the item dropped as leftovers after butchery or when the monster is gibbed.  Default as "ruined_chunks".
+itype_id of the item dropped as leftovers after butchery or when the monster is gibbed. Default as "ruined_chunks".
 
 ### Harvest Drop Type
+
 ```json
 {
   "type": "harvest_drop_type",
   "id": "mutagen",
   "dissect_only": true,
   "group": false,
-  "harvest_skills": [ "firstaid", "chemistry" ],
+  "harvest_skills": ["firstaid", "chemistry"],
   "msg_fielddress_fail": "harvest_drop_mutagen_field_dress",
   "msg_fielddress_success": "",
   "msg_butcher_fail": "harvest_drop_mutagen_butcher",
@@ -4372,6 +4305,7 @@ Harvest drop types are used in harvest drop entries to control how the drop is p
 `harvest_skills` refers to the id of skills that affect the yields of this harvest drop type. If omitted, this defaults to the survival skill. For example, dissecting a zomborg for CBMs will produce better results when the "electronics" and "firstaid" skills are high. `harvest_skills` can be either a single string (just one skill) or an array of strings.
 
 `msg_<butcher_type>_<result>` refers to a snippet to be printed when the specified butcher type either succeeds or fails. Currently, the following message types are available:
+
 - `"msg_fielddress_fail"`
 - `"msg_fielddress_success"`
 - `"msg_butcher_fail"`
@@ -4406,8 +4340,8 @@ Examples from the actual definitions:
   {
     "type": "connect_group",
     "id": "WALL",
-    "group_flags": [ "WALL", "CONNECT_WITH_WALL" ],
-    "connects_to_flags": [ "WALL", "CONNECT_WITH_WALL" ]
+    "group_flags": ["WALL", "CONNECT_WITH_WALL"],
+    "connects_to_flags": ["WALL", "CONNECT_WITH_WALL"]
   },
   {
     "type": "connect_group",
@@ -4416,8 +4350,8 @@ Examples from the actual definitions:
   {
     "type": "connect_group",
     "id": "INDOORFLOOR",
-    "group_flags": [ "INDOORS" ],
-    "rotates_to_flags": [ "WINDOW", "DOOR" ]
+    "group_flags": ["INDOORS"],
+    "rotates_to_flags": ["WINDOW", "DOOR"]
   }
 ]
 ```
@@ -4505,11 +4439,13 @@ Movement cost modifier (`-10` = impassable, `0` = no change). This is added to t
 
 #### `light_emitted`
 
-How much light the furniture produces.  10 will light the tile it's on brightly, 15 will light that tile and the tiles around it brightly, as well as slightly lighting the tiles two tiles away from the source.
+How much light the furniture produces. 10 will light the tile it's on brightly, 15 will light that tile and the tiles around it brightly, as well as slightly lighting the tiles two tiles away from the source.
 For examples: An overhead light is 120, a utility light, 240, and a console, 10.
 
 #### `boltcut`
+
 (Optional) Data for using with an bolt cutter.
+
 ```cpp
 "boltcut": {
     "result": "furniture_id", // (optional) furniture it will become when done, defaults to f_null
@@ -4530,7 +4466,9 @@ For examples: An overhead light is 120, a utility light, 240, and a console, 10.
 ```
 
 #### `hacksaw`
+
 (Optional) Data for using with an hacksaw.
+
 ```cpp
 "hacksaw": {
     "result": "furniture_id", // (optional) furniture it will become when done, defaults to f_null
@@ -4550,7 +4488,9 @@ For examples: An overhead light is 120, a utility light, 240, and a console, 10.
 ```
 
 #### `oxytorch`
+
 (Optional) Data for using with an oxytorch.
+
 ```cpp
 oxytorch: {
     "result": "furniture_id", // (optional) furniture it will become when done, defaults to f_null
@@ -4570,7 +4510,9 @@ oxytorch: {
 ```
 
 #### `prying`
+
 (Optional) Data for using with pyring tools
+
 ```cpp
 "prying": {
     "result": "furniture_id", // (optional) furniture it will become when done, defaults to f_null
@@ -4608,7 +4550,7 @@ Strength required to move the furniture around. Negative values indicate an unmo
 
 #### `workbench`
 
-(Optional) Can craft here.  Must specify a speed multiplier, allowed mass, and allowed volume.  Mass/volume over these limits incur a speed penalty.  Must be paired with a `"workbench"` `examine_action` to function.
+(Optional) Can craft here. Must specify a speed multiplier, allowed mass, and allowed volume. Mass/volume over these limits incur a speed penalty. Must be paired with a `"workbench"` `examine_action` to function.
 
 #### `plant_data`
 
@@ -4617,7 +4559,6 @@ Strength required to move the furniture around. Negative values indicate an unmo
 #### `surgery_skill_multiplier`
 
 (Optional) Surgery skill multiplier (float) applied by this furniture to survivor standing next to it for the purpose of surgery.
-
 
 ### Terrain
 
@@ -4716,7 +4657,9 @@ For example the terrain `t_pit` has the built-in trap `tr_pit`. Every tile in th
 A built-in trap prevents adding any other trap explicitly (by the player and through mapgen).
 
 #### `boltcut`
+
 (Optional) Data for using with an bolt cutter.
+
 ```cpp
 "boltcut": {
     "result": "ter_id", // terrain it will become when done
@@ -4737,7 +4680,9 @@ A built-in trap prevents adding any other trap explicitly (by the player and thr
 ```
 
 #### `hacksaw`
+
 (Optional) Data for using with an hacksaw.
+
 ```cpp
 "hacksaw": {
     "result": "terrain_id", // terrain it will become when done
@@ -4757,7 +4702,9 @@ A built-in trap prevents adding any other trap explicitly (by the player and thr
 ```
 
 #### `oxytorch`
+
 (Optional) Data for using with an oxytorch.
+
 ```cpp
 oxytorch: {
     "result": "terrain_id", // terrain it will become when done
@@ -4777,7 +4724,9 @@ oxytorch: {
 ```
 
 #### `prying`
+
 (Optional) Data for using with prying tools
+
 ```cpp
 "prying": {
     "result": "terrain_id", // terrain it will become when done
@@ -4817,6 +4766,7 @@ oxytorch: {
 (Optional) Array of objects containing the seasons in which to harvest and the id of the harvest entry used.
 
 Example:
+
 ```json
 "harvest_by_season": [ { "seasons": [ "spring", "summer", "autumn", "winter" ], "id": "blackjack_harv" } ],
 ```
@@ -4831,7 +4781,7 @@ Some values can/must be set for terrain and furniture. They have the same meanin
 
 #### `id`
 
-Id of the object, this should be unique among all object of that type (all terrain or all furniture types). By convention (but technically not needed), the id should have the "f_" prefix for furniture and the "t_" prefix for terrain. This is not translated. It must not be changed later as that would break save compatibility.
+Id of the object, this should be unique among all object of that type (all terrain or all furniture types). By convention (but technically not needed), the id should have the "f*" prefix for furniture and the "t*" prefix for terrain. This is not translated. It must not be changed later as that would break save compatibility.
 
 #### `name`
 
@@ -4904,11 +4854,11 @@ ASCII symbol of the object as it appears in the game. The symbol string must be 
 #### `comfort`
 
 How comfortable this terrain/furniture is. Impact ability to fall asleep on it.
-    uncomfortable = -999,
-    neutral = 0,
-    slightly_comfortable = 3,
-    comfortable = 5,
-    very_comfortable = 10
+uncomfortable = -999,
+neutral = 0,
+slightly_comfortable = 3,
+comfortable = 5,
+very_comfortable = 10
 
 #### `floor_bedding_warmth`
 
@@ -4916,7 +4866,7 @@ Bonus warmth offered by this terrain/furniture when used to sleep.
 
 #### `bonus_fire_warmth_feet`
 
-Increase warmth received on feet from nearby fire  (default = 300)
+Increase warmth received on feet from nearby fire (default = 300)
 
 #### `looks_like`
 
@@ -4980,12 +4930,15 @@ Defines the various things that happen when the player or something else bashes 
 The bash succeeds if str >= random # between str_min & str_max
 
 ##### `str_min_blocked`, `str_max_blocked`
+
 (Optional) Will be used instead of str_min & str_max if the furniture is blocked, for example a washing machine behind a door
 
 ##### `str_min_supported`, `str_max_supported`
+
 (Optional) Will be used instead of str_min & str_max if beneath this is something that can support a roof.
 
 ##### `sound`, `sound_fail`, `sound_vol`, `sound_fail_vol`
+
 (Optional) Sound and volume of the sound that appears upon destroying the bashed object or upon unsuccessfully bashing it (failing). The sound strings are translated (and displayed to the player).
 
 ##### `furn_set`, `ter_set`
@@ -4993,15 +4946,19 @@ The bash succeeds if str >= random # between str_min & str_max
 The terrain / furniture that will be set when the original is destroyed. This is mandatory for bash entries in terrain, but optional for entries in furniture (it defaults to no furniture).
 
 ##### `explosive`
+
 (Optional) If greater than 0, destroying the object causes an explosion with this strength (see `game::explosion`).
 
 ##### `destroy_only`
+
 TODO
 
 ##### `bash_below`
+
 TODO
 
 ##### `tent_centers`, `collapse_radius`
+
 (Optional) For furniture that is part of tents, this defines the id of the center part, which will be destroyed as well when other parts of the tent get bashed. The center is searched for in the given "collapse_radius" radius, it should match the size of the tent.
 
 ##### `items`
@@ -5096,16 +5053,18 @@ The id member should be the unique id of the scenario.
 
 The following properties (mandatory, except if noted otherwise) are supported:
 
-
 ## `description`
+
 (string)
 
 The in-game description.
 
 ## `name`
+
 (string or object with members "male" and "female")
 
 The in-game name, either one gender-neutral string, or an object with gender specific names. Example:
+
 ```C++
 "name": {
     "male": "Runaway groom",
@@ -5114,16 +5073,19 @@ The in-game name, either one gender-neutral string, or an object with gender spe
 ```
 
 ## `points`
+
 (integer)
 
 Point cost of scenario. Positive values cost points and negative values grant points.
 
 ## `items`
+
 (optional, object with optional members "both", "male" and "female")
 
 Items the player starts with when selecting this scenario. One can specify different items based on the gender of the character. Each lists of items should be an array of items ids. Ids may appear multiple times, in which case the item is created multiple times.
 
 Example:
+
 ```C++
 "items": {
     "both": [
@@ -5135,19 +5097,23 @@ Example:
     "female": [ "panties" ]
 }
 ```
+
 This gives the player pants, two rocks and (depending on the gender) briefs or panties.
 
 ## `flags`
+
 (optional, array of strings)
 
 A list of flags. TODO: document those flags here.
 
 ## `cbms`
+
 (optional, array of strings)
 
 A list of CBM ids that are implanted in the character.
 
 ## `traits`, `forced_traits`, `forbidden_traits`
+
 (optional, array of strings)
 
 Lists of trait/mutation ids. Traits in "forbidden_traits" are forbidden and can't be selected during the character creation. Traits in "forced_traits" are automatically added to character. Traits in "traits" enables them to be chosen, even if they are not starting traits.
@@ -5155,21 +5121,25 @@ Lists of trait/mutation ids. Traits in "forbidden_traits" are forbidden and can'
 `forced_traits` can also be specified with a variant, as `{ "trait": "trait_id", "variant": "variant_id" }` (replacing just `"trait_id"`).
 
 ## `allowed_locs`
+
 (optional, array of strings)
 
 A list of starting location ids (see start_locations.json) that can be chosen when using this scenario.
 
 ## `start_name`
+
 (string)
 
 The name that is shown for the starting location. This is useful if the scenario allows several starting locations, but the game can not list them all at once in the scenario description. Example: if the scenario allows to start somewhere in the wilderness, the starting locations would contain forest and fields, but its "start_name" may simply be "wilderness".
 
 ## `professions`
+
 (optional, array of strings)
 
 A list of allowed professions that can be chosen when using this scenario. The first entry is the default profession. If this is empty, all professions are allowed.
 
 ## `map_special`
+
 (optional, string)
 
 Add a map special to the starting location, see JSON_FLAGS for the possible specials.
@@ -5181,16 +5151,19 @@ Add a map special to the starting location, see JSON_FLAGS for the possible spec
 The achievement you need to do to access this scenario
 
 ## `eocs`
+
 (optional, array of strings)
 
 A list of eocs that are triggered once for each new character on scenario start.
 
 ## `missions`
+
 (optional, array of strings)
 
 A list of mission ids that will be started and assigned to the player at the start of the game. Only missions with the ORIGIN_GAME_START origin are allowed. The last mission in the list will be the active mission, if multiple missions are assigned.
 
 ## `custom_initial_date`
+
 (optional, object with optional members "hour", "day", "season" and "year")
 
 Allows customizing start date. If `custom_initial_date` is not set the corresponding values from world options are used instead.
@@ -5201,16 +5174,17 @@ If the start date of the scenario is before the date of cataclysm defined by map
 "custom_initial_date": { "hour": 3, "day": 10, "season": "winter", "year": 1 }
 ```
 
- Identifier            | Description
----                    | ---
-`hour`                 | (optional, integer) Hour of the day for initial date. Default 8. -1 randomizes 0-23.
-`day`                  | (optional, integer) Day of the season for initial date. Default 0. -1 randomizes 0-season length.
-`season`               | (optional, integer) Season for initial date. Default `SPRING`.
-`year`                 | (optional, integer) Year for initial date. Default 1. -1 randomizes 1-11.
+| Identifier | Description                                                                                       |
+| ---------- | ------------------------------------------------------------------------------------------------- |
+| `hour`     | (optional, integer) Hour of the day for initial date. Default 8. -1 randomizes 0-23.              |
+| `day`      | (optional, integer) Day of the season for initial date. Default 0. -1 randomizes 0-season length. |
+| `season`   | (optional, integer) Season for initial date. Default `SPRING`.                                    |
+| `year`     | (optional, integer) Year for initial date. Default 1. -1 randomizes 1-11.                         |
 
 # Starting locations
 
 Starting locations are specified as JSON object with "type" member set to "start_location":
+
 ```C++
 {
     "type": "start_location",
@@ -5229,60 +5203,66 @@ The id member should be the unique id of the location.
 The following properties (mandatory, except if noted otherwise) are supported:
 
 ## `name`
+
 (string)
 
 The in-game name of the location.
 
 ## `terrain`
+
 (array of strings and/or objects)
 
 String here contains the id of an overmap terrain type (see overmap_terrain.json) of the starting location. The game will chose a random place with that terrain.
 
 If it is an object - it has following attributes:
 
- Identifier            | Description
----                    | ---
-`om_terrain`           | ID of overmap terrain which will be selected as the target. Mandatory.
-`om_terrain_match_type`| Matching rule to use with `om_terrain`. Defaults to TYPE. Details are below.
-
+| Identifier              | Description                                                                  |
+| ----------------------- | ---------------------------------------------------------------------------- |
+| `om_terrain`            | ID of overmap terrain which will be selected as the target. Mandatory.       |
+| `om_terrain_match_type` | Matching rule to use with `om_terrain`. Defaults to TYPE. Details are below. |
 
 `om_terrain_match_type` defaults to TYPE if unspecified, and has the following possible values:
 
-* `EXACT` - The provided string must completely match the overmap terrain id,
+- `EXACT` - The provided string must completely match the overmap terrain id,
   including linear direction suffixes for linear terrain types or rotation
   suffixes for rotated terrain types.
 
-* `TYPE` - The provided string must completely match the base type id of the
+- `TYPE` - The provided string must completely match the base type id of the
   overmap terrain id, which means that suffixes for rotation and linear terrain
   types are ignored.
 
-* `PREFIX` - The provided string must be a complete prefix (with additional
+- `PREFIX` - The provided string must be a complete prefix (with additional
   parts delimited by an underscore) of the overmap terrain id. For example,
   "forest" will match "forest" or "forest_thick" but not "forestcabin".
 
-* `CONTAINS` - The provided string must be contained within the overmap terrain
+- `CONTAINS` - The provided string must be contained within the overmap terrain
   id, but may occur at the beginning, end, or middle and does not have any rules
   about underscore delimiting.
 
 ## `city_sizes`
+
 (array of two integers)
 
 Restricts possible start location based on nearest city size (similar to how overmap specials are restricted).
 
 ## `city_distance`
+
 (array of two integers)
 
 Restricts possible start location based on distance to nearest city (similar to how overmap specials are restricted).
 
 ## `allowed_z_levels`
+
 (array of two integers)
 
 Restricts possible start location based on z-level (e.g. there is no need to search forests on z-levels other than 0).
 
 ## `flags`
+
 (optional, array of strings)
 
-Arbitrary flags.  Two flags are supported in the code: `ALLOW_OUTSIDE` and `BOARDED` (see [JSON_FLAGS.md](JSON_FLAGS.md)). Mods can modify this via "extend" / "delete".
+Arbitrary flags. Two flags are supported in the code: `ALLOW_OUTSIDE` and `BOARDED` (see [JSON_FLAGS.md](JSON_FLAGS.md)). Mods can modify this via "extend" / "delete".
+
 ```C++
 {
     "type": "start_location",
@@ -5298,6 +5278,7 @@ Arbitrary flags.  Two flags are supported in the code: `ALLOW_OUTSIDE` and `BOAR
 The file `mutation_ordering.json` defines the order that visual mutation and bionic overlays are rendered on a character ingame. The layering value from 0 (bottom) - 9999 (top) sets the order.
 
 Example:
+
 ```C++
 [
     {
@@ -5326,11 +5307,13 @@ Example:
 ```
 
 ## `id`
+
 (string)
 
 The internal ID of the mutation. Can be provided as a single string, or an array of strings. The order value provided will be applied to all items in the array.
 
 ## `order`
+
 (integer)
 
 The ordering value of the mutation overlay. Values range from 0 - 9999, 9999 being the topmost drawn layer. Mutations that are not in any list will default to 9999.
@@ -5340,6 +5323,7 @@ The ordering value of the mutation overlay. Values range from 0 - 9999, 9999 bei
 MOD tileset defines additional sprite sheets. It is specified as JSON object with `type` member set to `mod_tileset`.
 
 Example:
+
 ```C++
 [
     {
@@ -5367,6 +5351,7 @@ Example:
 ```
 
 ## `compatibility`
+
 (string)
 
 The internal ID of the compatible tilesets. MOD tileset is only applied when base tileset's ID exists in this field.
@@ -5402,42 +5387,44 @@ Migrating vehicle parts is done using `vehicle_part_migration` type, in the exam
 For `VEH_TOOLS` parts only - `add_veh_tools` is a list of itype_ids to add to the vehicle tools after migrating the part.
 
 ```json
-  {
-    "type": "vehicle_part_migration",
-    "//": "migration to VEH_TOOLS, remove after 0.H release",
-    "from": "afs_metal_rig",
-    "to": "veh_tools_workshop",
-    "add_veh_tools": [ "welder", "soldering_iron", "forge", "kiln" ]
-  }
+{
+  "type": "vehicle_part_migration",
+  "//": "migration to VEH_TOOLS, remove after 0.H release",
+  "from": "afs_metal_rig",
+  "to": "veh_tools_workshop",
+  "add_veh_tools": ["welder", "soldering_iron", "forge", "kiln"]
+}
 ```
 
 For bionics, you should use `bionic_migration` type. The migration happens when character is loaded; if `to` is `null` the bionic will be deleted, if `to` is not null the id will be changed to the provided value.
 
 ```json
-  {
-    "type": "bionic_migration",
-    "from": "bio_tools_extend",
-    "to": null
-  }
+{
+  "type": "bionic_migration",
+  "from": "bio_tools_extend",
+  "to": null
+}
 ```
 
 Obsoletion is used, when we want to remove the item entirely from the game, without any migration. For this you, again, **do not remove item** from the game.
 
-For items, monsters, furniture, terrain, factions, loot groups and lot of similar stuff, you remove all places, where the entity can spawn (maps, palettes, NPCs etc), mark the item with "OBSOLETE" flag (optional), and move into `data/json/obsoletion/` or inside  - they will stay here till the next developement cycle, to make fluent transfer between one stable and another
+For items, monsters, furniture, terrain, factions, loot groups and lot of similar stuff, you remove all places, where the entity can spawn (maps, palettes, NPCs etc), mark the item with "OBSOLETE" flag (optional), and move into `data/json/obsoletion/` or inside - they will stay here till the next developement cycle, to make fluent transfer between one stable and another
 
 For maps, you remove the item from all the places it can spawn, remove the mapgen entries, and add the overmap terrain id into `data/json/obsoletion/migration_oter_ids.json`, to migrate oter_id `hive` and `hive2` into `omt_obsolete` add an entry similar to this, note that if mapgen has already generated this area this will only alter the tile shown on the overmap:
+
 ```json
-  {
-    "type": "oter_id_migration",
-    "//": "obsoleted in 0.H",
-    "oter_ids": {
-      "hive": "omt_obsolete",
-      "hive2": "omt_obsolete"
-    }
+{
+  "type": "oter_id_migration",
+  "//": "obsoleted in 0.H",
+  "oter_ids": {
+    "hive": "omt_obsolete",
+    "hive2": "omt_obsolete"
   }
+}
 ```
 
 For overmap specials add an entry to `data/json/obsoletion/migration_overmap_specials.json`:
+
 ```json
   {
     "type": "overmap_special_migration",
@@ -5456,9 +5443,9 @@ For EOC/dialogue variables you can use `var_migration`. This currently only migr
 
 ```json
 {
-    "type": "var_migration",
-    "from": "temp_var",
-    "to": "new_temp_var"
+  "type": "var_migration",
+  "from": "temp_var",
+  "to": "new_temp_var"
 }
 ```
 
@@ -5468,23 +5455,23 @@ For mods, you need to add an `"obsolete": true,` boolean into MOD_INFO, which pr
 
 ## Charge and temperature removal
 
-If an item that used to have charges (e.g. `AMMO` or `COMESTIBLE` types) is changed to another type that does not use charges, migration is needed to ensure correct behavior when loading from existing save files, and prevent spurious error messages from being shown to the player.  Migration lists for this are found in `data/json/obsoletion/charge_removal.json`.
+If an item that used to have charges (e.g. `AMMO` or `COMESTIBLE` types) is changed to another type that does not use charges, migration is needed to ensure correct behavior when loading from existing save files, and prevent spurious error messages from being shown to the player. Migration lists for this are found in `data/json/obsoletion/charge_removal.json`.
 
 Such items may be added to one of the following:
 
 `data/json/obsoletion/blacklist_charge_migration.json` a `charge_migration_blacklist` list:
-Items in existing save files with `n` charges will be converted to `n` items with no charges.  This will preserve item count.
+Items in existing save files with `n` charges will be converted to `n` items with no charges. This will preserve item count.
 
 `data/json/obsoletion/blacklist_charge_removal.json` a `charge_removal_blacklist` list
-* `charge_removal_blacklist`: items will simply have charges removed.
 
-Additionally, `COMESTIBLE` items have temperature and rot processing, and are thus set as always activated.  When an item is changed from `COMESTIBLE` to a different type, migration is needed to check and unset this if applicable:
+- `charge_removal_blacklist`: items will simply have charges removed.
+
+Additionally, `COMESTIBLE` items have temperature and rot processing, and are thus set as always activated. When an item is changed from `COMESTIBLE` to a different type, migration is needed to check and unset this if applicable:
 
 `data/json/obsoletion/blacklist_temperature_removal.json` a `temperature_removal_blacklist` list:
 
-* In most cases, the item has no other features that require it to remain activated, in which case it can be simply added to `temperature_removal_blacklist`.  Items in this list will be deactivated and have temperature-related data cleared *without any further checks performed*.
-* In case of an item that may be active for additional reasons other than temperature/rot tracking, an instance of the item loaded from existing save file cannot be blindly deactivated -- additional checks are required to see if it should remain active.  Instead of adding to the above list, a separate special case should be added in `src/savegame_json.cpp` to implement the necessary item-specific deactivation logic.
-
+- In most cases, the item has no other features that require it to remain activated, in which case it can be simply added to `temperature_removal_blacklist`. Items in this list will be deactivated and have temperature-related data cleared _without any further checks performed_.
+- In case of an item that may be active for additional reasons other than temperature/rot tracking, an instance of the item loaded from existing save file cannot be blindly deactivated -- additional checks are required to see if it should remain active. Instead of adding to the above list, a separate special case should be added in `src/savegame_json.cpp` to implement the necessary item-specific deactivation logic.
 
 # Field types
 
@@ -5537,7 +5524,7 @@ Fields can exist on top of terrain/furniture, and support different intensity le
             "message_type": "bad", // Type of the above messages - good/bad/mixed/neutral
           }
         ]
-        "scent_neutralization": 3, // Reduce scents at the field's position by this value        
+        "scent_neutralization": 3, // Reduce scents at the field's position by this value
     ],
     "npc_complain": { "chance": 20, "issue": "weed_smoke", "duration": "10 minutes", "speech": "<weed_smoke>" }, // NPCs in this field will complain about being in it once per <duration> if a 1-in-<chance> roll succeeds, giving off a <speech> bark that supports snippets
     "immunity_data": {  // Array containing the necessary conditions for immunity to this field.  Any one fulfilled condition confers immunity:
@@ -5616,33 +5603,33 @@ Fields can exist on top of terrain/furniture, and support different intensity le
 
 ## Option sliders - Fields
 
-| Field       | Description
-|---          |---
-| `"type"`    | _(mandatory)_ Always `"option_slider"`
-| `"id"`      | _(mandatory)_ Uniquely identifies this `option_slider`
-| `"context"` | The hardcoded context in which this `option_slider` is used (ex: the world creation menu shows option sliders in the `WORLDGEN` context)
-| `"name"`    | _(mandatory)_ The translated name of this `option_slider`
-| `"default"` | The default level for this `option_slider` (defaults to 0)
-| `"levels"`  | _(mandatory)_ A list of definitions for each level of this `option_slider`
+| Field       | Description                                                                                                                              |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `"type"`    | _(mandatory)_ Always `"option_slider"`                                                                                                   |
+| `"id"`      | _(mandatory)_ Uniquely identifies this `option_slider`                                                                                   |
+| `"context"` | The hardcoded context in which this `option_slider` is used (ex: the world creation menu shows option sliders in the `WORLDGEN` context) |
+| `"name"`    | _(mandatory)_ The translated name of this `option_slider`                                                                                |
+| `"default"` | The default level for this `option_slider` (defaults to 0)                                                                               |
+| `"levels"`  | _(mandatory)_ A list of definitions for each level of this `option_slider`                                                               |
 
 ## Option sliders - Levels
 
 Each object in the `"levels"` field uses these fields:
 
-| Field | Description
-|--- |---
-| `"level"` | _(mandatory)_ The numeric index of this level in the slider.  Indexes start at 0 and increase sequentially.
-| `"name"` | _(mandatory)_ The name of this slider level, acts as a short descriptor for the selected level.
-| `"description"` | A longer description for the effects of this slider level.
-| `"options"` | _(mandatory)_ A list of option values to apply when selecting this slider level.
+| Field           | Description                                                                                                |
+| --------------- | ---------------------------------------------------------------------------------------------------------- |
+| `"level"`       | _(mandatory)_ The numeric index of this level in the slider. Indexes start at 0 and increase sequentially. |
+| `"name"`        | _(mandatory)_ The name of this slider level, acts as a short descriptor for the selected level.            |
+| `"description"` | A longer description for the effects of this slider level.                                                 |
+| `"options"`     | _(mandatory)_ A list of option values to apply when selecting this slider level.                           |
 
 Each option defines an `"option"` tag that corresponds to an option ID as listed in the
 `options_manager::add_options_*` functions in src/options.cpp. The `"type"` field determines
 how the `"val"` field is interpreted:
 
-| `type`     | `val`
-|---         |---
-| `"int"`    | An integer.  Ex: `"type": "int", "val": 5`
-| `"float"`  | A decimal number.  Ex: `"type": "float", "val": 0.8`
-| `"bool"`   | A boolean.  Ex: `"type": "bool", "val": false`
-| `"string"` | A text value.  Ex: `"type": "string", "val": "crops"`
+| `type`     | `val`                                                |
+| ---------- | ---------------------------------------------------- |
+| `"int"`    | An integer. Ex: `"type": "int", "val": 5`            |
+| `"float"`  | A decimal number. Ex: `"type": "float", "val": 0.8`  |
+| `"bool"`   | A boolean. Ex: `"type": "bool", "val": false`        |
+| `"string"` | A text value. Ex: `"type": "string", "val": "crops"` |
