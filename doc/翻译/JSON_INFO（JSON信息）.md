@@ -96,8 +96,8 @@
     - [车辆部件 (Vehicle Parts)](#车辆部件-vehicle-parts)
       - [符号和变种](#符号和变种)
       - [以下可选字段仅适用于CARGO部件。](#以下可选字段仅适用于cargo部件)
-      - [The following optional fields are specific to ENGINEs.(以下可选字段专用于ENGINEs。)](#the-following-optional-fields-are-specific-to-engines以下可选字段专用于engines)
-      - [The following optional fields are specific to WHEELs.](#the-following-optional-fields-are-specific-to-wheels)
+      - [The following optional fields are specific to ENGINEs.(以下可选字段是特定于引擎（ENGINE）的。)](#the-following-optional-fields-are-specific-to-engines以下可选字段是特定于引擎engine的)
+      - [The following optional fields are specific to WHEELs.(以下可选字段仅适用于WHEELs引擎。)](#the-following-optional-fields-are-specific-to-wheels以下可选字段仅适用于wheels引擎)
       - [The following optional fields are specific to ROTORs.](#the-following-optional-fields-are-specific-to-rotors)
       - [The following optional fields are specific to WORKBENCHes.](#the-following-optional-fields-are-specific-to-workbenches)
       - [The following optional fields are specific to SEATs.](#the-following-optional-fields-are-specific-to-seats)
@@ -2721,7 +2721,7 @@ The value of the given field for the last event in the input stream:
 "cargo_weight_modifier": 33,  // (可选，默认值为100) 该百分比将货物重量乘以此百分比。
 ```
 
-#### The following optional fields are specific to ENGINEs.(以下可选字段专用于ENGINEs。)
+#### The following optional fields are specific to ENGINEs.(以下可选字段是特定于引擎（ENGINE）的。)
 
 ```C++
 "power": "15000 W"            // 引擎的动力功率（单位：瓦特）。
@@ -2738,7 +2738,7 @@ The value of the given field for the last event in the input stream:
                               // 要成为燃料，一个物品必须只由一个材料制成，该材料必须产生能量，即具有“data_fuel”条目，并且它需要具有可消耗的耗电量。
 ```
 
-#### The following optional fields are specific to WHEELs.
+#### The following optional fields are specific to WHEELs.(以下可选字段仅适用于WHEELs引擎。)
 
 ```c++
 "wheel_offroad_rating": 0.5,  // multiplier of wheel performance offroad
