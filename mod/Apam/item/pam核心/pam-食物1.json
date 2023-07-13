@@ -1,739 +1,544 @@
 [
-    {
-        "type": "COMESTIBLE",
-        "id": "Pam_toastedsandwich",
-        "name": {
-            "str": "烤奶酪三明治(Toasted Sandwich)"
-        },
-        "vitamins": [
-            [
-                "vitA",
-                1
-            ],
-            [
-                "vitC",
-                2
-            ],
-            [
-                "calcium",
-                10
-            ],
-            [
-                "iron",
-                2
-            ]
-        ],
-        "material": [
-            "bread",
-            "milk",
-            "flesh"
-        ],
-        "weight": 200,
-        "color": "yellow",
-        "spoils_in": "3 days",
-        "container": "wrapper",
-        "comestible_type": "FOOD",
-        "symbol": "&",
-        "description": "这是一款烤得酥脆的面包，中间夹着融化的奶酪和火腿。闻起来散发着浓郁的奶香味和肉香味，非常美味。",
-        "price": 350,
-        "volume": 0.25,
-        "calories": 350,
-        "protein": 10,
-        "carbs": 40,
-        "charges": 5,
-        "flags": {
-            "EATEN_HOT": 1
-        },
-        "fun": 5,
-        "quench": -5,
-        "healthy": 0,
-        "addiction_potential": 1,
-        "rand_eaten_msg": [
-            "你咬了一口烤奶酪三明治，感受到面包和馅料的完美搭配。",
-            "你享受着烤奶酪三明治带给你的温暖和满足。"
-        ]
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_toastedsandwich",
+    "name": {
+      "str": "烤奶酪三明治(Toasted Sandwich)"
     },
-    {
-        "//": "奶酪通心粉",
-        "id": "Pam_pasta",
-        "type": "COMESTIBLE",
-        "name": {
-            "str": "奶酪通心粉"
-        },
-        "description": "一道经典的舒适食物，由通心粉和奶酪酱制成。它有着浓郁的乳香味和柔软的口感，让你回味无穷。",
-        "vitamins": [
-            [
-                "vitA",
-                2
-            ],
-            [
-                "vitC",
-                1
-            ],
-            [
-                "calcium",
-                15
-            ],
-            [
-                "iron",
-                1
-            ]
-        ],
-        "weight": 400,
-        "color": "yellow",
-        "spoils_in": "3 days",
-        "container": "Pam_Dish",
-        "comestible_type": "FOOD",
-        "symbol": "%",
-        "calories": 400,
-        "protein": 10,
-        "carbs": 50,
-        "flags": {
-            "EATEN_HOT": 1,
-            "COOKED": 1,
-            "BASIS": 1
-        },
-        "fun": 15,
-        "quench": -5,
-        "healthy": -2,
-        "material": [
-            "wheat",
-            "milk"
-        ],
-        "volume": "750 ml",
-        "phase": "solid",
-        "charges": 1
+    "vitamins": [
+      ["vitA", 1],
+      ["vitC", 2],
+      ["calcium", 10],
+      ["iron", 2]
+    ],
+    "material": ["bread", "milk", "flesh"],
+    "weight": 200,
+    "color": "yellow",
+    "spoils_in": "3 days",
+    "container": "wrapper",
+    "comestible_type": "FOOD",
+    "symbol": "&",
+    "description": "这是一款烤得酥脆的面包，中间夹着融化的奶酪和火腿。闻起来散发着浓郁的奶香味和肉香味，非常美味。",
+    "price": 350,
+    "volume": 0.25,
+    "calories": 350,
+    "protein": 10,
+    "charges": 5,
+    "flags": {
+      "EATEN_HOT": 1
     },
-    {
-        "type": "COMESTIBLE",
-        "id": "Pam_chocolatebar",
-        "name": {
-            "str": "巧克力棒",
-            "str_pl": "巧克力棒"
-        },
-        "weight": 50,
-        "color": "brown",
-        "spoils_in": "360 days",
-        "container": "wrapper",
-        "comestible_type": "FOOD",
-        "symbol": "%",
-        "calories": 547,
-        "protein": 5,
-        "carbs": 60,
-        "description": "这是一根由巧克力和其他天然成分制成的小吃，适合任何时候食用。",
-        "vitamins": [
-            [
-                "vitA",
-                1
-            ],
-            [
-                "vitC",
-                1
-            ],
-            [
-                "calcium",
-                10
-            ],
-            [
-                "iron",
-                2
-            ]
-        ],
-        "price": 15,
-        "price_postapoc": 20,
-        "material": [
-            "coco_beans",
-            "sugar",
-            "milk"
-        ],
-        "volume": 25,
-        "fun": 10,
-        "flags": {
-            "EDIBLE_FROZEN": true
-        },
-        "addiction_potential": 3
+    "fun": 5,
+    "quench": -5,
+    "healthy": 0,
+    "addiction_potential": 1,
+    "rand_eaten_msg": [
+      "你咬了一口烤奶酪三明治，感受到面包和馅料的完美搭配。",
+      "你享受着烤奶酪三明治带给你的温暖和满足。"
+    ]
+  },
+  {
+    "//": "奶酪通心粉",
+    "id": "Pam_pasta",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "奶酪通心粉"
     },
-    {
-        "type": "COMESTIBLE",
-        "id": "Pam_chocolatebacon",
-        "name": {
-            "str": "巧克力培根"
-        },
-        "weight": 50,
-        "color": "brown",
-        "spoils_in": "3 days",
-        "container": "wrapper",
-        "comestible_type": "FOOD",
-        "symbol": "%",
-        "calories": 450,
-        "protein": 10,
-        "carbs": 40,
-        "description": "这是一种将香脆的煎培根与浓郁的巧克力完美结合的小吃，让你的味蕾开始疯狂尖叫。",
-        "vitamins": [
-            [
-                "vitA",
-                1
-            ],
-            [
-                "vitC",
-                1
-            ],
-            [
-                "calcium",
-                5
-            ],
-            [
-                "iron",
-                2
-            ]
-        ],
-        "price": 30,
-        "price_postapoc": 40,
-        "material": [
-            "milk",
-            "bacon",
-            "coco_beans"
-        ],
-        "volume": "200 ml",
-        "charges": 1,
-        "flags": {
-            "NO_PARASITES": true,
-            "NO_SALTWATER_STAIN": true,
-            "EDIBLE_FROZEN": true
-        },
-        "fun": 20,
-        "addiction_potential": 4
+    "description": "一道经典的舒适食物，由通心粉和奶酪酱制成。它有着浓郁的乳香味和柔软的口感，让你回味无穷。",
+    "vitamins": [
+      ["vitA", 2],
+      ["vitC", 1],
+      ["calcium", 15],
+      ["iron", 1]
+    ],
+    "weight": 400,
+    "color": "yellow",
+    "spoils_in": "3 days",
+    "container": "Pam_Dish",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "calories": 400,
+    "protein": 10,
+    "flags": {
+      "EATEN_HOT": 1,
+      "COOKED": 1,
+      "BASIS": 1
     },
-    {
-        "type": "COMESTIBLE",
-        "id": "Pam_Assorted_preserves",
-        "name": {
-            "str": "什锦蜜饯(Assorted preserves)"
-        },
-        "weight": 50,
-        "color": "orange",
-        "spoils_in": "180 days",
-        "container": "Pam_Bowl",
-        "comestible_type": "DRINK",
-        "symbol": "&",
-        "description": "这是一种由各种新鲜水果制成的蜜饯，能在野外生活或远足时补充能量。",
-        "vitamins": [
-            [
-                "vitA",
-                30
-            ],
-            [
-                "vitC",
-                20
-            ],
-            [
-                "calcium",
-                5
-            ],
-            [
-                "iron",
-                2
-            ]
-        ],
-        "material": [
-            "fruit",
-            "nut"
-        ],
-        "calories": 220,
-        "protein": 5,
-        "carbs": 40,
-        "volume": 500,
-        "price": 25,
-        "price_postapoc": 35,
-        "charges": 1,
-        "flags": {
-            "NO_PARASITES": true,
-            "SWEET": true
-        },
-        "fun": 10,
-        "quench": 5,
-        "healthy": 15,
-        "addiction_potential": 1,
-        "rand_eaten_msg": [
-            "香甜的蜜饯惊醒了你从路途中产生的困意。",
-            "一口蜜饯，丰富的水果香气充盈口腔，让你惬意地闭上眼。"
-        ]
+    "fun": 15,
+    "quench": -5,
+    "healthy": -2,
+    "material": ["wheat", "milk"],
+    "volume": "750 ml",
+    "phase": "solid",
+    "charges": 1
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_chocolatebar",
+    "name": {
+      "str": "巧克力棒",
+      "str_pl": "巧克力棒"
     },
-    {
-        "//": "苹果沙司",
-        "type": "COMESTIBLE",
-        "id": "Pam_applesauce",
-        "name": {
-            "str": "苹果沙司"
-        },
-        "weight": 100,
-        "color": "red",
-        "spoils_in": "10 days",
-        "container": "Pam_Bowl",
-        "comestible_type": "FOOD",
-        "symbol": "&",
-        "calories": 150,
-        "protein": 1,
-        "carbs": 35,
-        "description": "这是一种由苹果和各种香料制成的甜美美食，适合作为点心或早餐食用。",
-        "vitamins": [
-            [
-                "vitA",
-                5
-            ],
-            [
-                "vitC",
-                15
-            ],
-            [
-                "calcium",
-                2
-            ],
-            [
-                "iron",
-                1
-            ]
-        ],
-        "price": 15,
-        "price_postapoc": 20,
-        "material": [
-            "fruit",
-            "sugar"
-        ],
-        "volume": "0.25",
-        "charges": 1,
-        "flags": {
-            "COLD": true,
-            "EATEN_WARM": true,
-            "SWEET": true
-        },
-        "fun": 10,
-        "quench": -5,
-        "healthy": -2,
-        "addiction_potential": 2
+    "weight": 50,
+    "color": "brown",
+    "spoils_in": "360 days",
+    "container": "wrapper",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "calories": 547,
+    "protein": 5,
+    "description": "这是一根由巧克力和其他天然成分制成的小吃，适合任何时候食用。",
+    "vitamins": [
+      ["vitA", 1],
+      ["vitC", 1],
+      ["calcium", 10],
+      ["iron", 2]
+    ],
+    "price": 15,
+    "price_postapoc": 20,
+    "material": ["coco_beans", "sugar", "milk"],
+    "volume": 25,
+    "fun": 10,
+    "flags": {
+      "EDIBLE_FROZEN": true
     },
-    {
-        "type": "COMESTIBLE",
-        "id": "Pam_epic_bacon",
-        "name": {
-            "str": "史诗培根"
-        },
-        "weight": 50,
-        "color": "red",
-        "container": "Pam_Bag",
-        "comestible_type": "FOOD",
-        "symbol": "%",
-        "calories": 300,
-        "protein": 15,
-        "carbs": 0,
-        "description": "这是一种史诗级别的食物，每一片都是用心制作的，带着独特的香气和口感。",
-        "vitamins": [
-            [
-                "vitA",
-                1
-            ],
-            [
-                "vitC",
-                1
-            ],
-            [
-                "calcium",
-                2
-            ],
-            [
-                "iron",
-                2
-            ]
-        ],
-        "price": 100,
-        "price_postapoc": 150,
-        "material": [
-            "bacon"
-        ],
-        "volume": 250,
-        "charges": 1,
-        "fun": 20,
-        "quench": -5,
-        "healthy": -5,
-        "addiction_potential": 5
+    "addiction_potential": 3
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_chocolatebacon",
+    "name": {
+      "str": "巧克力培根"
     },
-    {
-        "//": "炸鱼薯条",
-        "type": "COMESTIBLE",
-        "id": "Pam_fish_and_chips",
-        "name": {
-            "str": "炸鱼薯条"
-        },
-        "weight": 200,
-        "color": "white",
-        "spoils_in": "3 days",
-        "container": "basket",
-        "comestible_type": "FOOD",
-        "symbol": "%",
-        "calories": 400,
-        "protein": 10,
-        "carbs": 50,
-        "description": "这是一道口味优美的食物，由炸鱼和炸薯条组成，鱼肉酥脆，薯条松软，营养均衡。",
-        "vitamins": [
-            [
-                "vitA",
-                5
-            ],
-            [
-                "vitC",
-                5
-            ],
-            [
-                "calcium",
-                5
-            ],
-            [
-                "iron",
-                5
-            ]
-        ],
-        "price": 30,
-        "price_postapoc": 40,
-        "material": [
-            "flesh",
-            "vegetables"
-        ],
-        "volume": "500 ml",
-        "charges": 1,
-        "flags": {
-            "EATEN_HOT": true,
-            "COOKED": true
-        },
-        "fun": 10,
-        "quench": -5,
-        "healthy": -2,
-        "addiction_potential": 2
+    "weight": 50,
+    "color": "brown",
+    "spoils_in": "3 days",
+    "container": "wrapper",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "calories": 450,
+    "protein": 10,
+    "description": "这是一种将香脆的煎培根与浓郁的巧克力完美结合的小吃，让你的味蕾开始疯狂尖叫。",
+    "vitamins": [
+      ["vitA", 1],
+      ["vitC", 1],
+      ["calcium", 5],
+      ["iron", 2]
+    ],
+    "price": 30,
+    "price_postapoc": 40,
+    "material": ["milk", "bacon", "coco_beans"],
+    "volume": "200 ml",
+    "charges": 1,
+    "flags": {
+      "NO_PARASITES": true,
+      "NO_SALTWATER_STAIN": true,
+      "EDIBLE_FROZEN": true
     },
-    {
-        "type": "COMESTIBLE",
-        "id": "Pam_butteredpotato",
-        "name": {
-            "str": "黄油烤土豆"
-        },
-        "weight": 250,
-        "color": "white",
-        "container": "tray",
-        "comestible_type": "FOOD",
-        "symbol": "&",
-        "calories": 300,
-        "protein": 5,
-        "carbs": 40,
-        "description": "这是一道口感咸香的传统英式菜肴，采用烤土豆和大量黄油制成，是任何一顿饭的理想伴侣。",
-        "vitamins": [
-            [
-                "vitA",
-                2
-            ],
-            [
-                "vitC",
-                10
-            ],
-            [
-                "calcium",
-                5
-            ],
-            [
-                "iron",
-                2
-            ]
-        ],
-        "price": 20,
-        "price_postapoc": 30,
-        "material": [
-            "vegetables",
-            "milk",
-            "salt"
-        ],
-        "volume": 500,
-        "charges": 1,
-        "flags": {
-            "EATEN_HOT": true,
-            "COOKED": true
-        },
-        "fun": 5,
-        "quench": -5,
-        "healthy": -2,
-        "addiction_potential": 2
+    "fun": 20,
+    "addiction_potential": 4
+  },
+  {
+    "//": "Assorted preserves",
+    "type": "COMESTIBLE",
+    "id": "Pam_Assorted_preserves",
+    "name": {
+      "str": "什锦蜜饯(Assorted preserves)"
     },
-    {
-        "//": "土豆泥",
-        "type": "COMESTIBLE",
-        "id": "Pam_mashedpotatoes",
-        "name": {
-            "str": "土豆泥"
-        },
-        "weight": 200,
-        "color": "white",
-        "spoils_in": "3 days",
-        "container": "Pam_Bowl",
-        "comestible_type": "FOOD",
-        "symbol": "&",
-        "calories": 350,
-        "protein": 5,
-        "carbs": 50,
-        "description": "这是一道美味的配菜，使用煮熟的土豆和大量的黄油和牛奶制成。",
-        "vitamins": [
-            [
-                "vitA",
-                2
-            ],
-            [
-                "vitC",
-                10
-            ],
-            [
-                "calcium",
-                10
-            ],
-            [
-                "iron",
-                2
-            ]
-        ],
-        "price": 15,
-        "price_postapoc": 20,
-        "material": [
-            "vegetables",
-            "milk"
-        ],
-        "volume": "500 ml",
-        "charges": 1,
-        "flags": {
-            "EATEN_HOT": true,
-            "COOKED": true
-        },
-        "fun": 5,
-        "quench": -5,
-        "healthy": -2,
-        "addiction_potential": 2
+    "weight": 50,
+    "color": "orange",
+    "spoils_in": "180 days",
+    "container": "Pam_Bowl",
+    "comestible_type": "FOOD",
+    "symbol": "&",
+    "description": "这是一种由各种新鲜水果制成的蜜饯，能在野外生活或远足时补充能量。",
+    "vitamins": [
+      ["vitA", 30],
+      ["vitC", 20],
+      ["calcium", 5],
+      ["iron", 2]
+    ],
+    "material": ["fruit", "nut"],
+    "calories": 220,
+    "protein": 5,
+    "volume": "500 ml",
+    "price": 25,
+    "price_postapoc": 35,
+    "charges": 1,
+    "flags": ["NO_PARASITES", "SWEET"],
+    "fun": 10,
+    "quench": 5,
+    "healthy": 15,
+    "addiction_potential": 1,
+    "rand_eaten_msg": [
+      "香甜的蜜饯惊醒了你从路途中产生的困意。",
+      "一口蜜饯，丰富的水果香气充盈口腔，让你惬意地闭上眼。"
+    ]
+  },
+  {
+    "//": "Apple sauce",
+    "type": "COMESTIBLE",
+    "id": "Pam_applesauce",
+    "name": {
+      "str": "苹果沙司"
     },
-    {
-        "type": "COMESTIBLE",
-        "id": "Pam_candied_carrots",
-        "name": {
-            "str": "糖汁胡萝卜"
-        },
-        "weight": 150,
-        "color": "white",
-        "container": "Pam_Jar",
-        "comestible_type": "FOOD",
-        "symbol": "&",
-        "calories": 150,
-        "description": "这是一道由糖、胡萝卜和水烹制而来的小食,是一种非常甜美的口感。",
-        "vitamins": [],
-        "price": 25,
-        "price_postapoc": 35,
-        "material": [
-            "vegetables",
-            "water",
-            "sugar"
-        ],
-        "volume": 1.5,
-        "charges": 1,
-        "phase": "solid",
-        "quench": 5,
-        "healthy": 5,
-        "addiction_potential": 0
+    "weight": 100,
+    "color": "red",
+    "spoils_in": "10 days",
+    "container": "Pam_Bowl",
+    "comestible_type": "FOOD",
+    "symbol": "&",
+    "calories": 150,
+    "protein": 1,
+    "description": "这是一种由苹果和各种香料制成的甜美美食，适合作为点心或早餐食用。",
+    "vitamins": [
+      ["vitA", 5],
+      ["vitC", 15],
+      ["calcium", 2],
+      ["iron", 1]
+    ],
+    "price": 15,
+    "price_postapoc": 20,
+    "material": ["fruit", "sugar"],
+    "volume": 0.25,
+    "charges": 1,
+    "flags": ["COLD", "EATEN_WARM", "SWEET"],
+    "fun": 10,
+    "quench": -5,
+    "healthy": -2,
+    "addiction_potential": 2
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_epic_bacon",
+    "name": {
+      "str": "史诗培根"
     },
-    {
-        "type": "COMESTIBLE",
-        "id": "Pam_pickled_beets",
-        "name": {
-            "str": "腌甜菜",
-            "str_pl": "腌甜菜"
-        },
-        "description": "这是一种使用醋和酸甜的腌菜方法,把甜菜根腌化成了一种又咸又甜的酸甜蔬菜。",
-        "vitamins": [],
-        "weight": 100,
-        "color": "red",
-        "spoils_in": 10,
-        "container": "Pam_Jar",
-        "comestible_type": "FOOD",
-        "symbol": "*",
-        "calories": 10,
-        "quench": 0,
-        "healthy": 10,
-        "price": 15,
-        "material": [
-            "vegetables",
-            "sugar"
-        ],
-        "charges": 1,
-        "phase": "solid",
-        "addiction_potential": 0
+    "weight": 50,
+    "color": "red",
+    "container": "Pam_Bag",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "calories": 300,
+    "protein": 15,
+    "description": "这是一种史诗级别的食物，每一片都是用心制作的，带着独特的香气和口感。",
+    "vitamins": [
+      ["vitA", 1],
+      ["vitC", 1],
+      ["calcium", 2],
+      ["iron", 2]
+    ],
+    "price": 100,
+    "price_postapoc": 150,
+    "material": ["bacon"],
+    "volume": 250,
+    "charges": 1,
+    "fun": 20,
+    "quench": -5,
+    "healthy": -5,
+    "addiction_potential": 5
+  },
+  {
+    "//": "炸鱼薯条",
+    "type": "COMESTIBLE",
+    "id": "Pam_fish_and_chips",
+    "name": {
+      "str": "炸鱼薯条"
     },
-    {
-        "type": "COMESTIBLE",
-        "id": "Pam_stewpot",
-        "name": {
-            "str": "大锅炖",
-            "str_pl": "大锅炖"
-        },
-        "description": "这是一道美味的大锅炖,汁水浓郁,口味鲜美。",
-        "vitamins": [],
-        "weight": 600,
-        "color": "brown",
-        "spoils_in": 2,
-        "container": "pot",
-        "comestible_type": "FOOD",
-        "symbol": "&",
-        "calories": 1200,
-        "quench": 20,
-        "price": 30,
-        "material": [
-            "flesh",
-            "vegetables",
-            "water"
-        ],
-        "volume": 0.6,
-        "charges": 1,
-        "phase": "solid",
-        "healthy": 0,
-        "addiction_potential": 0
+    "weight": 200,
+    "color": "white",
+    "spoils_in": "3 days",
+    "container": "basket",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "calories": 400,
+    "protein": 10,
+    "description": "这是一道口味优美的食物，由炸鱼和炸薯条组成，鱼肉酥脆，薯条松软，营养均衡。",
+    "vitamins": [
+      ["vitA", 5],
+      ["vitC", 5],
+      ["calcium", 5],
+      ["iron", 5]
+    ],
+    "price": 30,
+    "price_postapoc": 40,
+    "material": ["flesh", "vegetables"],
+    "volume": "500 ml",
+    "charges": 1,
+    "flags": {
+      "EATEN_HOT": true,
+      "COOKED": true
     },
-    {
-        "type": "COMESTIBLE",
-        "id": "Pam_mixed_veggies",
-        "name": {
-            "str": "大拌菜",
-            "str_pl": "大拌菜"
-        },
-        "description": "这是一道各种蔬菜和肉类的大拌菜,口感香脆,营养丰富。",
-        "vitamins": [],
-        "weight": 400,
-        "color": "green",
-        "spoils_in": 2,
-        "container": "Pam_Bowl",
-        "comestible_type": "FOOD",
-        "symbol": "@",
-        "calories": 600,
-        "quench": 0,
-        "price": 25,
-        "material": [
-            "vegetables",
-            "flesh"
-        ],
-        "volume": 0.4,
-        "charges": 1,
-        "phase": "solid",
-        "healthy": 20,
-        "addiction_potential": 0
+    "fun": 10,
+    "quench": -5,
+    "healthy": -2,
+    "addiction_potential": 2
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_butteredpotato",
+    "name": {
+      "str": "黄油烤土豆"
     },
-    {
-        "type": "COMESTIBLE",
-        "id": "Pam_fruit_salad",
-        "name": {
-            "str": "水果沙拉",
-            "str_pl": "水果沙拉"
-        },
-        "description": "这是一道美味的水果沙拉,香甜可口,适合作为甜点或小食。",
-        "vitamins": [],
-        "weight": 200,
-        "color": "white",
-        "spoils_in": 4,
-        "container": "Pam_Bowl",
-        "comestible_type": "FOOD",
-        "symbol": "#",
-        "calories": 300,
-        "price": 20,
-        "material": [
-            "fruit",
-            "sugar",
-            "milk"
-        ],
-        "volume": 0.2,
-        "charges": 1,
-        "phase": "solid",
-        "quench": 0,
-        "healthy": 30,
-        "addiction_potential": 0
+    "weight": 250,
+    "color": "white",
+    "container": "tray",
+    "comestible_type": "FOOD",
+    "symbol": "&",
+    "calories": 300,
+    "protein": 5,
+    "description": "这是一道口感咸香的传统英式菜肴，采用烤土豆和大量黄油制成，是任何一顿饭的理想伴侣。",
+    "vitamins": [
+      ["vitA", 2],
+      ["vitC", 10],
+      ["calcium", 5],
+      ["iron", 2]
+    ],
+    "price": 20,
+    "price_postapoc": 30,
+    "material": ["vegetables", "milk", "salt"],
+    "volume": 500,
+    "charges": 1,
+    "flags": {
+      "EATEN_HOT": true,
+      "COOKED": true
     },
-    {
-        "type": "COMESTIBLE",
-        "id": "Pam_roast_beef_roll",
-        "name": {
-            "str": "烘肉卷",
-            "str_pl": "烘肉卷"
-        },
-        "description": "这是一道烤牛肉和面饼卷,是一种香气四溢的小食。",
-        "vitamins": [],
-        "weight": 100,
-        "color": "brown",
-        "spoils_in": 2,
-        "container": "Pam_Bag",
-        "comestible_type": "FOOD",
-        "symbol": "*",
-        "calories": 180,
-        "price": 30,
-        "material": [
-            "flesh"
-        ],
-        "volume": 0.1,
-        "charges": 1,
-        "phase": "solid",
-        "quench": 0,
-        "healthy": -10,
-        "addiction_potential": 0
+    "fun": 5,
+    "quench": -5,
+    "healthy": -2,
+    "addiction_potential": 2
+  },
+  {
+    "//": "土豆泥",
+    "type": "COMESTIBLE",
+    "id": "Pam_mashedpotatoes",
+    "name": {
+      "str": "土豆泥"
     },
-    {
-        "type": "COMESTIBLE",
-        "id": "Pam_sunflower_seeds",
-        "name": {
-            "str": "葵花籽",
-            "str_pl": "葵花籽"
-        },
-        "description": "这是一种加盐烤熟的葵花籽,是一种口感香脆的零食。",
-        "vitamins": [],
-        "weight": 50,
-        "volume": 50,
-        "price": 5,
-        "comestible_type": "FOOD",
-        "spoils_in": 30,
-        "material": [
-            "seeds",
-            "salt"
-        ],
-        "color": "brown",
-        "container": "Pam_Bag",
-        "symbol": "*",
-        "calories": 670,
-        "fun": 5,
-        "quench": 0,
-        "healthy": 0,
-        "addiction_potential": 0,
-        "phase": "solid"
+    "weight": 200,
+    "color": "white",
+    "spoils_in": "3 days",
+    "container": "Pam_Bowl",
+    "comestible_type": "FOOD",
+    "symbol": "&",
+    "calories": 350,
+    "protein": 5,
+    "description": "这是一道美味的配菜，使用煮熟的土豆和大量的黄油和牛奶制成。",
+    "vitamins": [
+      ["vitA", 2],
+      ["vitC", 10],
+      ["calcium", 10],
+      ["iron", 2]
+    ],
+    "price": 15,
+    "price_postapoc": 20,
+    "material": ["vegetables", "milk"],
+    "volume": "500 ml",
+    "charges": 1,
+    "flags": {
+      "EATEN_HOT": true,
+      "COOKED": true
     },
-    {
-        "type": "COMESTIBLE",
-        "id": "Pam_roasted_sunflower_seeds",
-        "name": {
-            "str": "烤葵花籽",
-            "str_pl": "烤葵花籽"
-        },
-        "description": "这是一种烤制过的葵花籽,充满了独特的风味,非常适合作为小食。",
-        "vitamins": [],
-        "weight": 50,
-        "volume": 50,
-        "price": 8,
-        "comestible_type": "FOOD",
-        "spoils_in": 7,
-        "material": [
-            "seeds",
-            "salt"
-        ],
-        "color": "brown",
-        "container": "Pam_Bag",
-        "symbol": "&",
-        "calories": 690,
-        "fun": 5,
-        "quench": 0,
-        "healthy": 0,
-        "addiction_potential": 0,
-        "phase": "solid"
-    }
+    "fun": 5,
+    "quench": -5,
+    "healthy": -2,
+    "addiction_potential": 2
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_candied_carrots",
+    "name": {
+      "str": "糖汁胡萝卜"
+    },
+    "weight": 150,
+    "color": "white",
+    "container": "Pam_Jar",
+    "comestible_type": "FOOD",
+    "symbol": "&",
+    "calories": 150,
+    "description": "这是一道由糖、胡萝卜和水烹制而来的小食,是一种非常甜美的口感。",
+    "vitamins": [],
+    "price": 25,
+    "price_postapoc": 35,
+    "material": ["vegetables", "water", "sugar"],
+    "volume": 1.5,
+    "charges": 1,
+    "phase": "solid",
+    "quench": 5,
+    "healthy": 5,
+    "addiction_potential": 0
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_pickled_beets",
+    "name": {
+      "str": "腌甜菜",
+      "str_pl": "腌甜菜"
+    },
+    "description": "这是一种使用醋和酸甜的腌菜方法,把甜菜根腌化成了一种又咸又甜的酸甜蔬菜。",
+    "vitamins": [],
+    "weight": 100,
+    "color": "red",
+    "spoils_in": 10,
+    "container": "Pam_Jar",
+    "comestible_type": "FOOD",
+    "symbol": "*",
+    "calories": 10,
+    "quench": 0,
+    "healthy": 10,
+    "price": 15,
+    "material": ["vegetables", "sugar"],
+    "charges": 1,
+    "phase": "solid",
+    "addiction_potential": 0
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_stewpot",
+    "name": {
+      "str": "大锅炖",
+      "str_pl": "大锅炖"
+    },
+    "description": "这是一道美味的大锅炖,汁水浓郁,口味鲜美。",
+    "vitamins": [],
+    "weight": 600,
+    "color": "brown",
+    "spoils_in": 2,
+    "container": "pot",
+    "comestible_type": "FOOD",
+    "symbol": "&",
+    "calories": 1200,
+    "quench": 20,
+    "price": 30,
+    "material": ["flesh", "vegetables", "water"],
+    "volume": 0.6,
+    "charges": 1,
+    "phase": "solid",
+    "healthy": 0,
+    "addiction_potential": 0
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_mixed_veggies",
+    "name": {
+      "str": "大拌菜",
+      "str_pl": "大拌菜"
+    },
+    "description": "这是一道各种蔬菜和肉类的大拌菜,口感香脆,营养丰富。",
+    "vitamins": [],
+    "weight": 400,
+    "color": "green",
+    "spoils_in": 2,
+    "container": "Pam_Bowl",
+    "comestible_type": "FOOD",
+    "symbol": "@",
+    "calories": 600,
+    "quench": 0,
+    "price": 25,
+    "material": ["vegetables", "flesh"],
+    "volume": 0.4,
+    "charges": 1,
+    "phase": "solid",
+    "healthy": 20,
+    "addiction_potential": 0
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_fruit_salad",
+    "name": {
+      "str": "水果沙拉",
+      "str_pl": "水果沙拉"
+    },
+    "description": "这是一道美味的水果沙拉,香甜可口,适合作为甜点或小食。",
+    "vitamins": [],
+    "weight": 200,
+    "color": "white",
+    "spoils_in": 4,
+    "container": "Pam_Bowl",
+    "comestible_type": "FOOD",
+    "symbol": "#",
+    "calories": 300,
+    "price": 20,
+    "material": ["fruit", "sugar", "milk"],
+    "volume": 0.2,
+    "charges": 1,
+    "phase": "solid",
+    "quench": 0,
+    "healthy": 30,
+    "addiction_potential": 0
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_roast_beef_roll",
+    "name": {
+      "str": "烘肉卷",
+      "str_pl": "烘肉卷"
+    },
+    "description": "这是一道烤牛肉和面饼卷,是一种香气四溢的小食。",
+    "vitamins": [],
+    "weight": 100,
+    "color": "brown",
+    "spoils_in": 2,
+    "container": "Pam_Bag",
+    "comestible_type": "FOOD",
+    "symbol": "*",
+    "calories": 180,
+    "price": 30,
+    "material": ["flesh"],
+    "volume": 0.1,
+    "charges": 1,
+    "phase": "solid",
+    "quench": 0,
+    "healthy": -10,
+    "addiction_potential": 0
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_sunflower_seeds",
+    "name": {
+      "str": "葵花籽",
+      "str_pl": "葵花籽"
+    },
+    "description": "这是一种加盐烤熟的葵花籽,是一种口感香脆的零食。",
+    "vitamins": [],
+    "weight": 50,
+    "volume": 50,
+    "price": 5,
+    "comestible_type": "FOOD",
+    "spoils_in": 30,
+    "material": ["seeds", "salt"],
+    "color": "brown",
+    "container": "Pam_Bag",
+    "symbol": "*",
+    "calories": 670,
+    "fun": 5,
+    "quench": 0,
+    "healthy": 0,
+    "addiction_potential": 0,
+    "phase": "solid"
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_roasted_sunflower_seeds",
+    "name": {
+      "str": "烤葵花籽",
+      "str_pl": "烤葵花籽"
+    },
+    "description": "这是一种烤制过的葵花籽,充满了独特的风味,非常适合作为小食。",
+    "vitamins": [],
+    "weight": 50,
+    "volume": 50,
+    "price": 8,
+    "comestible_type": "FOOD",
+    "spoils_in": 7,
+    "material": ["seeds", "salt"],
+    "color": "brown",
+    "container": "Pam_Bag",
+    "symbol": "&",
+    "calories": 690,
+    "fun": 5,
+    "quench": 0,
+    "healthy": 0,
+    "addiction_potential": 0,
+    "phase": "solid"
+  }
 ]

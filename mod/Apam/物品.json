@@ -11,9 +11,7 @@
     "volume": 1,
     "price": 1000,
     "price_postapoc": 3500,
-    "material": [
-      "paper"
-    ],
+    "material": ["paper"],
     "symbol": "#",
     "color": "red",
     "skill": "cooking",
@@ -32,9 +30,7 @@
     "volume": 0.01,
     "price": 1,
     "symbol": "#",
-    "material": [
-      "wood"
-    ],
+    "material": ["wood"],
     "color": "red",
     "use_action": {
       "type": "unpack",
@@ -52,20 +48,9 @@
     "weight": 550,
     "volume": 10,
     "symbol": "$",
-    "material": [
-      "cotton",
-      "leather"
-    ],
-    "qualities": [
-      [
-        "CONTAIN",
-        4
-      ]
-    ],
-    "flags": [
-      "POCKET",
-      "EFFECTIVE_STORAGE"
-    ],
+    "material": ["cotton", "leather"],
+    "qualities": [["CONTAIN", 4]],
+    "flags": ["POCKET", "EFFECTIVE_STORAGE"],
     "color": "white",
     "price": 50,
     "phase": "solid"
@@ -81,23 +66,12 @@
     "weight": 200,
     "volume": 1,
     "symbol": "$",
-    "material": [
-      "ceramic"
-    ],
+    "material": ["ceramic"],
     "qualities": [
-      [
-        "CONTAIN",
-        3
-      ],
-      [
-        "BOIL",
-        1
-      ]
+      ["CONTAIN", 3],
+      ["BOIL", 1]
     ],
-    "flags": [
-      "DURABLE_MELEE",
-      "BOIL_OR_FREEZE"
-    ],
+    "flags": ["DURABLE_MELEE", "BOIL_OR_FREEZE"],
     "color": "white",
     "price": 80,
     "price_postapoc": 30,
@@ -115,22 +89,12 @@
     "weight": 500,
     "volume": 5,
     "symbol": "•",
-    "material": [
-      "ceramic"
-    ],
+    "material": ["ceramic"],
     "qualities": [
-      [
-        "CONTAIN",
-        2
-      ],
-      [
-        "CHOP",
-        1
-      ]
+      ["CONTAIN", 2],
+      ["CHOP", 1]
     ],
-    "flags": [
-      "DURABLE_MELEE"
-    ],
+    "flags": ["DURABLE_MELEE"],
     "color": "white",
     "phase": "solid",
     "price": 80,
@@ -148,18 +112,9 @@
     "weight": "300g",
     "volume": 1.2,
     "symbol": "%",
-    "material": [
-      "ceramic"
-    ],
-    "qualities": [
-      [
-        "CONTAIN",
-        3
-      ]
-    ],
-    "flags": [
-      "DURABLE_MELEE"
-    ],
+    "material": ["ceramic"],
+    "qualities": [["CONTAIN", 3]],
+    "flags": ["DURABLE_MELEE"],
     "color": "off white",
     "phase": "solid",
     "price": 60,
@@ -168,11 +123,6 @@
     "bashing": 4,
     "to_hit": 1,
     "max_volume": 1200,
-    "usage_methods": [
-      [
-        "CONTAIN",
-        "容纳食物和液体"
-      ]
-    ]
+    "usage_methods": [["CONTAIN", "容纳食物和液体"]]
   }
 ]

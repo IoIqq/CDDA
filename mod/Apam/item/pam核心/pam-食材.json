@@ -1,154 +1,142 @@
 [
-    {
-        "type": "COMESTIBLE",
-        "id": "Pam_flour",
-        "name": {
-            "str": "面粉",
-            "str_pl": "面粉"
-        },
-        "description": "这是一袋细腻的面粉，散发着淡淡的香气，是制作面点的重要原料。",
-        "weight": 500,
-        "color": "white",
-        "spoils_in": 365,
-        "container": "Pam_Bag",
-        "comestible_type": "FOOD",
-        "symbol": "*",
-        "calories": 1500,
-        "price": 5,
-        "material": [
-            "wheat"
-        ],
-        "volume": 1,
-        "phase": "solid",
-        "charges": 10,
-        "flags": {
-            "EATEN_COLD": 1,
-            "USE_EAT_VERB": 0
-        },
-        "addiction_potential": 0,
-        "cib_to_hit": 0,
-        "quench": 0
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_flour",
+    "name": {
+      "str": "面粉",
+      "str_pl": "面粉"
     },
-    {
-        "type": "COMESTIBLE",
-        "id": "Pam_raw_dough",
-        "name": {
-            "str": "生面团",
-            "str_pl": "生面团"
-        },
-        "description": "这团面团在揉捏中慢慢发酵长大，散发出淡淡的酒精味。",
-        "weight": 500,
-        "color": "white",
-        "spoils_in": 3,
-        "container": "Pam_Bowl",
-        "comestible_type": "FOOD",
-        "symbol": "@",
-        "calories": 1500,
-        "price": 10,
-        "material": [
-            "wheat"
-        ],
-        "volume": 0.5,
-        "phase": "solid",
-        "charges": 10,
-        "flags": {
-            "EATEN_COLD": 1,
-            "USE_EAT_VERB": 0
-        },
-        "addiction_potential": 0,
-        "cib_to_hit": 0,
-        "quench": 0
+    "description": "这是一袋细腻的面粉，散发着淡淡的香气，是制作面点的重要原料。",
+    "weight": 500,
+    "color": "white",
+    "spoils_in": 365,
+    "container": "Pam_Bag",
+    "comestible_type": "FOOD",
+    "symbol": "*",
+    "calories": 1500,
+    "price": 5,
+    "material": ["wheat"],
+    "volume": 1,
+    "phase": "solid",
+    "charges": 10,
+    "flags": {
+      "EATEN_COLD": 1,
+      "USE_EAT_VERB": 0
     },
-    {
-        "type": "COMESTIBLE",
-        "id": "Pam_batter",
-        "name": {
-            "str": "面糊",
-            "str_pl": "面糊"
-        },
-        "description": "均匀的面糊可以用来做各种蛋糕、饼干和糕点。",
-        "weight": 500,
-        "color": "white",
-        "spoils_in": 3,
-        "container": "Pam_Bowl",
-        "comestible_type": "FOOD",
-        "symbol": "%",
-        "calories": 1500,
-        "price": 15,
-        "material": [
-            "wheat",
-            "egg",
-            "milk"
-        ],
-        "volume": 0.5,
-        "phase": "liquid",
-        "charges": 6,
-        "flags": {
-            "EATEN_COLD": 1,
-            "USE_EAT_VERB": 0
-        },
-        "addiction_potential": 0,
-        "cib_to_hit": 0,
-        "quench": 0
+    "addiction_potential": 0,
+    "cib_to_hit": 0,
+    "quench": 0
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_raw_dough",
+    "name": {
+      "str": "生面团",
+      "str_pl": "生面团"
     },
-    {
-        "type": "COMESTIBLE",
-        "id": "Pam_cocoa_powder",
-        "name": {
-            "str": "可可粉",
-            "str_pl": "可可粉"
-        },
-        "description": "苦涩的可可粉是最好的巧克力原料，同时也是许多美味糕点和甜品的主要成分。",
-        "weight": 200,
-        "color": "brown",
-        "spoils_in": 365,
-        "container": "Pam_Jar",
-        "comestible_type": "FOOD",
-        "symbol": "#",
-        "calories": 400,
-        "price": 25,
-        "material": [
-            "coco_beans"
-        ],
-        "volume": 0.2,
-        "phase": "solid",
-        "charges": 2,
-        "flags": {
-            "EATEN_COLD": 1,
-            "USE_EAT_VERB": 0
-        },
-        "addiction_potential": 0,
-        "cib_to_hit": 0,
-        "quench": 0
+    "description": "这团面团在揉捏中慢慢发酵长大，散发出淡淡的酒精味。",
+    "weight": 500,
+    "color": "white",
+    "spoils_in": 3,
+    "container": "Pam_Bowl",
+    "comestible_type": "FOOD",
+    "symbol": "@",
+    "calories": 1500,
+    "price": 10,
+    "material": ["wheat"],
+    "volume": 0.5,
+    "phase": "solid",
+    "charges": 10,
+    "flags": {
+      "EATEN_COLD": 1,
+      "USE_EAT_VERB": 0
     },
-    {
-        "type": "COMESTIBLE",
-        "id": "Pam_milk",
-        "name": {
-            "str": "鲜牛奶",
-            "str_pl": "鲜牛奶"
-        },
-        "description": "这种新鲜的牛奶可以用于制作奶酪、酸奶、奶昔等美食，也可以直接食用。",
-        "weight": 1000,
-        "color": "white",
-        "spoils_in": 3,
-        "container": "bottle",
-        "comestible_type": "DRINK",
-        "symbol": "@",
-        "calories": 600,
-        "price": 40,
-        "material": [
-            "milk"
-        ],
-        "volume": 1,
-        "phase": "liquid",
-        "charges": 5,
-        "flags": {
-            "DRINKABLE": 1,
-            "USE_EAT_VERB": 0
-        },
-        "addiction_potential": 0,
-        "cib_to_hit": 0,
-        "quench": 5
-    }
+    "addiction_potential": 0,
+    "cib_to_hit": 0,
+    "quench": 0
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_batter",
+    "name": {
+      "str": "面糊",
+      "str_pl": "面糊"
+    },
+    "description": "均匀的面糊可以用来做各种蛋糕、饼干和糕点。",
+    "weight": 500,
+    "color": "white",
+    "spoils_in": 3,
+    "container": "Pam_Bowl",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "calories": 1500,
+    "price": 15,
+    "material": ["wheat", "egg", "milk"],
+    "volume": 0.5,
+    "phase": "liquid",
+    "charges": 6,
+    "flags": {
+      "EATEN_COLD": 1,
+      "USE_EAT_VERB": 0
+    },
+    "addiction_potential": 0,
+    "cib_to_hit": 0,
+    "quench": 0
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_cocoa_powder",
+    "name": {
+      "str": "可可粉",
+      "str_pl": "可可粉"
+    },
+    "description": "苦涩的可可粉是最好的巧克力原料，同时也是许多美味糕点和甜品的主要成分。",
+    "weight": 200,
+    "color": "brown",
+    "spoils_in": 365,
+    "container": "Pam_Jar",
+    "comestible_type": "FOOD",
+    "symbol": "#",
+    "calories": 400,
+    "price": 25,
+    "material": ["coco_beans"],
+    "volume": 0.2,
+    "phase": "solid",
+    "charges": 2,
+    "flags": {
+      "EATEN_COLD": 1,
+      "USE_EAT_VERB": 0
+    },
+    "addiction_potential": 0,
+    "cib_to_hit": 0,
+    "quench": 0
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_milk",
+    "name": {
+      "str": "鲜牛奶",
+      "str_pl": "鲜牛奶"
+    },
+    "description": "这种新鲜的牛奶可以用于制作奶酪、酸奶、奶昔等美食，也可以直接食用。",
+    "weight": 1000,
+    "color": "white",
+    "spoils_in": 3,
+    "container": "bottle",
+    "comestible_type": "DRINK",
+    "symbol": "@",
+    "calories": 600,
+    "price": 40,
+    "material": ["milk"],
+    "volume": 1,
+    "phase": "liquid",
+    "charges": 5,
+    "flags": {
+      "DRINKABLE": 1,
+      "USE_EAT_VERB": 0
+    },
+    "addiction_potential": 0,
+    "cib_to_hit": 0,
+    "quench": 5
+  }
 ]

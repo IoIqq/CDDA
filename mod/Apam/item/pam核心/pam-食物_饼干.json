@@ -1,132 +1,112 @@
 [
-    {
-        "//": "苏打饼干",
-        "type": "COMESTIBLE",
-        "id": "Pam_soda_crackers",
-        "name": {
-            "str": "苏打饼干",
-            "str_pl": "苏打饼干"
-        },
-        "weight": 100,
-        "color": "white",
-        "spoils_in": "7 days",
-        "container": "null",
-        "comestible_type": "FOOD",
-        "symbol": "%",
-        "quench": 5,
-        "healthy": -5,
-        "calories": 5,
-        "description": "这是一种口感脆脆,带有黄油香味的小点心。",
-        "price": 30,
-        "material": [
-            "milk",
-            "wheat"
-        ],
-        "volume": 80,
-        "phase": "solid",
-        "charges": 10,
-        "flags": [
-            "EATEN_COLD",
-            "USE_EAT_VERB"
-        ]
+  {
+    "//": "苏打饼干",
+    "type": "COMESTIBLE",
+    "id": "Pam_soda_crackers",
+    "name": {
+      "str": "苏打饼干",
+      "str_pl": "苏打饼干"
     },
-    {
-        "//": "椒盐脆饼",
-        "type": "COMESTIBLE",
-        "id": "Pam_salted_crackers",
-        "name": {
-            "str": "椒盐脆饼",
-            "str_pl": "椒盐脆饼"
-        },
-        "weight": 100,
-        "color": "white",
-        "spoils_in": "7 days",
-        "container": "null",
-        "comestible_type": "FOOD",
-        "symbol": "%",
-        "quench": 5,
-        "healthy": -5,
-        "calories": 5,
-        "description": "这是一种口感酥脆,略带咸味的小点心。",
-        "price": 35,
-        "material": [
-            "wheat",
-            "milk"
-        ],
-        "volume": 80,
-        "phase": "solid",
-        "charges": 10,
-        "flags": [
-            "EATEN_COLD",
-            "USE_EAT_VERB"
-        ]
+    "weight": 100,
+    "color": "white",
+    "spoils_in": "7 days",
+    "container": "null",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "quench": 5,
+    "healthy": -5,
+    "calories": 5,
+    "description": "这是一种口感脆脆,带有黄油香味的小点心。",
+    "price": 30,
+    "material": ["milk", "wheat"],
+    "volume": 80,
+    "phase": "solid",
+    "charges": 10,
+    "flags": ["EATEN_COLD", "USE_EAT_VERB"]
+  },
+  {
+    "//": "椒盐脆饼",
+    "type": "COMESTIBLE",
+    "id": "Pam_salted_crackers",
+    "name": {
+      "str": "椒盐脆饼",
+      "str_pl": "椒盐脆饼"
     },
-    {
-        "//": "牛奶饼干",
-        "type": "COMESTIBLE",
-        "id": "Pam_milk_cookies",
-        "name": {
-            "str_pl": "牛奶饼干",
-            "str": "牛奶饼干"
-        },
-        "weight": 120,
-        "color": "white",
-        "spoils_in": 7,
-        "container": null,
-        "comestible_type": "FOOD",
-        "symbol": "&",
-        "quench": 5,
-        "healthy": -10,
-        "nutrition": 10,
-        "description": "这是一种口感柔软,带有浓浓牛奶香味的小点心。",
-        "price": 40,
-        "material": [
-            "wheat",
-            "milk",
-            "sugar"
-        ],
-        "volume": 80,
-        "phase": "solid",
-        "charges": 10,
-        "flags": {
-            "EATEN_COLD": 1,
-            "USE_EAT_VERB": 1
-        },
-        "addiction_potential": 2,
-        "cib_to_hit": 0
+    "weight": 100,
+    "color": "white",
+    "spoils_in": "7 days",
+    "container": "null",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "quench": 5,
+    "healthy": -5,
+    "calories": 5,
+    "description": "这是一种口感酥脆,略带咸味的小点心。",
+    "price": 35,
+    "material": ["wheat", "milk"],
+    "volume": 80,
+    "phase": "solid",
+    "charges": 10,
+    "flags": ["EATEN_COLD", "USE_EAT_VERB"]
+  },
+  {
+    "//": "牛奶饼干",
+    "type": "COMESTIBLE",
+    "id": "Pam_milk_cookies",
+    "name": {
+      "str_pl": "牛奶饼干",
+      "str": "牛奶饼干"
     },
-    {
-        "//": "棉花糖巧克力夹心饼干",
-        "type": "COMESTIBLE",
-        "id": "Pam_marshmallow_chocolate_cookies",
-        "name": {
-            "str_pl": "棉花糖巧克力夹心饼干",
-            "str": "棉花糖巧克力夹心饼干"
-        },
-        "weight": 150,
-        "color": "white",
-        "spoils_in": 7,
-        "container": null,
-        "comestible_type": "FOOD",
-        "symbol": "&",
-        "quench": 10,
-        "healthy": -10,
-        "nutrition": 10,
-        "description": "这是一种口感酥脆,清甜可口,带有巧克力和棉花糖的味道。",
-        "price": 50,
-        "material": [
-            "wheat",
-            "milk",
-            "coco_beans"
-        ],
-        "volume": 80,
-        "phase": "solid",
-        "charges": 5,
-        "flags": {
-            "EATEN_COLD": 1,
-            "USE_EAT_VERB": 1
-        },
-        "addiction_potential": 3,
-        "cib_to_hit": 0
-    }
+    "weight": 120,
+    "color": "white",
+    "spoils_in": 7,
+    "container": null,
+    "comestible_type": "FOOD",
+    "symbol": "&",
+    "quench": 5,
+    "healthy": -10,
+    "nutrition": 10,
+    "description": "这是一种口感柔软,带有浓浓牛奶香味的小点心。",
+    "price": 40,
+    "material": ["wheat", "milk", "sugar"],
+    "volume": 80,
+    "phase": "solid",
+    "charges": 10,
+    "flags": {
+      "EATEN_COLD": 1,
+      "USE_EAT_VERB": 1
+    },
+    "addiction_potential": 2,
+    "cib_to_hit": 0
+  },
+  {
+    "//": "棉花糖巧克力夹心饼干",
+    "type": "COMESTIBLE",
+    "id": "Pam_marshmallow_chocolate_cookies",
+    "name": {
+      "str_pl": "棉花糖巧克力夹心饼干",
+      "str": "棉花糖巧克力夹心饼干"
+    },
+    "weight": 150,
+    "color": "white",
+    "spoils_in": 7,
+    "container": null,
+    "comestible_type": "FOOD",
+    "symbol": "&",
+    "quench": 10,
+    "healthy": -10,
+    "nutrition": 10,
+    "description": "这是一种口感酥脆,清甜可口,带有巧克力和棉花糖的味道。",
+    "price": 50,
+    "material": ["wheat", "milk", "coco_beans"],
+    "volume": 80,
+    "phase": "solid",
+    "charges": 5,
+    "flags": {
+      "EATEN_COLD": 1,
+      "USE_EAT_VERB": 1
+    },
+    "addiction_potential": 3,
+    "cib_to_hit": 0
+  }
 ]

@@ -4,13 +4,9 @@
     "category": "items",
     "id": "pam_farm",
     "version": "0.1",
-    "authors": [
-      "Gamer"
-    ],
+    "authors": ["Gamer"],
     "name": "潘马斯农场及其附属",
-    "dependencies": [
-      "dda"
-    ],
+    "dependencies": ["dda"],
     "description": "由一位mc老玩家对种田的热爱及对cdda的热爱而制作的mod，"
   }
 ]

@@ -1,325 +1,236 @@
 [
-        {
-                "type": "material",
-                "id": "sugar",
-                "name": {
-                        "str": "糖"
-                },
-                "density": 1.76,
-                "edible": true,
-                "rotting": false,
-                "material_damage": "完好",
-                "bullet_res": 0,
-                "bash_res": 0,
-                "cut_res": 0,
-                "fire_resist": 0.5,
-                "acid_res": 0.2,
-                "elec_resist": 0.01,
-                "chip_resist": 1,
-                "specific_heat_liquid": 2.2,
-                "specific_heat_solid": 1.8,
-                "latent_heat": 333,
-                "dmg_adj": [
-                        "完好",
-                        "轻微受潮",
-                        "结块",
-                        "发霉"
-                ],
-                "bash_dmg_verb": "弄湿",
-                "cut_dmg_verb": "弄碎",
-                "color": "white",
-                "phase": "solid",
-                "flags": [
-                        "COOKED",
-                        "DRY"
-                ]
-        },
-        {
-                "type": "material",
-                "id": "coco_beans",
-                "name": {
-                        "str": "可可豆子"
-                },
-                "density": 1.1,
-                "edible": true,
-                "rotting": true,
-                "material_damage": "新鲜",
-                "bullet_res": 0.1,
-                "bash_res": 2.5,
-                "cut_res": 1.5,
-                "fire_resist": 0.4,
-                "acid_resist": 0.3,
-                "elec_resist": 0.05,
-                "chip_resist": 0.7,
-                "specific_heat_liquid": 3.9,
-                "specific_heat_solid": 1.9,
-                "latent_heat": 260,
-                "color": "white",
-                "state": "solid",
-                "flags": [
-                        "COOKED",
-                        "DRY",
-                        "EDIBLE",
-                        "ORGANIC"
-                ],
-                "bash_dmg_verb": "压碎",
-                "cut_dmg_verb": "切割",
-                "dmg_modifier": [
-                        0.8,
-                        0.6,
-                        0.4,
-                        0.2
-                ],
-                "dmg_adj": [
-                        "新鲜",
-                        "轻微受潮",
-                        "发霉",
-                        "腐烂"
-                ]
-        },
-        {
-                "type": "material",
-                "id": "rice",
-                "name": {
-                        "str": "稻米"
-                },
-                "density": 0.8,
-                "edible": true,
-                "rotting": true,
-                "soft": true,
-                "material_damage": "新鲜",
-                "bullet_res": 0.1,
-                "bash_res": 0.1,
-                "cut_res": 0.1,
-                "fire_resist": 0.3,
-                "acid_resist": 0.4,
-                "elec_resist": 0.02,
-                "chip_resist": 0.1,
-                "specific_heat_liquid": 3.9,
-                "specific_heat_solid": 1.7,
-                "latent_heat": 250,
-                "color": "white",
-                "state": "solid",
-                "flags": [
-                        "COOKED",
-                        "DRY",
-                        "EDIBLE",
-                        "ORGANIC"
-                ],
-                "bash_dmg_verb": "压碎",
-                "cut_dmg_verb": "切割",
-                "dmg_modifier": [
-                        0.8,
-                        0.6,
-                        0.4,
-                        0.2
-                ],
-                "weight": 100,
-                "volume": 0.2,
-                "calories": 350,
-                "carbs": 80,
-                "dmg_adj": [
-                        "完好",
-                        "变色",
-                        "发霉",
-                        "腐烂"
-                ]
-        },
-        {
-                "//": "培根",
-                "type": "material",
-                "id": "bacon",
-                "name": {
-                        "str": "培根"
-                },
-                "density": 0.9,
-                "edible": true,
-                "rotting": true,
-                "soft": false,
-                "bullet_res": 0.1,
-                "bash_res": 0.1,
-                "cut_res": 0.1,
-                "fire_resist": 0.4,
-                "acid_resist": 0.3,
-                "elec_resist": 0.05,
-                "chip_resist": 0.1,
-                "specific_heat_liquid": 3.9,
-                "specific_heat_solid": 2.1,
-                "latent_heat": 280,
-                "color": "white",
-                "state": "solid",
-                "material_damage": "新鲜",
-                "flags": {
-                        "COOKED": true,
-                        "MEAT": true,
-                        "EDIBLE": true,
-                        "SMOKED": true
-                },
-                "weight": 100,
-                "volume": 0.2,
-                "calories": 400,
-                "carbs": 5,
-                "dmg_adj": [
-                        "新鲜",
-                        "变质",
-                        "腐烂",
-                        "发臭"
-                ],
-                "bash_dmg_verb": "压碎",
-                "cut_dmg_verb": "切割"
-        },
-        {
-                "type": "material",
-                "id": "seeds",
-                "name": {
-                        "str": "种子"
-                },
-                "density": 0.6,
-                "edible": true,
-                "rotting": true,
-                "bullet_res": 0,
-                "bash_res": 0,
-                "cut_res": 0,
-                "fire_resist": 0.2,
-                "acid_resist": 0.4,
-                "elec_resist": 0.01,
-                "chip_resist": 0,
-                "specific_heat_liquid": 1.67,
-                "specific_heat_solid": 1.8,
-                "latent_heat": 270,
-                "color": "white",
-                "phase": "solid",
-                "damaged_material": "seed",
-                "soft": false,
-                "weight": 10,
-                "volume": 0.05,
-                "calories": 100,
-                "carbs": 20,
-                "vitamins": [
-                        [
-                                "protein",
-                                10
-                        ],
-                        [
-                                "carbs",
-                                30
-                        ]
-                ],
-                "flags": {
-                        "COOKED": true,
-                        "DRIED": true,
-                        "SEED": true,
-                        "EDIBLE": true
-                },
-                "bash_dmg_verb": "压碎",
-                "cut_dmg_verb": "切割",
-                "dmg_adj": [
-                        "完整",
-                        "裂开",
-                        "碎裂",
-                        "发芽"
-                ]
-        },
-        {
-                "//": "食盐",
-                "type": "material",
-                "id": "salt",
-                "name": {
-                        "str": "食盐"
-                },
-                "density": 0.4,
-                "edible": true,
-                "rotting": false,
-                "bullet_res": 0.1,
-                "bash_res": 0.1,
-                "cut_res": 0.1,
-                "fire_resist": 0.2,
-                "acid_resist": 0.5,
-                "elec_resist": 0.01,
-                "chip_resist": 0.1,
-                "specific_heat_liquid": 0.88,
-                "specific_heat_solid": 0.88,
-                "latent_heat": 30.3,
-                "color": "white",
-                "state": "solid",
-                "damaged_material": "salt",
-                "soft": false,
-                "weight": 10,
-                "volume": 0.05,
-                "calories": 0,
-                "carbs": 0.1,
-                "flags": {
-                        "COOKED": true,
-                        "DRIED": true,
-                        "POWDER": true,
-                        "SPICE": true,
-                        "EDIBLE": true
-                },
-                "bash_dmg_verb": "磨碎",
-                "cut_dmg_verb": "剐蹭",
-                "dmg_adj": [
-                        "完整",
-                        "碎裂",
-                        "粉碎",
-                        "溶解"
-                ]
-        },
-        {
-                "type": "material",
-                "id": "vegetables",
-                "name": {
-                        "str": "蔬菜"
-                },
-                "density": 0.5,
-                "edible": true,
-                "rotting": true,
-                "bullet_res": 0,
-                "bash_res": 0,
-                "cut_res": 0,
-                "fire_resist": 0,
-                "acid_resist": 0.5,
-                "elec_resist": 0,
-                "chip_resist": 0,
-                "damaged_material": "rotten_veggy",
-                "soft": false,
-                "flags": [
-                        "COOKED",
-                        "EDIBLE"
-                ],
-                "material_flags": [
-                        "VEGETABLE"
-                ],
-                "weight": 100,
-                "volume": 0.25,
-                "calories": 20,
-                "carbs": 5,
-                "vitamins": [
-                        [
-                                "vitA",
-                                10
-                        ],
-                        [
-                                "vitC",
-                                20
-                        ],
-                        [
-                                "calcium",
-                                5
-                        ],
-                        [
-                                "iron",
-                                2
-                        ]
-                ],
-                "addiction_potential": 0,
-                "bash_dmg_verb": "捣碎",
-                "cut_dmg_verb": "切开",
-                "container": "Pam_Bag",
-                "dmg_adj": [
-                        "新鲜",
-                        "枯萎",
-                        "腐烂",
-                        "发霉"
-                ]
-        }
+  {
+    "type": "material",
+    "id": "sugar",
+    "name": {
+      "str": "糖"
+    },
+    "density": 1.76,
+    "edible": true,
+    "rotting": false,
+    "material_damage": "完好",
+    "bullet_res": 0,
+    "bash_res": 0,
+    "cut_res": 0,
+    "fire_resist": 0.5,
+    "acid_res": 0.2,
+    "elec_resist": 0.01,
+    "chip_resist": 1,
+    "specific_heat_liquid": 2.2,
+    "specific_heat_solid": 1.8,
+    "latent_heat": 333,
+    "dmg_adj": ["完好", "轻微受潮", "结块", "发霉"],
+    "bash_dmg_verb": "弄湿",
+    "cut_dmg_verb": "弄碎",
+    "color": "white",
+    "phase": "solid",
+    "flags": ["COOKED", "DRY"]
+  },
+  {
+    "type": "material",
+    "id": "coco_beans",
+    "name": {
+      "str": "可可豆子"
+    },
+    "density": 1.1,
+    "edible": true,
+    "rotting": true,
+    "material_damage": "新鲜",
+    "bullet_res": 0.1,
+    "bash_res": 2.5,
+    "cut_res": 1.5,
+    "fire_resist": 0.4,
+    "acid_resist": 0.3,
+    "elec_resist": 0.05,
+    "chip_resist": 0.7,
+    "specific_heat_liquid": 3.9,
+    "specific_heat_solid": 1.9,
+    "latent_heat": 260,
+    "color": "white",
+    "state": "solid",
+    "flags": ["COOKED", "DRY", "EDIBLE", "ORGANIC"],
+    "bash_dmg_verb": "压碎",
+    "cut_dmg_verb": "切割",
+    "dmg_modifier": [0.8, 0.6, 0.4, 0.2],
+    "dmg_adj": ["新鲜", "轻微受潮", "发霉", "腐烂"]
+  },
+  {
+    "type": "material",
+    "id": "rice",
+    "name": {
+      "str": "稻米"
+    },
+    "density": 0.8,
+    "edible": true,
+    "rotting": true,
+    "soft": true,
+    "material_damage": "新鲜",
+    "bullet_res": 0.1,
+    "bash_res": 0.1,
+    "cut_res": 0.1,
+    "fire_resist": 0.3,
+    "acid_resist": 0.4,
+    "elec_resist": 0.02,
+    "chip_resist": 0.1,
+    "specific_heat_liquid": 3.9,
+    "specific_heat_solid": 1.7,
+    "latent_heat": 250,
+    "color": "white",
+    "state": "solid",
+    "flags": ["COOKED", "DRY", "EDIBLE", "ORGANIC"],
+    "bash_dmg_verb": "压碎",
+    "cut_dmg_verb": "切割",
+    "dmg_modifier": [0.8, 0.6, 0.4, 0.2],
+    "weight": 100,
+    "volume": 0.2,
+    "calories": 350,
+    "dmg_adj": ["完好", "变色", "发霉", "腐烂"]
+  },
+  {
+    "//": "培根",
+    "type": "material",
+    "id": "bacon",
+    "name": {
+      "str": "培根"
+    },
+    "density": 0.9,
+    "edible": true,
+    "rotting": true,
+    "soft": false,
+    "bullet_res": 0.1,
+    "bash_res": 0.1,
+    "cut_res": 0.1,
+    "fire_resist": 0.4,
+    "acid_resist": 0.3,
+    "elec_resist": 0.05,
+    "chip_resist": 0.1,
+    "specific_heat_liquid": 3.9,
+    "specific_heat_solid": 2.1,
+    "latent_heat": 280,
+    "color": "white",
+    "state": "solid",
+    "material_damage": "新鲜",
+    "flags": {
+      "COOKED": true,
+      "MEAT": true,
+      "EDIBLE": true,
+      "SMOKED": true
+    },
+    "weight": 100,
+    "volume": 0.2,
+    "calories": 400,
+    "dmg_adj": ["新鲜", "变质", "腐烂", "发臭"],
+    "bash_dmg_verb": "压碎",
+    "cut_dmg_verb": "切割"
+  },
+  {
+    "type": "material",
+    "id": "seeds",
+    "name": {
+      "str": "种子"
+    },
+    "density": 0.6,
+    "edible": true,
+    "rotting": true,
+    "bullet_res": 0,
+    "bash_res": 0,
+    "cut_res": 0,
+    "fire_resist": 0.2,
+    "acid_resist": 0.4,
+    "elec_resist": 0.01,
+    "chip_resist": 0,
+    "specific_heat_liquid": 1.67,
+    "specific_heat_solid": 1.8,
+    "latent_heat": 270,
+    "color": "white",
+    "phase": "solid",
+    "damaged_material": "seed",
+    "soft": false,
+    "weight": 10,
+    "volume": 0.05,
+    "calories": 100,
+    "vitamins": [["protein", 10]],
+    "flags": {
+      "COOKED": true,
+      "DRIED": true,
+      "SEED": true,
+      "EDIBLE": true
+    },
+    "bash_dmg_verb": "压碎",
+    "cut_dmg_verb": "切割",
+    "dmg_adj": ["完整", "裂开", "碎裂", "发芽"]
+  },
+  {
+    "//": "食盐",
+    "type": "material",
+    "id": "salt",
+    "name": {
+      "str": "食盐"
+    },
+    "density": 0.4,
+    "edible": true,
+    "rotting": false,
+    "bullet_res": 0.1,
+    "bash_res": 0.1,
+    "cut_res": 0.1,
+    "fire_resist": 0.2,
+    "acid_resist": 0.5,
+    "elec_resist": 0.01,
+    "chip_resist": 0.1,
+    "specific_heat_liquid": 0.88,
+    "specific_heat_solid": 0.88,
+    "latent_heat": 30.3,
+    "color": "white",
+    "state": "solid",
+    "damaged_material": "salt",
+    "soft": false,
+    "weight": 10,
+    "volume": 0.05,
+    "calories": 0,
+    "flags": {
+      "COOKED": true,
+      "DRIED": true,
+      "POWDER": true,
+      "SPICE": true,
+      "EDIBLE": true
+    },
+    "bash_dmg_verb": "磨碎",
+    "cut_dmg_verb": "剐蹭",
+    "dmg_adj": ["完整", "碎裂", "粉碎", "溶解"]
+  },
+  {
+    "type": "material",
+    "id": "vegetables",
+    "name": {
+      "str": "蔬菜"
+    },
+    "density": 0.5,
+    "edible": true,
+    "rotting": true,
+    "bullet_res": 0,
+    "bash_res": 0,
+    "cut_res": 0,
+    "fire_resist": 0,
+    "acid_resist": 0.5,
+    "elec_resist": 0,
+    "chip_resist": 0,
+    "damaged_material": "rotten_veggy",
+    "soft": false,
+    "flags": ["COOKED", "EDIBLE"],
+    "material_flags": ["VEGETABLE"],
+    "weight": 100,
+    "volume": 0.25,
+    "calories": 20,
+    "vitamins": [
+      ["vitA", 10],
+      ["vitC", 20],
+      ["calcium", 5],
+      ["iron", 2]
+    ],
+    "addiction_potential": 0,
+    "bash_dmg_verb": "捣碎",
+    "cut_dmg_verb": "切开",
+    "container": "Pam_Bag",
+    "dmg_adj": ["新鲜", "枯萎", "腐烂", "发霉"]
+  }
 ]

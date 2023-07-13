@@ -1,174 +1,159 @@
 [
-    {
-        "//": "面条汤",
-        "type": "COMESTIBLE",
-        "id": "Pam_noodle_soup",
-        "name": {
-            "str": "面条汤",
-            "str_pl": "面条汤"
-        },
-        "weight": 400,
-        "color": "yellow",
-        "spoils_in": 5,
-        "container": null,
-        "comestible_type": "FOOD",
-        "symbol": "&",
-        "quench": 3,
-        "healthy": 8,
-        "calories": 220,
-        "description": "这是一种浓郁鲜美的面条汤,由鸡汤调味而成,营养丰富,口感滑顺爽口。",
-        "price": 5,
-        "material": [
-            "water",
-            "wheat"
-        ],
-        "volume": 300,
-        "phase": "liquid",
-        "charges": 6,
-        "flags": {
-            "EATEN_HOT": 1,
-            "USE_EAT_VERB": 1
-        },
-        "vitamins": [],
-        "fun": 7,
-        "addiction_potential": 0
+  {
+    "//": "面条汤",
+    "type": "COMESTIBLE",
+    "id": "Pam_noodle_soup",
+    "name": {
+      "str": "面条汤",
+      "str_pl": "面条汤"
     },
-    {
-        "//": "土豆汤",
-        "type": "COMESTIBLE",
-        "id": "Pam_potato_soup",
-        "name": {
-            "str": "土豆汤",
-            "str_pl": "土豆汤"
-        },
-        "weight": 500,
-        "color": "white",
-        "spoils_in": 4,
-        "container": "pot",
-        "comestible_type": "FOOD",
-        "symbol": "#",
-        "quench": 4,
-        "healthy": 10,
-        "calories": 350,
-        "description": "这是一种浓稠的土豆汤,由土豆,水和乳酪打达成,口味浓郁香浓,营养丰富。",
-        "price": 4,
-        "material": [
-            "water",
-            "vegetables"
-        ],
-        "volume": 500,
-        "phase": "liquid",
-        "charges": 8,
-        "flags": {
-            "EATEN_HOT": 1,
-            "USE_EAT_VERB": 1
-        },
-        "vitamins": [],
-        "fun": 5,
-        "addiction_potential": 0
+    "weight": 400,
+    "color": "yellow",
+    "spoils_in": 5,
+    "container": null,
+    "comestible_type": "FOOD",
+    "symbol": "&",
+    "quench": 3,
+    "healthy": 8,
+    "calories": 220,
+    "description": "这是一种浓郁鲜美的面条汤,由鸡汤调味而成,营养丰富,口感滑顺爽口。",
+    "price": 5,
+    "material": ["water", "wheat"],
+    "volume": 300,
+    "phase": "liquid",
+    "charges": 6,
+    "flags": {
+      "EATEN_HOT": 1,
+      "USE_EAT_VERB": 1
     },
-    {
-        "//": "胡萝卜汤",
-        "type": "COMESTIBLE",
-        "id": "Pam_carrot_soup",
-        "name": {
-            "str": "胡萝卜汤",
-            "str_pl": "胡萝卜汤"
-        },
-        "weight": 450,
-        "color": "white",
-        "spoils_in": 3,
-        "container": null,
-        "comestible_type": "FOOD",
-        "symbol": "%",
-        "quench": 3,
-        "healthy": 9,
-        "calories": 280,
-        "description": "这是一种以胡萝卜,鸡汤和香料熬制而成的汤,营养丰富,颜色橙黄亮丽,口感鲜美爽口。",
-        "price": 6.5,
-        "material": [
-            "water",
-            "vegetables"
-        ],
-        "volume": 400,
-        "phase": "liquid",
-        "charges": 7,
-        "flags": {
-            "EATEN_HOT": 1,
-            "USE_EAT_VERB": 1
-        },
-        "vitamins": [],
-        "fun": 6,
-        "addiction_potential": 0
+    "vitamins": [],
+    "fun": 7,
+    "addiction_potential": 0
+  },
+  {
+    "//": "土豆汤",
+    "type": "COMESTIBLE",
+    "id": "Pam_potato_soup",
+    "name": {
+      "str": "土豆汤",
+      "str_pl": "土豆汤"
     },
-    {
-        "//": "南瓜汤",
-        "type": "COMESTIBLE",
-        "id": "Pam_pumpkin_soup",
-        "name": {
-            "str": "南瓜汤",
-            "str_pl": "南瓜汤"
-        },
-        "weight": 500,
-        "color": "white",
-        "spoils_in": "4 days",
-        "container": "pot",
-        "comestible_type": "FOOD",
-        "symbol": "@",
-        "quench": 5,
-        "healthy": 15,
-        "calories": 450,
-        "description": "这是一种甜美浓郁的南瓜汤,由南瓜,鸡汤和乳酪熬制而成,色彩橘黄,营养丰富,口感滑顺香醇。",
-        "price": 7,
-        "material": [
-            "water",
-            "vegetables"
-        ],
-        "volume": 400,
-        "phase": "liquid",
-        "charges": 5,
-        "flags": {
-            "EATEN_HOT": 1,
-            "USE_EAT_VERB": 1
-        },
-        "vitamins": [],
-        "fun": 10,
-        "addiction_potential": 0,
-        "cooks_into": "cooked_pumpkin_soup"
+    "weight": 500,
+    "color": "white",
+    "spoils_in": 4,
+    "container": "pot",
+    "comestible_type": "FOOD",
+    "symbol": "#",
+    "quench": 4,
+    "healthy": 10,
+    "calories": 350,
+    "description": "这是一种浓稠的土豆汤,由土豆,水和乳酪打达成,口味浓郁香浓,营养丰富。",
+    "price": 4,
+    "material": ["water", "vegetables"],
+    "volume": 500,
+    "phase": "liquid",
+    "charges": 8,
+    "flags": {
+      "EATEN_HOT": 1,
+      "USE_EAT_VERB": 1
     },
-    {
-        "//": "底汤",
-        "type": "COMESTIBLE",
-        "id": "Pam_stock",
-        "name": {
-            "str": "底汤",
-            "str_pl": "底汤"
-        },
-        "weight": 1000,
-        "color": "white",
-        "spoils_in": 4,
-        "container": null,
-        "comestible_type": "FOOD",
-        "symbol": "$",
-        "quench": 4,
-        "healthy": 5,
-        "calories": 75,
-        "description": "这是一种浓稠的鸡底汤,由鸡骨熬制而成,色彩浅棕,口感浓郁,常被用来增强其他汤羹的营养与口感。",
-        "price": 3.5,
-        "material": [
-            "water",
-            "flesh"
-        ],
-        "volume": 600,
-        "phase": "liquid",
-        "charges": 1,
-        "flags": {
-            "EATEN_HOT": 1,
-            "USE_EAT_VERB": 1
-        },
-        "vitamins": [],
-        "fun": 5,
-        "addiction_potential": 0,
-        "cooks_into": "cooked_stock"
-    }
+    "vitamins": [],
+    "fun": 5,
+    "addiction_potential": 0
+  },
+  {
+    "//": "胡萝卜汤",
+    "type": "COMESTIBLE",
+    "id": "Pam_carrot_soup",
+    "name": {
+      "str": "胡萝卜汤",
+      "str_pl": "胡萝卜汤"
+    },
+    "weight": 450,
+    "color": "white",
+    "spoils_in": 3,
+    "container": null,
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "quench": 3,
+    "healthy": 9,
+    "calories": 280,
+    "description": "这是一种以胡萝卜,鸡汤和香料熬制而成的汤,营养丰富,颜色橙黄亮丽,口感鲜美爽口。",
+    "price": 6.5,
+    "material": ["water", "vegetables"],
+    "volume": 400,
+    "phase": "liquid",
+    "charges": 7,
+    "flags": {
+      "EATEN_HOT": 1,
+      "USE_EAT_VERB": 1
+    },
+    "vitamins": [],
+    "fun": 6,
+    "addiction_potential": 0
+  },
+  {
+    "//": "南瓜汤",
+    "type": "COMESTIBLE",
+    "id": "Pam_pumpkin_soup",
+    "name": {
+      "str": "南瓜汤",
+      "str_pl": "南瓜汤"
+    },
+    "weight": 500,
+    "color": "white",
+    "spoils_in": "4 days",
+    "container": "pot",
+    "comestible_type": "FOOD",
+    "symbol": "@",
+    "quench": 5,
+    "healthy": 15,
+    "calories": 450,
+    "description": "这是一种甜美浓郁的南瓜汤,由南瓜,鸡汤和乳酪熬制而成,色彩橘黄,营养丰富,口感滑顺香醇。",
+    "price": 7,
+    "material": ["water", "vegetables"],
+    "volume": 400,
+    "phase": "liquid",
+    "charges": 5,
+    "flags": {
+      "EATEN_HOT": 1,
+      "USE_EAT_VERB": 1
+    },
+    "vitamins": [],
+    "fun": 10,
+    "addiction_potential": 0,
+    "cooks_into": "cooked_pumpkin_soup"
+  },
+  {
+    "//": "底汤",
+    "type": "COMESTIBLE",
+    "id": "Pam_stock",
+    "name": {
+      "str": "底汤",
+      "str_pl": "底汤"
+    },
+    "weight": 1000,
+    "color": "white",
+    "spoils_in": 4,
+    "container": null,
+    "comestible_type": "FOOD",
+    "symbol": "$",
+    "quench": 4,
+    "healthy": 5,
+    "calories": 75,
+    "description": "这是一种浓稠的鸡底汤,由鸡骨熬制而成,色彩浅棕,口感浓郁,常被用来增强其他汤羹的营养与口感。",
+    "price": 3.5,
+    "material": ["water", "flesh"],
+    "volume": 600,
+    "phase": "liquid",
+    "charges": 1,
+    "flags": {
+      "EATEN_HOT": 1,
+      "USE_EAT_VERB": 1
+    },
+    "vitamins": [],
+    "fun": 5,
+    "addiction_potential": 0,
+    "cooks_into": "cooked_stock"
+  }
 ]

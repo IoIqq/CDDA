@@ -13,14 +13,8 @@
     "spoils_in": "5 days",
     "calories": 300,
     "charges": 1,
-    "flags": [
-      "EATEN_HOT",
-      "EATEN_COLD"
-    ],
-    "material": [
-      "wheat",
-      "egg"
-    ],
+    "flags": ["EATEN_HOT", "EATEN_COLD"],
+    "material": ["wheat", "egg"],
     "vitamins": [],
     "color": "brown",
     "container": "Pam_Bag",
@@ -50,10 +44,7 @@
     "comestible_type": "FOOD",
     "symbol": "%",
     "nutrition": 150,
-    "material": [
-      "wheat",
-      "milk"
-    ],
+    "material": ["wheat", "milk"],
     "volume": "8 ml",
     "charges": 1,
     "flags": {
@@ -87,14 +78,8 @@
     "spoils_in": "60 days",
     "calories": 150,
     "charges": 1,
-    "flags": [
-      "EATEN_HOT",
-      "EATEN_COLD"
-    ],
-    "material": [
-      "wheat",
-      "egg"
-    ],
+    "flags": ["EATEN_HOT", "EATEN_COLD"],
+    "material": ["wheat", "egg"],
     "vitamins": [],
     "color": "brown",
     "container": "Pam_Bag",
@@ -120,14 +105,8 @@
     "spoils_in": "365 days",
     "calories": 280,
     "charges": 1,
-    "flags": [
-      "EATEN_COLD"
-    ],
-    "material": [
-      "wheat",
-      "egg",
-      "coco_beans"
-    ],
+    "flags": ["EATEN_COLD"],
+    "material": ["wheat", "egg", "coco_beans"],
     "vitamins": [],
     "color": "green",
     "container": "Pam_Bag",
@@ -155,14 +134,8 @@
     "spoils_in": "3 days",
     "calories": 120,
     "charges": 1,
-    "flags": [
-      "EATEN_HOT",
-      "EATEN_COLD"
-    ],
-    "material": [
-      "wheat",
-      "wheat"
-    ],
+    "flags": ["EATEN_HOT", "EATEN_COLD"],
+    "material": ["wheat", "wheat"],
     "vitamins": [],
     "color": "brown",
     "container": "Pam_Bag",
@@ -189,15 +162,8 @@
     "spoils_in": "10 days",
     "calories": 90,
     "charges": 1,
-    "flags": [
-      "EATEN_HOT",
-      "EATEN_COLD"
-    ],
-    "material": [
-      "milk",
-      "cheese",
-      "sugar"
-    ],
+    "flags": ["EATEN_HOT", "EATEN_COLD"],
+    "material": ["milk", "cheese", "sugar"],
     "vitamins": [],
     "color": "yellow",
     "container": "Pam_Bag",
@@ -224,24 +190,11 @@
     "spoils_in": "10 days",
     "calories": 150,
     "charges": 1,
-    "flags": [
-      "EATEN_HOT",
-      "EATEN_COLD"
-    ],
-    "material": [
-      "wheat",
-      "milk",
-      "sugar"
-    ],
+    "flags": ["EATEN_HOT", "EATEN_COLD"],
+    "material": ["wheat", "milk", "sugar"],
     "vitamins": [
-      [
-        "vitA",
-        1
-      ],
-      [
-        "vitD",
-        1
-      ]
+      ["vitA", 1],
+      ["vitD", 1]
     ],
     "color": "white",
     "container": "Pam_Bag",
@@ -268,20 +221,9 @@
     "spoils_in": "15 days",
     "calories": 350,
     "charges": 4,
-    "flags": [
-      "EATEN_HOT"
-    ],
-    "material": [
-      "wheat",
-      "egg",
-      "sugar"
-    ],
-    "vitamins": [
-      [
-        "vitB",
-        2
-      ]
-    ],
+    "flags": ["EATEN_HOT"],
+    "material": ["wheat", "egg", "sugar"],
+    "vitamins": [["vitB", 2]],
     "color": "red",
     "container": null,
     "symbol": "%",
@@ -313,20 +255,9 @@
     "max_goodness": 10,
     "spoils_velocity": 0.0005,
     "stack_size": 20,
-    "flags": [
-      "EATEN_HOT",
-      "EATEN_COLD"
-    ],
-    "material": [
-      "wheat",
-      "sugar"
-    ],
-    "vitamins": [
-      [
-        "vitC",
-        2
-      ]
-    ],
+    "flags": ["EATEN_HOT", "EATEN_COLD"],
+    "material": ["wheat", "sugar"],
+    "vitamins": [["vitC", 2]],
     "color": "brown",
     "symbol": "&",
     "phase": "solid",
@@ -353,25 +284,11 @@
     "max_goodness": 10,
     "spoils_velocity": 0.001,
     "stack_size": 20,
-    "flags": [
-      "EATEN_HOT",
-      "EATEN_COLD"
-    ],
-    "material": [
-      "wheat",
-      "milk",
-      "fruit",
-      "sugar"
-    ],
+    "flags": ["EATEN_HOT", "EATEN_COLD"],
+    "material": ["wheat", "milk", "fruit", "sugar"],
     "vitamins": [
-      [
-        "vitA",
-        1
-      ],
-      [
-        "vitC",
-        2
-      ]
+      ["vitA", 1],
+      ["vitC", 2]
     ],
     "color": "brown",
     "symbol": "&",
@@ -399,20 +316,9 @@
     "max_goodness": 10,
     "spoils_velocity": 0.002,
     "stack_size": 20,
-    "flags": [
-      "EATEN_HOT",
-      "EATEN_COLD"
-    ],
-    "material": [
-      "wheat",
-      "sugar"
-    ],
-    "vitamins": [
-      [
-        "vitA",
-        1
-      ]
-    ],
+    "flags": ["EATEN_HOT", "EATEN_COLD"],
+    "material": ["wheat", "sugar"],
+    "vitamins": [["vitA", 1]],
     "color": "brown",
     "symbol": "&",
     "phase": "solid",
@@ -439,20 +345,9 @@
     "max_goodness": 10,
     "spoils_velocity": 0.001,
     "stack_size": 20,
-    "flags": [
-      "EATEN_HOT",
-      "EATEN_COLD"
-    ],
-    "material": [
-      "wheat",
-      "sugar"
-    ],
-    "vitamins": [
-      [
-        "vitB",
-        1
-      ]
-    ],
+    "flags": ["EATEN_HOT", "EATEN_COLD"],
+    "material": ["wheat", "sugar"],
+    "vitamins": [["vitB", 1]],
     "color": "white",
     "symbol": "%",
     "phase": "solid",
@@ -479,24 +374,11 @@
     "max_goodness": 10,
     "spoils_velocity": 0.03,
     "stack_size": 10,
-    "flags": [
-      "EATEN_HOT",
-      "EATEN_COLD"
-    ],
-    "material": [
-      "wheat",
-      "flesh",
-      "veggy"
-    ],
+    "flags": ["EATEN_HOT", "EATEN_COLD"],
+    "material": ["wheat", "flesh", "veggy"],
     "vitamins": [
-      [
-        "vitA",
-        1
-      ],
-      [
-        "vitC",
-        1
-      ]
+      ["vitA", 1],
+      ["vitC", 1]
     ],
     "color": "brown",
     "symbol": "&",
@@ -524,19 +406,9 @@
     "max_goodness": 10,
     "spoils_velocity": 0,
     "stack_size": 50,
-    "flags": [
-      "EATEN_COLD"
-    ],
-    "material": [
-      "wheat",
-      "salt"
-    ],
-    "vitamins": [
-      [
-        "vitB",
-        1
-      ]
-    ],
+    "flags": ["EATEN_COLD"],
+    "material": ["wheat", "salt"],
+    "vitamins": [["vitB", 1]],
     "color": "white",
     "symbol": "%",
     "phase": "solid",

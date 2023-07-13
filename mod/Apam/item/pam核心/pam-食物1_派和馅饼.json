@@ -1,126 +1,108 @@
 [
-    {
-        "type": "COMESTIBLE",
-        "id": "Pam_apple_pie",
-        "name": {
-            "str": "苹果派",
-            "str_pl": "苹果派"
-        },
-        "description": "这是一种以苹果馅料和酥皮包裹而成的甜点，酸甜适度，富含维生素和纤维，口感酥脆香甜。它最好在热的时候食用，可以让你感到温暖和满足。",
-        "weight": "350 g",
-        "color": "yellow",
-        "spoils_in": "3 days",
-        "container": "null",
-        "comestible_type": "FOOD",
-        "symbol": "&",
-        "quench": 2,
-        "healthy": 3,
-        "calories": 550,
-        "price": 1000,
-        "material": [
-            "apple",
-            "wheat"
-        ],
-        "volume": "500 ml",
-        "phase": "solid",
-        "charges": 6,
-        "flags": [
-            "EATEN_HOT",
-            "USE_EAT_VERB"
-        ]
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_apple_pie",
+    "name": {
+      "str": "苹果派",
+      "str_pl": "苹果派"
     },
-    {
-        "type": "COMESTIBLE",
-        "id": "Pam_sweet_berry_pie",
-        "name": {
-            "str": "甜浆果派",
-            "str_pl": "甜浆果派"
-        },
-        "description": "这是一种以浆果馅料和酥皮包裹而成的甜点，酸甜适度，营养丰富，口感酥脆浆果香甜。它最好在热的时候食用，可以让你感到清爽和愉悦。",
-        "weight": "300 g",
-        "color": "magenta",
-        "spoils_in": "2 days",
-        "container": "null",
-        "comestible_type": "FOOD",
-        "symbol": "&",
-        "quench": 3,
-        "healthy": 5,
-        "calories": 650,
-        "price": 1200,
-        "material": [
-            "berry",
-            "wheat"
-        ],
-        "volume": "500 ml",
-        "phase": "solid",
-        "charges": 5,
-        "flags": [
-            "EATEN_HOT",
-            "USE_EAT_VERB"
-        ]
+    "description": "这是一种以苹果馅料和酥皮包裹而成的甜点，酸甜适度，富含维生素和纤维，口感酥脆香甜。它最好在热的时候食用，可以让你感到温暖和满足。",
+    "weight": "350 g",
+    "color": "yellow",
+    "spoils_in": "3 days",
+    "container": "null",
+    "comestible_type": "FOOD",
+    "symbol": "&",
+    "quench": 2,
+    "healthy": 3,
+    "calories": 550,
+    "price": 1000,
+    "material": ["apple", "wheat"],
+    "volume": "500 ml",
+    "phase": "solid",
+    "charges": 6,
+    "flags": ["EATEN_HOT", "USE_EAT_VERB"]
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_sweet_berry_pie",
+    "name": {
+      "str": "甜浆果派",
+      "str_pl": "甜浆果派"
     },
-    {
-        "//": "鸡肉派",
-        "type": "COMESTIBLE",
-        "id": "Pam_chicken_pie",
-        "name": {
-            "str": "鸡肉派",
-            "str_pl": "鸡肉派"
-        },
-        "description": "这是一种以鸡肉馅料和酥皮包裹而成的美食，营养丰富，口感酥脆香鸡。它最好在热的时候食用，可以让你感到饱足和满意。",
-        "weight": 500,
-        "color": "brown",
-        "spoils_in": 2,
-        "container": null,
-        "comestible_type": "FOOD",
-        "symbol": "&",
-        "quench": 1,
-        "healthy": 6,
-        "calories": 800,
-        "price": 1500,
-        "material": [
-            "flesh",
-            "wheat"
-        ],
-        "volume": 0.75,
-        "phase": "solid",
-        "charges": 4,
-        "flags": {
-            "EATEN_HOT": 1,
-            "USE_EAT_VERB": 1
-        },
-        "addiction_potential": 3
+    "description": "这是一种以浆果馅料和酥皮包裹而成的甜点，酸甜适度，营养丰富，口感酥脆浆果香甜。它最好在热的时候食用，可以让你感到清爽和愉悦。",
+    "weight": "300 g",
+    "color": "magenta",
+    "spoils_in": "2 days",
+    "container": "null",
+    "comestible_type": "FOOD",
+    "symbol": "&",
+    "quench": 3,
+    "healthy": 5,
+    "calories": 650,
+    "price": 1200,
+    "material": ["berry", "wheat"],
+    "volume": "500 ml",
+    "phase": "solid",
+    "charges": 5,
+    "flags": ["EATEN_HOT", "USE_EAT_VERB"]
+  },
+  {
+    "//": "鸡肉派",
+    "type": "COMESTIBLE",
+    "id": "Pam_chicken_pie",
+    "name": {
+      "str": "鸡肉派",
+      "str_pl": "鸡肉派"
     },
-    {
-        "//": "水果松脆饼",
-        "type": "COMESTIBLE",
-        "id": "Pam_fruit_crisp",
-        "name": {
-            "str": "水果松脆饼",
-            "str_pl": "水果松脆饼"
-        },
-        "description": "这是一种以水果馅料和糖霜包裹在饼皮上而成的甜点，酸甜适度，营养丰富，口感酥脆香甜。它最好在热的时候食用，可以让你感到清新和开心。",
-        "weight": 200,
-        "color": "pink",
-        "spoils_in": 2,
-        "container": null,
-        "comestible_type": "FOOD",
-        "symbol": "&",
-        "quench": 3,
-        "healthy": 5,
-        "calories": 450,
-        "price": 800,
-        "material": [
-            "fruit",
-            "sugar"
-        ],
-        "volume": 0.25,
-        "phase": "solid",
-        "charges": 8,
-        "flags": {
-            "EATEN_HOT": 1,
-            "USE_EAT_VERB": 1
-        },
-        "addiction_potential": 3
-    }
+    "description": "这是一种以鸡肉馅料和酥皮包裹而成的美食，营养丰富，口感酥脆香鸡。它最好在热的时候食用，可以让你感到饱足和满意。",
+    "weight": 500,
+    "color": "brown",
+    "spoils_in": 2,
+    "container": null,
+    "comestible_type": "FOOD",
+    "symbol": "&",
+    "quench": 1,
+    "healthy": 6,
+    "calories": 800,
+    "price": 1500,
+    "material": ["flesh", "wheat"],
+    "volume": 0.75,
+    "phase": "solid",
+    "charges": 4,
+    "flags": {
+      "EATEN_HOT": 1,
+      "USE_EAT_VERB": 1
+    },
+    "addiction_potential": 3
+  },
+  {
+    "//": "水果松脆饼",
+    "type": "COMESTIBLE",
+    "id": "Pam_fruit_crisp",
+    "name": {
+      "str": "水果松脆饼",
+      "str_pl": "水果松脆饼"
+    },
+    "description": "这是一种以水果馅料和糖霜包裹在饼皮上而成的甜点，酸甜适度，营养丰富，口感酥脆香甜。它最好在热的时候食用，可以让你感到清新和开心。",
+    "weight": 200,
+    "color": "pink",
+    "spoils_in": 2,
+    "container": null,
+    "comestible_type": "FOOD",
+    "symbol": "&",
+    "quench": 3,
+    "healthy": 5,
+    "calories": 450,
+    "price": 800,
+    "material": ["fruit", "sugar"],
+    "volume": 0.25,
+    "phase": "solid",
+    "charges": 8,
+    "flags": {
+      "EATEN_HOT": 1,
+      "USE_EAT_VERB": 1
+    },
+    "addiction_potential": 3
+  }
 ]

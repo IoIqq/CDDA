@@ -1,353 +1,223 @@
 [
-    {
-        "id": "Pam_Bakeware",
-        "name": {
-            "str": "烤盘",
-            "str_pl": "烤盘"
-        },
-        "type": "TOOL",
-        "weight": 800,
-        "volume": 3.5,
-        "longest_side": 35,
-        "price": 500,
-        "price_postapoc": 50,
-        "symbol": "&",
-        "material": [
-            "steel"
-        ],
-        "qualities": [
-            [
-                "COOK",
-                4
-            ],
-            [
-                "BOIL",
-                1
-            ],
-            [
-                "CONTAIN",
-                1
-            ]
-        ],
-        "color": "light_gray",
-        "description": "一个用于烘烤食物的大铁盘，可以承受高温，但需要清洁和涂油。",
-        "flags": [
-            "LOCKED",
-            "COOK_POT"
-        ],
-        "phase": "solid"
+  {
+    "id": "Pam_Bakeware",
+    "name": {
+      "str": "烤盘",
+      "str_pl": "烤盘"
     },
-    {
-        "id": "Pam_Cutting_Board",
-        "name": {
-            "str": "砧板及刀",
-            "str_pl": "砧板及刀"
-        },
-        "type": "TOOL",
-        "description": "一套用于切割食物的工具，包括一把锋利的刀和一个坚固的砧板。",
-        "weight": 1200,
-        "volume": 1.5,
-        "price": 300,
-        "price_postapoc": 20,
-        "symbol": "&",
-        "material": [
-            "steel",
-            "wood"
-        ],
-        "longest_side": 28,
-        "qualities": [
-            [
-                "BUTCHER",
-                14
-            ],
-            [
-                "CUT_FINE",
-                4
-            ],
-            [
-                "CUT",
-                5
-            ]
-        ],
-        "color": "brown",
-        "flags": [
-            "DURABLE_MELEE",
-            "CUTTING_BOARD"
-        ],
-        "phase": "solid"
+    "type": "TOOL",
+    "weight": 800,
+    "volume": 3.5,
+    "longest_side": 35,
+    "price": 500,
+    "price_postapoc": 50,
+    "symbol": "&",
+    "material": ["steel"],
+    "qualities": [
+      ["COOK", 4],
+      ["BOIL", 1],
+      ["CONTAIN", 1]
+    ],
+    "color": "light_gray",
+    "description": "一个用于烘烤食物的大铁盘，可以承受高温，但需要清洁和涂油。",
+    "flags": ["LOCKED", "COOK_POT"],
+    "phase": "solid"
+  },
+  {
+    "id": "Pam_Cutting_Board",
+    "name": {
+      "str": "砧板及刀",
+      "str_pl": "砧板及刀"
     },
-    {
-        "id": "Pam_Juicer",
-        "name": {
-            "str": "榨汁机",
-            "str_pl": "榨汁机"
-        },
-        "type": "TOOL",
-        "description": "一台可以榨取新鲜果汁的手动机器。",
-        "weight": 2270,
-        "volume": 2,
-        "longest_side": "18cm",
-        "price": 130,
-        "price_postapoc": 30,
-        "symbol": "&",
-        "material": [
-            "copper",
-            "glass",
-            "steel"
-        ],
-        "qualities": [
-            [
-                "COOK",
-                2
-            ],
-            [
-                "CONTAIN",
-                1
-            ],
-            [
-                "CHEM",
-                1
-            ]
-        ],
-        "color": "white",
-        "flags": [
-            "DURABLE_MELEE"
-        ],
-        "phase": "solid",
-        "bash": 6,
-        "to_hit": 4,
-        "max_volume": 10000,
-        "technique": null,
-        "required_str": 8,
-        "attack_eff": "BLUDGEON",
-        "usage_methods": [
-            [
-                "CONTAIN",
-                "contain fruit and juice"
-            ],
-            [
-                "COOK",
-                "heat liquid inside the juicer"
-            ],
-            [
-                "CHEM",
-                "separate chemicals using juicer parts"
-            ]
-        ]
+    "type": "TOOL",
+    "description": "一套用于切割食物的工具，包括一把锋利的刀和一个坚固的砧板。",
+    "weight": 1200,
+    "volume": 1.5,
+    "price": 300,
+    "price_postapoc": 20,
+    "symbol": "&",
+    "material": ["steel", "wood"],
+    "longest_side": 28,
+    "qualities": [
+      ["BUTCHER", 14],
+      ["CUT_FINE", 4],
+      ["CUT", 5]
+    ],
+    "color": "brown",
+    "flags": ["DURABLE_MELEE", "CUTTING_BOARD"],
+    "phase": "solid"
+  },
+  {
+    "id": "Pam_Juicer",
+    "name": {
+      "str": "榨汁机",
+      "str_pl": "榨汁机"
     },
-    {
-        "id": "Pam_Grinder",
-        "name": {
-            "str": "绞肉钵",
-            "str_pl": "绞肉钵"
-        },
-        "type": "TOOL",
-        "description": "一个用来研磨食物的绞肉钵。它由一块坚硬的石头制成，可以用来捣碎或者粉碎各种物质。它也可以用来装载物品。",
-        "weight": 500,
-        "volume": 0.5,
-        "longest_side": 15,
-        "price": 900,
-        "price_postapoc": 10,
-        "symbol": "&",
-        "material": [
-            "stone"
-        ],
-        "qualities": [
-            [
-                "HAMMER",
-                2
-            ],
-            [
-                "FINE_GRIND",
-                1
-            ],
-            [
-                "CONTAIN",
-                2
-            ]
-        ],
-        "color": "dark_gray",
-        "flags": [
-            "DURABLE_MELEE",
-            "MORTAR_AND_PESTLE"
-        ],
-        "phase": "solid"
+    "type": "TOOL",
+    "description": "一台可以榨取新鲜果汁的手动机器。",
+    "weight": 2270,
+    "volume": 2,
+    "longest_side": "18cm",
+    "price": 130,
+    "price_postapoc": 30,
+    "symbol": "&",
+    "material": ["copper", "glass", "steel"],
+    "qualities": [
+      ["COOK", 2],
+      ["CONTAIN", 1],
+      ["CHEM", 1]
+    ],
+    "color": "white",
+    "flags": ["DURABLE_MELEE"],
+    "phase": "solid",
+    "bash": 6,
+    "to_hit": 4,
+    "max_volume": 10000,
+    "technique": null,
+    "required_str": 8,
+    "attack_eff": "BLUDGEON",
+    "usage_methods": [
+      ["CONTAIN", "contain fruit and juice"],
+      ["COOK", "heat liquid inside the juicer"],
+      ["CHEM", "separate chemicals using juicer parts"]
+    ]
+  },
+  {
+    "id": "Pam_Grinder",
+    "name": {
+      "str": "绞肉钵",
+      "str_pl": "绞肉钵"
     },
-    {
-        "id": "Pam_Mixing_Bowl",
-        "name": {
-            "str": "搅拌钵",
-            "str_pl": "搅拌钵"
-        },
-        "type": "TOOL",
-        "description": "一个木制的搅拌钵，虽然不如石制的绞肉钵那么坚固，但是足够应对大部分烹饪需求。它可以用来混合各种食材或者液体。",
-        "weight": 360,
-        "volume": 1.5,
-        "longest_side": 15,
-        "price": 300,
-        "price_postapoc": 10,
-        "symbol": "&",
-        "material": [
-            "wood"
-        ],
-        "qualities": [
-            [
-                "CONTAIN",
-                2
-            ]
-        ],
-        "color": "brown",
-        "flags": [
-            "DURABLE_MELEE",
-            "MIXING_BOWL"
-        ],
-        "phase": "solid"
+    "type": "TOOL",
+    "description": "一个用来研磨食物的绞肉钵。它由一块坚硬的石头制成，可以用来捣碎或者粉碎各种物质。它也可以用来装载物品。",
+    "weight": 500,
+    "volume": 0.5,
+    "longest_side": 15,
+    "price": 900,
+    "price_postapoc": 10,
+    "symbol": "&",
+    "material": ["stone"],
+    "qualities": [
+      ["HAMMER", 2],
+      ["FINE_GRIND", 1],
+      ["CONTAIN", 2]
+    ],
+    "color": "dark_gray",
+    "flags": ["DURABLE_MELEE", "MORTAR_AND_PESTLE"],
+    "phase": "solid"
+  },
+  {
+    "id": "Pam_Mixing_Bowl",
+    "name": {
+      "str": "搅拌钵",
+      "str_pl": "搅拌钵"
     },
-    {
-        "id": "Pam_Pot",
-        "name": {
-            "str": "锅",
-            "str_pl": "锅"
-        },
-        "type": "TOOL",
-        "description": "一个用于烹饪食物的钢制锅，可以用来煮沸或者炒炸各种物质。它比普通的锅更加坚固和耐用。",
-        "weight": 1500,
-        "volume": 3.5,
-        "price": 2000,
-        "price_postapoc": 50,
-        "symbol": "&",
-        "material": [
-            "steel"
-        ],
-        "qualities": [
-            [
-                "CONTAIN",
-                2
-            ],
-            [
-                "COOK",
-                3
-            ],
-            [
-                "BOIL",
-                3
-            ]
-        ],
-        "color": "light_gray",
-        "flags": [
-            "DURABLE_MELEE",
-            "POT"
-        ],
-        "phase": "solid"
+    "type": "TOOL",
+    "description": "一个木制的搅拌钵，虽然不如石制的绞肉钵那么坚固，但是足够应对大部分烹饪需求。它可以用来混合各种食材或者液体。",
+    "weight": 360,
+    "volume": 1.5,
+    "longest_side": 15,
+    "price": 300,
+    "price_postapoc": 10,
+    "symbol": "&",
+    "material": ["wood"],
+    "qualities": [["CONTAIN", 2]],
+    "color": "brown",
+    "flags": ["DURABLE_MELEE", "MIXING_BOWL"],
+    "phase": "solid"
+  },
+  {
+    "id": "Pam_Pot",
+    "name": {
+      "str": "锅",
+      "str_pl": "锅"
     },
-    {
-        "id": "Pam_Roller",
-        "name": {
-            "str": "擀面杖",
-            "str_pl": "擀面杖"
-        },
-        "type": "TOOL",
-        "description": "一根粗大的擀面杖，适合烹饪时使用，可以用来压平或者碾碎各种物质。但请不要将其放在不适当的地方。",
-        "weight": 810,
-        "volume": 0.5,
-        "price": 4900,
-        "price_postapoc": 150,
-        "symbol": "&",
-        "material": [
-            "wood"
-        ],
-        "qualities": [
-            [
-                "HAMMER",
-                2
-            ],
-            [
-                "GRIND",
-                1
-            ]
-        ],
-        "color": "brown",
-        "flags": [
-            "DURABLE_MELEE",
-            "ROLLER"
-        ],
-        "phase": "solid"
+    "type": "TOOL",
+    "description": "一个用于烹饪食物的钢制锅，可以用来煮沸或者炒炸各种物质。它比普通的锅更加坚固和耐用。",
+    "weight": 1500,
+    "volume": 3.5,
+    "price": 2000,
+    "price_postapoc": 50,
+    "symbol": "&",
+    "material": ["steel"],
+    "qualities": [
+      ["CONTAIN", 2],
+      ["COOK", 3],
+      ["BOIL", 3]
+    ],
+    "color": "light_gray",
+    "flags": ["DURABLE_MELEE", "POT"],
+    "phase": "solid"
+  },
+  {
+    "id": "Pam_Roller",
+    "name": {
+      "str": "擀面杖",
+      "str_pl": "擀面杖"
     },
-    {
-        "id": "Pam_Sauce_Pan",
-        "name": {
-            "str": "深平底锅",
-            "str_pl": "深平底锅"
-        },
-        "type": "TOOL",
-        "description": "一个深度适中的平底锅，非常适合烹饪各种食物。它可以用来煮沸或者炒炸各种物质。它比普通的锅更加坚固和耐用。",
-        "weight": 1500,
-        "volume": 3.5,
-        "price": 3500,
-        "price_postapoc": 100,
-        "symbol": "&",
-        "material": [
-            "steel"
-        ],
-        "qualities": [
-            [
-                "CONTAIN",
-                3
-            ],
-            [
-                "COOK",
-                4
-            ],
-            [
-                "BOIL",
-                5
-            ]
-        ],
-        "color": "light_gray",
-        "flags": [
-            "DURABLE_MELEE",
-            "POT"
-        ],
-        "phase": "solid"
+    "type": "TOOL",
+    "description": "一根粗大的擀面杖，适合烹饪时使用，可以用来压平或者碾碎各种物质。但请不要将其放在不适当的地方。",
+    "weight": 810,
+    "volume": 0.5,
+    "price": 4900,
+    "price_postapoc": 150,
+    "symbol": "&",
+    "material": ["wood"],
+    "qualities": [
+      ["HAMMER", 2],
+      ["GRIND", 1]
+    ],
+    "color": "brown",
+    "flags": ["DURABLE_MELEE", "ROLLER"],
+    "phase": "solid"
+  },
+  {
+    "id": "Pam_Sauce_Pan",
+    "name": {
+      "str": "深平底锅",
+      "str_pl": "深平底锅"
     },
-    {
-        "id": "Pam_Skillet",
-        "type": "TOOL",
-        "name": {
-            "str": "煎锅",
-            "str_pl": "煎锅"
-        },
-        "description": "一个用来煎培根等食物的铁制平底锅。它可以用来加热或者油炸各种物质。它比普通的平底锅更加坚固和耐用。",
-        "weight": 1000,
-        "volume": 2.5,
-        "price": 2000,
-        "price_postapoc": 50,
-        "symbol": "&",
-        "material": [
-            "steel"
-        ],
-        "material_damaged": "steel",
-        "qualities": [
-            [
-                "CONTAIN",
-                3
-            ],
-            [
-                "COOK",
-                5
-            ],
-            [
-                "BOIL",
-                4
-            ]
-        ],
-        "flags": [
-            "DURABLE_MELEE",
-            "SKILLET"
-        ],
-        "bash": 12,
-        "to_hit": 3,
-        "color": "dark_gray",
-        "phase": "solid"
-    }
+    "type": "TOOL",
+    "description": "一个深度适中的平底锅，非常适合烹饪各种食物。它可以用来煮沸或者炒炸各种物质。它比普通的锅更加坚固和耐用。",
+    "weight": 1500,
+    "volume": 3.5,
+    "price": 3500,
+    "price_postapoc": 100,
+    "symbol": "&",
+    "material": ["steel"],
+    "qualities": [
+      ["CONTAIN", 3],
+      ["COOK", 4],
+      ["BOIL", 5]
+    ],
+    "color": "light_gray",
+    "flags": ["DURABLE_MELEE", "POT"],
+    "phase": "solid"
+  },
+  {
+    "id": "Pam_Skillet",
+    "type": "TOOL",
+    "name": {
+      "str": "煎锅",
+      "str_pl": "煎锅"
+    },
+    "description": "一个用来煎培根等食物的铁制平底锅。它可以用来加热或者油炸各种物质。它比普通的平底锅更加坚固和耐用。",
+    "weight": 1000,
+    "volume": 2.5,
+    "price": 2000,
+    "price_postapoc": 50,
+    "symbol": "&",
+    "material": ["steel"],
+    "material_damaged": "steel",
+    "qualities": [
+      ["CONTAIN", 3],
+      ["COOK", 5],
+      ["BOIL", 4]
+    ],
+    "flags": ["DURABLE_MELEE", "SKILLET"],
+    "bash": 12,
+    "to_hit": 3,
+    "color": "dark_gray",
+    "phase": "solid"
+  }
 ]

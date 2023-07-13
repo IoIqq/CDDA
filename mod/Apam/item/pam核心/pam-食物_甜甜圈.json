@@ -1,117 +1,107 @@
 [
-    {
-        "type": "COMESTIBLE",
-        "id": "Pam_donut",
-        "name": {
-            "str": "甜甜圈(Donut)"
-        },
-        "vitamins": [],
-        "material": [
-            "wheat",
-            "oil"
-        ],
-        "weight": 100,
-        "color": "brown",
-        "spoils_in": 3,
-        "container": "Pam_Bag",
-        "comestible_type": "FOOD",
-        "symbol": "%",
-        "description": "这是一种圆环状的油炸面包，中间有一个圆形的空洞，表面撒上糖粉或糖浆，香甜可口。",
-        "price": 10,
-        "price_postapoc": 15,
-        "calories": 800,
-        "charges": 1,
-        "flags": {
-            "EDIBLE_FROZEN": 0,
-            "EATEN_HOT": 1,
-            "SWEET": 1
-        },
-        "fun": 8,
-        "phase": "solid",
-        "quench": 0,
-        "healthy": 5,
-        "addiction_potential": 3,
-        "cib_to_hit": 0,
-        "rand_eaten_msg": [
-            "吃下这个甜甜圈，你感受到了甜蜜的滋味。",
-            "甜甜圈的香甜味道让你心情愉悦。"
-        ]
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_donut",
+    "name": {
+      "str": "甜甜圈(Donut)"
     },
-    {
-        "type": "COMESTIBLE",
-        "id": "Pam_choco_donut",
-        "name": {
-            "str": "巧克力甜甜圈(Chocolate Donut)"
-        },
-        "vitamins": [],
-        "material": [
-            "wheat",
-            "oil",
-            "coco_beans"
-        ],
-        "weight": 120,
-        "color": "brown",
-        "spoils_in": 3,
-        "container": "Pam_Bag",
-        "comestible_type": "FOOD",
-        "symbol": "%",
-        "description": "这是一种圆环状的油炸面包，中间有一个圆形的空洞，表面覆盖巧克力酱和糖粉，香甜可口。",
-        "price": 15,
-        "price_postapoc": 20,
-        "calories": 1000,
-        "charges": 1,
-        "flags": {
-            "EDIBLE_FROZEN": 0,
-            "EATEN_HOT": 1,
-            "SWEET": 1
-        },
-        "fun": 10,
-        "phase": "solid",
-        "quench": 0,
-        "healthy": 5,
-        "addiction_potential": 4,
-        "cib_to_hit": 0,
-        "rand_eaten_msg": [
-            "吃下这个巧克力甜甜圈，你感受到了甜蜜的滋味。",
-            "巧克力甜甜圈的香甜味道让你心情愉悦。"
-        ]
+    "vitamins": [],
+    "material": ["wheat", "oil"],
+    "weight": 100,
+    "color": "brown",
+    "spoils_in": 3,
+    "container": "Pam_Bag",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "description": "这是一种圆环状的油炸面包，中间有一个圆形的空洞，表面撒上糖粉或糖浆，香甜可口。",
+    "price": 10,
+    "price_postapoc": 15,
+    "calories": 800,
+    "charges": 1,
+    "flags": {
+      "EDIBLE_FROZEN": 0,
+      "EATEN_HOT": 1,
+      "SWEET": 1
     },
-    {
-        "type": "COMESTIBLE",
-        "id": "Pam_jam_donut",
-        "name": {
-            "str": "果酱甜甜圈(Jam Donut)"
-        },
-        "vitamins": [],
-        "material": [
-            "wheat",
-            "oil"
-        ],
-        "weight": 110,
-        "color": "brown",
-        "spoils_in": 3,
-        "container": "Pam_Bag",
-        "comestible_type": "FOOD",
-        "symbol": "%",
-        "description": "这是一种圆环状的油炸面包，中间有一个圆形的空洞，表面覆盖糖浆和果酱，香甜可口。",
-        "price": 12,
-        "price_postapoc": 18,
-        "calories": 900,
-        "charges": 1,
-        "flags": {
-            "EDIBLE_FROZEN": 0,
-            "EATEN_HOT": 1,
-            "SWEET": 1
-        },
-        "fun": 12,
-        "phase": "solid",
-        "quench": 0,
-        "healthy": 5,
-        "addiction_potential": 3,
-        "cib_to_hit": 0,
-        "rand_eaten_msg": [
-            "吃下这个果酱甜甜圈，你感受到了甜蜜的滋味。",
-            "果酱甜甜圈的香甜味道让你心情愉悦。"
-        ]
-    }
+    "fun": 8,
+    "phase": "solid",
+    "quench": 0,
+    "healthy": 5,
+    "addiction_potential": 3,
+    "cib_to_hit": 0,
+    "rand_eaten_msg": [
+      "吃下这个甜甜圈，你感受到了甜蜜的滋味。",
+      "甜甜圈的香甜味道让你心情愉悦。"
+    ]
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_choco_donut",
+    "name": {
+      "str": "巧克力甜甜圈(Chocolate Donut)"
+    },
+    "vitamins": [],
+    "material": ["wheat", "oil", "coco_beans"],
+    "weight": 120,
+    "color": "brown",
+    "spoils_in": 3,
+    "container": "Pam_Bag",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "description": "这是一种圆环状的油炸面包，中间有一个圆形的空洞，表面覆盖巧克力酱和糖粉，香甜可口。",
+    "price": 15,
+    "price_postapoc": 20,
+    "calories": 1000,
+    "charges": 1,
+    "flags": {
+      "EDIBLE_FROZEN": 0,
+      "EATEN_HOT": 1,
+      "SWEET": 1
+    },
+    "fun": 10,
+    "phase": "solid",
+    "quench": 0,
+    "healthy": 5,
+    "addiction_potential": 4,
+    "cib_to_hit": 0,
+    "rand_eaten_msg": [
+      "吃下这个巧克力甜甜圈，你感受到了甜蜜的滋味。",
+      "巧克力甜甜圈的香甜味道让你心情愉悦。"
+    ]
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "Pam_jam_donut",
+    "name": {
+      "str": "果酱甜甜圈(Jam Donut)"
+    },
+    "vitamins": [],
+    "material": ["wheat", "oil"],
+    "weight": 110,
+    "color": "brown",
+    "spoils_in": 3,
+    "container": "Pam_Bag",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "description": "这是一种圆环状的油炸面包，中间有一个圆形的空洞，表面覆盖糖浆和果酱，香甜可口。",
+    "price": 12,
+    "price_postapoc": 18,
+    "calories": 900,
+    "charges": 1,
+    "flags": {
+      "EDIBLE_FROZEN": 0,
+      "EATEN_HOT": 1,
+      "SWEET": 1
+    },
+    "fun": 12,
+    "phase": "solid",
+    "quench": 0,
+    "healthy": 5,
+    "addiction_potential": 3,
+    "cib_to_hit": 0,
+    "rand_eaten_msg": [
+      "吃下这个果酱甜甜圈，你感受到了甜蜜的滋味。",
+      "果酱甜甜圈的香甜味道让你心情愉悦。"
+    ]
+  }
 ]

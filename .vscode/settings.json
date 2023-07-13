@@ -1,9 +1,20 @@
 {
     "editor.defaultFormatter": "vscode.json-language-features",
     "[json]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[markdown]": {
         "editor.defaultFormatter": "yzhang.markdown-all-in-one"
-    }
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "/mod/Apam/item/pam核心/pam-食物1.json"
+            ],
+            "url": "http://json-schema.org/draft-07/schema#"
+        }
+    ]
 }

@@ -1,98 +1,79 @@
 [
-    {
-        "//": "热可可",
-        "type": "COMESTIBLE",
-        "id": "Pam_hot_chocolate",
-        "name": {
-            "str": "热可可",
-            "str_pl": "热可可"
-        },
-        "description": "这是一杯加热的可可饮料，香浓可口，能够提神暖身。它由可可豆、牛奶和糖制成，有着浓郁的巧克力味。",
-        "comestible_type": "DRINK",
-        "calories": 200,
-        "fun": 7,
-        "quench": 2,
-        "spoils_in": 0,
-        "material": [
-            "milk",
-            "coco_beans"
-        ],
-        "weight": 350,
-        "volume": 0.5,
-        "price": 2000,
-        "price_postapoc": 50,
-        "symbol": "&",
-        "container": "Pam_Cup",
-        "color": "brown",
-        "addiction_potential": 2,
-        "cib_to_hit": 0,
-        "flags": [
-            "WATER_FRIENDLY",
-            "EATEN_HOT"
-        ]
+  {
+    "//": "热可可",
+    "type": "COMESTIBLE",
+    "id": "Pam_hot_chocolate",
+    "name": {
+      "str": "热可可",
+      "str_pl": "热可可"
     },
-    {
-        "//": "果汁潘趣酒",
-        "type": "COMESTIBLE",
-        "id": "Pam_fruit_punch",
-        "name": {
-            "str": "果汁潘趣酒",
-            "str_pl": "果汁潘趣酒"
-        },
-        "description": "这是一种混合了不同水果汁和碳酸饮料的可口果味碳酸饮料。它有着清爽甜酸的口感，能够解渴提神。它含有少量的酒精，可能会让你有些微醺。",
-        "comestible_type": "DRINK",
-        "calories": 150,
-        "fun": 13,
-        "quench": 6,
-        "spoils_in": 0,
-        "material": [
-            "fruit",
-            "sugar",
-            "alcohol"
-        ],
-        "weight": 330,
-        "volume": 0.75,
-        "price": 1500,
-        "price_postapoc": 50,
-        "symbol": "&",
-        "container": "bottle",
-        "color": "red",
-        "addiction_potential": 2,
-        "cib_to_hit": 0,
-        "flags": [
-            "WATER_FRIENDLY",
-            "ALCOHOL"
-        ]
+    "description": "这是一杯加热的可可饮料，香浓可口，能够提神暖身。它由可可豆、牛奶和糖制成，有着浓郁的巧克力味。",
+    "comestible_type": "DRINK",
+    "calories": 200,
+    "fun": 7,
+    "quench": 2,
+    "spoils_in": 0,
+    "material": ["milk", "coco_beans"],
+    "weight": 350,
+    "volume": 0.5,
+    "price": 2000,
+    "price_postapoc": 50,
+    "symbol": "&",
+    "container": "Pam_Cup",
+    "color": "brown",
+    "addiction_potential": 2,
+    "cib_to_hit": 0,
+    "flags": ["WATER_FRIENDLY", "EATEN_HOT"]
+  },
+  {
+    "//": "果汁潘趣酒",
+    "type": "COMESTIBLE",
+    "id": "Pam_fruit_punch",
+    "name": {
+      "str": "果汁潘趣酒",
+      "str_pl": "果汁潘趣酒"
     },
-    {
-        "//": "P8果汁",
-        "type": "COMESTIBLE",
-        "id": "Pam_P8_juice",
-        "name": {
-            "str": "P8果汁",
-            "str_pl": "P8果汁"
-        },
-        "description": "这是一种混合了多种水果汁的果汁饮料，营养丰富，甜蜜可口。",
-        "comestible_type": "DRINK",
-        "calories": 170,
-        "fun": 7,
-        "quench": 5,
-        "spoils_in": 3,
-        "material": [
-            "water",
-            "fruit"
-        ],
-        "weight": 330,
-        "volume": 0.5,
-        "price": 1700,
-        "symbol": "&",
-        "container": "Pam_Cup",
-        "color": "pink",
-        "addiction_potential": 2,
-        "cib_to_hit": 0,
-        "flags": [
-            "WATER_FRIENDLY",
-            "PERISHABLE"
-        ]
-    }
+    "description": "这是一种混合了不同水果汁和碳酸饮料的可口果味碳酸饮料。它有着清爽甜酸的口感，能够解渴提神。它含有少量的酒精，可能会让你有些微醺。",
+    "comestible_type": "DRINK",
+    "calories": 150,
+    "fun": 13,
+    "quench": 6,
+    "spoils_in": 0,
+    "material": ["fruit", "sugar", "alcohol"],
+    "weight": 330,
+    "volume": 0.75,
+    "price": 1500,
+    "price_postapoc": 50,
+    "symbol": "&",
+    "container": "bottle",
+    "color": "red",
+    "addiction_potential": 2,
+    "cib_to_hit": 0,
+    "flags": ["WATER_FRIENDLY", "ALCOHOL"]
+  },
+  {
+    "//": "P8果汁",
+    "type": "COMESTIBLE",
+    "id": "Pam_P8_juice",
+    "name": {
+      "str": "P8果汁",
+      "str_pl": "P8果汁"
+    },
+    "description": "这是一种混合了多种水果汁的果汁饮料，营养丰富，甜蜜可口。",
+    "comestible_type": "DRINK",
+    "calories": 170,
+    "fun": 7,
+    "quench": 5,
+    "spoils_in": 3,
+    "material": ["water", "fruit"],
+    "weight": 330,
+    "volume": 0.5,
+    "price": 1700,
+    "symbol": "&",
+    "container": "Pam_Cup",
+    "color": "pink",
+    "addiction_potential": 2,
+    "cib_to_hit": 0,
+    "flags": ["WATER_FRIENDLY", "PERISHABLE"]
+  }
 ]

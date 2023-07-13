@@ -1,94 +1,78 @@
 [
-    {
-        "//": "薯条",
-        "type": "COMESTIBLE",
-        "id": "Pam_potato_fries",
-        "name": {
-            "str": "薯条(french fries)",
-            "str_pl": "薯条(french fries)"
-        },
-        "weight": 150,
-        "color": "yellow",
-        "spoils_in": 3,
-        "container": "Pam_Bag",
-        "comestible_type": "FOOD",
-        "symbol": "*",
-        "quench": 2,
-        "healthy": 3,
-        "calories": 350,
-        "description": "这是由马铃薯切条而成的一种快餐零食,口感酥脆,富含淀粉和维生素C。",
-        "price": 2.5,
-        "price_postapoc": 5,
-        "material": [
-            "oil",
-            "vegetables"
-        ],
-        "volume": 0.1,
-        "phase": "solid",
-        "charges": 12,
-        "flags": {
-            "EATEN_HOT": 1,
-            "USE_EAT_VERB": 1,
-            "NO_PARASITES": 1
-        },
-        "vitamins": [
-            [
-                "vitC",
-                15
-            ]
-        ],
-        "fun": 8,
-        "addiction_potential": 3,
-        "cib_to_hit": 0,
-        "rand_eaten_msg": [
-            "薯条的香脆口感让你回味无穷。",
-            "吃完薯条,你感到精力充沛。"
-        ]
+  {
+    "//": "薯条",
+    "type": "COMESTIBLE",
+    "id": "Pam_potato_fries",
+    "name": {
+      "str": "薯条(french fries)",
+      "str_pl": "薯条(french fries)"
     },
-    {
-        "//": "薯片",
-        "type": "COMESTIBLE",
-        "id": "Pam_potato_chips",
-        "name": {
-            "str": "薯片(potato chips)",
-            "str_pl": "薯片(potato chips)"
-        },
-        "weight": 45,
-        "color": "yellow",
-        "spoils_in": 5,
-        "container": "Pam_Bag",
-        "comestible_type": "FOOD",
-        "symbol": "&",
-        "quench": 1,
-        "healthy": 3,
-        "calories": 200,
-        "description": "这是由薄切马铃薯片炸至酥脆而成的一种零食,富含淀粉和维生素B。",
-        "price": 1.5,
-        "price_postapoc": 3,
-        "material": [
-            "vegetables",
-            "oil"
-        ],
-        "volume": 0.03,
-        "phase": "solid",
-        "charges": 16,
-        "flags": {
-            "EATEN_HOT": 0,
-            "USE_EAT_VERB": 1,
-            "NO_PARASITES": 1
-        },
-        "vitamins": [
-            [
-                "vitB6",
-                5
-            ]
-        ],
-        "fun": 7,
-        "addiction_potential": 4,
-        "cib_to_hit": 0,
-        "rand_eaten_msg": [
-            "薯片的香味让你回味无穷。",
-            "吃完薯片,你感到精神为之一振。"
-        ]
-    }
+    "weight": 150,
+    "color": "yellow",
+    "spoils_in": 3,
+    "container": "Pam_Bag",
+    "comestible_type": "FOOD",
+    "symbol": "*",
+    "quench": 2,
+    "healthy": 3,
+    "calories": 350,
+    "description": "这是由马铃薯切条而成的一种快餐零食,口感酥脆,富含淀粉和维生素C。",
+    "price": 2.5,
+    "price_postapoc": 5,
+    "material": ["oil", "vegetables"],
+    "volume": 0.1,
+    "phase": "solid",
+    "charges": 12,
+    "flags": {
+      "EATEN_HOT": 1,
+      "USE_EAT_VERB": 1,
+      "NO_PARASITES": 1
+    },
+    "vitamins": [["vitC", 15]],
+    "fun": 8,
+    "addiction_potential": 3,
+    "cib_to_hit": 0,
+    "rand_eaten_msg": [
+      "薯条的香脆口感让你回味无穷。",
+      "吃完薯条,你感到精力充沛。"
+    ]
+  },
+  {
+    "//": "薯片",
+    "type": "COMESTIBLE",
+    "id": "Pam_potato_chips",
+    "name": {
+      "str": "薯片(potato chips)",
+      "str_pl": "薯片(potato chips)"
+    },
+    "weight": 45,
+    "color": "yellow",
+    "spoils_in": 5,
+    "container": "Pam_Bag",
+    "comestible_type": "FOOD",
+    "symbol": "&",
+    "quench": 1,
+    "healthy": 3,
+    "calories": 200,
+    "description": "这是由薄切马铃薯片炸至酥脆而成的一种零食,富含淀粉和维生素B。",
+    "price": 1.5,
+    "price_postapoc": 3,
+    "material": ["vegetables", "oil"],
+    "volume": 0.03,
+    "phase": "solid",
+    "charges": 16,
+    "flags": {
+      "EATEN_HOT": 0,
+      "USE_EAT_VERB": 1,
+      "NO_PARASITES": 1
+    },
+    "vitamins": [["vitB6", 5]],
+    "fun": 7,
+    "addiction_potential": 4,
+    "cib_to_hit": 0,
+    "rand_eaten_msg": [
+      "薯片的香味让你回味无穷。",
+      "吃完薯片,你感到精神为之一振。"
+    ]
+  }
 ]
