@@ -12,9 +12,12 @@
     "json.schemas": [
         {
             "fileMatch": [
-                "/mod/Apam/item/pam核心/pam-食物1.json"
+                "/修正用.json"
             ],
             "url": "http://json-schema.org/draft-07/schema#"
         }
-    ]
+    ],
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    }
 }

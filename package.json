@@ -1,0 +1,18 @@
+{
+  "name": "cdda",
+  "version": "1.0.0",
+  "description": "这是一个用于Cataclysm: Dark Days Ahead（CDDA）模组的存储和修改的存储库。在这里，你可以找到我制作的模组，以及一些在制作模组过程中可能会对你有所帮助的资源。",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ajv": "^8.12.0"
+  }
+}

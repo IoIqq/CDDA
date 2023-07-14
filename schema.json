@@ -1,182 +1,199 @@
-{
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "type": "array",
-  "items": {
-    "type": "object",
-    "properties": {
-      "type": {
-        "type": "string",
-        "enum": ["COMESTIBLE"]
-      },
-      "id": {
-        "type": "string",
-        "pattern": "^Pam_.*"
-      },
-      "name": {
+[
+  {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "array",
+    "items": {
+      "type": "array",
+      "items": {
         "type": "object",
         "properties": {
-          "str": {
+          "type": {
             "type": "string",
-            "pattern": "^[\\u4e00-\\u9fa5a-zA-Z]*$"
+            "enum": ["COMESTIBLE"]
+          },
+          "id": {
+            "type": "string",
+            "pattern": "^Pam_.*"
+          },
+          "name": {
+            "type": "object",
+            "properties": {
+              "str": {
+                "type": "string",
+                "pattern": "^[\\u4e00-\\u9fa5a-zA-Z]*$"
+              }
+            },
+            "required": ["str"]
+          },
+          "vitamins": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "number"
+                }
+              ],
+              "minItems": 2,
+              "maxItems": 2
+            }
+          },
+          "weight": {
+            "type": "number"
+          },
+          "color": {
+            "type": "string"
+          },
+          "spoils_in": {
+            "type": "integer"
+          },
+          "container": {
+            "type": "string"
+          },
+          "comestible_type": {
+            "type": "string"
+          },
+          "symbol": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "price_postapoc": {
+            "type": "number"
+          },
+          "material": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "alcohol",
+                "chitin",
+                "acidchitin",
+                "bone",
+                "cotton",
+                "egg",
+                "flesh",
+                "fruit",
+                "fur",
+                "honey",
+                "milk",
+                "veggy",
+                "wood",
+                "wool",
+                "clay",
+                "diamond",
+                "glass",
+                "stone",
+                "aluminum",
+                "brass",
+                "budget_steel",
+                "copper",
+                "gold",
+                "hardsteel",
+                "iron",
+                "lead",
+                "silver",
+                "steel",
+                "superalloy",
+                "faux_fur",
+                "kevlar",
+                "leather",
+                "neoprene",
+                "nomex",
+                "plastic",
+                "hydrocarbons",
+                "oil",
+                "powder",
+                "powder_nonflam",
+                "null",
+                "paper",
+                "feces",
+                "seeds",
+                "bacon",
+                "bean",
+                "coco_beans",
+                "garlic",
+                "mushroom",
+                "nut",
+                "rice",
+                "salt",
+                "sugar",
+                "tomato",
+                "water",
+                "wheat"
+              ]
+            }
+          },
+          "volume": {
+            "type": "number"
+          },
+          "calories": {
+            "type": "number"
+          },
+          "charges": {
+            "type": "number"
+          },
+          "flags": {
+            "anyOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "fun": {
+            "type": "number"
+          },
+          "phase": {
+            "type": "string"
+          },
+          "quench": {
+            "type": "integer"
+          },
+          "healthy": {
+            "type": "integer"
           }
         },
-        "required": ["str"]
-      },
-      "vitamins": {
-        "type": "array",
-        "items": {
-          "type": "array",
-          "items": [
-            {
-              "type": "string"
-            },
-            {
-              "type": "number"
-            }
-          ],
-          "minItems": 2,
-          "maxItems": 2
-        }
-      },
-      "weight": {
-        "type": "number"
-      },
-      "color": {
-        "type": "string"
-      },
-      "spoils_in": {
-        "type": "string"
-      },
-      "container": {
-        "type": "string"
-      },
-      "comestible_type": {
-        "type": "string"
-      },
-      "symbol": {
-        "type": "string"
-      },
-      "description": {
-        "type": "string"
-      },
-      "price": {
-        "type": "number"
-      },
-      "price_postapoc": {
-        "type": "number"
-      },
-      "material": {
-        "type": "array",
-        "items": {
-          "type": "string",
-          "enum": [
-            "alcohol",
-            "chitin",
-            "acidchitin",
-            "bone",
-            "cotton",
-            "egg",
-            "flesh",
-            "fruit",
-            "fur",
-            "honey",
-            "milk",
-            "veggy",
-            "wood",
-            "wool",
-            "clay",
-            "diamond",
-            "glass",
-            "stone",
-            "aluminum",
-            "brass",
-            "budget_steel",
-            "copper",
-            "gold",
-            "hardsteel",
-            "iron",
-            "lead",
-            "silver",
-            "steel",
-            "superalloy",
-            "faux_fur",
-            "kevlar",
-            "leather",
-            "neoprene",
-            "nomex",
-            "plastic",
-            "hydrocarbons",
-            "oil",
-            "powder",
-            "powder_nonflam",
-            "null",
-            "paper",
-            "feces",
-            "seeds",
-            "bacon",
-            "bean",
-            "coco_beans",
-            "garlic",
-            "mushroom",
-            "nut",
-            "rice",
-            "salt",
-            "sugar",
-            "tomato",
-            "water",
-            "wheat"
-          ]
-        }
-      },
-      "volume": {
-        "type": "number"
-      },
-      "calories": {
-        "type": "number"
-      },
-      "charges": {
-        "type": "number"
-      },
-      "flags": {
-        "type": "object",
-        "additionalProperties": true
-      },
-      "fun": {
-        "type": "number"
-      },
-      "phase": {
-        "type": "string"
-      },
-      "quench": {
-        "type": "integer"
-      },
-      "healthy": {
-        "type": "integer"
+        "required": [
+          "type",
+          "id",
+          "name",
+          "vitamins",
+          "weight",
+          "color",
+          "spoils_in",
+          "container",
+          "comestible_type",
+          "symbol",
+          "description",
+          "price",
+          "price_postapoc",
+          "material",
+          "volume",
+          "calories",
+          "charges",
+          "flags",
+          "fun",
+          "phase",
+          "quench",
+          "healthy"
+        ]
       }
-    },
-    "required": [
-      "type",
-      "id",
-      "name",
-      "vitamins",
-      "weight",
-      "color",
-      "spoils_in",
-      "container",
-      "comestible_type",
-      "symbol",
-      "description",
-      "price",
-      "price_postapoc",
-      "material",
-      "volume",
-      "calories",
-      "charges",
-      "flags",
-      "fun",
-      "phase",
-      "quench",
-      "healthy"
-    ]
+    }
   }
-}
+]

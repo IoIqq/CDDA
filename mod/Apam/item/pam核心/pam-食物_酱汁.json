@@ -1,32 +1,29 @@
 [
   {
-    "//": "果酱",
     "type": "COMESTIBLE",
     "id": "Pam_jam",
-    "name": {
-      "str": "果酱",
-      "str_pl": "果酱"
-    },
+    "name": { "str": "jam" },
     "weight": 250,
     "color": "red",
-    "spoils_in": 30,
+    "spoils_in": "30 days",
     "container": "Pam_Jar",
     "comestible_type": "FOOD",
     "symbol": "&",
     "quench": 3,
     "healthy": -10,
-    "nutrition": 5,
     "description": "这是一种由水果和糖制成的果酱,味道香甜可口。",
     "price": 30,
+    "price_postapoc": 15,
     "material": ["fruit", "sugar"],
     "volume": 0.25,
-    "phase": "solid",
+    "calories": 200,
     "charges": 5,
-    "flags": {
-      "EATEN_COLD": 1,
-      "USE_EAT_VERB": 0
-    },
-    "addiction_potential": 2,
-    "cib_to_hit": 0
+    "flags": ["EATEN_COLD", "USE_EAT_VERB"],
+    "fun": 2,
+    "phase": "solid",
+    "vitamins": [
+      ["vitC", 2],
+      ["calcium", 1]
+    ]
   }
 ]
