@@ -11,12 +11,12 @@
 例如：假设物品A的概率为30，物品B的概率为20。那么A和B的4个组合的概率如下：
 
 
-| 组合             | 收集       | 分配       |
-| ---------------  | ---------- | --------- |
-| 既不是 A 也不是 B | 56%        | 0%        |
-| 仅 A             | 24%        | 60%       |
-| 仅 B             | 14%        | 40%       |
-| A 和 B 都有      | 6%         | 0%        |
+| 组合              | 收集 | 分配 |
+| ----------------- | ---- | ---- |
+| 既不是 A 也不是 B | 56%  | 0%   |
+| 仅 A              | 24%  | 60%  |
+| 仅 B              | 14%  | 40%  |
+| A 和 B 都有       | 6%   | 0%   |
 
 
 ## Format(##格式)
@@ -38,7 +38,10 @@
 
 `subtype` 是可选的。它可以是 `collection` 或 `distribution`。如果未指定，则默认为 `old`，表示此物品组使用旧格式（基本上是一个分布）。
 
-`container-item` 会导致组中的所有物品生成在一个容器中，而不是作为单独的顶级物品。如果物品可能无法全部放入容器中，您必须通过将 `on_overflow` 设置为 `discard`（随机丢弃物品直到适合容器）或 `spill`（多余物品与容器一起生成）来指定如何处理溢出物品。
+当你使用 `container-item` 时，所有的东西都会被放到一个容器里，而不是分开放。如果容器放不下所有的东西，你需要设置 `on_overflow` 来处理溢出的情况。你可以选择随机丢掉一些东西（设为 `discard`），或者让多余的东西放在容器旁边（设为 `spill`）。另外，`container-item` 也可以是一个对象，里面有一个 `item` 字段用来指定容器，以及一个 `variant` 字段用来指定容器的类型。例如：
+
+```json
+    "container-item": { "item": "<容器ID>", "variant": "<容器类型ID>" }
 
 当使用`ammo`或`magazine`时，需要注意一些[注意事项](#ammo-and-magazines)。
 
@@ -74,58 +77,43 @@
 
 每个条目可以有更多的值（如上所示的...）。它们允许进一步指定物品的属性：
 
-```json
-"damage": <number>|<array>,
-"damage-min": <number>,
-"damage-max": <number>,
-"count": <number>|<array>,
-"count-min": <number>,
-"count-max": <number>,
-"charges": <number>|<array>,
-"charges-min": <number>,
-"charges-max": <number>,
-"contents-item": "<item-id>" (可以是字符串或字符串数组),
-"contents-group": "<group-id>" (可以是字符串或字符串数组),
-"ammo-item": "<ammo-item-id>",
-"ammo-group": "<group-id>",
-"container-group": "<group-id>",
-"sealed": <boolean>
-"variant": <string>
-"artifact": <object>
-"event": <string>
-```
-这段内容描述了一些属性和值的格式。以下是对每个属性的解释：
+"damage": <number>|<array>,          // 伤害：可以是一个数字或数字数组
+"damage-min": <number>,              // 最小伤害值
+"damage-max": <number>,              // 最大伤害值
+"count": <number>|<array>,           // 数量：可以是一个数字或数字数组
+"count-min": <number>,               // 最小数量
+"count-max": <number>,               // 最大数量
+"charges": <number>|<array>,         // 装载数：可以是一个数字或数字数组
+"charges-min": <number>,             // 最小装载数
+"charges-max": <number>,             // 最大装载数
+"contents-item": "<item-id>"         // 内容物项：可以是字符串或字符串数组
+"contents-group": "<group-id>"       // 内容物组：可以是字符串或字符串数组
+"ammo-item": "<ammo-item-id>",       // 弹药项
+"ammo-group": "<group-id>",          // 弹药组
+"container-group": "<group-id>",     // 容器组
+"entry-wrapper": "<item-id>",        // 条目包装
+"sealed": <boolean>                  // 密封的
+"custom-flags": <array of string>,   // 自定义标志：字符串数组
+"variant": <string>                  // 变体
+"artifact": <object>                 // 神器
+"event": <string>                    // 事件
+"snippets": <string>                 // 片段
 
-- "damage": 表示伤害值，可以是一个数字或者一个数字数组。
-- "damage-min": 表示最小伤害值。
-- "damage-max": 表示最大伤害值。
-- "count": 表示数量，可以是一个数字或者一个数字数组。
-- "count-min": 表示最小数量。
-- "count-max": 表示最大数量。
-- "charges": 表示充电量，可以是一个数字或者一个数字数组。
-- "charges-min": 表示最小充电量。
-- "charges-max": 表示最大充电量。
-- "contents-item": 表示容器中的物品ID，可以是一个字符串或者一个字符串数组。
-- "contents-group": 表示容器中的物品组ID，可以是一个字符串或者一个字符串数组。
-- "ammo-item": 表示弹药的物品ID。
-- "ammo-group": 表示弹药的物品组ID。
-- "container-group": 表示容器的组ID。
-- "sealed": 表示容器是否密封，可以是一个布尔值。
-- "variant": 表示变体的字符串。
-- "artifact": 表示神器的对象。
-- "event": 表示事件的字符串。
+- `contents`: 添加到创建的物品里的东西。不检查是否能放进物品里。这样可以实现水里有一本书，书里有一个钢架，钢架里有一具尸体。
 
-`contents`作为创建物品的内容添加。不检查它们是否可以放入物品中。这允许水中包含书，书中包含钢框架，钢框架中包含尸体。
+- `count`: 使物品反复生成，每次生成都创建一个新物品。
 
-`count`使物品重复生成，每次都创建一个新的物品。
+- `charges`: 只设置最小值而不设置最大值会让游戏根据容器或者弹药/弹夹的容量来计算最大装载数。设置最大值太高会将其减少到最大容量。不设置最小值会在设置最大值时将其设为0。
 
-`charges`：仅设置最小值而不设置最大值将使游戏根据容器或弹药/弹夹容量计算最大充电量。将最大值设置得太高将减少到最大容量。如果没有设置最小值，当设置了最大值时，将其设置为0。
+- `sealed`: 如果为真，物品生成时容器会被密封。默认是`true`。
 
-`sealed`：如果为`true`，则物品生成时容器将被密封。默认为`true`。
+- `custom-flags`: 是一个标志数组，会应用到这个物品上。
 
-`variant`：此物品的有效`itype`变体ID。
+- `variant`: 这个物品的有效类型变体ID。
 
-`event`：对`holiday`枚举中的节日的引用。如果指定了，则条目只在指定的真实节日期间生成。这与季节性标题屏幕的工作方式相同，其中节日与当前系统时间进行比较。如果节日匹配，则物品的生成概率取自`prob`字段。否则，生成概率为0。
+- `event`: 指向`holiday`枚举中的一个假期。如果指定了，条目只在指定的真实假期时生成。它与季节性标题画面的工作方式相同，检查假期是否与当前系统时间匹配。如果匹配，物品的生成概率来自`prob`字段。否则，生成概率会变为0。
+
+- `snippets`: 如果物品使用`snippet_category`而不是描述，且片段包含ID，则允许选择生成物品的特定描述；参见[JSON_INFO.md#snippets](JSON_INFO.md#snippets)。
 
 当前可能的值有：
 - "none"（不基于事件。与省略 "event" 字段相同。）
@@ -162,6 +150,7 @@
 
 容器被检查，物品被放入容器中，并且物品的弹药数量被限制/增加到与容器的大小相匹配。
 
+- `entry-wrapper`: 用于在容器内生成大量不可堆叠的物品。与为此目的创建专门的物品组不同，您可以使用此字段在条目内定义。请注意，您可能希望将`container-item`设置为null以覆盖物品的默认容器。
 
 ### Ammo and Magazines (###弹药和弹夹)
 
@@ -298,7 +287,7 @@ Mods 可以通过指定具有相同 id 的组，从先前的组中复制 (`"copy
 ```json
   {
     "death_drops": [
-      { "item": "rag", "damage": 2 }, { "item": "bowling_ball" }
+      { "item": "sheet_cotton", "damage": 2 }, { "item": "bowling_ball" }
     ]
   }
 ```
