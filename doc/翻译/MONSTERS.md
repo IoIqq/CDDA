@@ -23,54 +23,56 @@ Property          | Description
 ---               | ---
 `name`            | (string or object) Monster name, and optional plural name and translation context
 `description`     | (string) In-game description of the monster, in one or two sentences
-`ascii_picture`   | (string) Id of the asci_art used for this monster
-`hp`              | (integer) Hit points
+`hp`              | (integer) Hit points. Also see [monster HP scaling in GAME_BALANCE.md](GAME_BALANCE.md#monster-hp-scaling)
 `volume`          | (string) Volume of the creature's body, as an integer with metric units, ex. `"35 L"` or `"1500 ml"`. Used to calculate monster size, size influences melee hit chances on different-sized targets.
 `weight`          | (string) Monster weight, as an integer with metric units, ex. `"12 kg"` or `"7500 g"`
 `symbol`          | (string) UTF-8 single-character string representing the monster in-game
 `color`           | (string) Symbol color for the monster
 `default_faction` | (string) What faction the monster is allied with
 `bodytype`        | (string) Monster's body type, ex. bear, bird, dog, human, insect, lizard etc.
-`speed`           | (integer) Monster speed, relative to human speed `100`, with greater numbers being faster
+`speed`           | (integer) Monster speed, relative to human speed `100`, with greater numbers being faster. Also see [monster speed scaling in GAME_BALANCE.md](GAME_BALANCE.md#monster-speed-scaling)
 
 Monsters may also have any of these optional properties:
 
 Property                 | Description
 ---                      | ---
 `copy-from`              | (string) Inherit monster attributes from another. See [JSON_INHERITANCE.md](JSON_INHERITANCE.md)
-`categories`             | (array of strings) Monster categories (NULL, CLASSIC, or WILDLIFE)
-`species`                | (array of strings) Species IDs, ex. HUMAN, ROBOT, ZOMBIE, BIRD, MUTANT, etc.
-`scents_tracked`         | (array of strings) Monster tracks these scents
+`categories`             | (array of strings) Monster categories (NULL, CLASSIC, or WILDLIFE). Important for mods who black or whitelist monsters.
+`ascii_picture`          | (string) Id of the `ascii_art` used for this monster
+`species`                | (array of strings) Species IDs, ex. HUMAN, ROBOT, ZOMBIE, BIRD, MUTANT, etc. Defined in [`species.json`](../data/json/species.json)
+`scents_tracked`         | (array of strings) Monster tracks these scents. Defined [`scent_types.json`](../data/json/scent_types.json)
 `scents_ignored`         | (array of strings) Monster ignores these scents
-`material`               | (array of strings) Materials the monster is made of
+`material`               | (array of strings) Materials the monster is made of. Defined in [`materials.json`](../data/json/materials.json)
 `phase`                  | (string) Monster's body matter state, ex. SOLID, LIQUID, GAS, PLASMA, NULL
-`attack_cost`            | (integer) Number of moves per regular attack (??)
-`diff`                   | (integer) Additional monster difficulty for special and ranged attacks
+`attack_cost`            | (integer) Number of moves per regular attack. If not defined defaults to `100`.
+`diff`                   | (integer) Displayed monster difficulty, e.g affects how the monster name is colored, e.g red for very nasty critters. Also see [monster difficulty scaling in GAME_BALANCE.md](GAME_BALANCE.md#monster-difficulty-scaling)
 `aggression`             | (integer) Starting aggression, the monster will become hostile when it reaches 10
 `morale`                 | (integer) Starting morale, monster will flee when (current aggression + current morale) < 0
-`aggro_character`        | (bool) If the monster will always attack characters when angry.
+`aggro_character`        | (bool) If true the monster will always attack characters when angry.
 `mountable_weight_ratio` | (float) For mounts, max ratio of mount to rider weight, ex. `0.2` for `<=20%`
-`melee_skill`            | (integer) Monster skill in melee combat, from `0-10`, with `4` being an average mob
+`melee_skill`            | (integer) Monster skill in melee combat, from `0-10`, with `4` being an average mob. Also see [monster melee skill scaling in GAME_BALANCE.md](GAME_BALANCE.md#monster-melee-skill-scaling)
 `dodge`                  | (integer) Monster's skill at dodging attacks
-`melee_damage`           | (array of objects) List of damage instances added to die roll on monster melee attack
+`melee_damage`           | (array of objects) List of damage instances added to die roll on monster melee attack. Also see [monster maximum damage scaling in GAME_BALANCE.md](GAME_BALANCE.md#monster-maximum-damage-scaling)
 `melee_dice`             | (integer) Number of dice rolled on monster melee attack to determine bash damage
 `melee_dice_sides`       | (integer) Number of sides on each die rolled by `melee_dice`
 `grab_strength`          | (integer) Intensity of grab effect, from `1` to `n`, simulating `n` regular zombie grabs
 `melee_training_cap`     | (integer) The maximum melee skill levels learnable by fighting this monster. If not defined defaults to `melee_skill + 2`.
 `armor`                  | (object) Monster's protection from different types of damage
 `weakpoints`             | (array of objects) Weakpoints in the monster's protection
-`weakpoint_sets`         | (array of strings) Weakpoint sets to apply to the monster
+`weakpoint_sets`         | (array of strings) Weakpoint sets to apply to the monster. Defined in [`monster_weakpoints`](../data/json/monster_weakpoints)
+`status_chance_multiplier`| (float) Multiplier to chance to apply zapped when electric damage is dealt (no other effects are implemented at this time)
 `families`               | (array of objects or strings) Weakpoint families that the monster belongs to
 `vision_day`             | (integer) Vision range in full daylight, with `50` being the typical maximum
 `vision_night`           | (integer) Vision range in total darkness, ex. coyote `5`, bear `10`, sewer rat `30`, flaming eye `40`
 `tracking_distance`      | (integer) Amount of tiles the monster will keep between itself and its current tracked enemy or followed leader. Defaults to `3`.
 `trap_avoids`            | (array of strings) trap_id of traps that are not triggered by this monster. Default behaviour is to trigger all traps.
-`luminance`              | (integer) Amount of light passively emitted by the monster, from `0-10`
+`luminance`              | (float) Amount of light passively emitted by the monster, must be >0 to have any effect
 `death_drops`            | (string or item group) Item group to spawn when the monster dies
 `death_function`         | (array of strings) How the monster behaves on death. See JSON_FLAGS
-`emit_field`             | (array of objects) What field the monster emits, and how frequently
+`emit_fields`            | (array of objects) What field the monster emits, and how frequently
 `regenerates`            | (integer) Number of hit points the monster regenerates per turn
 `regenerates_in_dark`    | (boolean) True if monster regenerates quickly in the dark
+`regeneration_modifiers` | (effect id, integer) When monster has this effect, modify regenerates by integer value (i.e. -5 reduces a regen value of 40hp/turn to 35hp/turn). Cannot reduce regeneration below 0.
 `regen_morale`           | (bool) True if monster will stop fleeing at max HP to regenerate anger and morale
 `special_attacks`        | (array of objects) Special attacks the monster has
 `flags`                  | (array of strings) Any number of attributes like SEES, HEARS, SMELLS, STUMBLES, REVIVES
@@ -79,7 +81,11 @@ Property                 | Description
 `placate_triggers`       | (array of strings) Triggers that lower monster aggression (same flags as fear)
 `chat_topics`            | (array of strings) Conversation topics if dialog is opened with the monster
 `revert_to_itype`        | (string) Item monster can be converted to when friendly (ex. to deconstruct turrets)
+`mech_weapon`            | (string) If this monster is a rideable mech with built-in weapons, this is the weapons id
+`mech_str_bonus`         | (integer) If this monster is a rideable mech with enhanced strength, this is the strength it gives to the player when ridden
+`mech_battery`           | (string) If this monster is a rideable mech, this is battery's id. Does not support objects or arrays (i.e. ONE battery id only)
 `starting_ammo`          | (object) Ammo that newly spawned monsters start with
+`mount_items`            | (array of objects) Mount-specific items this monster spawns with. Accepts entries for `tied`, `tack`, `armor`, and `storage`.
 `upgrades`               | (boolean or object) False if monster does not upgrade, or an object do define an upgrade
 `reproduction`           | (object) The monster's reproductive cycle and timing
 `baby_flags`             | (array of strings) Seasons during which this monster is capable of reproduction
@@ -228,12 +234,12 @@ Value           | Description
 ## "attack_cost"
 (integer, optional)
 
-Number of moves per regular attack.
+Number of moves per regular attack. Higher values means the monster attacks less often (e.g. a monster with a speed of 100 and an attack_cost of 1000 attacks about once every 10 seconds).
 
 ## "diff"
 (integer, optional)
 
-Monster baseline difficulty.  Impacts the shade used to label the monster, and if it is above 30 a kill will be recorded in the memorial log.  Monster difficult is calculated based on expected melee damage, dodge, armor, hit points, speed, morale, aggression, and vision ranges.  The calculation does not handle ranged special attacks or unique special attacks very well, and baseline difficulty can be used to account for that.  Suggested values:
+Monster baseline difficulty.  Impacts the shade used to label the monster, and if it is above 30 a kill will be recorded in the memorial log.  Monster difficulty is calculated based on expected melee damage, dodge, armor, hit points, speed, morale, aggression, and vision ranges, and the defined ``diff`` value is added on top of that.  The calculation does not handle special attacks, and baseline difficulty can be used to offset that gap.  Suggested values:
 
 Value | Description
 ---   | ---
@@ -244,7 +250,7 @@ Value | Description
 `20`  | a very powerful ranged attack, like a laser turret or military turret's 5.56mm rifle, or a powerful special ability, like a zombie necromancer's ability to raise other zombies.
 `30`  | a ranged attack that is deadly even for armored characters, like an anti-material turret's .50 BMG rifle.
 
-Most monsters should have difficulty 0 - even dangerous monsters like a zombie hulk or razorclaw alpha.  Difficulty should only be used for exceptional, ranged, special attacks.
+Most monsters should have ``diff`` of 0 - even dangerous monsters like a zombie hulk or razorclaw alpha.  This field should only be used for exceptional, ranged, special attacks.
 
 ## "aggression"
 (integer, optional)
@@ -452,7 +458,7 @@ How the monster behaves on death.
 }
 ```
 
-## "emit_field"
+## "emit_fields"
 (array of objects of emit_id and time_duration, optional)
 "emit_fields": [ { "emit_id": "emit_gum_web", "delay": "30 m" } ],
 
@@ -476,7 +482,7 @@ Will stop fleeing if at max hp, and regen anger and morale.
 ## "flags"
 (array of strings, optional)
 
-Monster flags. See [JSON_FLAGS.md](JSON_FLAGS.md) for a full list.
+Monster flags. See [JSON_FLAGS.md](JSON_FLAGS.md) for a full list. These are IDs that point to a `"monster_flag"` object, which usually can be found in `data/json/monsters/monster_flags.json`.
 
 ## "fear_triggers", "anger_triggers", "placate_triggers"
 (array of strings, optional)
@@ -654,11 +660,3 @@ Field                | Description
 ## "special_attacks"
 
 See [MONSTER_SPECIAL_ATTACKS.md](MONSTER_SPECIAL_ATTACKS.md)
-# Testing Monsters
-
-To help facilitate playtesting monsters use the loadouts from the Standard Combat Testing mod (included under Misc), and document your results in the PR's Testing section.
-
-Important test tips:
- - A spawned and saved monster will **not** change for any reason, even if you change the underlying monster definition.  Always use freshly spawned monsters!
- - Evolution, growth, and reproduction happen on monster load, so the sequence of testing is Spawn monster -> Teleport away to unload it -> Teleport back to load it and start the timers -> Teleport away -> Set time forward via the debug menu -> Teleport back
- - Activating Debug Mode's monster filter allows you to examine monsters using x->e and get additional information
