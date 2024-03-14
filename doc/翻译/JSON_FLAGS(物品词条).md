@@ -1,10 +1,10 @@
 # JSON Flags
 
 - [JSON Flags](#json-flags)
-  - [Notes](#notes)
-  - [Inheritance](#inheritance)
-  - [TODO](#todo)
-  - [Ammo](#ammo)
+  - [Notes注解](#notes注解)
+  - [Inheritance继承](#inheritance继承)
+  - [TODO待办事项](#todo待办事项)
+  - [Ammo弹药](#ammo弹药)
   - [Armor](#armor)
     - [Covers](#covers)
     - [Specifically Covers](#specifically-covers)
@@ -24,7 +24,7 @@
   - [Generic](#generic)
   - [Guns](#guns)
     - [Firing modes](#firing-modes)
-    - [Gun Faults](#gun-faults)
+    - [Gun faults](#gun-faults)
   - [Magazines](#magazines)
   - [Magic](#magic)
   - [Mapgen](#mapgen)
@@ -57,102 +57,102 @@
   - [Technical flags](#technical-flags)
   - [Techniques](#techniques)
   - [Tools](#tools)
-    - [`use_action`](#use_action)
+    - [`use_action`](#use_action-1)
   - [Traps](#traps)
   - [Vehicles](#vehicles)
     - [Fuel types](#fuel-types)
     - [Parts](#parts)
     - [Vehicle faults](#vehicle-faults)
 
-## Notes
+## Notes注解
 
-- Some flags (items, effects, vehicle parts) have to be defined in `flags.json` or `vp_flags.json` (with type: `json_flag`) to work correctly.
-- Many of the flags intended for one category or item type can be used in other categories or item types.  Experiment to see where else flags can be used.
-- Offensive and defensive flags can be used on any item type that can be wielded.
-
-
-## Inheritance
-
-When an item is crafted, it can inherit flags from the components that were used to craft it.  This requires that the flag to be inherited has the `"craft_inherit": true` entry.  If you don't want a particular item to inherit flags when crafted, specify the member delete_flags, which is an array of strings.  Flags specified there will be removed from the resultant item upon crafting.  This will override flag inheritance, but will not delete flags that are part of the item type itself.
+- 一些标志（物品、效果、车辆零件）必须在`flags.json`或`vp_flags.json`中定义（类型为`json_flag`），才能正确使用。
+- 许多旨在用于一类或物品类型的标志也可以用于其他类别或物品类型。尝试看看标志还可以在哪些地方使用。
+- 进攻和防御标志可用于可以使用的任何可以使用的物品类型。
 
 
-## TODO
+## Inheritance继承
 
-- `Ammo type` table is very old and doesn't include many new ammo types.  Consider updating it or removing altogether, as ammo types ain't no json flags at all.
+当制作物品时，它可以从用于制作它的组件中继承标志。这需要被继承的标志具有`"craft_inherit": true`条目。如果您不希望特定物品在制作时继承标志，请指定成员`delete_flags`，它是一个字符串数组。在制作后，指定的标志将从结果物品中删除。这将覆盖标志继承，但不会删除作为物品类型本身的一部分的标志。
 
 
-## Ammo
+## TODO待办事项
 
-These are handled through [ammo types](../data/json/items/ammo_types.json).  You can tag a weapon with these to have it chamber existing ammo, or make your own ammo there.  The first column in this list is the tag's "id", the internal identifier DDA uses to track the tag, and the second is a brief description of the ammo tagged.  Use the id to search for ammo listings, as ids are constant throughout DDA's code.  Happy chambering!  :-)
+- `弹药类型`表格非常陈旧，不包括许多新的弹药类型。考虑更新或完全删除它，因为弹药类型根本不是json标志。
 
-- ```120mm``` 120mm HEAT
-- ```12mm``` 12mm
-- ```20x66mm``` 20x66mm Shot (and relatives)
-- ```223``` .223 Remington (and 5.56 NATO)
-- ```22``` .22LR (and relatives)
+
+## Ammo弹药
+
+这些通过[ammo types](弹药类型)(../data/json/items/ammo_types.json)处理。您可以使用这些标签为武器标记，以便将其装入现有的弹药，或者在那里制作您自己的弹药。此列表中的第一列是标签的“id”，这是 DDA 用于跟踪标签的内部标识符；第二列是标记的弹药的简要描述。使用 id 来搜索弹药清单，因为 id 在 DDA 代码中始终保持不变。祝您使用愉快！:-)
+
+- ```120mm``` 120毫米 穿甲弹
+- ```12mm``` 12毫米
+- ```20x66mm``` 20x66毫米 铅弹（及相关）
+- ```223``` .223雷明顿（5.56北约弹）
+- ```22``` .22LR（及相关）
 - ```3006``` 30.06
-- ```300``` .300 WinMag
-- ```308``` .308 Winchester (and relatives)
-- ```32``` .32 ACP
-- ```36paper``` .36 cap & ball
-- ```38``` .38 Special
-- ```40``` 10mm
-- ```40mm``` 40mm Grenade
-- ```44``` .44 Magnum
-- ```44paper``` .44 cap & ball
-- ```454``` .454 Casull
-- ```45``` .45 ACP (and relatives)
-- ```46``` 46mm
-- ```500``` .500 Magnum
-- ```50``` .50 BMG
-- ```57``` 57mm
-- ```5x50``` 5x50 Dart
-- ```66mm``` 66mm HEAT
-- ```700nx``` .700 Nitro Express
-- ```762R``` 7.62x54mm
-- ```762``` 7.62x39mm
-- ```762x25``` 7.62x25mm
-- ```84x246mm``` 84x246mm HE
-- ```8x40mm``` 8mm Caseless
-- ```9mm``` 9x19mm Luger (and relatives)
-- ```9x18``` 9x18mm
-- ```BB``` BB
+- ```300``` .300温马格
+- ```308``` .308温彻斯特（及相关）
+- ```32``` .32自动（ACP）
+- ```36paper``` .36毛边铅弹
+- ```38``` .38特种
+- ```40``` 10毫米
+- ```40mm``` 40毫米 榴弹
+- ```44``` .44马格南
+- ```44paper``` .44毛边铅弹
+- ```454``` .454卡斯尔
+- ```45``` .45自动（ACP）（及相关）
+- ```46``` 46毫米
+- ```500``` .500马格南
+- ```50``` .50BMG
+- ```57``` 57毫米
+- ```5x50``` 5x50 飞镖
+- ```66mm``` 66毫米 穿甲弹
+- ```700nx``` .700NE步枪弹
+- ```762R``` 7.62x54毫米
+- ```762``` 7.62x39毫米
+- ```762x25``` 7.62x25毫米
+- ```84x246mm``` 84x246毫米 高爆
+- ```8x40mm``` 8毫米 无壳弹
+- ```9mm``` 9x19毫米 lugar（及相关）
+- ```9x18``` 9x18毫米
+- ```BB``` BB弹
 - ```RPG-7``` RPG-7
-- ```UPS``` UPS charges
-- ```ammo_flintlock``` Flintlock ammo
-- ```ampoule``` Ampoule
-- ```arrow``` Arrow
-- ```battery``` Battery
-- ```blunderbuss``` Blunderbuss
-- ```bolt``` Bolt
-- ```charcoal``` Charcoal
-- ```components``` Components
-- ```dart``` Dart
-- ```diesel``` Diesel
-- ```fish_bait``` Fish bait
-- ```fishspear``` Speargun spear
-- ```fusion``` Laser Pack
-- ```gasoline``` Gasoline
-- ```homebrew_rocket``` homebrew rocket
-- ```lamp_oil``` Lamp oil
-- ```laser_capacitor``` Charge
-- ```m235``` M235 TPA (66mm Incendiary Rocket)
-- ```metal_rail``` Rebar Rail
-- ```money``` Cents
-- ```muscle``` Muscle
-- ```nail``` Nail
-- ```pebble``` Pebble
-- ```plasma``` Plasma
-- ```plutonium``` Plutonium Cell
-- ```rebreather_filter``` Rebreather filter
-- ```shot``` Shotshell
-- ```signal_flare``` Signal Flare
-- ```tape``` Duct tape
-- ```thread``` Thread
-- ```thrown``` Thrown
-- ```unfinished_char``` Semi-charred fuel
-- ```water``` Water
-- ```paper``` Paper
+- ```UPS``` UPS 充电器
+- ```ammo_flintlock``` 燧发枪弹药
+- ```ampoule``` 安瓿
+- ```arrow``` 箭
+- ```battery``` 电池
+- ```blunderbuss``` 火铳
+- ```bolt``` 弩箭
+- ```charcoal``` 木炭
+- ```components``` 部件
+- ```dart``` 镖
+- ```diesel``` 柴油
+- ```fish_bait``` 鱼饵
+- ```fishspear``` 鱼叉
+- ```fusion``` 激光包
+- ```gasoline``` 汽油
+- ```homebrew_rocket``` 自制火箭
+- ```lamp_oil``` 灯油
+- ```laser_capacitor``` 充能电池
+- ```m235``` M235 TPA（66mm 燃烧火箭）
+- ```metal_rail``` 钢筋轨道
+- ```money``` 分
+- ```muscle``` 肌肉
+- ```nail``` 钉子
+- ```pebble``` 鹅卵石
+- ```plasma``` 等离子体
+- ```plutonium``` 钚电池
+- ```rebreather_filter``` 再呼吸器过滤器
+- ```shot``` 散弹
+- ```signal_flare``` 信号闪光弹
+- ```tape``` 胶带
+- ```thread``` 线
+- ```thrown``` 投掷物
+- ```unfinished_char``` 半炭燃料
+- ```water``` 水
+- ```paper``` 纸
 
 
 ## Armor
