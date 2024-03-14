@@ -6,9 +6,9 @@
   - [TODO待办事项](#todo待办事项)
   - [Ammo弹药](#ammo弹药)
   - [Armor](#armor)
-    - [Covers](#covers)
-    - [Specifically Covers](#specifically-covers)
-  - [Bionics](#bionics)
+    - [部位覆盖](#部位覆盖)
+    - [具体覆盖部位](#具体覆盖部位)
+  - [Bionics（CBM）](#bionicscbm)
   - [Bodyparts](#bodyparts)
   - [Books](#books)
   - [Character](#character)
@@ -248,62 +248,62 @@ Some armor flags, such as `WATCH` and `ALARMCLOCK` are compatible with other ite
 - ```WATER_FRIENDLY``` Prevents the item from making the body part count as unfriendly to water and thus reducing morale from being wet.
 
 
-### Covers
+### 部位覆盖
 
-- ```ARMS``` same as `ARM_L` and `ARM_R`.
-- ```ARM_L```
-- ```ARM_R```
-- ```EYES```
-- ```FEET``` same as `FOOT_L` and `FOOT_R`.
-- ```FOOT_L```
-- ```FOOT_R```
-- ```HANDS``` same as `HAND_L` and `HAND_R`.
-- ```HAND_L```
-- ```HAND_R```
-- ```HEAD```
-- ```LEGS``` same as `LEG_L` and `LEG_R`.
-- ```LEG_L```
-- ```LEG_R```
-- ```MOUTH```
-- ```TORSO```
+- ```ARMS```（手臂） 同 `ARM_L`（左臂） 和 `ARM_R`（右臂）。 
+- ```ARM_L```（左臂）
+- ```ARM_R```（右臂）
+- ```EYES```（眼睛）
+- ```FEET```（脚） 同 `FOOT_L`（左脚） 和 `FOOT_R`（右脚）。
+- ```FOOT_L```（左脚）
+- ```FOOT_R```（右脚）
+- ```HANDS```（手） 同 `HAND_L`（左手） 和 `HAND_R`（右手）。
+- ```HAND_L```（左手）
+- ```HAND_R```（右手）
+- ```HEAD```（头部）
+- ```LEGS```（腿） 同 `LEG_L`（左腿） 和 `LEG_R`（右腿）。
+- ```LEG_L```（左腿）
+- ```LEG_R```（右腿）
+- ```MOUTH```（口）
+- ```TORSO```（躯干）
 
-### Specifically Covers
+### 具体覆盖部位
 
-- ```torso_upper```
-- ```torso_neck```
-- ```torso_lower```
-- ```torso_hanging_front```
-- ```torso_hanging_back```
-- ```arm_shoulder_r```
-- ```arm_upper_r```
-- ```arm_elbow_r```
-- ```arm_lower_r```
-- ```arm_shoulder_l```
-- ```arm_upper_l```
-- ```arm_elbow_l```
-- ```arm_lower_l```
-- ```leg_hip_r```
-- ```leg_upper_r```
-- ```leg_knee_r```
-- ```leg_lower_r```
-- ```leg_hip_l```
-- ```leg_upper_l```
-- ```leg_knee_l```
-- ```leg_lower_l```
+- ```torso_upper```（上躯干）
+- ```torso_neck```（颈部）
+- ```torso_lower```（下躯干）
+- ```torso_hanging_front```（前方悬挂）
+- ```torso_hanging_back```（后方悬挂）
+- ```arm_shoulder_r```（右肩）
+- ```arm_upper_r```（右上臂）
+- ```arm_elbow_r```（右肘）
+- ```arm_lower_r```（右前臂）
+- ```arm_shoulder_l```（左肩）
+- ```arm_upper_l```（左上臂）
+- ```arm_elbow_l```（左肘）
+- ```arm_lower_l```（左前臂）
+- ```leg_hip_r```（右髋部）
+- ```leg_upper_r```（右大腿）
+- ```leg_knee_r```（右膝盖）
+- ```leg_lower_r```（右小腿）
+- ```leg_hip_l```（左髋部）
+- ```leg_upper_l```（左大腿）
+- ```leg_knee_l```（左膝盖）
+- ```leg_lower_l```（左小腿）
 
 
-## Bionics
+## Bionics（CBM）
 
-- ```BIONIC_ARMOR_INTERFACE``` This bionic can provide power to powered armor.
-- ```BIONIC_FAULTY``` This bionic is a "faulty" bionic.
-- ```BIONIC_GUN``` This bionic is a gun bionic and activating it will fire it.  Prevents all other activation effects including power draw by bionic.
-- ```BIONIC_NPC_USABLE``` The NPC AI knows how to use this CBM, and it can be installed on an NPC.
-- ```BIONIC_POWER_SOURCE``` This bionic is a power source bionic.
-- ```BIONIC_SLEEP_FRIENDLY``` This bionic won't prompt the user to turn it off if they try to sleep while it's active.
-- ```BIONIC_TOGGLED``` This bionic only has a function when activated, else it causes its effect every turn.
-- ```BIONIC_WEAPON``` This bionic is a weapon bionic and activating it will create (or destroy) bionic's fake_item in user's hands.  Prevents all other activation effects.
-- ```BIONIC_SHOCKPROOF``` This bionic can't be incapacitated by electrical attacks.
-- ```USES_BIONIC_POWER``` If present, items attached to this bionic will inherit the `USES_BIONIC_POWER` flag automatically.
+- ```BIONIC_ARMOR_INTERFACE``` 此 CBM 可为动力装甲提供能量。
+- ```BIONIC_FAULTY``` 此 CBM 是“有缺陷”的。
+- ```BIONIC_GUN``` 此 CBM 是枪械型的，激活后可发射。阻止所有其他激活效果，包括通过CBM的能量消耗。
+- ```BIONIC_NPC_USABLE``` NPC AI 知道如何使用此 CBM，可将其植入到 NPC 中。
+- ```BIONIC_POWER_SOURCE``` 此 CBM 是电源型的。
+- ```BIONIC_SLEEP_FRIENDLY``` 如果激活此 CBM，用户尝试睡觉时不会提示关闭。
+- ```BIONIC_TOGGLED``` 此 CBM 只有在激活时才会发挥作用，否则每回合都会产生效果。
+- ```BIONIC_WEAPON``` 此 CBM 是武器型CBM，激活后会在用户手中创建（或销毁）CBM生成的虚拟物品。并阻止所有其他激活效果。
+- ```BIONIC_SHOCKPROOF``` 此 CBM 不会因电击而失效。
+- ```USES_BIONIC_POWER``` 如果存在，则连接到此 CBM 的物品将自动继承 `USES_BIONIC_POWER` 标志。
 
 
 ## Bodyparts
