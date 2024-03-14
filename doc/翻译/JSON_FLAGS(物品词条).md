@@ -295,10 +295,10 @@ Some armor flags, such as `WATCH` and `ALARMCLOCK` are compatible with other ite
 ## Bionics（CBM）
 
 - ```BIONIC_ARMOR_INTERFACE``` 此 CBM 可为动力装甲提供能量。
-- ```BIONIC_FAULTY``` 此 CBM 是“有缺陷”的。
+- ```BIONIC_FAULTY``` 此 CBM 是“损坏”的。
 - ```BIONIC_GUN``` 此 CBM 是枪械型的，激活后可发射。阻止所有其他激活效果，包括通过CBM的能量消耗。
 - ```BIONIC_NPC_USABLE``` NPC AI 知道如何使用此 CBM，可将其植入到 NPC 中。
-- ```BIONIC_POWER_SOURCE``` 此 CBM 是电源型的。
+- ```BIONIC_POWER_SOURCE``` 此 CBM 是一个电源型。
 - ```BIONIC_SLEEP_FRIENDLY``` 如果激活此 CBM，用户尝试睡觉时不会提示关闭。
 - ```BIONIC_TOGGLED``` 此 CBM 只有在激活时才会发挥作用，否则每回合都会产生效果。
 - ```BIONIC_WEAPON``` 此 CBM 是武器型CBM，激活后会在用户手中创建（或销毁）CBM生成的虚拟物品。并阻止所有其他激活效果。
