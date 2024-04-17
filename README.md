@@ -24,3 +24,6 @@ https://tongyi.aliyun.com/qianwen/?chatId=c80878912e0c46fd83ecff5eceedbcd1
 
 智谱清言（推荐，无需vpn）：
 https://chatglm.cn/main/alltoolsdetail
+
+## 个人翻译智能体
+智谱清言：https://chatglm.cn/main/gdetail/661e95841382084e8da3f203
