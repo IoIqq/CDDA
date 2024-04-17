@@ -27,3 +27,4 @@ https://chatglm.cn/main/alltoolsdetail
 
 ## 个人翻译智能体
 智谱清言：https://chatglm.cn/main/gdetail/661e95841382084e8da3f203
+通义千问app：https://m.tongyi.aliyun.com/app/tongyi/tongyi-hybrid/share-result?shareId=3886de78-0958-41b5-ab08-e78593dd0ab0
