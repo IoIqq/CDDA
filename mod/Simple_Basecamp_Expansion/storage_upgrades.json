@@ -1,0 +1,161 @@
+[
+  {
+    "type": "recipe",
+    "result": "faction_base_storage_simple_2",
+    "description": "将简单仓库升级为中型仓库，增加更多储物空间",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "fabrication",
+    "difficulty": 4,
+    "time": "480 m",
+    "autolearn": false,
+    "never_learn": true,
+    "construction_blueprint": "faction_base_storage_simple_2_mapgen",
+    "blueprint_name": "中型仓库（升级）",
+    "blueprint_provides": [
+      { "id": "tool_storage", "amount": 2 },
+      { "id": "gathering", "amount": 2 },
+      { "id": "bed", "amount": 2 }
+    ],
+    "blueprint_requires": [
+      { "id": "faction_base_storage_simple_1", "amount": 1 }
+    ],
+    "blueprint_excludes": [
+      { "id": "faction_base_storage_simple_2", "amount": 1 }
+    ],
+    "blueprint_autocalc": false,
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "SAW_M", "level": 1 } ]
+    ],
+    "components": [
+      [ [ "2x4", 30 ] ],
+      [ [ "log", 10 ] ],
+      [ [ "nail", 50 ] ],
+      [ [ "sheet_metal", 8 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_storage_simple_3",
+    "description": "将中型仓库升级为大型仓库，提供最大储物空间",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "fabrication",
+    "difficulty": 5,
+    "time": "600 m",
+    "autolearn": false,
+    "never_learn": true,
+    "construction_blueprint": "faction_base_storage_simple_3_mapgen",
+    "blueprint_name": "大型仓库（升级）",
+    "blueprint_provides": [
+      { "id": "tool_storage", "amount": 3 },
+      { "id": "gathering", "amount": 3 },
+      { "id": "bed", "amount": 2 }
+    ],
+    "blueprint_requires": [
+      { "id": "faction_base_storage_simple_2", "amount": 1 }
+    ],
+    "blueprint_excludes": [
+      { "id": "faction_base_storage_simple_3", "amount": 1 }
+    ],
+    "blueprint_autocalc": false,
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "SAW_M", "level": 1 } ]
+    ],
+    "components": [
+      [ [ "2x4", 40 ] ],
+      [ [ "log", 15 ] ],
+      [ [ "nail", 70 ] ],
+      [ [ "sheet_metal", 12 ] ],
+      [ [ "pipe", 6 ] ]
+    ]
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "faction_base_storage_simple_2_mapgen",
+    "object": {
+      "place_nested": [
+        {
+          "chunks": [ "storage_medium_room" ],
+          "x": 3,
+          "y": 3
+        }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "nested_mapgen_id": "storage_medium_room",
+    "object": {
+      "mapgensize": [ 8, 8 ],
+      "rows": [
+        "WWWWWWWW",
+        "WBBRRRR W",
+        "WR.....RW",
+        "WR.LL..RW",
+        "WR.CC..RW",
+        "WR.....RW",
+        "WRRRRLRW",
+        "WWWDWWWW"
+      ],
+      "terrain": {
+        "W": "t_wall_wood",
+        ".": "t_floor",
+        "D": "t_door_c",
+        " ": "t_floor"
+      },
+      "furniture": {
+        "B": "f_bed",
+        "R": "f_rack",
+        "L": "f_locker",
+        "C": "f_crate_c"
+      }
+    }
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "faction_base_storage_simple_3_mapgen",
+    "object": {
+      "place_nested": [
+        {
+          "chunks": [ "storage_large_room" ],
+          "x": 3,
+          "y": 3
+        }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "nested_mapgen_id": "storage_large_room",
+    "object": {
+      "mapgensize": [ 10, 10 ],
+      "rows": [
+        "WWWWWWWWWW",
+        "WBBRRRRRR W",
+        "WR.......RW",
+        "WR.LLLL..RW",
+        "WR.CCCC..RW",
+        "WR.......RW",
+        "WR.LLLL..RW",
+        "WR.......RW",
+        "WRRRRRRLRW",
+        "WWWWDWWWWW"
+      ],
+      "terrain": {
+        "W": "t_wall_wood",
+        ".": "t_floor",
+        "D": "t_door_c",
+        " ": "t_floor"
+      },
+      "furniture": {
+        "B": "f_bed",
+        "R": "f_rack",
+        "L": "f_locker",
+        "C": "f_crate_c"
+      }
+    }
+  }
+]
