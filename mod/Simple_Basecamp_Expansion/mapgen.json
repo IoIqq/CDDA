@@ -944,5 +944,83 @@
         "L": "f_locker"
       }
     }
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "faction_base_recreation_simple_1_mapgen",
+    "object": {
+      "place_nested": [
+        {
+          "chunks": [ "recreation_simple_room" ],
+          "x": 3,
+          "y": 3
+        }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "nested_mapgen_id": "recreation_simple_room",
+    "object": {
+      "mapgensize": [ 6, 6 ],
+      "rows": [
+        "WWWWWW",
+        "WBB..W",
+        "WHHHHW",
+        "W....W",
+        "WR.L.W",
+        "WWDWWW"
+      ],
+      "terrain": {
+        "W": "t_wall_wood",
+        ".": "t_floor",
+        "D": "t_door_c"
+      },
+      "furniture": {
+        "B": "f_bed",
+        "H": "f_chair",
+        "R": "f_rack",
+        "L": "f_locker"
+      }
+    }
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "faction_base_trading_simple_1_mapgen",
+    "object": {
+      "place_nested": [
+        {
+          "chunks": [ "trading_simple_room" ],
+          "x": 3,
+          "y": 3
+        }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "nested_mapgen_id": "trading_simple_room",
+    "object": {
+      "mapgensize": [ 6, 6 ],
+      "rows": [
+        "WWWWWW",
+        "WBB..W",
+        "WR..RW",
+        "WR..RW",
+        "WC.L.W",
+        "WWDWWW"
+      ],
+      "terrain": {
+        "W": "t_wall_wood",
+        ".": "t_floor",
+        "D": "t_door_c"
+      },
+      "furniture": {
+        "B": "f_bed",
+        "R": "f_rack",
+        "C": "f_crate_c",
+        "L": "f_locker"
+      }
+    }
   }
 ]

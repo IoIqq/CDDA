@@ -1128,5 +1128,96 @@
       [ [ "rock", 40 ] ],
       [ [ "pipe", 4 ] ]
     ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_recreation_simple_0",
+    "description": "娱乐室扩展的起始点",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_requires": [
+      { "id": "not_an_upgrade", "amount": 1 }
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_recreation_simple_1",
+    "description": "建造一个娱乐室，提供休闲娱乐能力。包含座椅和娱乐设施，可以提升NPC士气。",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "fabrication",
+    "difficulty": 2,
+    "time": "300 m",
+    "autolearn": false,
+    "never_learn": true,
+    "construction_blueprint": "faction_base_recreation_simple_1_mapgen",
+    "blueprint_name": "简单娱乐室",
+    "blueprint_provides": [
+      { "id": "morale_boost", "amount": 1 },
+      { "id": "bed", "amount": 2 }
+    ],
+    "blueprint_requires": [
+      { "id": "faction_base_camp_4", "amount": 1 }
+    ],
+    "blueprint_excludes": [
+      { "id": "faction_base_recreation_simple_1", "amount": 1 }
+    ],
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "SAW_M", "level": 1 } ]
+    ],
+    "components": [
+      [ [ "2x4", 30 ] ],
+      [ [ "log", 10 ] ],
+      [ [ "nail", 60 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_trading_simple_0",
+    "description": "交易站扩展的起始点",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_requires": [
+      { "id": "not_an_upgrade", "amount": 1 }
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_trading_simple_1",
+    "description": "建造一个交易站，提供贸易能力。包含展示台和储物空间，可以进行物资交易。",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "fabrication",
+    "difficulty": 3,
+    "time": "360 m",
+    "autolearn": false,
+    "never_learn": true,
+    "construction_blueprint": "faction_base_trading_simple_1_mapgen",
+    "blueprint_name": "简单交易站",
+    "blueprint_provides": [
+      { "id": "trading", "amount": 1 },
+      { "id": "bed", "amount": 2 }
+    ],
+    "blueprint_requires": [
+      { "id": "faction_base_camp_4", "amount": 1 }
+    ],
+    "blueprint_excludes": [
+      { "id": "faction_base_trading_simple_1", "amount": 1 }
+    ],
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "SAW_M", "level": 1 } ]
+    ],
+    "components": [
+      [ [ "2x4", 35 ] ],
+      [ [ "log", 12 ] ],
+      [ [ "nail", 65 ] ],
+      [ [ "sheet_metal", 4 ] ]
+    ]
   }
 ]
