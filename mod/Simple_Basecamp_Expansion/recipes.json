@@ -712,5 +712,144 @@
       [ [ "nail", 50 ] ],
       [ [ "rock", 30 ] ]
     ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_greenhouse_simple_0",
+    "description": "温室扩展的起始点",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_requires": [
+      { "id": "not_an_upgrade", "amount": 1 }
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_greenhouse_simple_1",
+    "description": "建造一个简单的温室，提供作物种植能力。包含耕地和储物设施，解锁农业配方组。",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "fabrication",
+    "difficulty": 3,
+    "time": "360 m",
+    "autolearn": false,
+    "never_learn": true,
+    "construction_blueprint": "faction_base_greenhouse_simple_1_mapgen",
+    "blueprint_name": "简单温室",
+    "blueprint_provides": [
+      { "id": "farming", "amount": 1 },
+      { "id": "bed", "amount": 2 }
+    ],
+    "blueprint_requires": [
+      { "id": "faction_base_camp_4", "amount": 1 }
+    ],
+    "blueprint_excludes": [
+      { "id": "faction_base_greenhouse_simple_1", "amount": 1 }
+    ],
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "SAW_M", "level": 1 } ],
+      [ { "id": "DIG", "level": 1 } ]
+    ],
+    "components": [
+      [ [ "2x4", 30 ] ],
+      [ [ "log", 12 ] ],
+      [ [ "nail", 60 ] ],
+      [ [ "plastic_chunk", 20 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_animals_simple_0",
+    "description": "畜栏扩展的起始点",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_requires": [
+      { "id": "not_an_upgrade", "amount": 1 }
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_animals_simple_1",
+    "description": "建造一个简单的畜栏，提供动物养殖能力。包含围栏和饲料槽，解锁养殖配方组。",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "fabrication",
+    "difficulty": 3,
+    "time": "360 m",
+    "autolearn": false,
+    "never_learn": true,
+    "construction_blueprint": "faction_base_animals_simple_1_mapgen",
+    "blueprint_name": "简单畜栏",
+    "blueprint_provides": [
+      { "id": "animal_husbandry", "amount": 1 },
+      { "id": "bed", "amount": 2 }
+    ],
+    "blueprint_requires": [
+      { "id": "faction_base_camp_4", "amount": 1 }
+    ],
+    "blueprint_excludes": [
+      { "id": "faction_base_animals_simple_1", "amount": 1 }
+    ],
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "SAW_M", "level": 1 } ]
+    ],
+    "components": [
+      [ [ "2x4", 40 ] ],
+      [ [ "log", 20 ] ],
+      [ [ "nail", 80 ] ],
+      [ [ "pipe", 6 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_brewery_simple_0",
+    "description": "酿酒坊扩展的起始点",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_requires": [
+      { "id": "not_an_upgrade", "amount": 1 }
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_brewery_simple_1",
+    "description": "建造一个简单的酿酒坊，提供饮料酿造能力。包含发酵桶和储物设施，解锁酿造配方组。",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "fabrication",
+    "difficulty": 3,
+    "time": "360 m",
+    "autolearn": false,
+    "never_learn": true,
+    "construction_blueprint": "faction_base_brewery_simple_1_mapgen",
+    "blueprint_name": "简单酿酒坊",
+    "blueprint_provides": [
+      { "id": "brewing", "amount": 1 },
+      { "id": "bed", "amount": 2 }
+    ],
+    "blueprint_requires": [
+      { "id": "faction_base_camp_4", "amount": 1 }
+    ],
+    "blueprint_excludes": [
+      { "id": "faction_base_brewery_simple_1", "amount": 1 }
+    ],
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "SAW_M", "level": 1 } ]
+    ],
+    "components": [
+      [ [ "2x4", 25 ] ],
+      [ [ "log", 10 ] ],
+      [ [ "nail", 50 ] ],
+      [ [ "pipe", 4 ] ]
+    ]
   }
 ]
