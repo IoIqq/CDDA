@@ -1,0 +1,14 @@
+[
+  {
+    "type": "recipe_group",
+    "name": "all_faction_base_expansions",
+    "building_type": "NONE",
+    "recipes": [
+      {
+        "id": "faction_base_smithy_simple_0",
+        "description": "简单铁匠铺",
+        "om_terrains": [ "field" ]
+      }
+    ]
+  }
+]
