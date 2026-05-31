@@ -1,0 +1,42 @@
+[
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "faction_base_smithy_simple_1_mapgen",
+    "object": {
+      "place_nested": [
+        {
+          "chunks": [ "smithy_simple_room" ],
+          "x": 3,
+          "y": 3
+        }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "nested_mapgen_id": "smithy_simple_room",
+    "object": {
+      "mapgensize": [ 6, 6 ],
+      "rows": [
+        "WWWWWW",
+        "W....W",
+        "W.AF.W",
+        "W.T..W",
+        "W.R.LW",
+        "WWDWWW"
+      ],
+      "terrain": {
+        "W": "t_wall_wood",
+        ".": "t_floor",
+        "D": "t_door_c"
+      },
+      "furniture": {
+        "A": "f_anvil",
+        "F": "f_forge",
+        "T": "f_workbench",
+        "R": "f_rack",
+        "L": "f_locker"
+      }
+    }
+  }
+]
