@@ -1,0 +1,49 @@
+[
+  {
+    "type": "recipe",
+    "result": "faction_base_smithy_simple_0",
+    "description": "铁匠铺扩展的起始点",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_requires": [
+      { "id": "not_an_upgrade", "amount": 1 }
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_smithy_simple_1",
+    "description": "建造一个简单的铁匠铺，提供基础的金属加工能力。包含铁砧、熔炉和工作台，解锁铁匠配方组。",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "fabrication",
+    "difficulty": 4,
+    "time": "480 m",
+    "autolearn": false,
+    "never_learn": true,
+    "construction_blueprint": "faction_base_smithy_simple_1_mapgen",
+    "blueprint_name": "简单铁匠铺",
+    "blueprint_provides": [
+      { "id": "blacksmith", "amount": 1 }
+    ],
+    "blueprint_requires": [
+      { "id": "faction_base_camp_4", "amount": 1 }
+    ],
+    "blueprint_excludes": [
+      { "id": "faction_base_smithy_simple_1", "amount": 1 }
+    ],
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "SAW_M", "level": 1 } ]
+    ],
+    "components": [
+      [ [ "2x4", 30 ] ],
+      [ [ "log", 15 ] ],
+      [ [ "nail", 60 ] ],
+      [ [ "pipe", 4 ] ],
+      [ [ "sheet_metal", 10 ] ],
+      [ [ "rock", 20 ] ]
+    ]
+  }
+]
