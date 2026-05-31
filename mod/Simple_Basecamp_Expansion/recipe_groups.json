@@ -108,6 +108,21 @@
         "id": "faction_base_training_simple_0",
         "description": "简单训练场",
         "om_terrains": [ "field" ]
+      },
+      {
+        "id": "faction_base_library_simple_0",
+        "description": "简单图书馆",
+        "om_terrains": [ "field" ]
+      },
+      {
+        "id": "faction_base_radio_simple_0",
+        "description": "简单通讯中心",
+        "om_terrains": [ "field" ]
+      },
+      {
+        "id": "faction_base_glass_simple_0",
+        "description": "简单玻璃工坊",
+        "om_terrains": [ "field" ]
       }
     ]
   }

@@ -989,5 +989,144 @@
       [ [ "nail", 70 ] ],
       [ [ "rock", 10 ] ]
     ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_library_simple_0",
+    "description": "图书馆扩展的起始点",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_requires": [
+      { "id": "not_an_upgrade", "amount": 1 }
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_library_simple_1",
+    "description": "建造一个图书馆，提供知识存储能力。包含书架和阅读区，可以存储书籍和技能手册。",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "fabrication",
+    "difficulty": 3,
+    "time": "360 m",
+    "autolearn": false,
+    "never_learn": true,
+    "construction_blueprint": "faction_base_library_simple_1_mapgen",
+    "blueprint_name": "简单图书馆",
+    "blueprint_provides": [
+      { "id": "knowledge_storage", "amount": 1 },
+      { "id": "bed", "amount": 2 }
+    ],
+    "blueprint_requires": [
+      { "id": "faction_base_camp_4", "amount": 1 }
+    ],
+    "blueprint_excludes": [
+      { "id": "faction_base_library_simple_1", "amount": 1 }
+    ],
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "SAW_M", "level": 1 } ]
+    ],
+    "components": [
+      [ [ "2x4", 40 ] ],
+      [ [ "log", 15 ] ],
+      [ [ "nail", 75 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_radio_simple_0",
+    "description": "通讯中心扩展的起始点",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_requires": [
+      { "id": "not_an_upgrade", "amount": 1 }
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_radio_simple_1",
+    "description": "建造一个通讯中心，提供无线电通讯能力。包含无线电设备和天线，可以进行远程通讯。",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "fabrication",
+    "difficulty": 4,
+    "time": "420 m",
+    "autolearn": false,
+    "never_learn": true,
+    "construction_blueprint": "faction_base_radio_simple_1_mapgen",
+    "blueprint_name": "简单通讯中心",
+    "blueprint_provides": [
+      { "id": "radio_communication", "amount": 1 },
+      { "id": "bed", "amount": 2 }
+    ],
+    "blueprint_requires": [
+      { "id": "faction_base_camp_4", "amount": 1 }
+    ],
+    "blueprint_excludes": [
+      { "id": "faction_base_radio_simple_1", "amount": 1 }
+    ],
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "SAW_M", "level": 1 } ]
+    ],
+    "components": [
+      [ [ "2x4", 30 ] ],
+      [ [ "log", 12 ] ],
+      [ [ "nail", 60 ] ],
+      [ [ "pipe", 6 ] ],
+      [ [ "sheet_metal", 8 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_glass_simple_0",
+    "description": "玻璃工坊扩展的起始点",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_requires": [
+      { "id": "not_an_upgrade", "amount": 1 }
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_glass_simple_1",
+    "description": "建造一个玻璃工坊，提供玻璃制作能力。包含熔炉和工作台，NPC可以制作玻璃制品。",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "fabrication",
+    "difficulty": 4,
+    "time": "420 m",
+    "autolearn": false,
+    "never_learn": true,
+    "construction_blueprint": "faction_base_glass_simple_1_mapgen",
+    "blueprint_name": "简单玻璃工坊",
+    "blueprint_provides": [
+      { "id": "glassworking", "amount": 1 },
+      { "id": "bed", "amount": 2 }
+    ],
+    "blueprint_requires": [
+      { "id": "faction_base_camp_4", "amount": 1 }
+    ],
+    "blueprint_excludes": [
+      { "id": "faction_base_glass_simple_1", "amount": 1 }
+    ],
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "SAW_M", "level": 1 } ]
+    ],
+    "components": [
+      [ [ "2x4", 30 ] ],
+      [ [ "log", 15 ] ],
+      [ [ "nail", 60 ] ],
+      [ [ "rock", 40 ] ],
+      [ [ "pipe", 4 ] ]
+    ]
   }
 ]
