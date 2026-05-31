@@ -194,5 +194,242 @@
       [ [ "sheet_metal", 8 ] ],
       [ [ "rock", 15 ] ]
     ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_medical_simple_0",
+    "description": "医疗站扩展的起始点",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_requires": [
+      { "id": "not_an_upgrade", "amount": 1 }
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_medical_simple_1",
+    "description": "建造一个简单的医疗站，提供医疗救治能力。包含医疗床、药品柜和急救台，NPC可以制作医疗用品。",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "fabrication",
+    "difficulty": 4,
+    "time": "420 m",
+    "autolearn": false,
+    "never_learn": true,
+    "construction_blueprint": "faction_base_medical_simple_1_mapgen",
+    "blueprint_name": "简单医疗站",
+    "blueprint_provides": [
+      { "id": "medical_crafting", "amount": 1 },
+      { "id": "bed", "amount": 2 }
+    ],
+    "blueprint_requires": [
+      { "id": "faction_base_camp_4", "amount": 1 }
+    ],
+    "blueprint_excludes": [
+      { "id": "faction_base_medical_simple_1", "amount": 1 }
+    ],
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "SAW_M", "level": 1 } ]
+    ],
+    "components": [
+      [ [ "2x4", 30 ] ],
+      [ [ "log", 12 ] ],
+      [ [ "nail", 60 ] ],
+      [ [ "sheet_metal", 6 ] ],
+      [ [ "plastic_chunk", 10 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_water_simple_0",
+    "description": "水处理站扩展的起始点",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_requires": [
+      { "id": "not_an_upgrade", "amount": 1 }
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_water_simple_1",
+    "description": "建造一个水处理站，提供净化水源和储水能力。包含大型水箱、过滤系统和水井，解锁永久水源。",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "fabrication",
+    "difficulty": 3,
+    "time": "360 m",
+    "autolearn": false,
+    "never_learn": true,
+    "construction_blueprint": "faction_base_water_simple_1_mapgen",
+    "blueprint_name": "简单水处理站",
+    "blueprint_provides": [
+      { "id": "water_well", "amount": 1 },
+      { "id": "bed", "amount": 2 }
+    ],
+    "blueprint_requires": [
+      { "id": "faction_base_camp_4", "amount": 1 }
+    ],
+    "blueprint_excludes": [
+      { "id": "faction_base_water_simple_1", "amount": 1 }
+    ],
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "SAW_M", "level": 1 } ],
+      [ { "id": "DIG", "level": 2 } ]
+    ],
+    "components": [
+      [ [ "2x4", 25 ] ],
+      [ [ "log", 10 ] ],
+      [ [ "nail", 50 ] ],
+      [ [ "pipe", 8 ] ],
+      [ [ "sheet_metal", 12 ] ],
+      [ [ "rock", 30 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_foodproc_simple_0",
+    "description": "食品加工厂扩展的起始点",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_requires": [
+      { "id": "not_an_upgrade", "amount": 1 }
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_foodproc_simple_1",
+    "description": "建造一个食品加工厂，提供食物保存能力。包含腌制桶、烟熏架和罐头封装台，NPC可以制作长期保存食品。",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "fabrication",
+    "difficulty": 3,
+    "time": "360 m",
+    "autolearn": false,
+    "never_learn": true,
+    "construction_blueprint": "faction_base_foodproc_simple_1_mapgen",
+    "blueprint_name": "简单食品加工厂",
+    "blueprint_provides": [
+      { "id": "food_preservation", "amount": 1 },
+      { "id": "bed", "amount": 2 }
+    ],
+    "blueprint_requires": [
+      { "id": "faction_base_camp_4", "amount": 1 }
+    ],
+    "blueprint_excludes": [
+      { "id": "faction_base_foodproc_simple_1", "amount": 1 }
+    ],
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "SAW_M", "level": 1 } ]
+    ],
+    "components": [
+      [ [ "2x4", 35 ] ],
+      [ [ "log", 15 ] ],
+      [ [ "nail", 65 ] ],
+      [ [ "sheet_metal", 8 ] ],
+      [ [ "rock", 10 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_fuel_simple_0",
+    "description": "燃料精炼站扩展的起始点",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_requires": [
+      { "id": "not_an_upgrade", "amount": 1 }
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_fuel_simple_1",
+    "description": "建造一个燃料精炼站，提供燃料制作能力。包含蒸馏器和储油罐，NPC可以制作生物柴油和酒精燃料。",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "fabrication",
+    "difficulty": 4,
+    "time": "420 m",
+    "autolearn": false,
+    "never_learn": true,
+    "construction_blueprint": "faction_base_fuel_simple_1_mapgen",
+    "blueprint_name": "简单燃料精炼站",
+    "blueprint_provides": [
+      { "id": "fuel_crafting", "amount": 1 },
+      { "id": "bed", "amount": 2 }
+    ],
+    "blueprint_requires": [
+      { "id": "faction_base_camp_4", "amount": 1 }
+    ],
+    "blueprint_excludes": [
+      { "id": "faction_base_fuel_simple_1", "amount": 1 }
+    ],
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "SAW_M", "level": 1 } ]
+    ],
+    "components": [
+      [ [ "2x4", 30 ] ],
+      [ [ "log", 12 ] ],
+      [ [ "nail", 60 ] ],
+      [ [ "pipe", 10 ] ],
+      [ [ "sheet_metal", 15 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_armory_simple_0",
+    "description": "武器维修站扩展的起始点",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_requires": [
+      { "id": "not_an_upgrade", "amount": 1 }
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_armory_simple_1",
+    "description": "建造一个武器维修站，提供武器装备维护能力。包含武器架、维修台和磨刀石，NPC可以修理和改装装备。",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "fabrication",
+    "difficulty": 3,
+    "time": "360 m",
+    "autolearn": false,
+    "never_learn": true,
+    "construction_blueprint": "faction_base_armory_simple_1_mapgen",
+    "blueprint_name": "简单武器维修站",
+    "blueprint_provides": [
+      { "id": "weapon_maintenance", "amount": 1 },
+      { "id": "bed", "amount": 2 }
+    ],
+    "blueprint_requires": [
+      { "id": "faction_base_camp_4", "amount": 1 }
+    ],
+    "blueprint_excludes": [
+      { "id": "faction_base_armory_simple_1", "amount": 1 }
+    ],
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "SAW_M", "level": 1 } ]
+    ],
+    "components": [
+      [ [ "2x4", 35 ] ],
+      [ [ "log", 15 ] ],
+      [ [ "nail", 65 ] ],
+      [ [ "sheet_metal", 10 ] ],
+      [ [ "rock", 5 ] ]
+    ]
   }
 ]
