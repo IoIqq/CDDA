@@ -1,0 +1,12 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "simple_basecamp_expansion",
+    "name": "Simple Basecamp Expansion",
+    "authors": ["IoIqq"],
+    "description": "添加营地扩展房间：铁匠铺、木工坊、仓库、厨房。只使用游戏已有物品，提供额外的营地功能和工作空间。",
+    "category": "buildings",
+    "dependencies": ["dda"],
+    "version": "0.1.0"
+  }
+]
