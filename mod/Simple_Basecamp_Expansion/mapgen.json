@@ -160,5 +160,203 @@
         "R": "f_rack"
       }
     }
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "faction_base_medical_simple_1_mapgen",
+    "object": {
+      "place_nested": [
+        {
+          "chunks": [ "medical_simple_room" ],
+          "x": 3,
+          "y": 3
+        }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "nested_mapgen_id": "medical_simple_room",
+    "object": {
+      "mapgensize": [ 6, 6 ],
+      "rows": [
+        "WWWWWW",
+        "WBB..W",
+        "W.T.UW",
+        "W....W",
+        "WR.L.W",
+        "WWDWWW"
+      ],
+      "terrain": {
+        "W": "t_wall_wood",
+        ".": "t_floor",
+        "D": "t_door_c"
+      },
+      "furniture": {
+        "B": "f_bed",
+        "T": "f_workbench",
+        "U": "f_cupboard",
+        "R": "f_rack",
+        "L": "f_locker"
+      }
+    }
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "faction_base_water_simple_1_mapgen",
+    "object": {
+      "place_nested": [
+        {
+          "chunks": [ "water_simple_room" ],
+          "x": 3,
+          "y": 3
+        }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "nested_mapgen_id": "water_simple_room",
+    "object": {
+      "mapgensize": [ 6, 6 ],
+      "rows": [
+        "WWWWWW",
+        "WBB..W",
+        "W.~~.W",
+        "W.~~.W",
+        "WR.L.W",
+        "WWDWWW"
+      ],
+      "terrain": {
+        "W": "t_wall_wood",
+        ".": "t_floor",
+        "D": "t_door_c",
+        "~": "t_water_sh"
+      },
+      "furniture": {
+        "B": "f_bed",
+        "R": "f_rack",
+        "L": "f_locker"
+      }
+    }
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "faction_base_foodproc_simple_1_mapgen",
+    "object": {
+      "place_nested": [
+        {
+          "chunks": [ "foodproc_simple_room" ],
+          "x": 3,
+          "y": 3
+        }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "nested_mapgen_id": "foodproc_simple_room",
+    "object": {
+      "mapgensize": [ 6, 6 ],
+      "rows": [
+        "WWWWWW",
+        "WBB..W",
+        "W.TT.W",
+        "WR..RW",
+        "WC.L.W",
+        "WWDWWW"
+      ],
+      "terrain": {
+        "W": "t_wall_wood",
+        ".": "t_floor",
+        "D": "t_door_c"
+      },
+      "furniture": {
+        "B": "f_bed",
+        "T": "f_workbench",
+        "R": "f_rack",
+        "C": "f_crate_c",
+        "L": "f_locker"
+      }
+    }
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "faction_base_fuel_simple_1_mapgen",
+    "object": {
+      "place_nested": [
+        {
+          "chunks": [ "fuel_simple_room" ],
+          "x": 3,
+          "y": 3
+        }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "nested_mapgen_id": "fuel_simple_room",
+    "object": {
+      "mapgensize": [ 6, 6 ],
+      "rows": [
+        "WWWWWW",
+        "WBB..W",
+        "W.T..W",
+        "WR..RW",
+        "WC.L.W",
+        "WWDWWW"
+      ],
+      "terrain": {
+        "W": "t_wall_wood",
+        ".": "t_floor",
+        "D": "t_door_c"
+      },
+      "furniture": {
+        "B": "f_bed",
+        "T": "f_workbench",
+        "R": "f_rack",
+        "C": "f_crate_c",
+        "L": "f_locker"
+      }
+    }
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "faction_base_armory_simple_1_mapgen",
+    "object": {
+      "place_nested": [
+        {
+          "chunks": [ "armory_simple_room" ],
+          "x": 3,
+          "y": 3
+        }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "nested_mapgen_id": "armory_simple_room",
+    "object": {
+      "mapgensize": [ 6, 6 ],
+      "rows": [
+        "WWWWWW",
+        "WBB..W",
+        "W.T..W",
+        "WR..RW",
+        "WL.L.W",
+        "WWDWWW"
+      ],
+      "terrain": {
+        "W": "t_wall_wood",
+        ".": "t_floor",
+        "D": "t_door_c"
+      },
+      "furniture": {
+        "B": "f_bed",
+        "T": "f_workbench",
+        "R": "f_rack",
+        "L": "f_locker"
+      }
+    }
   }
 ]

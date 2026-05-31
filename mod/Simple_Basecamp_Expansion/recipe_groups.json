@@ -23,6 +23,31 @@
         "id": "faction_base_kitchen_simple_0",
         "description": "简单厨房",
         "om_terrains": [ "field" ]
+      },
+      {
+        "id": "faction_base_medical_simple_0",
+        "description": "简单医疗站",
+        "om_terrains": [ "field" ]
+      },
+      {
+        "id": "faction_base_water_simple_0",
+        "description": "简单水处理站",
+        "om_terrains": [ "field" ]
+      },
+      {
+        "id": "faction_base_foodproc_simple_0",
+        "description": "简单食品加工厂",
+        "om_terrains": [ "field" ]
+      },
+      {
+        "id": "faction_base_fuel_simple_0",
+        "description": "简单燃料精炼站",
+        "om_terrains": [ "field" ]
+      },
+      {
+        "id": "faction_base_armory_simple_0",
+        "description": "简单武器维修站",
+        "om_terrains": [ "field" ]
       }
     ]
   }
