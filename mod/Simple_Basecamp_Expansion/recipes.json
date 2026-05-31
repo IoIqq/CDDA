@@ -431,5 +431,286 @@
       [ [ "sheet_metal", 10 ] ],
       [ [ "rock", 5 ] ]
     ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_ammo_simple_0",
+    "description": "弹药工坊扩展的起始点",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_requires": [
+      { "id": "not_an_upgrade", "amount": 1 }
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_ammo_simple_1",
+    "description": "建造一个弹药工坊，提供弹药制作能力。包含装弹台和火药存储，NPC可以制作各种弹药。",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "fabrication",
+    "difficulty": 4,
+    "time": "420 m",
+    "autolearn": false,
+    "never_learn": true,
+    "construction_blueprint": "faction_base_ammo_simple_1_mapgen",
+    "blueprint_name": "简单弹药工坊",
+    "blueprint_provides": [
+      { "id": "ammo_crafting", "amount": 1 },
+      { "id": "bed", "amount": 2 }
+    ],
+    "blueprint_requires": [
+      { "id": "faction_base_camp_4", "amount": 1 }
+    ],
+    "blueprint_excludes": [
+      { "id": "faction_base_ammo_simple_1", "amount": 1 }
+    ],
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "SAW_M", "level": 1 } ]
+    ],
+    "components": [
+      [ [ "2x4", 30 ] ],
+      [ [ "log", 12 ] ],
+      [ [ "nail", 60 ] ],
+      [ [ "sheet_metal", 8 ] ],
+      [ [ "pipe", 4 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_textile_simple_0",
+    "description": "纺织作坊扩展的起始点",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_requires": [
+      { "id": "not_an_upgrade", "amount": 1 }
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_textile_simple_1",
+    "description": "建造一个纺织作坊，提供衣物制作能力。包含缝纫台和织布机，NPC可以制作衣服和布料。",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "fabrication",
+    "difficulty": 3,
+    "time": "360 m",
+    "autolearn": false,
+    "never_learn": true,
+    "construction_blueprint": "faction_base_textile_simple_1_mapgen",
+    "blueprint_name": "简单纺织作坊",
+    "blueprint_provides": [
+      { "id": "tailoring", "amount": 1 },
+      { "id": "bed", "amount": 2 }
+    ],
+    "blueprint_requires": [
+      { "id": "faction_base_camp_4", "amount": 1 }
+    ],
+    "blueprint_excludes": [
+      { "id": "faction_base_textile_simple_1", "amount": 1 }
+    ],
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "SAW_M", "level": 1 } ]
+    ],
+    "components": [
+      [ [ "2x4", 35 ] ],
+      [ [ "log", 12 ] ],
+      [ [ "nail", 65 ] ],
+      [ [ "sheet_metal", 4 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_chem_simple_0",
+    "description": "化学实验室扩展的起始点",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_requires": [
+      { "id": "not_an_upgrade", "amount": 1 }
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_chem_simple_1",
+    "description": "建造一个化学实验室，提供化学品制作能力。包含实验台和化学品存储，NPC可以制作各种化学品。",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "fabrication",
+    "difficulty": 4,
+    "time": "420 m",
+    "autolearn": false,
+    "never_learn": true,
+    "construction_blueprint": "faction_base_chem_simple_1_mapgen",
+    "blueprint_name": "简单化学实验室",
+    "blueprint_provides": [
+      { "id": "chemistry_crafting", "amount": 1 },
+      { "id": "bed", "amount": 2 }
+    ],
+    "blueprint_requires": [
+      { "id": "faction_base_camp_4", "amount": 1 }
+    ],
+    "blueprint_excludes": [
+      { "id": "faction_base_chem_simple_1", "amount": 1 }
+    ],
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "SAW_M", "level": 1 } ]
+    ],
+    "components": [
+      [ [ "2x4", 30 ] ],
+      [ [ "log", 10 ] ],
+      [ [ "nail", 60 ] ],
+      [ [ "sheet_metal", 8 ] ],
+      [ [ "plastic_chunk", 12 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_electronics_simple_0",
+    "description": "电子工坊扩展的起始点",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_requires": [
+      { "id": "not_an_upgrade", "amount": 1 }
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_electronics_simple_1",
+    "description": "建造一个电子工坊，提供电子设备制作能力。包含焊接台和电子工作台，NPC可以制作电子设备。",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "fabrication",
+    "difficulty": 4,
+    "time": "420 m",
+    "autolearn": false,
+    "never_learn": true,
+    "construction_blueprint": "faction_base_electronics_simple_1_mapgen",
+    "blueprint_name": "简单电子工坊",
+    "blueprint_provides": [
+      { "id": "electronics_crafting", "amount": 1 },
+      { "id": "bed", "amount": 2 }
+    ],
+    "blueprint_requires": [
+      { "id": "faction_base_camp_4", "amount": 1 }
+    ],
+    "blueprint_excludes": [
+      { "id": "faction_base_electronics_simple_1", "amount": 1 }
+    ],
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "SAW_M", "level": 1 } ]
+    ],
+    "components": [
+      [ [ "2x4", 30 ] ],
+      [ [ "log", 10 ] ],
+      [ [ "nail", 60 ] ],
+      [ [ "sheet_metal", 10 ] ],
+      [ [ "plastic_chunk", 8 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_charcoal_simple_0",
+    "description": "木炭窑扩展的起始点",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_requires": [
+      { "id": "not_an_upgrade", "amount": 1 }
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_charcoal_simple_1",
+    "description": "建造一个木炭窑，提供木炭生产能力。包含窑炉和木材堆放区，NPC可以烧制木炭。",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "fabrication",
+    "difficulty": 3,
+    "time": "360 m",
+    "autolearn": false,
+    "never_learn": true,
+    "construction_blueprint": "faction_base_charcoal_simple_1_mapgen",
+    "blueprint_name": "简单木炭窑",
+    "blueprint_provides": [
+      { "id": "charcoal_production", "amount": 1 },
+      { "id": "firewood", "amount": 1 },
+      { "id": "bed", "amount": 2 }
+    ],
+    "blueprint_requires": [
+      { "id": "faction_base_camp_4", "amount": 1 }
+    ],
+    "blueprint_excludes": [
+      { "id": "faction_base_charcoal_simple_1", "amount": 1 }
+    ],
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "SAW_M", "level": 1 } ],
+      [ { "id": "DIG", "level": 1 } ]
+    ],
+    "components": [
+      [ [ "2x4", 25 ] ],
+      [ [ "log", 15 ] ],
+      [ [ "nail", 50 ] ],
+      [ [ "rock", 40 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_pottery_simple_0",
+    "description": "制陶工坊扩展的起始点",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_requires": [
+      { "id": "not_an_upgrade", "amount": 1 }
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_pottery_simple_1",
+    "description": "建造一个制陶工坊，提供陶器制作能力。包含陶轮和窑炉，NPC可以制作陶器容器。",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "fabrication",
+    "difficulty": 3,
+    "time": "360 m",
+    "autolearn": false,
+    "never_learn": true,
+    "construction_blueprint": "faction_base_pottery_simple_1_mapgen",
+    "blueprint_name": "简单制陶工坊",
+    "blueprint_provides": [
+      { "id": "pottery_crafting", "amount": 1 },
+      { "id": "bed", "amount": 2 }
+    ],
+    "blueprint_requires": [
+      { "id": "faction_base_camp_4", "amount": 1 }
+    ],
+    "blueprint_excludes": [
+      { "id": "faction_base_pottery_simple_1", "amount": 1 }
+    ],
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "SAW_M", "level": 1 } ]
+    ],
+    "components": [
+      [ [ "2x4", 25 ] ],
+      [ [ "log", 10 ] ],
+      [ [ "nail", 50 ] ],
+      [ [ "rock", 30 ] ]
+    ]
   }
 ]
