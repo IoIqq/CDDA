@@ -48,6 +48,36 @@
         "id": "faction_base_armory_simple_0",
         "description": "简单武器维修站",
         "om_terrains": [ "field" ]
+      },
+      {
+        "id": "faction_base_ammo_simple_0",
+        "description": "简单弹药工坊",
+        "om_terrains": [ "field" ]
+      },
+      {
+        "id": "faction_base_textile_simple_0",
+        "description": "简单纺织工坊",
+        "om_terrains": [ "field" ]
+      },
+      {
+        "id": "faction_base_chem_simple_0",
+        "description": "简单化学实验室",
+        "om_terrains": [ "field" ]
+      },
+      {
+        "id": "faction_base_electronics_simple_0",
+        "description": "简单电子工坊",
+        "om_terrains": [ "field" ]
+      },
+      {
+        "id": "faction_base_charcoal_simple_0",
+        "description": "简单木炭窑",
+        "om_terrains": [ "field" ]
+      },
+      {
+        "id": "faction_base_pottery_simple_0",
+        "description": "简单陶艺工坊",
+        "om_terrains": [ "field" ]
       }
     ]
   }

@@ -358,5 +358,241 @@
         "L": "f_locker"
       }
     }
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "faction_base_ammo_simple_1_mapgen",
+    "object": {
+      "place_nested": [
+        {
+          "chunks": [ "ammo_simple_room" ],
+          "x": 3,
+          "y": 3
+        }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "nested_mapgen_id": "ammo_simple_room",
+    "object": {
+      "mapgensize": [ 6, 6 ],
+      "rows": [
+        "WWWWWW",
+        "WBB..W",
+        "W.TT.W",
+        "WR..RW",
+        "WL.L.W",
+        "WWDWWW"
+      ],
+      "terrain": {
+        "W": "t_wall_wood",
+        ".": "t_floor",
+        "D": "t_door_c"
+      },
+      "furniture": {
+        "B": "f_bed",
+        "T": "f_workbench",
+        "R": "f_rack",
+        "L": "f_locker"
+      }
+    }
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "faction_base_textile_simple_1_mapgen",
+    "object": {
+      "place_nested": [
+        {
+          "chunks": [ "textile_simple_room" ],
+          "x": 3,
+          "y": 3
+        }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "nested_mapgen_id": "textile_simple_room",
+    "object": {
+      "mapgensize": [ 6, 6 ],
+      "rows": [
+        "WWWWWW",
+        "WBB..W",
+        "W.TT.W",
+        "W....W",
+        "WR.L.W",
+        "WWDWWW"
+      ],
+      "terrain": {
+        "W": "t_wall_wood",
+        ".": "t_floor",
+        "D": "t_door_c"
+      },
+      "furniture": {
+        "B": "f_bed",
+        "T": "f_workbench",
+        "R": "f_rack",
+        "L": "f_locker"
+      }
+    }
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "faction_base_chem_simple_1_mapgen",
+    "object": {
+      "place_nested": [
+        {
+          "chunks": [ "chem_simple_room" ],
+          "x": 3,
+          "y": 3
+        }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "nested_mapgen_id": "chem_simple_room",
+    "object": {
+      "mapgensize": [ 6, 6 ],
+      "rows": [
+        "WWWWWW",
+        "WBB..W",
+        "W.TT.W",
+        "W....W",
+        "WU.L.W",
+        "WWDWWW"
+      ],
+      "terrain": {
+        "W": "t_wall_wood",
+        ".": "t_floor",
+        "D": "t_door_c"
+      },
+      "furniture": {
+        "B": "f_bed",
+        "T": "f_workbench",
+        "U": "f_cupboard",
+        "L": "f_locker"
+      }
+    }
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "faction_base_electronics_simple_1_mapgen",
+    "object": {
+      "place_nested": [
+        {
+          "chunks": [ "electronics_simple_room" ],
+          "x": 3,
+          "y": 3
+        }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "nested_mapgen_id": "electronics_simple_room",
+    "object": {
+      "mapgensize": [ 6, 6 ],
+      "rows": [
+        "WWWWWW",
+        "WBB..W",
+        "W.TT.W",
+        "W....W",
+        "WR.L.W",
+        "WWDWWW"
+      ],
+      "terrain": {
+        "W": "t_wall_wood",
+        ".": "t_floor",
+        "D": "t_door_c"
+      },
+      "furniture": {
+        "B": "f_bed",
+        "T": "f_workbench",
+        "R": "f_rack",
+        "L": "f_locker"
+      }
+    }
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "faction_base_charcoal_simple_1_mapgen",
+    "object": {
+      "place_nested": [
+        {
+          "chunks": [ "charcoal_simple_room" ],
+          "x": 3,
+          "y": 3
+        }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "nested_mapgen_id": "charcoal_simple_room",
+    "object": {
+      "mapgensize": [ 6, 6 ],
+      "rows": [
+        "WWWWWW",
+        "WBB..W",
+        "W.FF.W",
+        "W....W",
+        "WR.L.W",
+        "WWDWWW"
+      ],
+      "terrain": {
+        "W": "t_wall_wood",
+        ".": "t_floor",
+        "D": "t_door_c"
+      },
+      "furniture": {
+        "B": "f_bed",
+        "F": "f_fireplace",
+        "R": "f_rack",
+        "L": "f_locker"
+      }
+    }
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "faction_base_pottery_simple_1_mapgen",
+    "object": {
+      "place_nested": [
+        {
+          "chunks": [ "pottery_simple_room" ],
+          "x": 3,
+          "y": 3
+        }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "nested_mapgen_id": "pottery_simple_room",
+    "object": {
+      "mapgensize": [ 6, 6 ],
+      "rows": [
+        "WWWWWW",
+        "WBB..W",
+        "W.OF.W",
+        "W.T..W",
+        "WR.L.W",
+        "WWDWWW"
+      ],
+      "terrain": {
+        "W": "t_wall_wood",
+        ".": "t_floor",
+        "D": "t_door_c"
+      },
+      "furniture": {
+        "B": "f_bed",
+        "O": "f_oven",
+        "F": "f_fireplace",
+        "T": "f_workbench",
+        "R": "f_rack",
+        "L": "f_locker"
+      }
+    }
   }
 ]
