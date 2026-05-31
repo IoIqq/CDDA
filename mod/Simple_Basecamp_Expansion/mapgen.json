@@ -19,7 +19,7 @@
       "mapgensize": [ 6, 6 ],
       "rows": [
         "WWWWWW",
-        "W....W",
+        "W.B..W",
         "W.AF.W",
         "W.T..W",
         "W.R.LW",
@@ -31,6 +31,7 @@
         "D": "t_door_c"
       },
       "furniture": {
+        "B": "f_bed",
         "A": "f_anvil",
         "F": "f_forge",
         "T": "f_workbench",
@@ -59,7 +60,7 @@
       "mapgensize": [ 6, 6 ],
       "rows": [
         "WWWWWW",
-        "W....W",
+        "WBB..W",
         "W.TT.W",
         "WR..RW",
         "WL.C.W",
@@ -71,6 +72,7 @@
         "D": "t_door_c"
       },
       "furniture": {
+        "B": "f_bed",
         "T": "f_workbench",
         "R": "f_rack",
         "L": "f_locker",
@@ -98,7 +100,7 @@
       "mapgensize": [ 6, 6 ],
       "rows": [
         "WWWWWW",
-        "WRRLRW",
+        "WBBRR W",
         "WR.LRW",
         "WR.CRW",
         "WRRLRW",
@@ -107,9 +109,11 @@
       "terrain": {
         "W": "t_wall_wood",
         ".": "t_floor",
-        "D": "t_door_c"
+        "D": "t_door_c",
+        " ": "t_floor"
       },
       "furniture": {
+        "B": "f_bed",
         "R": "f_rack",
         "L": "f_locker",
         "C": "f_crate_c"
@@ -136,9 +140,9 @@
       "mapgensize": [ 6, 6 ],
       "rows": [
         "WWWWWW",
-        "W....W",
+        "W.BB.W",
         "W.OT.W",
-        "W....W",
+        "W.S..W",
         "WU.R.W",
         "WWDWWW"
       ],
@@ -148,8 +152,10 @@
         "D": "t_door_c"
       },
       "furniture": {
+        "B": "f_bed",
         "O": "f_oven",
         "T": "f_workbench",
+        "S": "f_stool",
         "U": "f_cupboard",
         "R": "f_rack"
       }
