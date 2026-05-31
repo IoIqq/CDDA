@@ -18,6 +18,11 @@
         "id": "faction_base_storage_simple_0",
         "description": "简单仓库",
         "om_terrains": [ "field" ]
+      },
+      {
+        "id": "faction_base_kitchen_simple_0",
+        "description": "简单厨房",
+        "om_terrains": [ "field" ]
       }
     ]
   }

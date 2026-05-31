@@ -115,5 +115,44 @@
         "C": "f_crate_c"
       }
     }
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "faction_base_kitchen_simple_1_mapgen",
+    "object": {
+      "place_nested": [
+        {
+          "chunks": [ "kitchen_simple_room" ],
+          "x": 3,
+          "y": 3
+        }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "nested_mapgen_id": "kitchen_simple_room",
+    "object": {
+      "mapgensize": [ 6, 6 ],
+      "rows": [
+        "WWWWWW",
+        "W....W",
+        "W.OT.W",
+        "W....W",
+        "WU.R.W",
+        "WWDWWW"
+      ],
+      "terrain": {
+        "W": "t_wall_wood",
+        ".": "t_floor",
+        "D": "t_door_c"
+      },
+      "furniture": {
+        "O": "f_oven",
+        "T": "f_workbench",
+        "U": "f_cupboard",
+        "R": "f_rack"
+      }
+    }
   }
 ]
