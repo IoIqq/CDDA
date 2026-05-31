@@ -77,5 +77,43 @@
         "C": "f_crate_c"
       }
     }
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "faction_base_storage_simple_1_mapgen",
+    "object": {
+      "place_nested": [
+        {
+          "chunks": [ "storage_simple_room" ],
+          "x": 3,
+          "y": 3
+        }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "nested_mapgen_id": "storage_simple_room",
+    "object": {
+      "mapgensize": [ 6, 6 ],
+      "rows": [
+        "WWWWWW",
+        "WRRLRW",
+        "WR.LRW",
+        "WR.CRW",
+        "WRRLRW",
+        "WWDWWW"
+      ],
+      "terrain": {
+        "W": "t_wall_wood",
+        ".": "t_floor",
+        "D": "t_door_c"
+      },
+      "furniture": {
+        "R": "f_rack",
+        "L": "f_locker",
+        "C": "f_crate_c"
+      }
+    }
   }
 ]
