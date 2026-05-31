@@ -851,5 +851,143 @@
       [ [ "nail", 50 ] ],
       [ [ "pipe", 4 ] ]
     ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_traps_simple_0",
+    "description": "陷阱工坊扩展的起始点",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_requires": [
+      { "id": "not_an_upgrade", "amount": 1 }
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_traps_simple_1",
+    "description": "建造一个陷阱工坊，提供陷阱制作能力。包含工作台和材料存储，NPC可以制作各种陷阱。",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "fabrication",
+    "difficulty": 3,
+    "time": "360 m",
+    "autolearn": false,
+    "never_learn": true,
+    "construction_blueprint": "faction_base_traps_simple_1_mapgen",
+    "blueprint_name": "简单陷阱工坊",
+    "blueprint_provides": [
+      { "id": "trapping", "amount": 1 },
+      { "id": "bed", "amount": 2 }
+    ],
+    "blueprint_requires": [
+      { "id": "faction_base_camp_4", "amount": 1 }
+    ],
+    "blueprint_excludes": [
+      { "id": "faction_base_traps_simple_1", "amount": 1 }
+    ],
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "SAW_M", "level": 1 } ]
+    ],
+    "components": [
+      [ [ "2x4", 30 ] ],
+      [ [ "log", 15 ] ],
+      [ [ "nail", 60 ] ],
+      [ [ "pipe", 4 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_watchtower_simple_0",
+    "description": "瞭望塔扩展的起始点",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_requires": [
+      { "id": "not_an_upgrade", "amount": 1 }
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_watchtower_simple_1",
+    "description": "建造一个瞭望塔，提供侦查和防御能力。包含高处观察点和武器存储，解锁侦查任务。",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "fabrication",
+    "difficulty": 4,
+    "time": "420 m",
+    "autolearn": false,
+    "never_learn": true,
+    "construction_blueprint": "faction_base_watchtower_simple_1_mapgen",
+    "blueprint_name": "简单瞭望塔",
+    "blueprint_provides": [
+      { "id": "scouting", "amount": 1 },
+      { "id": "bed", "amount": 2 }
+    ],
+    "blueprint_requires": [
+      { "id": "faction_base_camp_4", "amount": 1 }
+    ],
+    "blueprint_excludes": [
+      { "id": "faction_base_watchtower_simple_1", "amount": 1 }
+    ],
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "SAW_M", "level": 1 } ]
+    ],
+    "components": [
+      [ [ "2x4", 50 ] ],
+      [ [ "log", 25 ] ],
+      [ [ "nail", 100 ] ],
+      [ [ "pipe", 8 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_training_simple_0",
+    "description": "训练场扩展的起始点",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_requires": [
+      { "id": "not_an_upgrade", "amount": 1 }
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_training_simple_1",
+    "description": "建造一个训练场，提供战斗训练能力。包含训练假人和武器架，NPC可以进行战斗训练。",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "fabrication",
+    "difficulty": 3,
+    "time": "360 m",
+    "autolearn": false,
+    "never_learn": true,
+    "construction_blueprint": "faction_base_training_simple_1_mapgen",
+    "blueprint_name": "简单训练场",
+    "blueprint_provides": [
+      { "id": "combat_training", "amount": 1 },
+      { "id": "bed", "amount": 2 }
+    ],
+    "blueprint_requires": [
+      { "id": "faction_base_camp_4", "amount": 1 }
+    ],
+    "blueprint_excludes": [
+      { "id": "faction_base_training_simple_1", "amount": 1 }
+    ],
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "SAW_M", "level": 1 } ]
+    ],
+    "components": [
+      [ [ "2x4", 35 ] ],
+      [ [ "log", 20 ] ],
+      [ [ "nail", 70 ] ],
+      [ [ "rock", 10 ] ]
+    ]
   }
 ]

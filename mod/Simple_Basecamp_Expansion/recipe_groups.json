@@ -93,6 +93,21 @@
         "id": "faction_base_brewery_simple_0",
         "description": "简单酿酒坊",
         "om_terrains": [ "field" ]
+      },
+      {
+        "id": "faction_base_traps_simple_0",
+        "description": "简单陷阱工坊",
+        "om_terrains": [ "field" ]
+      },
+      {
+        "id": "faction_base_watchtower_simple_0",
+        "description": "简单瞭望塔",
+        "om_terrains": [ "field" ]
+      },
+      {
+        "id": "faction_base_training_simple_0",
+        "description": "简单训练场",
+        "om_terrains": [ "field" ]
       }
     ]
   }

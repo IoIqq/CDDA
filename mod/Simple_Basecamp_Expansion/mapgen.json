@@ -710,5 +710,121 @@
         "L": "f_locker"
       }
     }
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "faction_base_traps_simple_1_mapgen",
+    "object": {
+      "place_nested": [
+        {
+          "chunks": [ "traps_simple_room" ],
+          "x": 3,
+          "y": 3
+        }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "nested_mapgen_id": "traps_simple_room",
+    "object": {
+      "mapgensize": [ 6, 6 ],
+      "rows": [
+        "WWWWWW",
+        "WBB..W",
+        "W.TT.W",
+        "WR..RW",
+        "WL.C.W",
+        "WWDWWW"
+      ],
+      "terrain": {
+        "W": "t_wall_wood",
+        ".": "t_floor",
+        "D": "t_door_c"
+      },
+      "furniture": {
+        "B": "f_bed",
+        "T": "f_workbench",
+        "R": "f_rack",
+        "L": "f_locker",
+        "C": "f_crate_c"
+      }
+    }
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "faction_base_watchtower_simple_1_mapgen",
+    "object": {
+      "place_nested": [
+        {
+          "chunks": [ "watchtower_simple_room" ],
+          "x": 3,
+          "y": 3
+        }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "nested_mapgen_id": "watchtower_simple_room",
+    "object": {
+      "mapgensize": [ 6, 6 ],
+      "rows": [
+        "WWWWWW",
+        "WBB..W",
+        "W....W",
+        "WR..RW",
+        "WL.L.W",
+        "WWDWWW"
+      ],
+      "terrain": {
+        "W": "t_wall_wood",
+        ".": "t_floor",
+        "D": "t_door_c"
+      },
+      "furniture": {
+        "B": "f_bed",
+        "R": "f_rack",
+        "L": "f_locker"
+      }
+    }
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "faction_base_training_simple_1_mapgen",
+    "object": {
+      "place_nested": [
+        {
+          "chunks": [ "training_simple_room" ],
+          "x": 3,
+          "y": 3
+        }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "nested_mapgen_id": "training_simple_room",
+    "object": {
+      "mapgensize": [ 6, 6 ],
+      "rows": [
+        "WWWWWW",
+        "WBB..W",
+        "W....W",
+        "W....W",
+        "WR.L.W",
+        "WWDWWW"
+      ],
+      "terrain": {
+        "W": "t_wall_wood",
+        ".": "t_dirtfloor",
+        "D": "t_door_c"
+      },
+      "furniture": {
+        "B": "f_bed",
+        "R": "f_rack",
+        "L": "f_locker"
+      }
+    }
   }
 ]
