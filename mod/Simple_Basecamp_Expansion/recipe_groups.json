@@ -8,6 +8,11 @@
         "id": "faction_base_smithy_simple_0",
         "description": "简单铁匠铺",
         "om_terrains": [ "field" ]
+      },
+      {
+        "id": "faction_base_woodshop_simple_0",
+        "description": "简单木工坊",
+        "om_terrains": [ "field" ]
       }
     ]
   }
