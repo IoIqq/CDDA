@@ -170,5 +170,1333 @@
     "blueprint_autocalc": false,
     "result_mult": 100,
     "description": "使用弹药工坊批量制作鸟弹。一次制作100发。需要建造弹药工坊扩展。"
+  },
+  {
+    "type": "recipe",
+    "result": "jerky",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_MEAT",
+    "skill_used": "cooking",
+    "difficulty": 2,
+    "time": "6 h",
+    "batch_time_factors": [90, 4],
+    "autolearn": false,
+    "components": [
+      [ [ "meat", 20 ] ],
+      [ [ "salt", 100 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量制作肉干（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 10,
+    "description": "使用食品加工厂批量制作肉干。一次处理20份肉，产出10份肉干。"
+  },
+  {
+    "type": "recipe",
+    "result": "meat_cooked",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_MEAT",
+    "skill_used": "cooking",
+    "difficulty": 1,
+    "time": "3 h",
+    "batch_time_factors": [85, 4],
+    "autolearn": false,
+    "qualities": [
+      { "id": "COOK", "level": 2 }
+    ],
+    "tools": [
+      [ [ "surface_heat", 15, "LIST" ] ]
+    ],
+    "components": [
+      [ [ "meat", 20 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量烹饪肉类（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 20,
+    "description": "使用食品加工厂批量烹饪肉类。一次处理20份生肉，产出20份熟肉。"
+  },
+  {
+    "type": "recipe",
+    "result": "fish_smoked",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_MEAT",
+    "skill_used": "cooking",
+    "difficulty": 2,
+    "time": "4 h",
+    "batch_time_factors": [90, 4],
+    "autolearn": false,
+    "qualities": [
+      { "id": "COOK", "level": 2 }
+    ],
+    "tools": [
+      [ [ "surface_heat", 10, "LIST" ] ]
+    ],
+    "components": [
+      [ [ "fish", 15 ] ],
+      [ [ "salt", 75 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量烟熏鱼类（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 15,
+    "description": "使用食品加工厂批量烟熏鱼类。一次处理15份鱼，产出15份烟熏鱼。"
+  },
+  {
+    "type": "recipe",
+    "result": "fish_cooked",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_MEAT",
+    "skill_used": "cooking",
+    "difficulty": 1,
+    "time": "2 h",
+    "batch_time_factors": [85, 4],
+    "autolearn": false,
+    "qualities": [
+      { "id": "COOK", "level": 2 }
+    ],
+    "tools": [
+      [ [ "surface_heat", 10, "LIST" ] ]
+    ],
+    "components": [
+      [ [ "fish", 20 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量烹饪鱼类（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 20,
+    "description": "使用食品加工厂批量烹饪鱼类。一次处理20份生鱼，产出20份熟鱼。"
+  },
+  {
+    "type": "recipe",
+    "result": "salted_fish",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_MEAT",
+    "skill_used": "cooking",
+    "difficulty": 1,
+    "time": "3 h",
+    "batch_time_factors": [90, 4],
+    "autolearn": false,
+    "components": [
+      [ [ "fish", 15 ] ],
+      [ [ "salt", 150 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量制作咸鱼（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 15,
+    "description": "使用食品加工厂批量制作咸鱼。一次处理15份鱼，产出15份咸鱼。"
+  },
+  {
+    "type": "recipe",
+    "result": "lobster_cooked",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_MEAT",
+    "skill_used": "cooking",
+    "difficulty": 2,
+    "time": "2 h",
+    "batch_time_factors": [85, 4],
+    "autolearn": false,
+    "qualities": [
+      { "id": "COOK", "level": 2 }
+    ],
+    "tools": [
+      [ [ "surface_heat", 10, "LIST" ] ]
+    ],
+    "components": [
+      [ [ "lobster", 15 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量烹饪龙虾（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 15,
+    "description": "使用食品加工厂批量烹饪龙虾。一次处理15份龙虾，产出15份熟龙虾。"
+  },
+  {
+    "type": "recipe",
+    "result": "mollusk_cooked",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_MEAT",
+    "skill_used": "cooking",
+    "difficulty": 1,
+    "time": "2 h",
+    "batch_time_factors": [85, 4],
+    "autolearn": false,
+    "qualities": [
+      { "id": "COOK", "level": 2 }
+    ],
+    "tools": [
+      [ [ "surface_heat", 10, "LIST" ] ]
+    ],
+    "components": [
+      [ [ "mollusk", 15 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量烹饪软体动物（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 15,
+    "description": "使用食品加工厂批量烹饪软体动物。一次处理15份软体动物，产出15份熟软体动物。"
+  },
+  {
+    "type": "recipe",
+    "result": "mollusk_smoked",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_MEAT",
+    "skill_used": "cooking",
+    "difficulty": 2,
+    "time": "4 h",
+    "batch_time_factors": [90, 4],
+    "autolearn": false,
+    "qualities": [
+      { "id": "COOK", "level": 2 }
+    ],
+    "tools": [
+      [ [ "surface_heat", 10, "LIST" ] ]
+    ],
+    "components": [
+      [ [ "mollusk", 12 ] ],
+      [ [ "salt", 60 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量烟熏软体动物（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 12,
+    "description": "使用食品加工厂批量烟熏软体动物。一次处理12份软体动物，产出12份烟熏软体动物。"
+  },
+  {
+    "type": "recipe",
+    "result": "salted_mollusk",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_MEAT",
+    "skill_used": "cooking",
+    "difficulty": 1,
+    "time": "3 h",
+    "batch_time_factors": [90, 4],
+    "autolearn": false,
+    "components": [
+      [ [ "mollusk", 12 ] ],
+      [ [ "salt", 120 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量制作咸软体动物（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 12,
+    "description": "使用食品加工厂批量制作咸软体动物。一次处理12份软体动物，产出12份咸软体动物。"
+  },
+  {
+    "type": "recipe",
+    "result": "froglegs_cooked",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_MEAT",
+    "skill_used": "cooking",
+    "difficulty": 1,
+    "time": "1 h 30 m",
+    "batch_time_factors": [85, 4],
+    "autolearn": false,
+    "qualities": [
+      { "id": "COOK", "level": 2 }
+    ],
+    "tools": [
+      [ [ "surface_heat", 8, "LIST" ] ]
+    ],
+    "components": [
+      [ [ "froglegs", 20 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量烹饪蛙腿（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 20,
+    "description": "使用食品加工厂批量烹饪蛙腿。一次处理20份蛙腿，产出20份熟蛙腿。"
+  },
+  {
+    "type": "recipe",
+    "result": "froglegs_smoked",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_MEAT",
+    "skill_used": "cooking",
+    "difficulty": 2,
+    "time": "3 h",
+    "batch_time_factors": [90, 4],
+    "autolearn": false,
+    "qualities": [
+      { "id": "COOK", "level": 2 }
+    ],
+    "tools": [
+      [ [ "surface_heat", 8, "LIST" ] ]
+    ],
+    "components": [
+      [ [ "froglegs", 15 ] ],
+      [ [ "salt", 50 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量烟熏蛙腿（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 15,
+    "description": "使用食品加工厂批量烟熏蛙腿。一次处理15份蛙腿，产出15份烟熏蛙腿。"
+  },
+  {
+    "type": "recipe",
+    "result": "offal_cooked",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_MEAT",
+    "skill_used": "cooking",
+    "difficulty": 2,
+    "time": "2 h",
+    "batch_time_factors": [85, 4],
+    "autolearn": false,
+    "qualities": [
+      { "id": "COOK", "level": 2 }
+    ],
+    "tools": [
+      [ [ "surface_heat", 10, "LIST" ] ]
+    ],
+    "components": [
+      [ [ "offal", 15 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量烹饪内脏（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 15,
+    "description": "使用食品加工厂批量烹饪内脏。一次处理15份内脏，产出15份熟内脏。"
+  },
+  {
+    "type": "recipe",
+    "result": "offal_pickled",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_MEAT",
+    "skill_used": "cooking",
+    "difficulty": 2,
+    "time": "3 h",
+    "batch_time_factors": [90, 4],
+    "autolearn": false,
+    "container": "jar_glass_sealed",
+    "components": [
+      [ [ "offal", 12 ] ],
+      [ [ "salt", 60 ] ],
+      [ [ "water", 12 ], [ "water_clean", 12 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量腌制内脏（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 12,
+    "description": "使用食品加工厂批量腌制内脏。一次处理12份内脏，产出12份腌制内脏。"
+  },
+  {
+    "type": "recipe",
+    "result": "peppermeat",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_MEAT",
+    "skill_used": "cooking",
+    "difficulty": 2,
+    "time": "3 h",
+    "batch_time_factors": [85, 4],
+    "autolearn": false,
+    "qualities": [
+      { "id": "COOK", "level": 2 }
+    ],
+    "tools": [
+      [ [ "surface_heat", 15, "LIST" ] ]
+    ],
+    "components": [
+      [ [ "meat", 15 ] ],
+      [ [ "pepper", 15 ] ],
+      [ [ "salt", 30 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量制作胡椒肉（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 15,
+    "description": "使用食品加工厂批量制作胡椒肉。一次处理15份肉，产出15份胡椒肉。"
+  },
+  {
+    "type": "recipe",
+    "result": "cooked_marrow",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_MEAT",
+    "skill_used": "cooking",
+    "difficulty": 1,
+    "time": "2 h",
+    "batch_time_factors": [85, 4],
+    "autolearn": false,
+    "qualities": [
+      { "id": "COOK", "level": 2 }
+    ],
+    "tools": [
+      [ [ "surface_heat", 10, "LIST" ] ]
+    ],
+    "components": [
+      [ [ "bone", 20 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量烤制骨髓（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 20,
+    "description": "使用食品加工厂批量烤制骨髓。一次处理20根骨头，产出20份烤骨髓。"
+  },
+  {
+    "type": "recipe",
+    "result": "dry_veggy",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_VEGGI",
+    "skill_used": "cooking",
+    "difficulty": 1,
+    "time": "5 h",
+    "batch_time_factors": [90, 4],
+    "autolearn": false,
+    "components": [
+      [ 
+        [ "broccoli", 20 ],
+        [ "cabbage", 20 ],
+        [ "spinach", 20 ],
+        [ "carrot", 20 ],
+        [ "celery", 20 ]
+      ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量干燥蔬菜（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 20,
+    "description": "使用食品加工厂批量干燥蔬菜。一次处理20份蔬菜，产出20份干菜。"
+  },
+  {
+    "type": "recipe",
+    "result": "dry_fruit",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_VEGGI",
+    "skill_used": "cooking",
+    "difficulty": 1,
+    "time": "5 h",
+    "batch_time_factors": [90, 4],
+    "autolearn": false,
+    "components": [
+      [ 
+        [ "apple", 20 ],
+        [ "banana", 20 ],
+        [ "orange", 20 ],
+        [ "blueberries", 20 ],
+        [ "strawberries", 20 ]
+      ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量干燥水果（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 20,
+    "description": "使用食品加工厂批量干燥水果。一次处理20份水果，产出20份果干。"
+  },
+  {
+    "type": "recipe",
+    "result": "dry_meat",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_MEAT",
+    "skill_used": "cooking",
+    "difficulty": 2,
+    "time": "8 h",
+    "batch_time_factors": [90, 4],
+    "autolearn": false,
+    "components": [
+      [ [ "meat_smoked", 15 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量制作肉干（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 15,
+    "description": "使用食品加工厂批量制作肉干。一次处理15份烟熏肉，产出15份肉干。"
+  },
+  {
+    "type": "recipe",
+    "result": "meat_fatty_cooked",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_MEAT",
+    "skill_used": "cooking",
+    "difficulty": 1,
+    "time": "3 h",
+    "batch_time_factors": [85, 4],
+    "autolearn": false,
+    "qualities": [
+      { "id": "COOK", "level": 2 }
+    ],
+    "tools": [
+      [ [ "surface_heat", 15, "LIST" ] ]
+    ],
+    "components": [
+      [ [ "porkbelly", 15 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量烹饪肥肉（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 15,
+    "description": "使用食品加工厂批量烹饪肥肉。一次处理15份五花肉，产出15份熟肥肉。"
+  },
+  {
+    "type": "recipe",
+    "result": "gastropod_cooked",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_MEAT",
+    "skill_used": "cooking",
+    "difficulty": 1,
+    "time": "1 h 30 m",
+    "batch_time_factors": [85, 4],
+    "autolearn": false,
+    "qualities": [
+      { "id": "COOK", "level": 2 }
+    ],
+    "tools": [
+      [ [ "surface_heat", 8, "LIST" ] ]
+    ],
+    "components": [
+      [ [ "gastropod_purged", 30 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量烹饪蜗牛（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 30,
+    "description": "使用食品加工厂批量烹饪蜗牛。一次处理30份蜗牛，产出30份熟蜗牛。"
+  },
+  {
+    "type": "recipe",
+    "result": "dry_fish",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_MEAT",
+    "skill_used": "cooking",
+    "difficulty": 2,
+    "time": "8 h",
+    "batch_time_factors": [90, 4],
+    "autolearn": false,
+    "components": [
+      [ [ "fish_smoked", 12 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量制作鱼干（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 12,
+    "description": "使用食品加工厂批量制作鱼干。一次处理12份烟熏鱼，产出12份鱼干。"
+  },
+  {
+    "type": "recipe",
+    "result": "dry_hflesh",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_MEAT",
+    "skill_used": "cooking",
+    "difficulty": 2,
+    "time": "8 h",
+    "batch_time_factors": [90, 4],
+    "autolearn": false,
+    "components": [
+      [ [ "human_flesh", 15 ] ],
+      [ [ "salt", 75 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量制作人肉干（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 10,
+    "description": "使用食品加工厂批量制作人肉干。一次处理15份人肉，产出10份人肉干。"
+  },
+  {
+    "type": "recipe",
+    "result": "mutant_meat_cooked",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_MEAT",
+    "skill_used": "cooking",
+    "difficulty": 2,
+    "time": "3 h",
+    "batch_time_factors": [85, 4],
+    "autolearn": false,
+    "qualities": [
+      { "id": "COOK", "level": 2 }
+    ],
+    "tools": [
+      [ [ "surface_heat", 15, "LIST" ] ]
+    ],
+    "components": [
+      [ [ "mutant_meat", 15 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量烹饪变异肉（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 15,
+    "description": "使用食品加工厂批量烹饪变异肉。一次处理15份变异肉，产出15份熟变异肉。"
+  },
+  {
+    "type": "recipe",
+    "result": "pepperfat",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_MEAT",
+    "skill_used": "cooking",
+    "difficulty": 2,
+    "time": "3 h",
+    "batch_time_factors": [85, 4],
+    "autolearn": false,
+    "qualities": [
+      { "id": "COOK", "level": 2 }
+    ],
+    "tools": [
+      [ [ "surface_heat", 15, "LIST" ] ]
+    ],
+    "components": [
+      [ [ "porkbelly", 12 ] ],
+      [ [ "pepper", 12 ] ],
+      [ [ "salt", 24 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量制作胡椒肥肉（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 12,
+    "description": "使用食品加工厂批量制作胡椒肥肉。一次处理12份五花肉，产出12份胡椒肥肉。"
+  },
+  {
+    "type": "recipe",
+    "result": "pepperbone",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_MEAT",
+    "skill_used": "cooking",
+    "difficulty": 2,
+    "time": "2 h",
+    "batch_time_factors": [85, 4],
+    "autolearn": false,
+    "qualities": [
+      { "id": "COOK", "level": 2 }
+    ],
+    "tools": [
+      [ [ "surface_heat", 10, "LIST" ] ]
+    ],
+    "components": [
+      [ [ "bone", 15 ] ],
+      [ [ "pepper", 15 ] ],
+      [ [ "salt", 15 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量制作胡椒骨髓（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 15,
+    "description": "使用食品加工厂批量制作胡椒骨髓。一次处理15根骨头，产出15份胡椒骨髓。"
+  },
+  {
+    "type": "recipe",
+    "result": "tallow",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_OTHER",
+    "skill_used": "cooking",
+    "difficulty": 2,
+    "time": "4 h",
+    "batch_time_factors": [85, 4],
+    "autolearn": false,
+    "qualities": [
+      { "id": "COOK", "level": 2 }
+    ],
+    "tools": [
+      [ [ "surface_heat", 20, "LIST" ] ]
+    ],
+    "components": [
+      [ [ "fat", 30 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量提炼动物脂肪（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 30,
+    "description": "使用食品加工厂批量提炼动物脂肪。一次处理30份脂肪，产出30份板油。"
+  },
+  {
+    "type": "recipe",
+    "result": "lard",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_OTHER",
+    "skill_used": "cooking",
+    "difficulty": 2,
+    "time": "4 h",
+    "batch_time_factors": [85, 4],
+    "autolearn": false,
+    "qualities": [
+      { "id": "COOK", "level": 2 }
+    ],
+    "tools": [
+      [ [ "surface_heat", 20, "LIST" ] ]
+    ],
+    "components": [
+      [ [ "fat", 25 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量制作猪油（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 25,
+    "description": "使用食品加工厂批量制作猪油。一次处理25份脂肪，产出25份猪油。"
+  },
+  {
+    "type": "recipe",
+    "result": "dry_beans",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_VEGGI",
+    "skill_used": "cooking",
+    "difficulty": 1,
+    "time": "6 h",
+    "batch_time_factors": [90, 4],
+    "autolearn": false,
+    "components": [
+      [ [ "beans", 30 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量干燥豆类（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 30,
+    "description": "使用食品加工厂批量干燥豆类。一次处理30份豆子，产出30份干豆。"
+  },
+  {
+    "type": "recipe",
+    "result": "dry_rice",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_VEGGI",
+    "skill_used": "cooking",
+    "difficulty": 1,
+    "time": "5 h",
+    "batch_time_factors": [90, 4],
+    "autolearn": false,
+    "components": [
+      [ [ "rice", 30 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量干燥大米（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 30,
+    "description": "使用食品加工厂批量干燥大米。一次处理30份大米，产出30份干米。"
+  },
+  {
+    "type": "recipe",
+    "result": "veggy_pickled",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_VEGGI",
+    "skill_used": "cooking",
+    "difficulty": 2,
+    "time": "4 h",
+    "batch_time_factors": [90, 4],
+    "autolearn": false,
+    "container": "jar_glass_sealed",
+    "components": [
+      [ 
+        [ "cucumber", 15 ],
+        [ "carrot", 15 ],
+        [ "cabbage", 15 ]
+      ],
+      [ [ "salt", 75 ] ],
+      [ [ "water", 15 ], [ "water_clean", 15 ] ],
+      [ [ "vinegar", 15 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量腌制蔬菜（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 15,
+    "description": "使用食品加工厂批量腌制蔬菜。一次处理15份蔬菜，产出15份腌菜。"
+  },
+  {
+    "type": "recipe",
+    "result": "veggy_canned",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_VEGGI",
+    "skill_used": "cooking",
+    "difficulty": 3,
+    "time": "3 h",
+    "batch_time_factors": [85, 4],
+    "autolearn": false,
+    "container": "can_food",
+    "qualities": [
+      { "id": "COOK", "level": 2 }
+    ],
+    "tools": [
+      [ [ "surface_heat", 15, "LIST" ] ]
+    ],
+    "components": [
+      [ 
+        [ "broccoli", 12 ],
+        [ "carrot", 12 ],
+        [ "celery", 12 ]
+      ],
+      [ [ "salt", 24 ] ],
+      [ [ "water", 12 ], [ "water_clean", 12 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量罐装蔬菜（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 12,
+    "description": "使用食品加工厂批量罐装蔬菜。一次处理12份蔬菜，产出12份罐装蔬菜。"
+  },
+  {
+    "type": "recipe",
+    "result": "fruit_canned",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_VEGGI",
+    "skill_used": "cooking",
+    "difficulty": 3,
+    "time": "3 h",
+    "batch_time_factors": [85, 4],
+    "autolearn": false,
+    "container": "can_food",
+    "qualities": [
+      { "id": "COOK", "level": 2 }
+    ],
+    "tools": [
+      [ [ "surface_heat", 15, "LIST" ] ]
+    ],
+    "components": [
+      [ 
+        [ "apple", 12 ],
+        [ "pear", 12 ],
+        [ "orange", 12 ]
+      ],
+      [ [ "sugar", 24 ] ],
+      [ [ "water", 12 ], [ "water_clean", 12 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量罐装水果（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 12,
+    "description": "使用食品加工厂批量罐装水果。一次处理12份水果，产出12份罐装水果。"
+  },
+  {
+    "type": "recipe",
+    "result": "jam_fruit",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_VEGGI",
+    "skill_used": "cooking",
+    "difficulty": 2,
+    "time": "4 h",
+    "batch_time_factors": [85, 4],
+    "autolearn": false,
+    "container": "jar_glass_sealed",
+    "qualities": [
+      { "id": "COOK", "level": 2 }
+    ],
+    "tools": [
+      [ [ "surface_heat", 15, "LIST" ] ]
+    ],
+    "components": [
+      [ 
+        [ "strawberries", 20 ],
+        [ "blueberries", 20 ],
+        [ "raspberries", 20 ]
+      ],
+      [ [ "sugar", 40 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量制作果酱（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 15,
+    "description": "使用食品加工厂批量制作果酱。一次处理20份浆果，产出15份果酱。"
+  },
+  {
+    "type": "recipe",
+    "result": "bread",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_BREAD",
+    "skill_used": "cooking",
+    "difficulty": 2,
+    "time": "4 h",
+    "batch_time_factors": [85, 4],
+    "autolearn": false,
+    "qualities": [
+      { "id": "COOK", "level": 2 }
+    ],
+    "tools": [
+      [ [ "surface_heat", 20, "LIST" ] ]
+    ],
+    "components": [
+      [ [ "flour", 30 ] ],
+      [ [ "water", 15 ], [ "water_clean", 15 ] ],
+      [ [ "yeast", 3 ] ],
+      [ [ "salt", 6 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量烘焙面包（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 15,
+    "description": "使用食品加工厂批量烘焙面包。一次制作15份面包。"
+  },
+  {
+    "type": "recipe",
+    "result": "hardtack",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_BREAD",
+    "skill_used": "cooking",
+    "difficulty": 1,
+    "time": "3 h",
+    "batch_time_factors": [85, 4],
+    "autolearn": false,
+    "qualities": [
+      { "id": "COOK", "level": 2 }
+    ],
+    "tools": [
+      [ [ "surface_heat", 15, "LIST" ] ]
+    ],
+    "components": [
+      [ [ "flour", 25 ] ],
+      [ [ "water", 12 ], [ "water_clean", 12 ] ],
+      [ [ "salt", 12 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量制作压缩饼干（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 20,
+    "description": "使用食品加工厂批量制作压缩饼干。一次制作20份压缩饼干。"
+  },
+  {
+    "type": "recipe",
+    "result": "crackers",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_BREAD",
+    "skill_used": "cooking",
+    "difficulty": 1,
+    "time": "2 h",
+    "batch_time_factors": [85, 4],
+    "autolearn": false,
+    "qualities": [
+      { "id": "COOK", "level": 2 }
+    ],
+    "tools": [
+      [ [ "surface_heat", 12, "LIST" ] ]
+    ],
+    "components": [
+      [ [ "flour", 20 ] ],
+      [ [ "water", 10 ], [ "water_clean", 10 ] ],
+      [ [ "salt", 10 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量制作饼干（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 20,
+    "description": "使用食品加工厂批量制作饼干。一次制作20份饼干。"
+  },
+  {
+    "type": "recipe",
+    "result": "cheese",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_OTHER",
+    "skill_used": "cooking",
+    "difficulty": 3,
+    "time": "6 h",
+    "batch_time_factors": [90, 4],
+    "autolearn": false,
+    "components": [
+      [ [ "milk", 40 ] ],
+      [ [ "salt", 20 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量制作奶酪（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 10,
+    "description": "使用食品加工厂批量制作奶酪。一次处理40份牛奶，产出10份奶酪。"
+  },
+  {
+    "type": "recipe",
+    "result": "butter",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_OTHER",
+    "skill_used": "cooking",
+    "difficulty": 2,
+    "time": "3 h",
+    "batch_time_factors": [85, 4],
+    "autolearn": false,
+    "components": [
+      [ [ "milk", 30 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量制作黄油（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 15,
+    "description": "使用食品加工厂批量制作黄油。一次处理30份牛奶，产出15份黄油。"
+  },
+  {
+    "type": "recipe",
+    "result": "sausage",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_MEAT",
+    "skill_used": "cooking",
+    "difficulty": 3,
+    "time": "4 h",
+    "batch_time_factors": [85, 4],
+    "autolearn": false,
+    "components": [
+      [ [ "meat", 25 ] ],
+      [ [ "salt", 50 ] ],
+      [ [ "pepper", 25 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量制作香肠（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 20,
+    "description": "使用食品加工厂批量制作香肠。一次处理25份肉，产出20份香肠。"
+  },
+  {
+    "type": "recipe",
+    "result": "dry_mushroom",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_VEGGI",
+    "skill_used": "cooking",
+    "difficulty": 1,
+    "time": "5 h",
+    "batch_time_factors": [90, 4],
+    "autolearn": false,
+    "components": [
+      [ [ "mushroom", 25 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量干燥蘑菇（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 25,
+    "description": "使用食品加工厂批量干燥蘑菇。一次处理25份蘑菇，产出25份干蘑菇。"
+  },
+  {
+    "type": "recipe",
+    "result": "dry_chili",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_VEGGI",
+    "skill_used": "cooking",
+    "difficulty": 1,
+    "time": "4 h",
+    "batch_time_factors": [90, 4],
+    "autolearn": false,
+    "components": [
+      [ [ "chili_pepper", 30 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量干燥辣椒（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 30,
+    "description": "使用食品加工厂批量干燥辣椒。一次处理30份辣椒，产出30份干辣椒。"
+  },
+  {
+    "type": "recipe",
+    "result": "meat_canned",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_MEAT",
+    "skill_used": "cooking",
+    "difficulty": 3,
+    "time": "3 h",
+    "batch_time_factors": [85, 4],
+    "autolearn": false,
+    "container": "can_food",
+    "qualities": [
+      { "id": "COOK", "level": 2 }
+    ],
+    "tools": [
+      [ [ "surface_heat", 15, "LIST" ] ]
+    ],
+    "components": [
+      [ [ "meat_cooked", 12 ] ],
+      [ [ "salt", 24 ] ],
+      [ [ "water", 6 ], [ "water_clean", 6 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量罐装肉类（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 12,
+    "description": "使用食品加工厂批量罐装肉类。一次处理12份熟肉，产出12份罐装肉。"
+  },
+  {
+    "type": "recipe",
+    "result": "fish_canned",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_MEAT",
+    "skill_used": "cooking",
+    "difficulty": 3,
+    "time": "3 h",
+    "batch_time_factors": [85, 4],
+    "autolearn": false,
+    "container": "can_food",
+    "qualities": [
+      { "id": "COOK", "level": 2 }
+    ],
+    "tools": [
+      [ [ "surface_heat", 15, "LIST" ] ]
+    ],
+    "components": [
+      [ [ "fish_cooked", 12 ] ],
+      [ [ "salt", 24 ] ],
+      [ [ "water", 6 ], [ "water_clean", 6 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量罐装鱼类（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 12,
+    "description": "使用食品加工厂批量罐装鱼类。一次处理12份熟鱼，产出12份罐装鱼。"
+  },
+  {
+    "type": "recipe",
+    "result": "soup_meat",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_MEAT",
+    "skill_used": "cooking",
+    "difficulty": 2,
+    "time": "2 h",
+    "batch_time_factors": [85, 4],
+    "autolearn": false,
+    "container": "jar_glass_sealed",
+    "qualities": [
+      { "id": "COOK", "level": 2 }
+    ],
+    "tools": [
+      [ [ "surface_heat", 15, "LIST" ] ]
+    ],
+    "components": [
+      [ [ "meat", 15 ] ],
+      [ [ "water", 30 ], [ "water_clean", 30 ] ],
+      [ [ "salt", 15 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量制作肉汤（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 15,
+    "description": "使用食品加工厂批量制作肉汤。一次制作15份肉汤。"
+  },
+  {
+    "type": "recipe",
+    "result": "soup_veggy",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_VEGGI",
+    "skill_used": "cooking",
+    "difficulty": 2,
+    "time": "2 h",
+    "batch_time_factors": [85, 4],
+    "autolearn": false,
+    "container": "jar_glass_sealed",
+    "qualities": [
+      { "id": "COOK", "level": 2 }
+    ],
+    "tools": [
+      [ [ "surface_heat", 15, "LIST" ] ]
+    ],
+    "components": [
+      [ 
+        [ "carrot", 15 ],
+        [ "celery", 15 ],
+        [ "broccoli", 15 ]
+      ],
+      [ [ "water", 30 ], [ "water_clean", 30 ] ],
+      [ [ "salt", 15 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量制作蔬菜汤（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 15,
+    "description": "使用食品加工厂批量制作蔬菜汤。一次制作15份蔬菜汤。"
+  },
+  {
+    "type": "recipe",
+    "result": "flour",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_OTHER",
+    "skill_used": "cooking",
+    "difficulty": 1,
+    "time": "2 h",
+    "batch_time_factors": [80, 4],
+    "autolearn": false,
+    "components": [
+      [ [ "wheat", 40 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量研磨面粉（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 40,
+    "description": "使用食品加工厂批量研磨面粉。一次处理40份小麦，产出40份面粉。"
+  },
+  {
+    "type": "recipe",
+    "result": "cornmeal",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_OTHER",
+    "skill_used": "cooking",
+    "difficulty": 1,
+    "time": "2 h",
+    "batch_time_factors": [80, 4],
+    "autolearn": false,
+    "components": [
+      [ [ "corn", 35 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量研磨玉米粉（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 35,
+    "description": "使用食品加工厂批量研磨玉米粉。一次处理35份玉米，产出35份玉米粉。"
+  },
+  {
+    "type": "recipe",
+    "result": "dry_corn",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_VEGGI",
+    "skill_used": "cooking",
+    "difficulty": 1,
+    "time": "5 h",
+    "batch_time_factors": [90, 4],
+    "autolearn": false,
+    "components": [
+      [ [ "corn", 30 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量干燥玉米（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 30,
+    "description": "使用食品加工厂批量干燥玉米。一次处理30份玉米，产出30份干玉米。"
+  },
+  {
+    "type": "recipe",
+    "result": "dry_potato",
+    "id_suffix": "bulk_food_processing",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_VEGGI",
+    "skill_used": "cooking",
+    "difficulty": 1,
+    "time": "6 h",
+    "batch_time_factors": [90, 4],
+    "autolearn": false,
+    "components": [
+      [ [ "potato", 25 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "food_preservation", "amount": 1 }
+    ],
+    "blueprint_name": "批量干燥土豆（食品加工厂）",
+    "blueprint_autocalc": false,
+    "result_mult": 25,
+    "description": "使用食品加工厂批量干燥土豆。一次处理25份土豆，产出25份干土豆。"
   }
 ]
