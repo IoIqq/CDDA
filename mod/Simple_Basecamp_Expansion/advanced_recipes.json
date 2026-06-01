@@ -1,0 +1,340 @@
+[
+  {
+    "//": "=== 高级冶金配方 ===",
+    "type": "recipe",
+    "result": "steel_lump",
+    "id_suffix": "advanced_metallurgy",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MATERIALS",
+    "skill_used": "fabrication",
+    "difficulty": 6,
+    "time": "2 h",
+    "batch_time_factors": [80, 4],
+    "autolearn": false,
+    "book_learn": [],
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ]
+    ],
+    "tools": [
+      [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ],
+      [ [ "forge", 100 ], [ "oxy_torch", 20 ] ]
+    ],
+    "components": [
+      [ [ "scrap", 12 ] ],
+      [ [ "coal_lump", 2 ], [ "charcoal", 4 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "advanced_blacksmith", "amount": 1 }
+    ],
+    "blueprint_name": "高效炼钢（高级）",
+    "blueprint_autocalc": false,
+    "result_mult": 3,
+    "description": "使用高级冶金技术，从废料中高效提炼钢材。需要高级铁匠铺。产量是普通方法的3倍。"
+  },
+  {
+    "type": "recipe",
+    "result": "alloy_sheet",
+    "id_suffix": "advanced_metallurgy",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MATERIALS",
+    "skill_used": "fabrication",
+    "difficulty": 7,
+    "time": "3 h",
+    "autolearn": false,
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ]
+    ],
+    "tools": [
+      [ [ "forge", 150 ], [ "oxy_torch", 30 ] ]
+    ],
+    "components": [
+      [ [ "steel_lump", 2 ] ],
+      [ [ "aluminum", 1 ] ],
+      [ [ "copper", 1 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "advanced_blacksmith", "amount": 1 }
+    ],
+    "blueprint_name": "特殊合金板",
+    "blueprint_autocalc": false,
+    "description": "制作轻质高强度的特殊合金板。需要高级铁匠铺和冶金研究。"
+  },
+  {
+    "//": "=== 高级农业配方 ===",
+    "type": "recipe",
+    "result": "seed_wheat",
+    "id_suffix": "advanced_agriculture",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_SEEDS",
+    "skill_used": "survival",
+    "difficulty": 5,
+    "time": "1 h",
+    "autolearn": false,
+    "components": [
+      [ [ "seed_wheat", 1 ] ],
+      [ [ "fertilizer", 10 ] ],
+      [ [ "water_clean", 5 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "advanced_farming", "amount": 1 }
+    ],
+    "blueprint_name": "改良小麦种子",
+    "blueprint_autocalc": false,
+    "result_mult": 5,
+    "description": "使用高级农业技术培育改良种子。需要高级温室。产量是普通方法的5倍。"
+  },
+  {
+    "type": "recipe",
+    "result": "veggy",
+    "id_suffix": "hydroponic",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_VEGGI",
+    "skill_used": "survival",
+    "difficulty": 4,
+    "time": "6 h",
+    "batch_time_factors": [85, 4],
+    "autolearn": false,
+    "components": [
+      [ [ "seed", 5 ] ],
+      [ [ "water_clean", 20 ] ],
+      [ [ "fertilizer", 5 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "advanced_farming", "amount": 1 }
+    ],
+    "blueprint_name": "水培蔬菜（高产）",
+    "blueprint_autocalc": false,
+    "result_mult": 20,
+    "description": "使用水培技术快速种植蔬菜。需要高级温室。产量极高。"
+  },
+  {
+    "//": "=== 高级医疗配方 ===",
+    "type": "recipe",
+    "result": "antibiotics",
+    "id_suffix": "advanced_medicine",
+    "category": "CC_CHEM",
+    "subcategory": "CSC_CHEM_DRUGS",
+    "skill_used": "firstaid",
+    "difficulty": 7,
+    "time": "4 h",
+    "autolearn": false,
+    "qualities": [
+      [ { "id": "CHEM", "level": 2 } ]
+    ],
+    "tools": [
+      [ [ "hotplate", 50 ], [ "toolset", 50 ] ]
+    ],
+    "components": [
+      [ [ "chem_sulphuric_acid", 5 ] ],
+      [ [ "chem_ethanol", 10 ] ],
+      [ [ "water_clean", 5 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "advanced_medical", "amount": 1 }
+    ],
+    "blueprint_name": "合成抗生素",
+    "blueprint_autocalc": false,
+    "result_mult": 10,
+    "description": "使用高级医学技术合成抗生素。需要高级医疗站。"
+  },
+  {
+    "type": "recipe",
+    "result": "first_aid",
+    "id_suffix": "advanced_medicine",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MEDICAL",
+    "skill_used": "firstaid",
+    "difficulty": 5,
+    "time": "1 h",
+    "batch_time_factors": [80, 4],
+    "autolearn": false,
+    "using": [ [ "sewing_standard", 5 ] ],
+    "components": [
+      [ [ "bandages", 10 ] ],
+      [ [ "disinfectant", 2 ] ],
+      [ [ "aspirin", 5 ] ],
+      [ [ "rag", 5 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "advanced_medical", "amount": 1 }
+    ],
+    "blueprint_name": "高级急救包",
+    "blueprint_autocalc": false,
+    "result_mult": 3,
+    "description": "制作高质量的急救包。需要高级医疗站。产量是普通方法的3倍。"
+  },
+  {
+    "//": "=== 高级电子配方 ===",
+    "type": "recipe",
+    "result": "solar_panel",
+    "id_suffix": "advanced_electronics",
+    "category": "CC_ELECTRONIC",
+    "subcategory": "CSC_ELECTRONIC_COMPONENTS",
+    "skill_used": "electronics",
+    "difficulty": 7,
+    "time": "6 h",
+    "autolearn": false,
+    "qualities": [
+      [ { "id": "SCREW", "level": 1 } ]
+    ],
+    "tools": [
+      [ [ "soldering_iron", 20 ], [ "toolset", 20 ] ]
+    ],
+    "components": [
+      [ [ "glass_sheet", 4 ] ],
+      [ [ "copper", 10 ] ],
+      [ [ "plastic_chunk", 5 ] ],
+      [ [ "cable", 10 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "advanced_electronics", "amount": 1 }
+    ],
+    "blueprint_name": "高效太阳能板",
+    "blueprint_autocalc": false,
+    "description": "制作高效率的太阳能板。需要高级电子工坊。"
+  },
+  {
+    "type": "recipe",
+    "result": "battery",
+    "id_suffix": "advanced_electronics",
+    "category": "CC_ELECTRONIC",
+    "subcategory": "CSC_ELECTRONIC_COMPONENTS",
+    "skill_used": "electronics",
+    "difficulty": 6,
+    "time": "2 h",
+    "batch_time_factors": [85, 4],
+    "autolearn": false,
+    "components": [
+      [ [ "scrap", 2 ] ],
+      [ [ "copper", 2 ] ],
+      [ [ "chem_sulphuric_acid", 1 ] ],
+      [ [ "plastic_chunk", 1 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "advanced_electronics", "amount": 1 }
+    ],
+    "blueprint_name": "高容量电池",
+    "blueprint_autocalc": false,
+    "result_mult": 5,
+    "description": "制作高容量电池。需要高级电子工坊。产量是普通方法的5倍。"
+  },
+  {
+    "//": "=== 高级化学配方 ===",
+    "type": "recipe",
+    "result": "gunpowder",
+    "id_suffix": "advanced_chemistry",
+    "category": "CC_CHEM",
+    "subcategory": "CSC_CHEM_CHEMICALS",
+    "skill_used": "chemistry",
+    "difficulty": 6,
+    "time": "1 h",
+    "batch_time_factors": [80, 4],
+    "autolearn": false,
+    "qualities": [
+      [ { "id": "CHEM", "level": 2 } ]
+    ],
+    "tools": [
+      [ [ "surface_heat", 10, "LIST" ] ]
+    ],
+    "components": [
+      [ [ "chem_saltpetre", 10 ] ],
+      [ [ "charcoal", 5 ] ],
+      [ [ "sulfur", 3 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "advanced_chemistry", "amount": 1 }
+    ],
+    "blueprint_name": "高效火药制造",
+    "blueprint_autocalc": false,
+    "result_mult": 100,
+    "description": "使用高级化学技术批量制造火药。需要高级化学实验室。产量极高。"
+  },
+  {
+    "type": "recipe",
+    "result": "plastic_chunk",
+    "id_suffix": "advanced_chemistry",
+    "category": "CC_CHEM",
+    "subcategory": "CSC_CHEM_CHEMICALS",
+    "skill_used": "chemistry",
+    "difficulty": 7,
+    "time": "3 h",
+    "batch_time_factors": [85, 4],
+    "autolearn": false,
+    "qualities": [
+      [ { "id": "CHEM", "level": 2 } ]
+    ],
+    "tools": [
+      [ [ "hotplate", 100 ], [ "toolset", 100 ] ]
+    ],
+    "components": [
+      [ [ "chem_ethanol", 20 ] ],
+      [ [ "chem_sulphuric_acid", 5 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "advanced_chemistry", "amount": 1 }
+    ],
+    "blueprint_name": "合成塑料",
+    "blueprint_autocalc": false,
+    "result_mult": 20,
+    "description": "从化学原料合成塑料。需要高级化学实验室。"
+  },
+  {
+    "//": "=== 高级机械配方 ===",
+    "type": "recipe",
+    "result": "motor_small",
+    "id_suffix": "advanced_mechanics",
+    "category": "CC_ELECTRONIC",
+    "subcategory": "CSC_ELECTRONIC_COMPONENTS",
+    "skill_used": "mechanics",
+    "difficulty": 7,
+    "time": "4 h",
+    "autolearn": false,
+    "qualities": [
+      [ { "id": "SCREW", "level": 1 } ],
+      [ { "id": "WRENCH", "level": 1 } ]
+    ],
+    "tools": [
+      [ [ "soldering_iron", 20 ], [ "toolset", 20 ] ]
+    ],
+    "components": [
+      [ [ "scrap", 5 ] ],
+      [ [ "copper", 10 ] ],
+      [ [ "cable", 5 ] ],
+      [ [ "bearing", 2 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "advanced_mechanics", "amount": 1 }
+    ],
+    "blueprint_name": "精密小型电机",
+    "blueprint_autocalc": false,
+    "description": "制作高效率的小型电机。需要自动化设施和机械研究。"
+  },
+  {
+    "type": "recipe",
+    "result": "spring",
+    "id_suffix": "advanced_mechanics",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_PARTS",
+    "skill_used": "mechanics",
+    "difficulty": 5,
+    "time": "30 m",
+    "batch_time_factors": [80, 4],
+    "autolearn": false,
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ]
+    ],
+    "tools": [
+      [ [ "forge", 50 ], [ "oxy_torch", 10 ] ]
+    ],
+    "components": [
+      [ [ "scrap", 1 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "advanced_mechanics", "amount": 1 }
+    ],
+    "blueprint_name": "批量制造弹簧",
+    "blueprint_autocalc": false,
+    "result_mult": 20,
+    "description": "批量制造高质量弹簧。需要自动化设施。产量是普通方法的20倍。"
+  }
+]

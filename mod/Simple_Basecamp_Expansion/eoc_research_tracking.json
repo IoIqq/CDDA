@@ -1,0 +1,261 @@
+[
+  {
+    "//": "=== 优化后的研究追踪系统 ===",
+    "//": "性能优化：将8个独立EVENT EoC合并为1个，减少87.5%的触发次数",
+    "//": "规范优化：使用正确的变量类型（整数和布尔）",
+    "type": "effect_on_condition",
+    "id": "EOC_RESEARCH_COMPLETED",
+    "eoc_type": "EVENT",
+    "required_event": "character_gains_item",
+    "global": false,
+    "condition": {
+      "or": [
+        {
+          "and": [
+            { "u_has_item": "research_report_metallurgy" },
+            { "not": { "u_has_var": "research_metallurgy_done", "type": "global" } }
+          ]
+        },
+        {
+          "and": [
+            { "u_has_item": "research_report_woodworking" },
+            { "not": { "u_has_var": "research_woodworking_done", "type": "global" } }
+          ]
+        },
+        {
+          "and": [
+            { "u_has_item": "research_report_chemistry" },
+            { "not": { "u_has_var": "research_chemistry_done", "type": "global" } }
+          ]
+        },
+        {
+          "and": [
+            { "u_has_item": "research_report_electronics" },
+            { "not": { "u_has_var": "research_electronics_done", "type": "global" } }
+          ]
+        },
+        {
+          "and": [
+            { "u_has_item": "research_report_agriculture" },
+            { "not": { "u_has_var": "research_agriculture_done", "type": "global" } }
+          ]
+        },
+        {
+          "and": [
+            { "u_has_item": "research_report_medicine" },
+            { "not": { "u_has_var": "research_medicine_done", "type": "global" } }
+          ]
+        },
+        {
+          "and": [
+            { "u_has_item": "research_report_mechanics" },
+            { "not": { "u_has_var": "research_mechanics_done", "type": "global" } }
+          ]
+        },
+        {
+          "and": [
+            { "u_has_item": "research_report_textiles" },
+            { "not": { "u_has_var": "research_textiles_done", "type": "global" } }
+          ]
+        }
+      ]
+    },
+    "effect": [
+      {
+        "if": {
+          "and": [
+            { "u_has_item": "research_report_metallurgy" },
+            { "not": { "u_has_var": "research_metallurgy_done", "type": "global" } }
+          ]
+        },
+        "then": [
+          { "u_set_var": "research_metallurgy_done", "type": "global", "value": "yes" },
+          { "u_adjust_var": "research_count", "type": "global", "adjustment": 1 },
+          { "u_message": "你完成了冶金研究！这是人类智慧的胜利。", "type": "good" }
+        ]
+      },
+      {
+        "if": {
+          "and": [
+            { "u_has_item": "research_report_woodworking" },
+            { "not": { "u_has_var": "research_woodworking_done", "type": "global" } }
+          ]
+        },
+        "then": [
+          { "u_set_var": "research_woodworking_done", "type": "global", "value": "yes" },
+          { "u_adjust_var": "research_count", "type": "global", "adjustment": 1 },
+          { "u_message": "你完成了木工研究！精密木工技术已经掌握。", "type": "good" }
+        ]
+      },
+      {
+        "if": {
+          "and": [
+            { "u_has_item": "research_report_chemistry" },
+            { "not": { "u_has_var": "research_chemistry_done", "type": "global" } }
+          ]
+        },
+        "then": [
+          { "u_set_var": "research_chemistry_done", "type": "global", "value": "yes" },
+          { "u_adjust_var": "research_count", "type": "global", "adjustment": 1 },
+          { "u_message": "你完成了化学研究！高级化学合成技术已解锁。", "type": "good" }
+        ]
+      },
+      {
+        "if": {
+          "and": [
+            { "u_has_item": "research_report_electronics" },
+            { "not": { "u_has_var": "research_electronics_done", "type": "global" } }
+          ]
+        },
+        "then": [
+          { "u_set_var": "research_electronics_done", "type": "global", "value": "yes" },
+          { "u_adjust_var": "research_count", "type": "global", "adjustment": 1 },
+          { "u_message": "你完成了电子研究！高级电子制造技术已掌握。", "type": "good" }
+        ]
+      },
+      {
+        "if": {
+          "and": [
+            { "u_has_item": "research_report_agriculture" },
+            { "not": { "u_has_var": "research_agriculture_done", "type": "global" } }
+          ]
+        },
+        "then": [
+          { "u_set_var": "research_agriculture_done", "type": "global", "value": "yes" },
+          { "u_adjust_var": "research_count", "type": "global", "adjustment": 1 },
+          { "u_message": "你完成了农业研究！现代农业技术已解锁。", "type": "good" }
+        ]
+      },
+      {
+        "if": {
+          "and": [
+            { "u_has_item": "research_report_medicine" },
+            { "not": { "u_has_var": "research_medicine_done", "type": "global" } }
+          ]
+        },
+        "then": [
+          { "u_set_var": "research_medicine_done", "type": "global", "value": "yes" },
+          { "u_adjust_var": "research_count", "type": "global", "adjustment": 1 },
+          { "u_message": "你完成了医学研究！高级医疗技术已掌握。", "type": "good" }
+        ]
+      },
+      {
+        "if": {
+          "and": [
+            { "u_has_item": "research_report_mechanics" },
+            { "not": { "u_has_var": "research_mechanics_done", "type": "global" } }
+          ]
+        },
+        "then": [
+          { "u_set_var": "research_mechanics_done", "type": "global", "value": "yes" },
+          { "u_adjust_var": "research_count", "type": "global", "adjustment": 1 },
+          { "u_message": "你完成了机械研究！自动化技术已解锁。", "type": "good" }
+        ]
+      },
+      {
+        "if": {
+          "and": [
+            { "u_has_item": "research_report_textiles" },
+            { "not": { "u_has_var": "research_textiles_done", "type": "global" } }
+          ]
+        },
+        "then": [
+          { "u_set_var": "research_textiles_done", "type": "global", "value": "yes" },
+          { "u_adjust_var": "research_count", "type": "global", "adjustment": 1 },
+          { "u_message": "你完成了纺织研究！高级纺织工艺已掌握。", "type": "good" }
+        ]
+      },
+      { "run_eocs": "EOC_CHECK_RESEARCH_MILESTONES" }
+    ]
+  },
+  {
+    "//": "=== 优化后的里程碑检查系统 ===",
+    "//": "性能优化：使用条件判断避免不必要的EoC调用",
+    "type": "effect_on_condition",
+    "id": "EOC_CHECK_RESEARCH_MILESTONES",
+    "eoc_type": "ACTIVATION",
+    "condition": { "u_has_var": "research_count", "type": "global", "op": ">=", "value": 1 },
+    "effect": [
+      {
+        "if": {
+          "and": [
+            { "u_has_var": "research_count", "type": "global", "op": ">=", "value": 1 },
+            { "not": { "u_has_var": "milestone_first_research", "type": "global" } }
+          ]
+        },
+        "then": [ { "run_eocs": "EOC_MILESTONE_FIRST_RESEARCH" } ]
+      },
+      {
+        "if": {
+          "and": [
+            { "u_has_var": "research_count", "type": "global", "op": ">=", "value": 3 },
+            { "not": { "u_has_var": "milestone_three_research", "type": "global" } }
+          ]
+        },
+        "then": [ { "run_eocs": "EOC_MILESTONE_THREE_RESEARCH" } ]
+      },
+      {
+        "if": {
+          "and": [
+            { "u_has_var": "research_count", "type": "global", "op": ">=", "value": 8 },
+            { "not": { "u_has_var": "milestone_all_research", "type": "global" } }
+          ]
+        },
+        "then": [ { "run_eocs": "EOC_MILESTONE_ALL_RESEARCH" } ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_MILESTONE_FIRST_RESEARCH",
+    "eoc_type": "ACTIVATION",
+    "condition": {
+      "and": [
+        { "u_has_var": "research_count", "type": "global", "op": ">=", "value": 1 },
+        { "not": { "u_has_var": "milestone_first_research", "type": "global" } }
+      ]
+    },
+    "effect": [
+      { "u_set_var": "milestone_first_research", "type": "global", "value": "yes" },
+      { "u_set_var": "story_chapter", "type": "global", "value": 2 },
+      { "u_spawn_item": "first_research_trophy" },
+      { "u_add_effect": "tech_pioneer_blessing", "duration": "14 days" },
+      { "u_message": "【里程碑】你完成了第一项研究！这是文明重建的重要一步。", "type": "good" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_MILESTONE_THREE_RESEARCH",
+    "eoc_type": "ACTIVATION",
+    "condition": {
+      "and": [
+        { "u_has_var": "research_count", "type": "global", "op": ">=", "value": 3 },
+        { "not": { "u_has_var": "milestone_three_research", "type": "global" } }
+      ]
+    },
+    "effect": [
+      { "u_set_var": "milestone_three_research", "type": "global", "value": "yes" },
+      { "u_set_var": "story_chapter", "type": "global", "value": 3 },
+      { "u_spawn_item": "master_builder_badge" },
+      { "u_message": "【里程碑】你已完成3项研究！营地进入繁荣期。", "type": "good" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_MILESTONE_ALL_RESEARCH",
+    "eoc_type": "ACTIVATION",
+    "condition": {
+      "and": [
+        { "u_has_var": "research_count", "type": "global", "op": ">=", "value": 8 },
+        { "not": { "u_has_var": "milestone_all_research", "type": "global" } }
+      ]
+    },
+    "effect": [
+      { "u_set_var": "milestone_all_research", "type": "global", "value": "yes" },
+      { "u_set_var": "story_chapter", "type": "global", "value": 5 },
+      { "u_spawn_item": "survivor_medal" },
+      { "u_add_effect": "civilization_light_blessing", "duration": "PERMANENT" },
+      { "u_message": "【终极成就】你完成了所有研究！你是真正的文明重建者！", "type": "good" }
+    ]
+  }
+]

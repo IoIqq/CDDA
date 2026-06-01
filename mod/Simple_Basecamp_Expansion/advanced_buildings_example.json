@@ -1,0 +1,168 @@
+[
+  {
+    "//": "高级铁匠铺示例 - 需要冶金研究报告",
+    "type": "recipe",
+    "result": "faction_base_smithy_advanced_1",
+    "description": "升级铁匠铺为高级版本，大幅提升金属加工能力。包含更大的熔炉、精密工具和合金制作设备。需要冶金研究报告。",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "fabrication",
+    "difficulty": 6,
+    "time": "720 m",
+    "autolearn": false,
+    "never_learn": true,
+    "construction_blueprint": "faction_base_smithy_advanced_1_mapgen",
+    "blueprint_name": "高级铁匠铺",
+    "blueprint_provides": [
+      { "id": "advanced_blacksmith", "amount": 1 },
+      { "id": "blacksmith", "amount": 2 },
+      { "id": "bed", "amount": 2 }
+    ],
+    "blueprint_requires": [
+      { "id": "blacksmith", "amount": 1 },
+      { "id": "faction_base_camp_4", "amount": 1 }
+    ],
+    "blueprint_excludes": [
+      { "id": "faction_base_smithy_advanced_1", "amount": 1 }
+    ],
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "SAW_M", "level": 1 } ]
+    ],
+    "components": [
+      [ [ "research_report_metallurgy", 1 ] ],
+      [ [ "2x4", 60 ] ],
+      [ [ "log", 30 ] ],
+      [ [ "nail", 120 ] ],
+      [ [ "pipe", 8 ] ],
+      [ [ "sheet_metal", 20 ] ],
+      [ [ "rock", 40 ] ],
+      [ [ "steel_lump", 15 ] ]
+    ]
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "faction_base_smithy_advanced_1_mapgen",
+    "object": {
+      "place_nested": [
+        {
+          "chunks": [ "smithy_advanced_room" ],
+          "x": 3,
+          "y": 3
+        }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "nested_mapgen_id": "smithy_advanced_room",
+    "object": {
+      "mapgensize": [ 8, 8 ],
+      "rows": [
+        "WWWWWWWW",
+        "WBB....W",
+        "W..AF..W",
+        "W..AF..W",
+        "WT.....W",
+        "WR.RR..W",
+        "WL.LL..W",
+        "WWWDWWWW"
+      ],
+      "terrain": {
+        "W": "t_wall_wood",
+        ".": "t_floor",
+        "D": "t_door_c"
+      },
+      "furniture": {
+        "B": "f_bed",
+        "A": "f_anvil",
+        "F": "f_forge",
+        "T": "f_workbench",
+        "R": "f_rack",
+        "L": "f_locker"
+      }
+    }
+  },
+  {
+    "//": "高级温室示例 - 需要农业研究报告",
+    "type": "recipe",
+    "result": "faction_base_greenhouse_advanced_1",
+    "description": "升级温室为高级版本，采用水培技术大幅提升作物产量。包含自动灌溉系统和气候控制设备。需要农业研究报告。",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "fabrication",
+    "difficulty": 5,
+    "time": "600 m",
+    "autolearn": false,
+    "never_learn": true,
+    "construction_blueprint": "faction_base_greenhouse_advanced_1_mapgen",
+    "blueprint_name": "高级温室",
+    "blueprint_provides": [
+      { "id": "advanced_farming", "amount": 1 },
+      { "id": "farming", "amount": 2 },
+      { "id": "bed", "amount": 2 }
+    ],
+    "blueprint_requires": [
+      { "id": "farming", "amount": 1 },
+      { "id": "faction_base_camp_4", "amount": 1 }
+    ],
+    "blueprint_excludes": [
+      { "id": "faction_base_greenhouse_advanced_1", "amount": 1 }
+    ],
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "SAW_M", "level": 1 } ],
+      [ { "id": "DIG", "level": 1 } ]
+    ],
+    "components": [
+      [ [ "research_report_agriculture", 1 ] ],
+      [ [ "2x4", 50 ] ],
+      [ [ "log", 20 ] ],
+      [ [ "nail", 100 ] ],
+      [ [ "plastic_chunk", 40 ] ],
+      [ [ "pipe", 12 ] ],
+      [ [ "hose", 6 ] ]
+    ]
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "faction_base_greenhouse_advanced_1_mapgen",
+    "object": {
+      "place_nested": [
+        {
+          "chunks": [ "greenhouse_advanced_room" ],
+          "x": 3,
+          "y": 3
+        }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "nested_mapgen_id": "greenhouse_advanced_room",
+    "object": {
+      "mapgensize": [ 8, 8 ],
+      "rows": [
+        "WWWWWWWW",
+        "WBB....W",
+        "W..####W",
+        "W..####W",
+        "W..####W",
+        "W..####W",
+        "WR.L...W",
+        "WWWDWWWW"
+      ],
+      "terrain": {
+        "W": "t_wall_wood",
+        ".": "t_floor",
+        "D": "t_door_c",
+        "#": "t_dirt"
+      },
+      "furniture": {
+        "B": "f_bed",
+        "R": "f_rack",
+        "L": "f_locker"
+      }
+    }
+  }
+]

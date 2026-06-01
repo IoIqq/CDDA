@@ -1,0 +1,85 @@
+[
+  {
+    "type": "item_group",
+    "id": "combat_reward_small",
+    "subtype": "collection",
+    "entries": [
+      { "item": "corpse", "count": [10, 20] },
+      { "group": "ammo_common", "prob": 30, "count": [1, 3] },
+      { "group": "tools_common", "prob": 20, "count": [1, 2] },
+      { "item": "bandages", "prob": 40, "count": [2, 5] },
+      { "item": "aspirin", "prob": 30, "count": [1, 3] }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "combat_reward_medium",
+    "subtype": "collection",
+    "entries": [
+      { "item": "corpse", "count": [30, 50] },
+      { "group": "ammo_common", "prob": 50, "count": [3, 8] },
+      { "group": "tools_common", "prob": 40, "count": [2, 4] },
+      { "group": "guns_common", "prob": 20, "count": [1, 2] },
+      { "item": "bandages", "prob": 60, "count": [5, 10] },
+      { "item": "aspirin", "prob": 50, "count": [3, 6] },
+      { "item": "first_aid", "prob": 30, "count": [1, 2] },
+      { "group": "rare_materials", "prob": 15, "count": [1, 2] }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "combat_reward_large",
+    "subtype": "collection",
+    "entries": [
+      { "item": "corpse", "count": [50, 100] },
+      { "group": "ammo_common", "prob": 70, "count": [8, 15] },
+      { "group": "tools_common", "prob": 60, "count": [4, 8] },
+      { "group": "guns_common", "prob": 40, "count": [2, 4] },
+      { "group": "guns_rifle_common", "prob": 25, "count": [1, 2] },
+      { "item": "bandages", "prob": 80, "count": [10, 20] },
+      { "item": "first_aid", "prob": 60, "count": [2, 4] },
+      { "group": "rare_materials", "prob": 30, "count": [2, 4] },
+      { "item": "kevlar_plate", "prob": 15, "count": [1, 2] },
+      { "item": "steel_chunk", "prob": 40, "count": [5, 10] }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "combat_reward_horde",
+    "subtype": "collection",
+    "entries": [
+      { "item": "corpse", "count": [100, 150] },
+      { "group": "ammo_common_boxed", "prob": 80, "count": [3, 6] },
+      { "group": "tools_common", "prob": 70, "count": [8, 15] },
+      { "group": "guns_common", "prob": 60, "count": [4, 8] },
+      { "group": "guns_rifle_common", "prob": 40, "count": [2, 4] },
+      { "group": "guns_smg_common", "prob": 30, "count": [1, 3] },
+      { "item": "bandages", "prob": 90, "count": [20, 40] },
+      { "item": "first_aid", "prob": 80, "count": [4, 8] },
+      { "group": "rare_materials", "prob": 50, "count": [4, 8] },
+      { "item": "kevlar_plate", "prob": 30, "count": [2, 4] },
+      { "item": "steel_chunk", "prob": 60, "count": [10, 20] },
+      { "item": "c4", "prob": 10, "count": [1, 2] },
+      { "item": "grenade", "prob": 20, "count": [2, 4] },
+      { "group": "bionics_common", "prob": 15, "count": [1, 2] },
+      { "item": "gold_small", "prob": 25, "count": [1, 3] }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "rare_materials",
+    "subtype": "distribution",
+    "entries": [
+      { "item": "steel_lump", "prob": 40 },
+      { "item": "steel_chunk", "prob": 60 },
+      { "item": "scrap", "prob": 80 },
+      { "item": "plastic_chunk", "prob": 50 },
+      { "item": "copper", "prob": 40 },
+      { "item": "aluminum", "prob": 30 },
+      { "item": "kevlar_plate", "prob": 20 },
+      { "item": "duct_tape", "prob": 50 },
+      { "item": "superglue", "prob": 30 },
+      { "item": "solder_wire", "prob": 25 }
+    ]
+  }
+]

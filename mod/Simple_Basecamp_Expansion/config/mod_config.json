@@ -1,0 +1,40 @@
+{
+  "config_version": "1.0.0",
+  "mod_name": "Simple Basecamp Expansion",
+  "active_preset": "normal",
+  "custom_settings": {
+    "enabled": false,
+    "description": "启用此选项以使用自定义配置而非预设"
+  },
+  "features": {
+    "auto_loot_collection": {
+      "enabled": true,
+      "description": "战斗任务后自动收集战利品到处理中心"
+    },
+    "combat_missions": {
+      "enabled": true,
+      "description": "启用战斗任务系统"
+    },
+    "bulk_recipes": {
+      "enabled": true,
+      "description": "启用批量生产配方"
+    },
+    "storage_upgrades": {
+      "enabled": true,
+      "description": "启用仓库升级系统"
+    },
+    "all_buildings": {
+      "enabled": true,
+      "description": "启用所有27个扩展建筑"
+    }
+  },
+  "debug": {
+    "verbose_logging": false,
+    "show_build_times": true,
+    "validate_on_load": true
+  },
+  "compatibility": {
+    "check_item_ids": true,
+    "warn_on_conflicts": true
+  }
+}

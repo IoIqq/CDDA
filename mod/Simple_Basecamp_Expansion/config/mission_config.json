@@ -1,0 +1,93 @@
+{
+  "config_version": "1.0.0",
+  "description": "任务系统配置 - 控制战斗任务难度和奖励",
+  "combat_missions": {
+    "enabled": true,
+    "difficulty_scaling": 1.0,
+    "reward_multiplier": 1.0,
+    "description": "战斗任务系统总开关和全局设置",
+    "missions": {
+      "small": {
+        "enabled": true,
+        "name": "清理周边 - 小规模",
+        "base_time": 60,
+        "difficulty": 2,
+        "enemy_count": {
+          "min": 10,
+          "max": 20
+        },
+        "reward_multiplier": 1.0,
+        "description": "简单的清理任务，适合新手"
+      },
+      "medium": {
+        "enabled": true,
+        "name": "清理周边 - 中等规模",
+        "base_time": 120,
+        "difficulty": 3,
+        "enemy_count": {
+          "min": 30,
+          "max": 50
+        },
+        "reward_multiplier": 1.0,
+        "description": "中等难度的清理任务"
+      },
+      "large": {
+        "enabled": true,
+        "name": "清理周边 - 大规模",
+        "base_time": 240,
+        "difficulty": 4,
+        "enemy_count": {
+          "min": 50,
+          "max": 100
+        },
+        "reward_multiplier": 1.2,
+        "description": "困难的大规模清理任务"
+      },
+      "horde": {
+        "enabled": true,
+        "name": "尸潮挑战",
+        "base_time": 360,
+        "difficulty": 6,
+        "enemy_count": {
+          "min": 100,
+          "max": 150
+        },
+        "reward_multiplier": 1.5,
+        "special_enemies": true,
+        "npc_risk": "high",
+        "description": "极难的尸潮挑战，NPC可能受伤或死亡"
+      }
+    }
+  },
+  "loot_collection": {
+    "enabled": true,
+    "auto_collect": true,
+    "collect_corpses": true,
+    "collect_items": true,
+    "sort_by_type": true,
+    "description": "战利品自动收集系统",
+    "tasks": {
+      "collect_loot": {
+        "enabled": true,
+        "name": "整理战利品",
+        "time": 30,
+        "difficulty": 1,
+        "requires_loot_center": true
+      },
+      "burn_corpses": {
+        "enabled": true,
+        "name": "焚烧尸体",
+        "time": 120,
+        "difficulty": 1,
+        "fuel_required": true,
+        "requires_loot_center": true
+      }
+    }
+  },
+  "rewards": {
+    "corpse_multiplier": 1.0,
+    "item_quality_bonus": 0.0,
+    "rare_item_chance": 1.0,
+    "description": "奖励系统调整"
+  }
+}

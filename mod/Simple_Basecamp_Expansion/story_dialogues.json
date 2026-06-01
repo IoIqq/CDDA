@@ -1,0 +1,131 @@
+[
+  {
+    "type": "talk_topic",
+    "id": "TALK_CHRONICLE_KEEPER_ROOT",
+    "dynamic_line": "你好，幸存者。我是一名历史学家，在灾变前专门研究人类文明史。现在，我想记录下我们重建文明的历程。",
+    "responses": [
+      {
+        "text": "告诉我关于营地编年史的事。",
+        "topic": "TALK_CHRONICLE_KEEPER_ABOUT"
+      },
+      {
+        "text": "我想查看我们的进度。",
+        "topic": "TALK_CHRONICLE_KEEPER_PROGRESS"
+      },
+      {
+        "text": "给我讲讲故事吧。",
+        "topic": "TALK_CHRONICLE_KEEPER_STORY"
+      },
+      {
+        "text": "我们改天再聊。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_CHRONICLE_KEEPER_ABOUT",
+    "dynamic_line": "营地编年史是我们重建文明历程的记录。每一个重要的里程碑，每一次突破，每一场战斗，都值得被铭记。\n\n我会记录下营地的发展，从第一座帐篷到高科技设施，从生存挣扎到繁荣昌盛。这不仅是历史，更是希望的见证。",
+    "responses": [
+      {
+        "text": "这很有意义。我们应该记住这一切。",
+        "topic": "TALK_CHRONICLE_KEEPER_ROOT"
+      },
+      {
+        "text": "我能帮上什么忙吗？",
+        "topic": "TALK_CHRONICLE_KEEPER_HELP"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_CHRONICLE_KEEPER_HELP",
+    "dynamic_line": "你已经在帮忙了！每一座你建造的建筑，每一项你完成的研究，每一场你赢得的战斗，都是编年史的一部分。\n\n继续发展营地吧。当你完成重要的里程碑时，来找我，我会为你记录下来，并给你一些纪念品。",
+    "responses": [
+      {
+        "text": "我会的。让我们一起书写历史。",
+        "topic": "TALK_CHRONICLE_KEEPER_ROOT"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_CHRONICLE_KEEPER_PROGRESS",
+    "dynamic_line": "让我看看我们的进度...\n\n【第一章：生存基础】\n- 建立营地中心\n- 建造图书馆\n- 建立生产设施\n\n【第二章：知识的力量】\n- 完成第一次研究\n- 建造第一座高级建筑\n\n【第三章：扩张与发展】\n- 完成全面研究计划\n- 完成战斗任务\n\n【第四章：文明的曙光】\n- 建造自动化工坊\n- 建造高级医疗站\n\n【第五章：繁荣与希望】\n- 完成所有研究\n- 建立纪念碑\n- 举办庆典\n\n你可以按照自己的节奏完成这些目标。每完成一个重要里程碑，都来找我记录一下吧。",
+    "responses": [
+      {
+        "text": "明白了，我会努力的。",
+        "topic": "TALK_CHRONICLE_KEEPER_ROOT"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_CHRONICLE_KEEPER_STORY",
+    "dynamic_line": {
+      "u_has_items": { "item": "camp_chronicle", "count": 1 },
+      "yes": "你已经拥有营地编年史了。翻开它，里面记录着我们走过的每一步。从废墟中站起，用知识和勇气重建文明的火种。\n\n每一页都是一个故事，每一个故事都是希望的证明。",
+      "no": "让我给你一本营地编年史。这本书会记录我们的历程。虽然现在还是空白的，但很快它就会被我们的故事填满。\n\n这是属于我们的史诗，属于人类的传奇。"
+    },
+    "responses": [
+      {
+        "text": "谢谢你。我会珍惜它的。",
+        "topic": "TALK_CHRONICLE_KEEPER_ROOT",
+        "condition": { "not": { "u_has_items": { "item": "camp_chronicle", "count": 1 } } },
+        "effect": { "u_spawn_item": "camp_chronicle" }
+      },
+      {
+        "text": "我会继续书写这个故事。",
+        "topic": "TALK_CHRONICLE_KEEPER_ROOT",
+        "condition": { "u_has_items": { "item": "camp_chronicle", "count": 1 } }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_CHRONICLE_KEEPER_MILESTONE_LIBRARY",
+    "dynamic_line": "太好了！图书馆建成了。这不仅仅是一座建筑，它代表着我们对知识的尊重，对文明的传承。\n\n让我把这一刻记录在编年史中...\n\n'今天，我们建成了图书馆。虽然只是一座简陋的木屋，但它承载着人类文明的希望。我们将这些书籍视为珍宝，因为它们记录着我们曾经的辉煌，也指引着我们未来的道路。'\n\n这是你应得的奖励。",
+    "responses": [
+      {
+        "text": "谢谢。这是重要的一步。",
+        "topic": "TALK_CHRONICLE_KEEPER_ROOT",
+        "effect": [
+          { "u_spawn_item": "first_research_trophy" },
+          { "u_add_effect": "knowledge_keeper_blessing", "duration": "7 days" }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_CHRONICLE_KEEPER_MILESTONE_RESEARCH",
+    "dynamic_line": "这是历史性的时刻！你完成了第一项研究。这不仅仅是一份报告，它代表着人类智慧的延续，代表着我们有能力重建文明。\n\n'经过漫长的努力，我们完成了第一项研究。当研究报告完成的那一刻，所有人都欢呼起来。这是知识的胜利，是希望的证明。'\n\n你是真正的科技先驱。",
+    "responses": [
+      {
+        "text": "这只是开始。我们还有更多要做。",
+        "topic": "TALK_CHRONICLE_KEEPER_ROOT",
+        "effect": [
+          { "u_spawn_item": "master_builder_badge" },
+          { "u_add_effect": "tech_pioneer_blessing", "duration": "14 days" }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_CHRONICLE_KEEPER_FINAL",
+    "dynamic_line": "我们做到了！从废墟中站起，用双手重建了家园，用智慧点燃了文明的火炬。\n\n这段历史将被永远铭记。你不仅是幸存者，更是文明的重建者。\n\n让我们举办一场盛大的庆典，庆祝这个伟大的时刻！\n\n'今天，我们举行了盛大的庆典。营地的旗帜在风中飘扬，纪念碑在阳光下闪耀。我们从废墟中走来，用双手重建了家园，用智慧点燃了文明的火炬。\n\n这不是结束，而是新的开始。我们的营地将成为希望的灯塔，指引更多幸存者找到回家的路。'\n\n这是你应得的最高荣誉。",
+    "responses": [
+      {
+        "text": "谢谢你记录了这一切。这是我们共同的荣耀。",
+        "topic": "TALK_CHRONICLE_KEEPER_ROOT",
+        "effect": [
+          { "u_spawn_item": "survivor_medal" },
+          { "u_spawn_item": "camp_feast" },
+          { "u_spawn_item": "victory_brew", "count": 5 },
+          { "u_add_effect": "civilization_light_blessing", "duration": "PERMANENT" }
+        ]
+      }
+    ]
+  }
+]

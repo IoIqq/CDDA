@@ -1,0 +1,222 @@
+{
+  "config_version": "1.0.0",
+  "description": "建筑系统配置 - 控制建造时间、材料成本和技能要求",
+  "global_multipliers": {
+    "build_time": 1.0,
+    "material_cost": 1.0,
+    "skill_requirement": 0,
+    "description": "全局倍率，影响所有建筑"
+  },
+  "building_categories": {
+    "production": {
+      "description": "生产类建筑（铁匠铺、木工坊、厨房等）",
+      "time_multiplier": 1.0,
+      "cost_multiplier": 1.0,
+      "buildings": {
+        "smithy": {
+          "enabled": true,
+          "name": "简单铁匠铺",
+          "base_time": 480,
+          "base_difficulty": 4
+        },
+        "woodshop": {
+          "enabled": true,
+          "name": "简单木工坊",
+          "base_time": 360,
+          "base_difficulty": 3
+        },
+        "kitchen": {
+          "enabled": true,
+          "name": "简单厨房",
+          "base_time": 420,
+          "base_difficulty": 4
+        },
+        "foodproc": {
+          "enabled": true,
+          "name": "简单食品加工厂",
+          "base_time": 360,
+          "base_difficulty": 3
+        },
+        "fuel": {
+          "enabled": true,
+          "name": "简单燃料精炼站",
+          "base_time": 420,
+          "base_difficulty": 4
+        },
+        "ammo": {
+          "enabled": true,
+          "name": "简单弹药工坊",
+          "base_time": 420,
+          "base_difficulty": 4
+        },
+        "textile": {
+          "enabled": true,
+          "name": "简单纺织作坊",
+          "base_time": 360,
+          "base_difficulty": 3
+        },
+        "chem": {
+          "enabled": true,
+          "name": "简单化学实验室",
+          "base_time": 420,
+          "base_difficulty": 4
+        },
+        "electronics": {
+          "enabled": true,
+          "name": "简单电子工坊",
+          "base_time": 420,
+          "base_difficulty": 4
+        },
+        "charcoal": {
+          "enabled": true,
+          "name": "简单木炭窑",
+          "base_time": 360,
+          "base_difficulty": 3
+        },
+        "pottery": {
+          "enabled": true,
+          "name": "简单制陶工坊",
+          "base_time": 360,
+          "base_difficulty": 3
+        },
+        "glass": {
+          "enabled": true,
+          "name": "简单玻璃工坊",
+          "base_time": 420,
+          "base_difficulty": 4
+        },
+        "brewery": {
+          "enabled": true,
+          "name": "简单酿酒坊",
+          "base_time": 360,
+          "base_difficulty": 3
+        }
+      }
+    },
+    "storage": {
+      "description": "存储类建筑（仓库、战利品处理中心）",
+      "time_multiplier": 0.9,
+      "cost_multiplier": 0.8,
+      "buildings": {
+        "storage": {
+          "enabled": true,
+          "name": "简单仓库",
+          "base_time": 360,
+          "base_difficulty": 3,
+          "allow_upgrades": true,
+          "max_upgrade_level": 3
+        },
+        "loot_center": {
+          "enabled": true,
+          "name": "战利品处理中心",
+          "base_time": 480,
+          "base_difficulty": 4,
+          "auto_sort": true,
+          "corpse_disposal": true
+        }
+      }
+    },
+    "utility": {
+      "description": "功能类建筑（医疗站、水处理站等）",
+      "time_multiplier": 1.0,
+      "cost_multiplier": 1.0,
+      "buildings": {
+        "medical": {
+          "enabled": true,
+          "name": "简单医疗站",
+          "base_time": 420,
+          "base_difficulty": 4
+        },
+        "water": {
+          "enabled": true,
+          "name": "简单水处理站",
+          "base_time": 360,
+          "base_difficulty": 3
+        },
+        "armory": {
+          "enabled": true,
+          "name": "简单武器维修站",
+          "base_time": 360,
+          "base_difficulty": 3
+        },
+        "traps": {
+          "enabled": true,
+          "name": "简单陷阱工坊",
+          "base_time": 360,
+          "base_difficulty": 3
+        }
+      }
+    },
+    "agriculture": {
+      "description": "农业类建筑（温室、畜栏）",
+      "time_multiplier": 1.0,
+      "cost_multiplier": 0.9,
+      "buildings": {
+        "greenhouse": {
+          "enabled": true,
+          "name": "简单温室",
+          "base_time": 360,
+          "base_difficulty": 3
+        },
+        "animals": {
+          "enabled": true,
+          "name": "简单畜栏",
+          "base_time": 360,
+          "base_difficulty": 3
+        }
+      }
+    },
+    "special": {
+      "description": "特殊建筑（图书馆、训练场、瞭望塔等）",
+      "time_multiplier": 1.1,
+      "cost_multiplier": 1.0,
+      "buildings": {
+        "library": {
+          "enabled": true,
+          "name": "简单图书馆",
+          "base_time": 360,
+          "base_difficulty": 3
+        },
+        "training": {
+          "enabled": true,
+          "name": "简单训练场",
+          "base_time": 360,
+          "base_difficulty": 3
+        },
+        "watchtower": {
+          "enabled": true,
+          "name": "简单瞭望塔",
+          "base_time": 420,
+          "base_difficulty": 4
+        },
+        "radio": {
+          "enabled": true,
+          "name": "简单通讯中心",
+          "base_time": 420,
+          "base_difficulty": 4
+        },
+        "recreation": {
+          "enabled": true,
+          "name": "简单娱乐室",
+          "base_time": 300,
+          "base_difficulty": 2
+        },
+        "trading": {
+          "enabled": true,
+          "name": "简单交易站",
+          "base_time": 360,
+          "base_difficulty": 3
+        }
+      }
+    }
+  },
+  "material_substitutions": {
+    "enabled": false,
+    "description": "允许使用替代材料建造（实验性功能）",
+    "rules": []
+  },
+  "build_requirements": {
+    "min_camp_level": 4,
+    "description": "所有扩展建筑需要营地达到4级"
+  }
+}

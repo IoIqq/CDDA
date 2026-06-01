@@ -1,0 +1,69 @@
+[
+  {
+    "//": "=== 优化后的初始化系统 ===",
+    "//": "规范优化：使用正确的变量类型（整数）",
+    "type": "effect_on_condition",
+    "id": "EOC_BASECAMP_EXPANSION_INIT",
+    "eoc_type": "SCENARIO_SPECIFIC",
+    "condition": {
+      "not": { "u_has_var": "basecamp_expansion_initialized", "type": "global" }
+    },
+    "effect": [
+      {
+        "u_message": "Simple Basecamp Expansion 模组已加载。开始你的营地重建之旅吧！",
+        "type": "good"
+      },
+      { "u_set_var": "basecamp_expansion_initialized", "type": "global", "value": "yes" },
+      { "u_set_var": "research_count", "type": "global", "value": 0 },
+      { "u_set_var": "story_chapter", "type": "global", "value": 0 }
+    ]
+  },
+  {
+    "//": "=== 优化后的欢迎消息系统 ===",
+    "//": "性能优化：使用deactivate_condition自动停用",
+    "type": "effect_on_condition",
+    "id": "EOC_WELCOME_MESSAGE",
+    "eoc_type": "RECURRING",
+    "recurrence": "1 h",
+    "global": false,
+    "condition": {
+      "and": [
+        { "u_has_var": "basecamp_expansion_initialized", "type": "global" },
+        { "u_has_var": "story_chapter", "type": "global", "value": 0 },
+        { "not": { "u_has_var": "welcome_shown", "type": "global" } }
+      ]
+    },
+    "effect": [
+      { "u_set_var": "welcome_shown", "type": "global", "value": "yes" },
+      {
+        "u_message": "提示：建造图书馆是开启研究系统的关键。查看营地任务菜单开始建造吧！",
+        "type": "neutral"
+      }
+    ],
+    "deactivate_condition": { "u_has_var": "welcome_shown", "type": "global" }
+  },
+  {
+    "//": "=== 优化后的进度提醒系统 ===",
+    "//": "性能优化：提高检查间隔到12-24小时，添加停用条件",
+    "type": "effect_on_condition",
+    "id": "EOC_PROGRESS_REMINDER",
+    "eoc_type": "RECURRING",
+    "recurrence": [ "12 h", "24 h" ],
+    "global": true,
+    "condition": {
+      "and": [
+        { "u_has_var": "basecamp_expansion_initialized", "type": "global" },
+        { "u_has_var": "research_count", "type": "global", "op": "<", "value": 8 }
+      ]
+    },
+    "effect": [
+      {
+        "u_message": "营地发展提示：你已完成研究进度。继续努力重建文明！",
+        "type": "neutral"
+      }
+    ],
+    "deactivate_condition": {
+      "u_has_var": "research_count", "type": "global", "op": ">=", "value": 8
+    }
+  }
+]

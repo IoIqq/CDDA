@@ -1,0 +1,240 @@
+[
+  {
+    "//": "=== 完整的高级建筑系统 ===",
+    "//": "高级木工坊",
+    "type": "recipe",
+    "result": "faction_base_woodshop_advanced_1",
+    "description": "升级木工坊为高级版本，提供精密木工能力。包含高级工具和自动化设备。需要木工研究报告。",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "fabrication",
+    "difficulty": 6,
+    "time": "600 m",
+    "autolearn": false,
+    "never_learn": true,
+    "construction_blueprint": "faction_base_woodshop_advanced_1_mapgen",
+    "blueprint_name": "高级木工坊",
+    "blueprint_provides": [
+      { "id": "advanced_woodworking", "amount": 1 },
+      { "id": "sorting", "amount": 2 },
+      { "id": "bed", "amount": 2 }
+    ],
+    "blueprint_requires": [
+      { "id": "sorting", "amount": 1 },
+      { "id": "faction_base_camp_4", "amount": 1 }
+    ],
+    "blueprint_excludes": [
+      { "id": "faction_base_woodshop_advanced_1", "amount": 1 }
+    ],
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "SAW_M", "level": 1 } ]
+    ],
+    "components": [
+      [ [ "research_report_woodworking", 1 ] ],
+      [ [ "2x4", 80 ] ],
+      [ [ "log", 40 ] ],
+      [ [ "nail", 150 ] ],
+      [ [ "sheet_metal", 10 ] ]
+    ]
+  },
+  {
+    "//": "高级化学实验室",
+    "type": "recipe",
+    "result": "faction_base_chem_advanced_1",
+    "description": "升级化学实验室为高级版本，提供高级化学合成能力。包含精密仪器和安全设备。需要化学研究报告。",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "chemistry",
+    "difficulty": 7,
+    "time": "720 m",
+    "autolearn": false,
+    "never_learn": true,
+    "construction_blueprint": "faction_base_chem_advanced_1_mapgen",
+    "blueprint_name": "高级化学实验室",
+    "blueprint_provides": [
+      { "id": "advanced_chemistry", "amount": 1 },
+      { "id": "chemistry_crafting", "amount": 2 },
+      { "id": "bed", "amount": 2 }
+    ],
+    "blueprint_requires": [
+      { "id": "chemistry_crafting", "amount": 1 },
+      { "id": "faction_base_camp_4", "amount": 1 }
+    ],
+    "blueprint_excludes": [
+      { "id": "faction_base_chem_advanced_1", "amount": 1 }
+    ],
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "SAW_M", "level": 1 } ]
+    ],
+    "components": [
+      [ [ "research_report_chemistry", 1 ] ],
+      [ [ "2x4", 50 ] ],
+      [ [ "log", 25 ] ],
+      [ [ "nail", 100 ] ],
+      [ [ "sheet_metal", 15 ] ],
+      [ [ "plastic_chunk", 20 ] ],
+      [ [ "glass_sheet", 10 ] ]
+    ]
+  },
+  {
+    "//": "高级电子工坊",
+    "type": "recipe",
+    "result": "faction_base_electronics_advanced_1",
+    "description": "升级电子工坊为高级版本，提供高级电子制造能力。包含精密焊接设备和测试仪器。需要电子研究报告。",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "electronics",
+    "difficulty": 7,
+    "time": "720 m",
+    "autolearn": false,
+    "never_learn": true,
+    "construction_blueprint": "faction_base_electronics_advanced_1_mapgen",
+    "blueprint_name": "高级电子工坊",
+    "blueprint_provides": [
+      { "id": "advanced_electronics", "amount": 1 },
+      { "id": "electronics_crafting", "amount": 2 },
+      { "id": "bed", "amount": 2 }
+    ],
+    "blueprint_requires": [
+      { "id": "electronics_crafting", "amount": 1 },
+      { "id": "faction_base_camp_4", "amount": 1 }
+    ],
+    "blueprint_excludes": [
+      { "id": "faction_base_electronics_advanced_1", "amount": 1 }
+    ],
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "SAW_M", "level": 1 } ]
+    ],
+    "components": [
+      [ [ "research_report_electronics", 1 ] ],
+      [ [ "2x4", 50 ] ],
+      [ [ "log", 25 ] ],
+      [ [ "nail", 100 ] ],
+      [ [ "sheet_metal", 15 ] ],
+      [ [ "plastic_chunk", 25 ] ],
+      [ [ "cable", 50 ] ]
+    ]
+  },
+  {
+    "//": "高级医疗站",
+    "type": "recipe",
+    "result": "faction_base_medical_advanced_1",
+    "description": "升级医疗站为高级版本，提供高级医疗服务。包含手术台和先进医疗设备。需要医学研究报告。",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "firstaid",
+    "difficulty": 7,
+    "time": "720 m",
+    "autolearn": false,
+    "never_learn": true,
+    "construction_blueprint": "faction_base_medical_advanced_1_mapgen",
+    "blueprint_name": "高级医疗站",
+    "blueprint_provides": [
+      { "id": "advanced_medical", "amount": 1 },
+      { "id": "medical_crafting", "amount": 2 },
+      { "id": "bed", "amount": 4 }
+    ],
+    "blueprint_requires": [
+      { "id": "medical_crafting", "amount": 1 },
+      { "id": "faction_base_camp_4", "amount": 1 }
+    ],
+    "blueprint_excludes": [
+      { "id": "faction_base_medical_advanced_1", "amount": 1 }
+    ],
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "SAW_M", "level": 1 } ]
+    ],
+    "components": [
+      [ [ "research_report_medicine", 1 ] ],
+      [ [ "2x4", 60 ] ],
+      [ [ "log", 30 ] ],
+      [ [ "nail", 120 ] ],
+      [ [ "sheet_metal", 10 ] ],
+      [ [ "plastic_chunk", 30 ] ]
+    ]
+  },
+  {
+    "//": "自动化工坊",
+    "type": "recipe",
+    "result": "faction_base_automation_1",
+    "description": "建造自动化工坊，提供自动化生产能力。包含机械臂和控制系统。需要机械研究报告。",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "mechanics",
+    "difficulty": 7,
+    "time": "720 m",
+    "autolearn": false,
+    "never_learn": true,
+    "construction_blueprint": "faction_base_automation_1_mapgen",
+    "blueprint_name": "自动化工坊",
+    "blueprint_provides": [
+      { "id": "advanced_mechanics", "amount": 1 },
+      { "id": "automation", "amount": 1 },
+      { "id": "bed", "amount": 2 }
+    ],
+    "blueprint_requires": [
+      { "id": "blacksmith", "amount": 1 },
+      { "id": "faction_base_camp_4", "amount": 1 }
+    ],
+    "blueprint_excludes": [
+      { "id": "faction_base_automation_1", "amount": 1 }
+    ],
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "SAW_M", "level": 1 } ],
+      [ { "id": "WRENCH", "level": 2 } ]
+    ],
+    "components": [
+      [ [ "research_report_mechanics", 1 ] ],
+      [ [ "2x4", 60 ] ],
+      [ [ "log", 30 ] ],
+      [ [ "nail", 120 ] ],
+      [ [ "sheet_metal", 20 ] ],
+      [ [ "motor_small", 5 ] ],
+      [ [ "cable", 30 ] ]
+    ]
+  },
+  {
+    "//": "高级纺织工坊",
+    "type": "recipe",
+    "result": "faction_base_textile_advanced_1",
+    "description": "升级纺织工坊为高级版本，提供高级纺织能力。包含自动织机和染色设备。需要纺织研究报告。",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "tailor",
+    "difficulty": 6,
+    "time": "600 m",
+    "autolearn": false,
+    "never_learn": true,
+    "construction_blueprint": "faction_base_textile_advanced_1_mapgen",
+    "blueprint_name": "高级纺织工坊",
+    "blueprint_provides": [
+      { "id": "advanced_tailoring", "amount": 1 },
+      { "id": "tailoring", "amount": 2 },
+      { "id": "bed", "amount": 2 }
+    ],
+    "blueprint_requires": [
+      { "id": "tailoring", "amount": 1 },
+      { "id": "faction_base_camp_4", "amount": 1 }
+    ],
+    "blueprint_excludes": [
+      { "id": "faction_base_textile_advanced_1", "amount": 1 }
+    ],
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "SAW_M", "level": 1 } ]
+    ],
+    "components": [
+      [ [ "research_report_textiles", 1 ] ],
+      [ [ "2x4", 50 ] ],
+      [ [ "log", 25 ] ],
+      [ [ "nail", 100 ] ],
+      [ [ "sheet_metal", 8 ] ],
+      [ [ "plastic_chunk", 15 ] ]
+    ]
+  }
+]

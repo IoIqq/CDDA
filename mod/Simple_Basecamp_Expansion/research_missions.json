@@ -1,0 +1,210 @@
+[
+  {
+    "type": "recipe",
+    "result": "research_task_metallurgy",
+    "id_suffix": "research_metallurgy",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "fabrication",
+    "difficulty": 5,
+    "time": "12 h",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_name": "研究：高级冶金学",
+    "description": "深入研究高级金属加工技术和合金配方。需要图书馆和铁匠铺，消耗相关书籍和材料。完成后获得冶金研究报告，可用于建造高级铁匠铺。",
+    "blueprint_requires": [
+      { "id": "knowledge_storage", "amount": 1 },
+      { "id": "blacksmith", "amount": 1 }
+    ],
+    "blueprint_autocalc": false,
+    "components": [
+      [ [ "textbook_fabrication", 1 ] ],
+      [ [ "textbook_chemistry", 1 ] ],
+      [ [ "steel_chunk", 30 ] ],
+      [ [ "copper", 20 ] ]
+    ],
+    "blueprint_resources": [ "research_report_metallurgy" ]
+  },
+  {
+    "type": "recipe",
+    "result": "research_task_woodworking",
+    "id_suffix": "research_woodworking",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "fabrication",
+    "difficulty": 4,
+    "time": "10 h",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_name": "研究：高级木工技术",
+    "description": "研究精密木工和家具制作技术。需要图书馆和木工坊，消耗相关书籍和木材。完成后获得木工研究报告，可用于建造高级木工坊。",
+    "blueprint_requires": [
+      { "id": "knowledge_storage", "amount": 1 },
+      { "id": "sorting", "amount": 1 }
+    ],
+    "blueprint_autocalc": false,
+    "components": [
+      [ [ "textbook_fabrication", 1 ] ],
+      [ [ "manual_carpentry", 1 ] ],
+      [ [ "2x4", 50 ] ],
+      [ [ "log", 20 ] ]
+    ],
+    "blueprint_resources": [ "research_report_woodworking" ]
+  },
+  {
+    "type": "recipe",
+    "result": "research_task_chemistry",
+    "id_suffix": "research_chemistry",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "chemistry",
+    "difficulty": 6,
+    "time": "14 h",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_name": "研究：高级化学工程",
+    "description": "研究药物合成、炸药制造和化学工程技术。需要图书馆和化学实验室，消耗化学书籍和试剂。完成后获得化学研究报告，可用于建造高级化学实验室。",
+    "blueprint_requires": [
+      { "id": "knowledge_storage", "amount": 1 },
+      { "id": "chemistry_crafting", "amount": 1 }
+    ],
+    "blueprint_autocalc": false,
+    "components": [
+      [ [ "textbook_chemistry", 2 ] ],
+      [ [ "chemistry_set", 1 ] ],
+      [ [ "chem_sulphuric_acid", 10 ] ],
+      [ [ "chem_nitric_acid", 10 ] ]
+    ],
+    "blueprint_resources": [ "research_report_chemistry" ]
+  },
+  {
+    "type": "recipe",
+    "result": "research_task_electronics",
+    "id_suffix": "research_electronics",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "electronics",
+    "difficulty": 6,
+    "time": "16 h",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_name": "研究：高级电子工程",
+    "description": "研究高级电路设计、微控制器编程和电子设备制造技术。需要图书馆和电子工坊，消耗电子书籍和元件。完成后获得电子研究报告，可用于建造高级电子工坊。",
+    "blueprint_requires": [
+      { "id": "knowledge_storage", "amount": 1 },
+      { "id": "electronics_crafting", "amount": 1 }
+    ],
+    "blueprint_autocalc": false,
+    "components": [
+      [ [ "textbook_electronics", 2 ] ],
+      [ [ "textbook_computer", 1 ] ],
+      [ [ "amplifier", 5 ] ],
+      [ [ "processor", 3 ] ]
+    ],
+    "blueprint_resources": [ "research_report_electronics" ]
+  },
+  {
+    "type": "recipe",
+    "result": "research_task_agriculture",
+    "id_suffix": "research_agriculture",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "survival",
+    "difficulty": 4,
+    "time": "10 h",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_name": "研究：现代农业技术",
+    "description": "研究高效种植、水培技术和作物改良方法。需要图书馆和温室，消耗农业书籍和种子。完成后获得农业研究报告，可用于建造高级温室。",
+    "blueprint_requires": [
+      { "id": "knowledge_storage", "amount": 1 },
+      { "id": "farming", "amount": 1 }
+    ],
+    "blueprint_autocalc": false,
+    "components": [
+      [ [ "textbook_survival", 1 ] ],
+      [ [ "manual_survival", 1 ] ],
+      [ [ "fertilizer", 50 ] ],
+      [ [ "seed", 100 ] ]
+    ],
+    "blueprint_resources": [ "research_report_agriculture" ]
+  },
+  {
+    "type": "recipe",
+    "result": "research_task_medicine",
+    "id_suffix": "research_medicine",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "firstaid",
+    "difficulty": 7,
+    "time": "18 h",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_name": "研究：高级医学技术",
+    "description": "研究外科手术技术、药物配方和生物医学知识。需要图书馆和医疗站，消耗医学书籍和医疗用品。完成后获得医学研究报告，可用于建造高级医疗站。",
+    "blueprint_requires": [
+      { "id": "knowledge_storage", "amount": 1 },
+      { "id": "medical_crafting", "amount": 1 }
+    ],
+    "blueprint_autocalc": false,
+    "components": [
+      [ [ "textbook_firstaid", 2 ] ],
+      [ [ "manual_first_aid", 1 ] ],
+      [ [ "first_aid", 5 ] ],
+      [ [ "syringe", 10 ] ]
+    ],
+    "blueprint_resources": [ "research_report_medicine" ]
+  },
+  {
+    "type": "recipe",
+    "result": "research_task_mechanics",
+    "id_suffix": "research_mechanics",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "mechanics",
+    "difficulty": 5,
+    "time": "12 h",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_name": "研究：机械工程技术",
+    "description": "研究精密机械设计、自动化系统和动力传动技术。需要图书馆和铁匠铺，消耗机械书籍和零件。完成后获得机械研究报告，可用于建造自动化设施。",
+    "blueprint_requires": [
+      { "id": "knowledge_storage", "amount": 1 },
+      { "id": "blacksmith", "amount": 1 }
+    ],
+    "blueprint_autocalc": false,
+    "components": [
+      [ [ "textbook_mechanics", 2 ] ],
+      [ [ "manual_mechanics", 1 ] ],
+      [ [ "motor_small", 2 ] ],
+      [ [ "spring", 20 ] ]
+    ],
+    "blueprint_resources": [ "research_report_mechanics" ]
+  },
+  {
+    "type": "recipe",
+    "result": "research_task_textiles",
+    "id_suffix": "research_textiles",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "tailor",
+    "difficulty": 4,
+    "time": "10 h",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_name": "研究：高级纺织工艺",
+    "description": "研究高级织造技术、防护服制作和纤维处理方法。需要图书馆和纺织工坊，消耗纺织书籍和布料。完成后获得纺织研究报告，可用于建造高级纺织工坊。",
+    "blueprint_requires": [
+      { "id": "knowledge_storage", "amount": 1 },
+      { "id": "tailoring", "amount": 1 }
+    ],
+    "blueprint_autocalc": false,
+    "components": [
+      [ [ "textbook_tailor", 1 ] ],
+      [ [ "manual_tailor", 1 ] ],
+      [ [ "rag", 100 ] ],
+      [ [ "thread", 500 ] ]
+    ],
+    "blueprint_resources": [ "research_report_textiles" ]
+  }
+]

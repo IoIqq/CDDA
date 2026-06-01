@@ -1,0 +1,60 @@
+[
+  {
+    "type": "effect_type",
+    "id": "knowledge_keeper_blessing",
+    "name": [ "知识守护者的祝福" ],
+    "desc": [ "你感到思维更加敏捷，学习能力得到提升。" ],
+    "rating": "good",
+    "max_intensity": 1,
+    "int_add_val": 2,
+    "per_add_val": 1,
+    "show_in_info": true
+  },
+  {
+    "type": "effect_type",
+    "id": "tech_pioneer_blessing",
+    "name": [ "科技先驱的祝福" ],
+    "desc": [ "你的研究能力得到了认可，工作效率显著提升。" ],
+    "rating": "good",
+    "max_intensity": 1,
+    "int_add_val": 3,
+    "per_add_val": 2,
+    "show_in_info": true,
+    "//": "提升智力和感知，帮助研究和制作"
+  },
+  {
+    "type": "effect_type",
+    "id": "civilization_light_blessing",
+    "name": [ "文明之光" ],
+    "desc": [ "你是文明的重建者，这份荣耀将永远伴随着你。你的存在本身就是希望的象征。" ],
+    "rating": "good",
+    "max_intensity": 1,
+    "int_add_val": 5,
+    "per_add_val": 3,
+    "str_add_val": 2,
+    "dex_add_val": 2,
+    "show_in_info": true,
+    "//": "永久效果，全属性提升"
+  },
+  {
+    "type": "BOOK",
+    "id": "camp_chronicle",
+    "name": { "str": "营地编年史", "str_pl": "营地编年史" },
+    "description": "一本厚重的书籍，记录着营地从建立到繁荣的完整历程。每一页都是一个故事，每一个故事都是希望的证明。\n\n这不仅是历史记录，更是人类坚韧精神的见证。翻开它，你能感受到那些艰难岁月中的勇气和希望。",
+    "weight": "1200 g",
+    "volume": "2500 ml",
+    "price": 100000,
+    "price_postapoc": 50000,
+    "material": [ "paper", "leather" ],
+    "symbol": "?",
+    "color": "brown",
+    "skill": "survival",
+    "required_level": 0,
+    "max_level": 10,
+    "intelligence": 8,
+    "time": 120,
+    "fun": 10,
+    "chapters": 12,
+    "//": "可以反复阅读，提供生存技能和乐趣"
+  }
+]

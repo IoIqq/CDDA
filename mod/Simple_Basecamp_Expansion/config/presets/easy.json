@@ -1,0 +1,68 @@
+{
+  "preset_name": "简单模式",
+  "preset_id": "easy",
+  "description": "降低建造成本和时间，增加任务奖励。适合新手玩家或想要快速发展营地的玩家。",
+  "version": "1.0.0",
+  "global_multipliers": {
+    "build_time": 0.7,
+    "material_cost": 0.8,
+    "skill_requirement": -1,
+    "mission_difficulty": 0.8,
+    "mission_rewards": 1.3,
+    "mission_time": 0.8
+  },
+  "features": {
+    "auto_loot_collection": true,
+    "combat_missions": true,
+    "bulk_recipes": true,
+    "storage_upgrades": true,
+    "all_buildings": true
+  },
+  "building_adjustments": {
+    "production": {
+      "time_multiplier": 0.7,
+      "cost_multiplier": 0.8
+    },
+    "storage": {
+      "time_multiplier": 0.6,
+      "cost_multiplier": 0.7
+    },
+    "utility": {
+      "time_multiplier": 0.7,
+      "cost_multiplier": 0.8
+    },
+    "agriculture": {
+      "time_multiplier": 0.7,
+      "cost_multiplier": 0.7
+    },
+    "special": {
+      "time_multiplier": 0.8,
+      "cost_multiplier": 0.9
+    }
+  },
+  "mission_adjustments": {
+    "small": {
+      "difficulty": 1,
+      "reward_multiplier": 1.3
+    },
+    "medium": {
+      "difficulty": 2,
+      "reward_multiplier": 1.3
+    },
+    "large": {
+      "difficulty": 3,
+      "reward_multiplier": 1.4
+    },
+    "horde": {
+      "difficulty": 5,
+      "reward_multiplier": 1.6
+    }
+  },
+  "notes": [
+    "建造时间减少30%",
+    "材料成本减少20%",
+    "技能要求降低1级",
+    "任务难度降低20%",
+    "任务奖励增加30%"
+  ]
+}

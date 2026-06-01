@@ -1,0 +1,82 @@
+[
+  {
+    "type": "recipe",
+    "result": "faction_base_combat_small",
+    "id_suffix": "combat_small",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "survival",
+    "difficulty": 2,
+    "time": "1 h",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_name": "清理周边 - 小规模",
+    "description": "派遣队伍清理营地周边的僵尸。预计遭遇10-20只僵尸。难度：简单。完成后获得僵尸尸体和战利品。如果建造了战利品处理中心，物品将自动放置到指定区域。",
+    "blueprint_requires": [
+      { "id": "faction_base_camp_1", "amount": 1 }
+    ],
+    "blueprint_resources": [ "combat_reward_small" ],
+    "blueprint_autocalc": false,
+    "components": []
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_combat_medium",
+    "id_suffix": "combat_medium",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "survival",
+    "difficulty": 3,
+    "time": "2 h",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_name": "清理周边 - 中等规模",
+    "description": "派遣队伍清理营地周边的僵尸。预计遭遇30-50只僵尸。难度：中等。完成后获得大量僵尸尸体和战利品。如果建造了战利品处理中心，物品将自动放置到指定区域。",
+    "blueprint_requires": [
+      { "id": "faction_base_camp_1", "amount": 1 }
+    ],
+    "blueprint_resources": [ "combat_reward_medium" ],
+    "blueprint_autocalc": false,
+    "components": []
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_combat_large",
+    "id_suffix": "combat_large",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "survival",
+    "difficulty": 4,
+    "time": "4 h",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_name": "清理周边 - 大规模",
+    "description": "派遣队伍清理营地周边的僵尸。预计遭遇50-100只僵尸。难度：困难。完成后获得大量僵尸尸体和丰厚战利品。如果建造了战利品处理中心，物品将自动放置到指定区域。",
+    "blueprint_requires": [
+      { "id": "faction_base_camp_1", "amount": 1 }
+    ],
+    "blueprint_resources": [ "combat_reward_large" ],
+    "blueprint_autocalc": false,
+    "components": []
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_combat_horde",
+    "id_suffix": "combat_horde",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "survival",
+    "difficulty": 6,
+    "time": "6 h",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_name": "尸潮挑战",
+    "description": "派遣队伍挑战大规模尸潮。预计遭遇100+只僵尸，包含特殊僵尸。难度：极难。完成后获得海量僵尸尸体和稀有战利品。风险：NPC可能受伤或死亡。如果建造了战利品处理中心，物品将自动放置到指定区域。",
+    "blueprint_requires": [
+      { "id": "faction_base_camp_1", "amount": 1 }
+    ],
+    "blueprint_resources": [ "combat_reward_horde" ],
+    "blueprint_autocalc": false,
+    "components": []
+  }
+]

@@ -1,0 +1,159 @@
+[
+  {
+    "type": "recipe",
+    "result": "faction_base_loot_center_0",
+    "description": "战利品处理中心扩展的起始点",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_requires": [
+      { "id": "not_an_upgrade", "amount": 1 }
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_loot_center_1",
+    "description": "建造一个战利品处理中心，提供尸体焚烧区和战利品整理区。包含3x3焚烧坑、大量储物空间和工作台。战斗任务完成后，物品将自动放置到此处。",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "fabrication",
+    "difficulty": 4,
+    "time": "480 m",
+    "autolearn": false,
+    "never_learn": true,
+    "construction_blueprint": "faction_base_loot_center_1_mapgen",
+    "blueprint_name": "战利品处理中心",
+    "blueprint_provides": [
+      { "id": "loot_processing", "amount": 1 },
+      { "id": "corpse_disposal", "amount": 1 },
+      { "id": "sorting", "amount": 1 },
+      { "id": "bed", "amount": 2 }
+    ],
+    "blueprint_requires": [
+      { "id": "faction_base_camp_4", "amount": 1 }
+    ],
+    "blueprint_excludes": [
+      { "id": "faction_base_loot_center_1", "amount": 1 }
+    ],
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "SAW_M", "level": 1 } ],
+      [ { "id": "DIG", "level": 2 } ]
+    ],
+    "components": [
+      [ [ "2x4", 40 ] ],
+      [ [ "log", 20 ] ],
+      [ [ "nail", 80 ] ],
+      [ [ "sheet_metal", 10 ] ],
+      [ [ "rock", 30 ] ]
+    ]
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "faction_base_loot_center_1_mapgen",
+    "object": {
+      "place_nested": [
+        {
+          "chunks": [ "loot_center_room" ],
+          "x": 3,
+          "y": 3
+        }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "nested_mapgen_id": "loot_center_room",
+    "object": {
+      "mapgensize": [ 10, 10 ],
+      "rows": [
+        "WWWWWWWWWW",
+        "WBB......W",
+        "W..PPP...W",
+        "W..PPP.RRW",
+        "W..PPP.RRW",
+        "WT.....RRW",
+        "WL.LLLL.RW",
+        "WL.CCCC.RW",
+        "WLLLLLLLRW",
+        "WWWWDWWWWW"
+      ],
+      "terrain": {
+        "W": "t_wall_wood",
+        ".": "t_floor",
+        "D": "t_door_c",
+        "P": "t_pit"
+      },
+      "furniture": {
+        "B": "f_bed",
+        "T": "f_workbench",
+        "R": "f_rack",
+        "L": "f_locker",
+        "C": "f_crate_c"
+      },
+      "place_loot": [
+        {
+          "group": "loot_center_corpse_pile",
+          "x": [ 3, 5 ],
+          "y": [ 2, 4 ],
+          "chance": 100,
+          "repeat": [ 1, 1 ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_collect_loot",
+    "id_suffix": "collect_loot",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "survival",
+    "difficulty": 1,
+    "time": "30 m",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_name": "整理战利品",
+    "description": "派遣NPC收集营地周围的战利品和尸体，将尸体堆放到焚烧坑，将物品整理到储物区。需要建造战利品处理中心。",
+    "blueprint_requires": [
+      { "id": "loot_processing", "amount": 1 }
+    ],
+    "blueprint_autocalc": false,
+    "components": []
+  },
+  {
+    "type": "recipe",
+    "result": "faction_base_burn_corpses",
+    "id_suffix": "burn_corpses",
+    "category": "CC_BUILDING",
+    "subcategory": "CSC_BUILDING_BASES",
+    "skill_used": "survival",
+    "difficulty": 1,
+    "time": "2 h",
+    "autolearn": false,
+    "never_learn": true,
+    "blueprint_name": "焚烧尸体",
+    "description": "在焚烧坑中焚烧堆积的尸体。需要建造战利品处理中心。消耗木材或其他燃料。",
+    "blueprint_requires": [
+      { "id": "corpse_disposal", "amount": 1 }
+    ],
+    "blueprint_autocalc": false,
+    "qualities": [
+      [ { "id": "LIGHT_FIRE", "level": 1 } ]
+    ],
+    "components": [
+      [ 
+        [ "log", 10 ],
+        [ "stick", 50 ],
+        [ "withered", 30 ]
+      ]
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "loot_center_corpse_pile",
+    "subtype": "collection",
+    "entries": []
+  }
+]

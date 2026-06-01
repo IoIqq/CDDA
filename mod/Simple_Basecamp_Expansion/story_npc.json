@@ -1,0 +1,58 @@
+[
+  {
+    "type": "npc_class",
+    "id": "NC_CHRONICLE_KEEPER",
+    "name": { "str": "营地编年史记录员" },
+    "job_description": "我记录着营地重建的历史。",
+    "common": false,
+    "bonus_int": 10,
+    "bonus_per": 5,
+    "bonus_bravery": 5,
+    "bonus_altruism": 8,
+    "skills": [
+      { "skill": "speech", "level": 8 },
+      { "skill": "survival", "level": 6 },
+      { "skill": "fabrication", "level": 4 }
+    ],
+    "worn_override": "NC_CHRONICLE_KEEPER_worn",
+    "carry_override": "NC_CHRONICLE_KEEPER_carry",
+    "traits": [
+      { "trait": "PROF_HISTORY" },
+      { "trait": "BOOKWORM" },
+      { "trait": "PACIFIST" }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_CHRONICLE_KEEPER_worn",
+    "subtype": "collection",
+    "entries": [
+      { "item": "glasses_reading" },
+      { "item": "dress_shirt" },
+      { "item": "pants" },
+      { "item": "socks" },
+      { "item": "boots" },
+      { "item": "vest" }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_CHRONICLE_KEEPER_carry",
+    "subtype": "collection",
+    "entries": [
+      { "item": "pen", "count": 3 },
+      { "item": "paper", "count": 50 },
+      { "item": "notebook", "count": 2 },
+      { "item": "textbook_history" }
+    ]
+  },
+  {
+    "type": "npc",
+    "id": "chronicle_keeper_1",
+    "class": "NC_CHRONICLE_KEEPER",
+    "attitude": 0,
+    "mission": 7,
+    "chat": "TALK_CHRONICLE_KEEPER_ROOT",
+    "faction": "your_followers"
+  }
+]

@@ -1,0 +1,285 @@
+[
+  {
+    "//": "=== 营地装饰物品配方 ===",
+    "type": "recipe",
+    "result": "camp_flag",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "tailor",
+    "difficulty": 3,
+    "time": "2 h",
+    "autolearn": false,
+    "using": [ [ "sewing_standard", 20 ] ],
+    "components": [
+      [ [ "rag", 20 ] ],
+      [ [ "thread", 100 ] ],
+      [ [ "stick", 1 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "tailoring", "amount": 1 }
+    ],
+    "blueprint_name": "制作营地旗帜"
+  },
+  {
+    "type": "recipe",
+    "result": "camp_statue",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "fabrication",
+    "difficulty": 5,
+    "time": "12 h",
+    "autolearn": false,
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "CHISEL", "level": 1 } ]
+    ],
+    "components": [
+      [ [ "rock", 200 ] ],
+      [ [ "2x4", 10 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "blacksmith", "amount": 1 }
+    ],
+    "blueprint_name": "雕刻纪念雕像"
+  },
+  {
+    "type": "recipe",
+    "result": "camp_garden",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "survival",
+    "difficulty": 3,
+    "time": "4 h",
+    "autolearn": false,
+    "qualities": [
+      [ { "id": "DIG", "level": 1 } ]
+    ],
+    "components": [
+      [ [ "seed", 50 ] ],
+      [ [ "fertilizer", 20 ] ],
+      [ [ "water_clean", 50 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "farming", "amount": 1 }
+    ],
+    "blueprint_name": "布置装饰花园"
+  },
+  {
+    "//": "=== 特殊工具配方 ===",
+    "type": "recipe",
+    "result": "advanced_toolkit",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "fabrication",
+    "difficulty": 7,
+    "time": "8 h",
+    "autolearn": false,
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "SAW_M", "level": 1 } ]
+    ],
+    "components": [
+      [ [ "steel_lump", 10 ] ],
+      [ [ "plastic_chunk", 5 ] ],
+      [ [ "scrap", 20 ] ],
+      [ [ "spring", 10 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "advanced_blacksmith", "amount": 1 }
+    ],
+    "blueprint_name": "制作高级工具套装"
+  },
+  {
+    "type": "recipe",
+    "result": "research_computer",
+    "category": "CC_ELECTRONIC",
+    "subcategory": "CSC_ELECTRONIC_TOOLS",
+    "skill_used": "electronics",
+    "difficulty": 8,
+    "time": "12 h",
+    "autolearn": false,
+    "qualities": [
+      [ { "id": "SCREW", "level": 1 } ]
+    ],
+    "tools": [
+      [ [ "soldering_iron", 50 ], [ "toolset", 50 ] ]
+    ],
+    "components": [
+      [ [ "processor", 5 ] ],
+      [ [ "RAM", 10 ] ],
+      [ [ "plastic_chunk", 20 ] ],
+      [ [ "cable", 20 ] ],
+      [ [ "power_supply", 1 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "advanced_electronics", "amount": 1 }
+    ],
+    "blueprint_name": "组装研究用计算机"
+  },
+  {
+    "//": "=== 特殊消耗品配方 ===",
+    "type": "recipe",
+    "result": "camp_feast",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_COOKED",
+    "skill_used": "cooking",
+    "difficulty": 5,
+    "time": "4 h",
+    "autolearn": false,
+    "qualities": [
+      [ { "id": "COOK", "level": 2 } ]
+    ],
+    "tools": [
+      [ [ "surface_heat", 50, "LIST" ] ]
+    ],
+    "components": [
+      [ [ "meat", 10 ] ],
+      [ [ "veggy", 10 ] ],
+      [ [ "flour", 5 ] ],
+      [ [ "salt", 2 ] ],
+      [ [ "water_clean", 5 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "kitchen", "amount": 1 }
+    ],
+    "blueprint_name": "准备营地盛宴"
+  },
+  {
+    "type": "recipe",
+    "result": "victory_brew",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_DRINKS",
+    "skill_used": "cooking",
+    "difficulty": 4,
+    "time": "24 h",
+    "autolearn": false,
+    "components": [
+      [ [ "fruit", 10 ] ],
+      [ [ "sugar", 5 ] ],
+      [ [ "water_clean", 2 ] ],
+      [ [ "yeast", 1 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "brewing", "amount": 1 }
+    ],
+    "blueprint_name": "酿造胜利之酿"
+  },
+  {
+    "//": "=== 特殊建筑材料配方 ===",
+    "type": "recipe",
+    "result": "reinforced_frame",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MATERIALS",
+    "skill_used": "fabrication",
+    "difficulty": 7,
+    "time": "6 h",
+    "autolearn": false,
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ],
+      [ { "id": "SAW_M", "level": 1 } ]
+    ],
+    "tools": [
+      [ [ "forge", 200 ], [ "oxy_torch", 40 ] ]
+    ],
+    "components": [
+      [ [ "steel_lump", 15 ] ],
+      [ [ "alloy_sheet", 5 ] ],
+      [ [ "scrap", 10 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "advanced_blacksmith", "amount": 1 }
+    ],
+    "blueprint_name": "制作强化框架"
+  },
+  {
+    "type": "recipe",
+    "result": "advanced_insulation",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MATERIALS",
+    "skill_used": "tailor",
+    "difficulty": 5,
+    "time": "3 h",
+    "autolearn": false,
+    "using": [ [ "sewing_standard", 10 ] ],
+    "components": [
+      [ [ "plastic_chunk", 10 ] ],
+      [ [ "rag", 20 ] ],
+      [ [ "cotton_patchwork", 10 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "tailoring", "amount": 1 }
+    ],
+    "blueprint_name": "制作高级隔热材料"
+  },
+  {
+    "//": "=== 成就纪念品配方（特殊条件） ===",
+    "type": "recipe",
+    "result": "first_research_trophy",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "fabrication",
+    "difficulty": 4,
+    "time": "4 h",
+    "autolearn": false,
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ]
+    ],
+    "components": [
+      [ [ "steel_lump", 2 ] ],
+      [ [ "gold", 1 ] ],
+      [ [ "plastic_chunk", 1 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "knowledge_storage", "amount": 1 }
+    ],
+    "blueprint_name": "铸造研究纪念奖杯"
+  },
+  {
+    "type": "recipe",
+    "result": "master_builder_badge",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "fabrication",
+    "difficulty": 5,
+    "time": "3 h",
+    "autolearn": false,
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ]
+    ],
+    "tools": [
+      [ [ "forge", 50 ], [ "oxy_torch", 10 ] ]
+    ],
+    "components": [
+      [ [ "steel_lump", 1 ] ],
+      [ [ "silver", 1 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "blacksmith", "amount": 1 }
+    ],
+    "blueprint_name": "铸造建造大师徽章"
+  },
+  {
+    "type": "recipe",
+    "result": "survivor_medal",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "fabrication",
+    "difficulty": 3,
+    "time": "2 h",
+    "autolearn": false,
+    "qualities": [
+      [ { "id": "HAMMER", "level": 2 } ]
+    ],
+    "tools": [
+      [ [ "forge", 30 ], [ "oxy_torch", 6 ] ]
+    ],
+    "components": [
+      [ [ "steel_chunk", 1 ] ],
+      [ [ "copper", 1 ] ]
+    ],
+    "blueprint_requires": [
+      { "id": "blacksmith", "amount": 1 }
+    ],
+    "blueprint_name": "铸造幸存者勋章"
+  }
+]

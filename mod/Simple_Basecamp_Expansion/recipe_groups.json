@@ -133,6 +133,11 @@
         "id": "faction_base_trading_simple_0",
         "description": "简单交易站",
         "om_terrains": [ "field" ]
+      },
+      {
+        "id": "faction_base_loot_center_0",
+        "description": "战利品处理中心",
+        "om_terrains": [ "field" ]
       }
     ]
   }

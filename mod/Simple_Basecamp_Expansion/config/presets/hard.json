@@ -1,0 +1,69 @@
+{
+  "preset_name": "困难模式",
+  "preset_id": "hard",
+  "description": "增加建造成本和时间，降低任务奖励。适合寻求挑战的资深玩家。",
+  "version": "1.0.0",
+  "global_multipliers": {
+    "build_time": 1.3,
+    "material_cost": 1.2,
+    "skill_requirement": 1,
+    "mission_difficulty": 1.3,
+    "mission_rewards": 0.8,
+    "mission_time": 1.2
+  },
+  "features": {
+    "auto_loot_collection": true,
+    "combat_missions": true,
+    "bulk_recipes": true,
+    "storage_upgrades": true,
+    "all_buildings": true
+  },
+  "building_adjustments": {
+    "production": {
+      "time_multiplier": 1.3,
+      "cost_multiplier": 1.2
+    },
+    "storage": {
+      "time_multiplier": 1.2,
+      "cost_multiplier": 1.1
+    },
+    "utility": {
+      "time_multiplier": 1.3,
+      "cost_multiplier": 1.2
+    },
+    "agriculture": {
+      "time_multiplier": 1.3,
+      "cost_multiplier": 1.2
+    },
+    "special": {
+      "time_multiplier": 1.4,
+      "cost_multiplier": 1.3
+    }
+  },
+  "mission_adjustments": {
+    "small": {
+      "difficulty": 3,
+      "reward_multiplier": 0.8
+    },
+    "medium": {
+      "difficulty": 4,
+      "reward_multiplier": 0.8
+    },
+    "large": {
+      "difficulty": 5,
+      "reward_multiplier": 0.9
+    },
+    "horde": {
+      "difficulty": 7,
+      "reward_multiplier": 1.2
+    }
+  },
+  "notes": [
+    "建造时间增加30%",
+    "材料成本增加20%",
+    "技能要求提高1级",
+    "任务难度增加30%",
+    "任务奖励减少20%",
+    "适合寻求挑战的玩家"
+  ]
+}

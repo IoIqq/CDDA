@@ -1,0 +1,66 @@
+{
+  "preset_name": "标准模式",
+  "preset_id": "normal",
+  "description": "平衡的游戏体验，所有参数保持默认值。适合大多数玩家。",
+  "version": "1.0.0",
+  "global_multipliers": {
+    "build_time": 1.0,
+    "material_cost": 1.0,
+    "skill_requirement": 0,
+    "mission_difficulty": 1.0,
+    "mission_rewards": 1.0,
+    "mission_time": 1.0
+  },
+  "features": {
+    "auto_loot_collection": true,
+    "combat_missions": true,
+    "bulk_recipes": true,
+    "storage_upgrades": true,
+    "all_buildings": true
+  },
+  "building_adjustments": {
+    "production": {
+      "time_multiplier": 1.0,
+      "cost_multiplier": 1.0
+    },
+    "storage": {
+      "time_multiplier": 0.9,
+      "cost_multiplier": 0.8
+    },
+    "utility": {
+      "time_multiplier": 1.0,
+      "cost_multiplier": 1.0
+    },
+    "agriculture": {
+      "time_multiplier": 1.0,
+      "cost_multiplier": 0.9
+    },
+    "special": {
+      "time_multiplier": 1.1,
+      "cost_multiplier": 1.0
+    }
+  },
+  "mission_adjustments": {
+    "small": {
+      "difficulty": 2,
+      "reward_multiplier": 1.0
+    },
+    "medium": {
+      "difficulty": 3,
+      "reward_multiplier": 1.0
+    },
+    "large": {
+      "difficulty": 4,
+      "reward_multiplier": 1.2
+    },
+    "horde": {
+      "difficulty": 6,
+      "reward_multiplier": 1.5
+    }
+  },
+  "notes": [
+    "所有参数保持默认值",
+    "平衡的游戏体验",
+    "推荐给大多数玩家"
+  ]
+}
