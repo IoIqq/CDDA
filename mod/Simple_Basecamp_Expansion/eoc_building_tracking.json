@@ -1,0 +1,195 @@
+[
+  {
+    "//": "=== 建筑追踪系统（统一EVENT EoC） ===",
+    "//": "性能优化：使用单一EVENT EoC监听营地任务完成",
+    "//": "规范优化：使用context_val接收事件参数",
+    "type": "effect_on_condition",
+    "id": "EOC_BASECAMP_TASK_COMPLETED",
+    "eoc_type": "EVENT",
+    "required_event": "character_finished_activity",
+    "global": false,
+    "condition": {
+      "and": [
+        { "u_has_var": "basecamp_expansion_initialized", "type": "global" },
+        { "not": { "u_has_var": "all_buildings_tracked", "type": "global" } }
+      ]
+    },
+    "effect": [
+      {
+        "//": "检查是否完成图书馆相关建造",
+        "if": {
+          "and": [
+            { "u_has_item": "research_report_metallurgy" },
+            { "not": { "u_has_var": "library_built", "type": "global" } }
+          ]
+        },
+        "then": [ { "run_eocs": "EOC_TRY_DETECT_LIBRARY" } ]
+      },
+      {
+        "//": "更新建筑统计",
+        "if": { "not": { "u_has_var": "buildings_count_initialized", "type": "global" } },
+        "then": [
+          { "u_set_var": "buildings_count_initialized", "type": "global", "value": "yes" },
+          { "u_set_var": "advanced_buildings_count", "type": "global", "value": 0 }
+        ]
+      }
+    ]
+  },
+  {
+    "//": "=== 高级建筑追踪 ===",
+    "//": "通过物品消耗推断高级建筑建造完成",
+    "type": "effect_on_condition",
+    "id": "EOC_ADVANCED_BUILDING_BUILT",
+    "eoc_type": "EVENT",
+    "required_event": "character_consumes_item",
+    "global": false,
+    "condition": {
+      "or": [
+        { "u_has_item": "research_report_metallurgy" },
+        { "u_has_item": "research_report_woodworking" },
+        { "u_has_item": "research_report_chemistry" },
+        { "u_has_item": "research_report_electronics" },
+        { "u_has_item": "research_report_agriculture" },
+        { "u_has_item": "research_report_medicine" },
+        { "u_has_item": "research_report_mechanics" },
+        { "u_has_item": "research_report_textiles" }
+      ]
+    },
+    "effect": [
+      { "u_adjust_var": "advanced_buildings_count", "type": "global", "adjustment": 1 },
+      { "run_eocs": "EOC_CHECK_BUILDING_MILESTONES" }
+    ]
+  },
+  {
+    "//": "=== 建筑里程碑检查 ===",
+    "type": "effect_on_condition",
+    "id": "EOC_CHECK_BUILDING_MILESTONES",
+    "eoc_type": "ACTIVATION",
+    "condition": { "u_has_var": "advanced_buildings_count", "type": "global", "op": ">=", "value": 1 },
+    "effect": [
+      {
+        "if": {
+          "and": [
+            { "u_has_var": "advanced_buildings_count", "type": "global", "op": ">=", "value": 1 },
+            { "not": { "u_has_var": "milestone_first_advanced_building", "type": "global" } }
+          ]
+        },
+        "then": [
+          { "u_set_var": "milestone_first_advanced_building", "type": "global", "value": "yes" },
+          { "u_message": "【里程碑】你建造了第一座高级建筑！营地科技水平大幅提升。", "type": "good" }
+        ]
+      },
+      {
+        "if": {
+          "and": [
+            { "u_has_var": "advanced_buildings_count", "type": "global", "op": ">=", "value": 4 },
+            { "not": { "u_has_var": "milestone_four_advanced_buildings", "type": "global" } }
+          ]
+        },
+        "then": [
+          { "u_set_var": "milestone_four_advanced_buildings", "type": "global", "value": "yes" },
+          { "u_spawn_item": "master_builder_badge" },
+          { "u_message": "【里程碑】你已建造4座高级建筑！获得建造大师徽章。", "type": "good" }
+        ]
+      },
+      {
+        "if": {
+          "and": [
+            { "u_has_var": "advanced_buildings_count", "type": "global", "op": ">=", "value": 8 },
+            { "not": { "u_has_var": "milestone_all_advanced_buildings", "type": "global" } }
+          ]
+        },
+        "then": [
+          { "u_set_var": "milestone_all_advanced_buildings", "type": "global", "value": "yes" },
+          { "u_spawn_item": "survivor_medal" },
+          { "u_add_effect": "civilization_light_blessing", "duration": "PERMANENT" },
+          { "u_message": "【终极成就】你建造了所有高级建筑！营地达到最高科技水平。", "type": "good" }
+        ]
+      }
+    ]
+  },
+  {
+    "//": "=== 战斗任务追踪 ===",
+    "//": "性能优化：使用单一EoC追踪所有战斗胜利",
+    "type": "effect_on_condition",
+    "id": "EOC_COMBAT_VICTORY",
+    "eoc_type": "EVENT",
+    "required_event": "character_kills_monster",
+    "global": false,
+    "condition": {
+      "u_has_var": "basecamp_expansion_initialized", "type": "global"
+    },
+    "effect": [
+      {
+        "if": { "not": { "u_has_var": "zombies_killed", "type": "global" } },
+        "then": [ { "u_set_var": "zombies_killed", "type": "global", "value": 0 } ]
+      },
+      { "u_adjust_var": "zombies_killed", "type": "global", "adjustment": 1 },
+      { "run_eocs": "EOC_CHECK_COMBAT_MILESTONES" }
+    ]
+  },
+  {
+    "//": "=== 战斗里程碑检查 ===",
+    "//": "性能优化：使用条件分支避免重复检查",
+    "type": "effect_on_condition",
+    "id": "EOC_CHECK_COMBAT_MILESTONES",
+    "eoc_type": "ACTIVATION",
+    "condition": { "u_has_var": "zombies_killed", "type": "global", "op": ">=", "value": 100 },
+    "effect": [
+      {
+        "if": {
+          "and": [
+            { "u_has_var": "zombies_killed", "type": "global", "op": ">=", "value": 100 },
+            { "not": { "u_has_var": "milestone_100_kills", "type": "global" } }
+          ]
+        },
+        "then": [
+          { "u_set_var": "milestone_100_kills", "type": "global", "value": "yes" },
+          { "u_spawn_item": "survivor_medal" },
+          { "u_message": "【战斗成就】你已击杀100只敌人！获得幸存者勋章。", "type": "good" }
+        ]
+      },
+      {
+        "if": {
+          "and": [
+            { "u_has_var": "zombies_killed", "type": "global", "op": ">=", "value": 500 },
+            { "not": { "u_has_var": "milestone_500_kills", "type": "global" } }
+          ]
+        },
+        "then": [
+          { "u_set_var": "milestone_500_kills", "type": "global", "value": "yes" },
+          { "u_message": "【战斗成就】你已击杀500只敌人！你是真正的守护者。", "type": "good" }
+        ]
+      },
+      {
+        "if": {
+          "and": [
+            { "u_has_var": "zombies_killed", "type": "global", "op": ">=", "value": 1000 },
+            { "not": { "u_has_var": "milestone_1000_kills", "type": "global" } }
+          ]
+        },
+        "then": [
+          { "u_set_var": "milestone_1000_kills", "type": "global", "value": "yes" },
+          { "u_add_effect": "civilization_light_blessing", "duration": "30 days" },
+          { "u_message": "【传奇成就】你已击杀1000只敌人！传奇战士的称号属于你。", "type": "good" }
+        ]
+      }
+    ]
+  },
+  {
+    "//": "=== 全成就检查EoC（手动调用） ===",
+    "//": "玩家可以通过对话手动检查所有成就状态",
+    "type": "effect_on_condition",
+    "id": "EOC_CHECK_ALL_ACHIEVEMENTS",
+    "eoc_type": "ACTIVATION",
+    "effect": [
+      { "run_eocs": "EOC_CHECK_RESEARCH_MILESTONES" },
+      { "run_eocs": "EOC_CHECK_BUILDING_MILESTONES" },
+      { "run_eocs": "EOC_CHECK_COMBAT_MILESTONES" },
+      {
+        "u_message": "成就检查完成。继续努力发展营地吧！",
+        "type": "neutral"
+      }
+    ]
+  }
+]
